@@ -1,0 +1,81 @@
+{
+  "errors": [],
+  "warnings": [],
+  "version": "4.43.0",
+  "hash": "c6c95832d2973e901c08",
+  "publicPath": "/static/",
+  "outputPath": "/Users/hramirez/Desktop/NodeJS Projects/gummybears/build/static",
+  "assetsByChunkName": {
+    "gummybears": "gummybears.module.js",
+    "list": "list.module.js"
+  },
+  "assets": [
+    {
+      "name": "gummybears.module.js",
+      "size": 5027260,
+      "chunks": [
+        "gummybears"
+      ],
+      "chunkNames": [
+        "gummybears"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "list.module.js",
+      "size": 47989,
+      "chunks": [
+        "list"
+      ],
+      "chunkNames": [
+        "list"
+      ],
+      "info": {},
+      "emitted": false
+    }
+  ],
+  "filteredAssets": 0,
+  "entrypoints": {
+    "gummybears": {
+      "chunks": [
+        "gummybears"
+      ],
+      "assets": [
+        "gummybears.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "namedChunkGroups": {
+    "gummybears": {
+      "chunks": [
+        "gummybears"
+      ],
+      "assets": [
+        "gummybears.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "list": {
+      "chunks": [
+        "list"
+      ],
+      "assets": [
+        "list.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "logging": {
+    "webpack.buildChunkGraph.visitModules": {
+      "entries": [],
+      "filteredEntries": 5,
+      "debug": false
+    }
+  },
+  "children": []
+}
