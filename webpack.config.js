@@ -24,7 +24,7 @@ module.exports = {
     filename: 'scripts/main.js',
   },
   devtool: 'source-map',
-  mode: 'development',
+  mode: 'production',
   module: {
     rules: [
       {
