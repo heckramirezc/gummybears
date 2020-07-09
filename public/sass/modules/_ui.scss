@@ -1,0 +1,183 @@
+.ui {
+
+  &--loading {
+    width: 100%; height: 100vh; position: fixed; @include full0; background-color: black; opacity: 0.6; 
+    @include flexbox; @include flow-cn; @include just-center; @include items-center; z-index: 99;
+    visibility: hidden; opacity: 0; @include trans;
+    &.active { visibility: visible; opacity: 0.8; @include trans;}
+    section {display: inline-block; text-align: center;
+      p { color: white; padding-right: 1rem; }
+      i {display: inline-block; margin-bottom: 1rem; 
+        @keyframes fill {
+          0% { fill: white; }
+          100% { fill: $red; }
+        }
+        svg { height: 3rem; display: block; opacity: 1;
+          g * { opacity: 0.3; }
+        }
+      }
+    }    
+  }
+
+  &--error404 {
+    width: 100%; text-align: center; @include module;
+    margin-top: 10vh; 
+    h1 { color: $red; font-weight: 300; font-size: 3rem; margin-bottom: 1rem; }
+    a { @include padblock(0.5rem); background-color: $red; color: white; width: 11rem; @include radius(6px); margin: 1rem 0; }
+  }
+
+  // &--notification {
+  //   width: auto; background-color: $red; @include trans;
+  //   position: fixed; right: -100%; bottom: 1rem; @include padblock(1rem); @include radius(6px 0 0 6px);
+  //   &.active { right: 0; }
+  //   div {
+  //     h6 { font-size: 0.85rem; font-weight: 300; margin-bottom: 0.5rem; color: $light; }
+  //     p { font-size: 1rem; color: white; }
+  //   }
+  // }
+
+  &--notification {
+    width: 100%; border: 1px solid $red; color: $red; @include padblock(0.5rem); @include radius(6px); @include trans;
+    &::before { content: "\f06a"; font-family: $icon; display: inline-block; margin-right: 6px; }
+    p { display: inline; }
+  }
+
+  &--login-btn { padding: 0.5rem; visibility: hidden; opacity: 0; @include trans;
+    &.active { visibility: visible; opacity: 1; @include trans; }
+    @include tablet { position: absolute; top: 130%; right: 0; }
+    &.ie-fix { @include ie11 { top: 160%; } }
+    a { font-size: 0.85rem; padding: 0.25rem 0.5rem; color: $blue;
+      &:first-child { border-right: 1px solid $light;
+        &::before { content: "\f007"; font-family: $icon; display: inline-block; margin-right: 6px; }
+      }
+      &:last-child { color: $blue; font-weight: 300;
+        &::before { content: "\f090"; font-family: $icon; display: inline-block; margin-right: 6px; }
+      }
+    }
+  }
+
+  &--logout-btn { padding: 0.5rem; visibility: hidden; opacity: 0; @include trans;
+    &.active { visibility: visible; opacity: 1; @include trans; }
+    @include tablet { position: absolute; top: 130%; right: 0; }
+    &.ie-fix { @include ie11 { top: 160%; } }
+    a { font-size: 0.85rem; padding: 0.25rem 0.5rem;
+      &:first-child { border-right: 1px solid $light;
+        &::before { content: "\f007"; font-family: $icon; color: $red; display: inline-block; margin-right: 6px; }
+        span { font-weight: 300; padding-right: 4px; }
+        b { font-weight: 500; }
+      }
+      &:last-child { color: $blue; font-weight: 300;
+        &::before { content: "\f00d"; font-family: $icon; display: inline-block; margin-right: 6px; }
+      }
+    }
+  }
+
+  &--warning { @include flexbox; @include flow-rn; @include just-start; @include items-start;
+    width: 100%; background-color: $sky; @include padbox(0.75rem); margin-bottom: 1rem; 
+    img, svg { width: 40px; height: auto; max-height: 34px; display: inline-block; margin-right: 1rem; }
+    p { display: inline-block; color: $dark; opacity: 0.8;
+      @include desk { font-size: 1.2rem; }
+      b { display: inline-block; padding: 0 4px; }
+      span { font-weight: 300; }
+      a { color: $blue; text-decoration: underline; }
+    }
+    &-confirm { padding: 1rem;
+      svg { width: 100%; max-width: 50px;
+        @include desk { width: 60px; max-height: 44px; }
+       }
+      p { font-size: 0.85rem;
+        b { display: inline; color: $black; padding: 0 4px 0 0; }
+        span { display: block; margin-bottom: 5px; }
+        a { padding-left: 3px; text-decoration: underline;
+          &::after {
+            font-family: $icon; content: "\f05a"; display: inline-block; padding-left: 3px;
+          }
+        }
+      }
+    }
+    &-modal {
+      width: 100%; display: block; position: fixed; @include full0;
+      visibility: hidden; opacity: 1; @include trans;
+      &.active { visibility: visible; opacity: 1; @include trans; }
+      div {
+        width: 100%; height: 100vh; background-color: rgba(black, 0.8);
+        @include flexbox; @include flow-cn; @include just-center; @include items-center;
+        section {
+          @include padblock(1rem); position: relative; margin: 0 auto; background-color: white;
+          width: 90%;
+          // @include tablet { width: 64%; }
+          @include tablet { width: 50%; padding: 2rem; }
+          p { margin-bottom: 1rem; font-size: 1rem; }
+          ul { @include padblock(1rem); }
+          li { margin-bottom: 0.5rem; position: relative; padding-left: 0.5rem;
+            &::before {
+              font-family: $icon; content: "\f0da"; display: inline-block; padding-right: 4px;
+              position: absolute; top: 0; left: -0.5rem;
+            }
+          }
+          a {
+            position: absolute; top: 0.5rem; right: 0.35rem; width: 30px; height: 30px;
+            @include padblock(0.5rem); border-radius: 99px; text-align: center;
+            font-family: Arial,sans-serif; font-size: 0.8rem;
+            &:hover { background-color: #eee; }
+          }
+        }
+      }
+    }
+  }
+
+  &--modal {
+    &-notification {
+      width: 100%; position: fixed; @include full0; background-color: rgba(black, 0.6); z-index: 9; @include trans; opacity: 0; visibility: hidden;
+      &.active { opacity: 1; visibility: visible; @include trans; }
+      > div { width: 100%; height: 100%; min-height: 100vh; @include flexbox; @include flow-cn; @include just-center; @include items-center;
+        > section {
+          width: 90%; @include padblock(1rem); background-color: white; position: relative;
+          @include tablet { width: 64%; }
+          @include desk { width: 38%; }
+          header { width: 100%; @include flexbox; @include flow-rw; @include just-center; @include items-center; margin-bottom: 1.5rem;
+            @include tablet { @include just-start; }
+            i { display: inline-block; width: 6rem; margin: 0 0 0.5rem 0;
+              @include tablet { width: 4rem; margin: 0 0.5rem 0 0; }
+              svg { width: 100%; height: auto; max-height: 3rem; display: block; }
+            }
+            h4 { display: inline-block; font-size: 1.5rem; font-weight: 300; color: $red;
+              @include tablet { font-size: 1.8rem; }
+            }
+          }
+          a.close { position: absolute; top: 1rem; right: 1rem; z-index: 1;
+            svg { display: inline-block; width: 1.4rem; }
+          }
+        }
+      }
+    }
+  }
+
+  &--ie-notification {
+    width: 100%; background-color: $sky; text-align: center;
+    @include padblock(0.5rem 1rem); margin: 0 auto 0 auto;
+    div { @include module; position: relative; }
+    a.link { @include flexbox; @include flow-rw; @include just-center; @include items-center;
+      span { display: inline-block; color: $black; font-size: 1rem; font-weight: 300; }
+      i { display: inline-block; margin: 0 0.5rem; line-height: 0;
+        svg { height: 1rem; width: auto; max-width: 1rem; }
+      }
+      &::after {
+        display: inline-block; font-size: 0.8rem; content: "Actualizar aquí"
+      }
+    }
+    a.close {
+      display: inline-block; color: $black; font-weight: 300; font-size: 1.4rem;
+      position: absolute; top: 0.5rem; right: 0.5rem; line-height: 0;
+      &::after { font-family: $icon; content: "\f00d"; }
+    }
+  }
+
+}
+
+#ui {
+  &--zoom-container {
+    position: absolute; top: 0; left: -5rem; border: 1px solid $light; background-color: white; z-index: 1;
+  }
+}
+

@@ -1,0 +1,167 @@
+.order {width: 100%; @include padbox(1em); @include module;
+  // @include flexbox; @include flow-rw; @include just-between; @include items-center;
+
+  &--box {width: 100%; @include padbox(1.5em); position: relative; box-shadow: 0px 2px 5px #ACAEAE;
+    border: 1px solid $light; border-left: 5px solid $red; margin-bottom: 1em;
+    @include flexbox; @include flow-cn; @include just-between; @include items-start;
+    @include tablet {width: 48.5%;}
+    @include desk {width: 100%; @include flow-rn; @include items-center;}
+    div {width: 100%; margin-bottom: 1em;
+      @include desk {width: 18%; margin-bottom: 0;}
+      h6 {font-size: 0.75em; font-weight: 400; margin-bottom: 5px;}
+      p {font-size: 0.95em; color: $grey;}
+    }
+    aside {width: 100%; padding: 0.5em 0;
+      @include desk {width: 28%; padding: 0; text-align: center;}
+      h3 {font-size: 1.375em; font-weight: 300; color: $red; padding-right: 0.5em; display: inline-block;}
+      p {display: inline-block; font-size: 1.875em;}
+    }
+    a {color: $blue; font-size: 0.8em; position: absolute; top: 1.5em; right: 1.5em;
+      &::after {content: "\f105"; font-family: $icon; display: inline-block; padding-left: 6px;}
+      &:hover {text-decoration: underline;}
+      @include desk {position: static; font-size: 0.95em; width: 10%;}
+    }
+  }
+
+  &--list {width: 100%; margin-bottom: 1em; @include flexbox; @include flow-rw; @include just-between; @include items-stretch;}
+
+  &--filters {width: 100%; margin: 1em 0; @include flexbox; @include flow-rw; @include just-between; @include items-start;
+    // nav {display: inline-block; width: 100%; margin-bottom: 1em; text-align: center;
+    //   @include tablet {width: 40%; text-align: right; @include order(1);}
+    //   @include desk {width: 30%; margin-bottom: 0;}
+    //   a {color: $blue; @include padbox(0.5em 1em); font-size: 0.9em; font-weight: 400;
+    //     &:nth-child(2) {border-left: 1px solid $light; border-right: 1px solid $light;}
+    //     &.active {color: $black;}
+    //   }
+    // }
+    &-date {width: 100%; @include flexbox; @include flow-rw; @include just-between; @include items-center;
+      @include tablet {width: 48%; @include order(0);}
+      @include desk {width: 54%;}
+      p {font-size: 0.8em; font-weight: 400; padding-bottom: 5px;
+        @include desk {padding-bottom: 0;}
+      }
+      b {font-size: 0.9em; font-weight: 300; @include padbox(0.5em 0);}
+      label {@include selectbox;
+        @include desk {width: auto;}
+        select {text-align-last: center;}
+      }
+    }
+    &-status { width: 100%; margin-bottom: 1em; text-align: center; @include flexbox; @include flow-rw; @include just-between; @include items-center;
+      @include tablet {width: 48%; text-align: right; @include order(1);}
+      @include desk {width: 36%; margin-bottom: 0;}
+      p {font-size: 0.8em; font-weight: 400; padding-bottom: 5px; text-align: left;
+        @include desk { padding-bottom: 0; display: inline-block; }
+      }
+      label {
+        @include desk { width: 48%; }
+        select {text-align-last: center;}
+      }
+    }
+
+  }
+
+  &--detail {width: 100%; margin-bottom: 1em;
+    > header {@include padbox(1rem); @include module;
+      @include desk {padding: 1em 0;}
+    }
+    > section {@include padbox(1em); @include flexbox; @include flow-rw; @include just-between; @include items-start;
+      @include desk {padding: 1em 0;}
+    }
+    h2 {display: inline-block; font-size: 1.25em; font-weight: 300; margin-bottom: 1em;}
+    a {font-size: 1em; color: $blue; margin-bottom: 1em;
+      &::before {content: "\f104"; font-family: $icon; display: inline-block; padding-right: 6px;}
+    }
+  }
+
+  &--item {width: 100%; @include module;
+    &-box {width: 100%; margin-bottom: 1em;
+      @include flexbox; @include flow-rw; @include just-between; @include items-start;
+      @include tablet {@include items-center;}
+      picture {width: 16%;
+        @include tablet {width: 14%;}
+        @include desk {width: 6%;}
+      }
+      section {width: 80%; @include flexbox; @include flow-rw; @include just-between; @include items-start;
+        @include tablet {width: 82%;}
+        @include desk {width: 92%;}
+        div {width: 100%; margin-bottom: 1em;
+          @include tablet {width: 48%;}
+          @include desk {width: 24%; margin-bottom: 0;}
+          b { display: block; font-size: 0.8em; font-weight: 400; margin-bottom: 8px;
+            & + p { margin-bottom: 8px; }
+          }
+          p { display: inline-block; font-size: 1em; font-weight: 300; color: $grey; }
+        }
+        aside {width: 100%;
+          @include tablet {width: 48%;}
+          @include desk {width: 24%;}
+          b {font-size: 1.375em; font-weight: 300; color: $red; padding-right: 0.5em;}
+          p {font-size: 1.875em; display: inline-block;}
+        }
+      }
+    }
+  }
+
+  &--status {width: 100%; background-color: $soft;
+    .module {@include flexbox; @include flow-rw; @include just-between; @include items-stretch; width: 100%;
+      @include desk {@include just-start;}
+    }
+    h2 { display: block; width: 100%; }
+    article {width: 100%; margin-bottom: 0.5em; @include padbox(0 1em);
+      @include flexbox; @include flow-rw; @include just-between; @include items-stretch;
+      @include tablet {width: 32%;}
+      @include desk {width: 24%; padding: 0 1em 0 0;}
+      aside {width: 21px; text-align: center;
+        @include flexbox; @include flow-cn; @include just-center; @include items-stretch;
+        @include tablet {width: 100%; @include flow-rn; @include just-start; margin-bottom: 1em;}
+        i {@include size(20px, 20px); border: 1px solid $black; @include radius(99px); margin-bottom: 5px;
+          @include tablet {margin: 0 5px 0 0;}
+          svg {display: block; @include size(20px, 20px); opacity: 0;}
+        }
+        b {@include size(21px, 2em); text-align: center; position: relative;
+          @include tablet {@include size(100%, 21px);}
+          &::before {content: ""; background-color: $black; width: 1px; display: inline-block; height: 100%;
+            @include tablet {width: 100%; height: 1px; vertical-align: middle;}
+          }
+        }
+      }
+      section {width: calc(100% - 40px);
+        @include tablet {width: 100%;}
+        h6 {font-size: 1em; font-weight: 300; color: $grey; padding-bottom: 5px;}
+        p {font-size: 0.85em; font-weight: 400; color: $black;}
+      }
+      &.active, &:first-of-type {
+        aside {
+          i {border-color: $green; background-color: $green;
+            svg {opacity: 0.9;}
+          }
+        }
+      }
+      &:last-of-type {
+        aside b::before {display: none;
+          @include tablet {display: inline-block;}
+        }
+      }
+    }
+  }
+
+  &--info {width: 100%; @include module;
+    section {width: 100%; @include padbox(0.5em 0);
+      @include flexbox; @include flow-rw; @include just-between; @include items-start;
+      article {width: 100%; margin-bottom: 1em;
+        @include tablet {width: 50%;}
+        @include desk {width: 19%;}
+        h6 {font-size: 0.8em; font-weight: 400; padding-bottom: 5px;}
+        p {font-size: 1em; color: $grey; display: inline-block; padding-bottom: 5px;}
+        a {font-size: 0.9em; color: $blue; display: block;
+          &:hover {text-decoration: underline;}
+          &::before { display: none; }
+        }
+        i {vertical-align: middle;
+          svg {height: 1em; display: block;}
+        }
+      }
+    }
+  }
+
+}

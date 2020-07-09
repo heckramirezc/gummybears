@@ -1,0 +1,96 @@
+.denied {width: 100%; @include padbox(1em); @include module;
+
+  > section {margin-bottom: 1em;
+    h2 {font-size: 1.25em; font-weight: 500; width: 100%; margin: 1em 0;}
+  }
+  &--header {width: 100%; text-align: center; padding-bottom: 2em; border-bottom: 1px solid $light;
+    span {margin-bottom: 1em;
+      svg {width: 60px;}
+    }
+    h1 {font-size: 2em; font-weight: 300;}
+  }
+  &--footer {width: 100%; @include flexbox; @include flow-rw; @include just-between; @include items-center; margin: 1em 0;
+    a {margin-bottom: 1em; width: 100%;
+      @include tablet {width: auto;}
+      &:first-of-type {@include btn-back; width: 100%; margin-bottom: 1em;
+        @include tablet {width: auto; margin-bottom: 0;}
+      }
+      &:last-of-type {@include btn-go;}
+    }
+  }
+
+  &--total {width: 100%; @include padbox(0 0 1em 0); text-align: right;
+    b {font-size: 2em; font-weight: 300; color: $red; padding-right: 6px;}
+    p {font-size: 2em; display: inline-block;}
+  }
+
+  &--address {width: 100%; margin-bottom: 1em;
+    @include flexbox; @include flow-rw; @include just-between; @include items-start;
+    article {width: 90%; margin-bottom: 1em;
+      @include tablet {width: 30%;}
+      @include desk {width: 25%;}
+      h3 {font-size: 0.875em; font-weight: 500; margin-bottom: 0.5em;}
+      //p {}
+      b {color: $grey; font-size: 0.875em; font-weight: 300;}
+    }
+  }
+
+  &--product {width: 100%; border-bottom: 1px solid $light; margin-bottom: 1em;
+    &-box {width: 100%; margin-bottom: 1em;
+      @include flexbox; @include flow-rw; @include just-between; @include items-start;
+
+      picture {text-align: center; width: 100%; margin-bottom: 1em;
+        img {display: inline-block; height: 180px; width: auto;
+          @include tablet {width: 100%; height: auto;}
+        }
+        @include tablet {width: 8%;}
+      }
+      aside {width: 14%; text-align: center;
+        label {width: 100%; font-size: 0.8em; font-weight: 500; margin-bottom: 0.5em; vertical-align: text-top;}
+        @include tablet {width: 5%;}
+      }
+      section {width: 84%;
+        @include flexbox; @include flow-rw; @include just-between; @include items-start;
+        @include tablet {width: 85%;}
+        article {width: 100%; margin-bottom: 1em;
+          @include flexbox; @include flow-rw; @include just-between; @include items-start;
+          label {width: 100%; font-size: 0.8em; font-weight: 500; margin-bottom: 0.5em;}
+          h4 {font-size: 1em; font-weight: 300; @include padblock(0 0em 0 0);
+            b {color: $grey; font-weight: 300;}
+          }
+          b {font-size: 1em; font-weight: 300; color: $grey; display: inline-block; }
+          i {@include padbox(0 1em); @include flex-grow(1);
+            &::after {content: " "; height: 1px; background-color: $light; display: inline-block; width: 100%; vertical-align: middle;}
+          }
+          p {font-size: 1em; text-align: right; display: inline-block; width: 100%; margin-top: 1em;
+            @include tablet {width: auto; margin-top: 0;}
+            .legend {font-size: 0.875em; width: auto; color: $grey; display: block; }
+          }
+          &:nth-of-type(1) {
+            h4 b {
+              &::after { display: none; }
+              @include tablet {
+                &::before { display: none; }
+                &::after { display: inline-block; content: "|"; padding: 0 0.5rem; color: $light; }
+              }
+              
+            }
+            p b {
+              &::before { content: "- "; color: $light; }
+              @include tablet {
+                &::before { display: none; }
+                &::after { display: inline-block; content: "|"; padding: 0 0.5rem; color: $light; }
+              }
+            }
+            p + p b::after { display: none; }
+            h4 + p, p + p { margin-top: 0.5rem; width: 100%; text-align: left;
+              @include tablet { width: auto; margin-top: 0; }
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+}

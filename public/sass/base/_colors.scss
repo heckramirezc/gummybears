@@ -1,0 +1,17 @@
+// Colors
+.color {
+	&-blanco {background-color: white; @include inset;}
+	&-negro {background-color: black;}
+	&-rojo {background-color: red;}
+	&-azul {background-color: blue;}
+	&-morado {background-color: purple;}
+	&-turquesa {background-color: turquoise;}
+	&-oro, &-dorado {background-color: gold;}
+	&-verde {background-color: green;}
+	&-amarillo {background-color: yellow;}
+	&-naranja {background-color: orange;}
+	&-rosa {background-color: pink;}
+	&-cafe, &-café {background-color: brown;}
+	&-plata, &-plateado {background-color: silver;}
+	&-gris, &-titanio &-gris-espacial {background-color: grey;}
+}

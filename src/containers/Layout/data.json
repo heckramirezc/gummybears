@@ -1,0 +1,3964 @@
+{
+  "Secciones": [
+    {
+      "Unico": "Z6_4808HGO0MO4I60AT95H7TT3Q62",
+      "URL": "https://www.claro.com.gt/personas",
+      "Descripcion": " Personas",
+      "HiddenHeader": "false",
+      "HiddenFooter": "false",
+      "HiddenPestana": "false",
+      "ClassAccesosRap": "",
+      "ClassContenido": "",
+      "ClassMenu": "movil",
+      "Hijos": [
+        {
+          "Unico": "Z6_4808HGO0MO4I60AT95H7TT3UJ0",
+          "URL": "https://www.claro.com.gt/personas/servicios",
+          "Descripcion": " Servicios",
+          "HiddenHeader": "false",
+          "HiddenFooter": "false",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "",
+          "ClassContenido": "",
+          "ClassMenu": "",
+          "Hijos": [
+            {
+              "Unico": "Z6_4808HGO0MO4I60AT95H7TT3UF7",
+              "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles",
+              "Descripcion": " Servicios M&oacute;viles",
+              "HiddenHeader": "false",
+              "HiddenFooter": "true",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "level2",
+              "ClassMenu": "movil",
+              "Hijos": [
+                {
+                  "Unico": "Z6_4808HGO0MO4I60AT95H7TT3PE3",
+                  "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/prepago",
+                  "Descripcion": " Prepago",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "movil",
+                  "Hijos": [
+                    {
+                      "Unico": "Z6_4808HGO0MO4I60AT95H7TT3DL3",
+                      "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/prepago/superpacks",
+                      "Descripcion": " Superpacks",
+                      "HiddenHeader": "true",
+                      "HiddenFooter": "false",
+                      "HiddenPestana": "false",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "level3",
+                      "ClassMenu": "",
+                      "Hijos": []
+                    },
+                    {
+                      "Unico": "Z6_4808HGO0MO4I60AT95H7TT3DF1",
+                      "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/prepago/promociones",
+                      "Descripcion": " Promociones",
+                      "HiddenHeader": "true",
+                      "HiddenFooter": "false",
+                      "HiddenPestana": "false",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "level3",
+                      "ClassMenu": "",
+                      "Hijos": []
+                    }
+                  ]
+                },
+                {
+                  "Unico": "Z6_4808HGO0MO4I60AT95H7TT3TS2",
+                  "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/servicios-adicionales-prepago",
+                  "Descripcion": " Servicios Adicionales Prepago",
+                  "HiddenHeader": "true",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "movil",
+                  "Hijos": [
+                    {
+                      "Unico": "Z6_6Q00G202MG3RC0ANO0DCQ12HJ4",
+                      "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/servicios-adicionales-prepago/financiamiento-smartphone",
+                      "Descripcion": " Financiamiento de Smartphone",
+                      "HiddenHeader": "true",
+                      "HiddenFooter": "true",
+                      "HiddenPestana": "false",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "level4",
+                      "ClassMenu": "",
+                      "Hijos": []
+                    },
+                    {
+                      "Unico": "Z6_6Q00G202MG3RC0ANO0DCQ129K0",
+                      "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/servicios-adicionales-prepago/kit-y-chip",
+                      "Descripcion": " Kit y Chip",
+                      "HiddenHeader": "true",
+                      "HiddenFooter": "true",
+                      "HiddenPestana": "false",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "level4",
+                      "ClassMenu": "",
+                      "Hijos": []
+                    },
+                    {
+                      "Unico": "Z6_IOHAH9S0MG4H60AFNDSFBICT72",
+                      "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/servicios-adicionales-prepago/buzon-voz-80",
+                      "Descripcion": " Buzon de Voz *80",
+                      "HiddenHeader": "true",
+                      "HiddenFooter": "true",
+                      "HiddenPestana": "false",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "level4",
+                      "ClassMenu": "",
+                      "Hijos": []
+                    }
+                  ]
+                },
+                {
+                  "Unico": "Z6_4808HGO0MO4I60AT95H7TT3BE2",
+                  "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/recargas",
+                  "Descripcion": " Recargas",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "movil",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_4808HGO0MO4I60AT95H7TT3NL2",
+                  "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/postpago",
+                  "Descripcion": " Postpago",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "movil",
+                  "Hijos": [
+                    {
+                      "Unico": "Z6_4808HGO0MO4I60AT95H7TTJ4O1",
+                      "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/postpago/planes-y-precios",
+                      "Descripcion": " Planes y precios",
+                      "HiddenHeader": "true",
+                      "HiddenFooter": "false",
+                      "HiddenPestana": "false",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "level3",
+                      "ClassMenu": "",
+                      "Hijos": []
+                    },
+                    {
+                      "Unico": "Z6_4808HGO0MO4I60AT95H7TTJ462",
+                      "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/postpago/promociones",
+                      "Descripcion": " Promociones",
+                      "HiddenHeader": "true",
+                      "HiddenFooter": "false",
+                      "HiddenPestana": "false",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "level3",
+                      "ClassMenu": "",
+                      "Hijos": []
+                    },
+                    {
+                      "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJAJCC0",
+                      "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/postpago/internacionales",
+                      "Descripcion": " Internacionales",
+                      "HiddenHeader": "true",
+                      "HiddenFooter": "true",
+                      "HiddenPestana": "true",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "level4",
+                      "ClassMenu": "",
+                      "Hijos": []
+                    },
+                    {
+                      "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJAJC94",
+                      "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/postpago/internet-compartido",
+                      "Descripcion": " Internet Compartido",
+                      "HiddenHeader": "true",
+                      "HiddenFooter": "true",
+                      "HiddenPestana": "true",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "level4",
+                      "ClassMenu": "",
+                      "Hijos": []
+                    }
+                  ]
+                },
+                {
+                  "Unico": "Z6_4808HGO0MO4I60AT95H7TTJ4L0",
+                  "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/servicios-adicionales-postpago",
+                  "Descripcion": " Servicios Adicionales Postpago",
+                  "HiddenHeader": "true",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "movil",
+                  "Hijos": [
+                    {
+                      "Unico": "Z6_6Q00G202MG3RC0ANO0DCQ12P25",
+                      "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/servicios-adicionales-postpago/sin-fronteras",
+                      "Descripcion": " Sin Fronteras",
+                      "HiddenHeader": "true",
+                      "HiddenFooter": "true",
+                      "HiddenPestana": "false",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "level4",
+                      "ClassMenu": "",
+                      "Hijos": []
+                    },
+                    {
+                      "Unico": "Z6_IOHAH9S0M83180QGAF6HPBHES2",
+                      "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/servicios-adicionales-postpago/centros-atencion-clientes",
+                      "Descripcion": " Centros de Atenci&oacute;n a Clientes",
+                      "HiddenHeader": "true",
+                      "HiddenFooter": "true",
+                      "HiddenPestana": "false",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "level4",
+                      "ClassMenu": "",
+                      "Hijos": []
+                    }
+                  ]
+                },
+                {
+                  "Unico": "Z6_4808HGO0MO4I60AT95H7TTJS70",
+                  "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/internet-movil",
+                  "Descripcion": " Internet M&oacute;vil",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "movil",
+                  "Hijos": [
+                    {
+                      "Unico": "Z6_4808HGO0MO4I60AT95H7TTJQO0",
+                      "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/internet-movil/planes-y-precios",
+                      "Descripcion": " Planes y precios",
+                      "HiddenHeader": "true",
+                      "HiddenFooter": "false",
+                      "HiddenPestana": "false",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "level3",
+                      "ClassMenu": "",
+                      "Hijos": []
+                    },
+                    {
+                      "Unico": "Z6_4808HGO0MO4I60AT95H7TTJQQ3",
+                      "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/internet-movil/promociones",
+                      "Descripcion": " Promociones",
+                      "HiddenHeader": "true",
+                      "HiddenFooter": "false",
+                      "HiddenPestana": "false",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "level3",
+                      "ClassMenu": "",
+                      "Hijos": []
+                    },
+                    {
+                      "Unico": "Z6_IOHAH9S0MG4H60AFNDSFBIK230",
+                      "URL": "https://www.claro.com.gt/personas/servicios/servicios-hogar/internet/computadoras-financiadas/",
+                      "Descripcion": " Equipos Financiados",
+                      "HiddenHeader": "true",
+                      "HiddenFooter": "true",
+                      "HiddenPestana": "false",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "",
+                      "ClassMenu": "",
+                      "Hijos": []
+                    }
+                  ]
+                },
+                {
+                  "Unico": "Z6_4808HGO0MO4I60AT95H7TTJQ51",
+                  "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/roaming",
+                  "Descripcion": " Roaming",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "movil",
+                  "Hijos": [
+                    {
+                      "Unico": "Z6_6Q00G202MG3RC0ANO0DCQ12917",
+                      "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/roaming/cobertura-roaming-postpago",
+                      "Descripcion": " Cobertura Roaming Postpago",
+                      "HiddenHeader": "true",
+                      "HiddenFooter": "true",
+                      "HiddenPestana": "true",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "level4",
+                      "ClassMenu": "",
+                      "Hijos": []
+                    },
+                    {
+                      "Unico": "Z6_6Q00G202MG3RC0ANO0DCQ12973",
+                      "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/roaming/prepago-plan-controlado",
+                      "Descripcion": " Roaming Prepago/ Plan Control",
+                      "HiddenHeader": "true",
+                      "HiddenFooter": "true",
+                      "HiddenPestana": "true",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "level4",
+                      "ClassMenu": "",
+                      "Hijos": []
+                    },
+                    {
+                      "Unico": "Z6_IOHAH9S0MGD000AN6G7MGM3017",
+                      "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/roaming/caracteristicas",
+                      "Descripcion": " Caracter&iacute;sticas",
+                      "HiddenHeader": "true",
+                      "HiddenFooter": "true",
+                      "HiddenPestana": "true",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "level4",
+                      "ClassMenu": "",
+                      "Hijos": []
+                    },
+                    {
+                      "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJAJNI2",
+                      "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/roaming/cobertura-roaming",
+                      "Descripcion": " Cobertura Roaming",
+                      "HiddenHeader": "true",
+                      "HiddenFooter": "true",
+                      "HiddenPestana": "false",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "level3",
+                      "ClassMenu": "",
+                      "Hijos": []
+                    },
+                    {
+                      "Unico": "Z6_IOHAH9S0M83180QGAF6HPB1J72",
+                      "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/roaming/configuracion-equipos",
+                      "Descripcion": " Configuraci&oacute;n de Equipos",
+                      "HiddenHeader": "true",
+                      "HiddenFooter": "true",
+                      "HiddenPestana": "true",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "level4",
+                      "ClassMenu": "",
+                      "Hijos": []
+                    },
+                    {
+                      "Unico": "Z6_IOHAH9S0M83180QGAF6HPB1BH4",
+                      "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/roaming/bienvenida",
+                      "Descripcion": " Bienvenida",
+                      "HiddenHeader": "true",
+                      "HiddenFooter": "true",
+                      "HiddenPestana": "true",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "level4",
+                      "ClassMenu": "",
+                      "Hijos": []
+                    }
+                  ]
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0M05250ANOMOFQK2526",
+                  "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/4g-lte",
+                  "Descripcion": " 4G LTE",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "true",
+                  "HiddenPestana": "true",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "",
+                  "Hijos": [
+                    {
+                      "Unico": "Z6_IOHAH9S0MGD000AN6G7MGM3042",
+                      "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/4g-lte/mapa-cobertura",
+                      "Descripcion": " Mapa de cobertura 4G LTE",
+                      "HiddenHeader": "true",
+                      "HiddenFooter": "true",
+                      "HiddenPestana": "true",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "level4",
+                      "ClassMenu": "",
+                      "Hijos": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA31P4",
+              "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/prepago",
+              "Descripcion": " Servicios M&oacute;viles",
+              "HiddenHeader": "true",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "",
+              "Hijos": []
+            },
+            {
+              "Unico": "Z6_4808HGO0MO4I60AT95H7TTJJ50",
+              "URL": "https://www.claro.com.gt/personas/servicios/servicios-hogar",
+              "Descripcion": " Servicios Hogar",
+              "HiddenHeader": "false",
+              "HiddenFooter": "true",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "level2",
+              "ClassMenu": "hogar",
+              "Hijos": [
+                {
+                  "Unico": "Z6_4808HGO0MO4I60AT95H7TTJ7R0",
+                  "URL": "https://www.claro.com.gt/personas/servicios/servicios-hogar/telefonia-fija",
+                  "Descripcion": " Telefon&iacute;a Fija",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "movil",
+                  "Hijos": [
+                    {
+                      "Unico": "Z6_4808HGO0MO4I60AT95H7TTB080",
+                      "URL": "https://www.claro.com.gt/personas/servicios/servicios-hogar/telefonia-fija/planes-y-precios",
+                      "Descripcion": " Planes y precios",
+                      "HiddenHeader": "true",
+                      "HiddenFooter": "false",
+                      "HiddenPestana": "false",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "level3",
+                      "ClassMenu": "",
+                      "Hijos": []
+                    },
+                    {
+                      "Unico": "Z6_4808HGO0MO4I60AT95H7TTB0A3",
+                      "URL": "https://www.claro.com.gt/personas/servicios/servicios-hogar/telefonia-fija/promociones",
+                      "Descripcion": " Promociones",
+                      "HiddenHeader": "true",
+                      "HiddenFooter": "false",
+                      "HiddenPestana": "false",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "level3",
+                      "ClassMenu": "",
+                      "Hijos": []
+                    },
+                    {
+                      "Unico": "Z6_IOHAH9S0MGRK30QOVCO1HUIFR3",
+                      "URL": "https://www.claro.com.gt/personas/servicios/servicios-hogar/telefonia-fija/codigos-internacionales",
+                      "Descripcion": " C&oacute;digos Internacionales",
+                      "HiddenHeader": "true",
+                      "HiddenFooter": "true",
+                      "HiddenPestana": "true",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "level4",
+                      "ClassMenu": "",
+                      "Hijos": []
+                    }
+                  ]
+                },
+                {
+                  "Unico": "Z6_4808HGO0MO4I60AT95H7TTB051",
+                  "URL": "https://www.claro.com.gt/personas/servicios/servicios-hogar/internet",
+                  "Descripcion": " Internet",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "movil",
+                  "Hijos": [
+                    {
+                      "Unico": "Z6_4808HGO0MO4I60AT95H7TTBC14",
+                      "URL": "https://www.claro.com.gt/personas/servicios/servicios-hogar/internet/planes-y-precios",
+                      "Descripcion": " Planes y precios",
+                      "HiddenHeader": "true",
+                      "HiddenFooter": "false",
+                      "HiddenPestana": "false",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "level3",
+                      "ClassMenu": "",
+                      "Hijos": []
+                    },
+                    {
+                      "Unico": "Z6_4808HGO0MO4I60AT95H7TTBC37",
+                      "URL": "https://www.claro.com.gt/personas/servicios/servicios-hogar/internet/promociones",
+                      "Descripcion": " Promociones",
+                      "HiddenHeader": "true",
+                      "HiddenFooter": "false",
+                      "HiddenPestana": "false",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "level3",
+                      "ClassMenu": "",
+                      "Hijos": []
+                    },
+                    {
+                      "Unico": "Z6_IOHAH9S0M05250ANOMOFQKIOU6",
+                      "URL": "https://www.claro.com.gt/personas/servicios/servicios-hogar/internet/computadoras-financiadas",
+                      "Descripcion": " Equipos Financiados",
+                      "HiddenHeader": "true",
+                      "HiddenFooter": "false",
+                      "HiddenPestana": "false",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "level3",
+                      "ClassMenu": "",
+                      "Hijos": []
+                    }
+                  ]
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0MGCL30Q8668MSUHE10",
+                  "URL": "https://www.claro.com.gt/personas/servicios/servicios-hogar/tv",
+                  "Descripcion": " TV",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "",
+                  "Hijos": [
+                    {
+                      "Unico": "Z6_4808HGO0MO4I60AT95H7TTBSG5",
+                      "URL": "https://www.claro.com.gt/personas/servicios/servicios-hogar/tv/claro-tv",
+                      "Descripcion": " Claro TV",
+                      "HiddenHeader": "false",
+                      "HiddenFooter": "false",
+                      "HiddenPestana": "false",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "level3",
+                      "ClassMenu": "movil",
+                      "Hijos": []
+                    },
+                    {
+                      "Unico": "Z6_IOHAH9S0M05250ANOMOFQK2TQ7",
+                      "URL": "https://www.claro.com.gt/personas/servicios/servicios-hogar/tv/tv-satelital",
+                      "Descripcion": " Tv Satelital",
+                      "HiddenHeader": "false",
+                      "HiddenFooter": "false",
+                      "HiddenPestana": "false",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "level3",
+                      "ClassMenu": "",
+                      "Hijos": []
+                    },
+                    {
+                      "Unico": "Z6_IOHAH9S0MGCL30Q8668MSUH040",
+                      "URL": "https://www.claro.com.gt/personas/servicios/servicios-hogar/tv/claro-tv-inalambrico",
+                      "Descripcion": " Claro TV Inal&aacute;mbrico",
+                      "HiddenHeader": "false",
+                      "HiddenFooter": "true",
+                      "HiddenPestana": "false",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "level3",
+                      "ClassMenu": "",
+                      "Hijos": []
+                    }
+                  ]
+                },
+                {
+                  "Unico": "Z6_4808HGO0MO4I60AT95H7TTBH34",
+                  "URL": "https://www.claro.com.gt/personas/servicios/servicios-hogar/todo-claro",
+                  "Descripcion": " Todo Claro",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "",
+                  "Hijos": [
+                    {
+                      "Unico": "Z6_IOHAH9S0MGCL30Q8668MSU9TI6",
+                      "URL": "https://www.claro.com.gt/personas/servicios/servicios-hogar/todo-claro/2-play",
+                      "Descripcion": " Claro Hogar Doble",
+                      "HiddenHeader": "false",
+                      "HiddenFooter": "false",
+                      "HiddenPestana": "false",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "level3",
+                      "ClassMenu": "",
+                      "Hijos": []
+                    },
+                    {
+                      "Unico": "Z6_4808HGO0MO4I60AT95H7TTB9F0",
+                      "URL": "https://www.claro.com.gt/personas/servicios/servicios-hogar/todo-claro/3-play",
+                      "Descripcion": " Claro Hogar Triple",
+                      "HiddenHeader": "false",
+                      "HiddenFooter": "false",
+                      "HiddenPestana": "false",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "level3",
+                      "ClassMenu": "",
+                      "Hijos": []
+                    },
+                    {
+                      "Unico": "Z6_IOHAH9S0MGCL30Q8668MSU9VF6",
+                      "URL": "https://www.claro.com.gt/personas/servicios/servicios-hogar/todo-claro/3-play-v1",
+                      "Descripcion": " Z6_IOHAH9S0MGCL30Q8668MSU9VF6",
+                      "HiddenHeader": "true",
+                      "HiddenFooter": "true",
+                      "HiddenPestana": "true",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "level3",
+                      "ClassMenu": "",
+                      "Hijos": []
+                    }
+                  ]
+                },
+                {
+                  "Unico": "Z6_4808HGO0MO4I60AT95H7TTBPU1",
+                  "URL": "https://www.claro.com.gt/personas/servicios/servicios-hogar/larga-distancia-internacional",
+                  "Descripcion": " Larga Distancia Internacional",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "movil",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_6Q00G202MOO1E0A7FPFL0E3080",
+                  "URL": "https://www.claro.com.gt/personas/servicios/servicios-hogar/arma-tu-play",
+                  "Descripcion": " Arma tu Play",
+                  "HiddenHeader": "true",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "armaPlay v2",
+                  "ClassMenu": "",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0M05250ANOMOFQK2BA6",
+                  "URL": "https://www.claro.com.gt/personas/servicios/servicios-hogar/publicidad-claro-tv",
+                  "Descripcion": " Publicidad en Claro Tv",
+                  "HiddenHeader": "true",
+                  "HiddenFooter": "true",
+                  "HiddenPestana": "true",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "",
+                  "Hijos": []
+                }
+              ]
+            },
+            {
+              "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA31P5",
+              "URL": "https://www.claro.com.gt/personas/servicios/servicios-hogar/telefonia-fija",
+              "Descripcion": " Servicios Hogar",
+              "HiddenHeader": "true",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "",
+              "Hijos": []
+            },
+            {
+              "Unico": "Z6_4808HGO0MO4I60AT95H7TTBTL5",
+              "URL": "https://www.claro.com.gt/personas/servicios/claro-club",
+              "Descripcion": " Claro club",
+              "HiddenHeader": "true",
+              "HiddenFooter": "true",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "level3",
+              "ClassMenu": "claroClub",
+              "Hijos": [
+                {
+                  "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA39D0",
+                  "URL": "https://www.claro.com.gt/personas/servicios/claro-club/como-funciona",
+                  "Descripcion": " Preguntas Frecuentes",
+                  "HiddenHeader": "true",
+                  "HiddenFooter": "true",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level4",
+                  "ClassMenu": "",
+                  "Hijos": []
+                }
+              ]
+            },
+            {
+              "Unico": "Z6_IOHAH9S0M05250ANOMOFQK2U10",
+              "URL": "https://www.claro.com.gt/wps/myportal/gt/pcc/personas/servicios/claro-club/",
+              "Descripcion": " Claro club",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "claroClub",
+              "Hijos": []
+            },
+            {
+              "Unico": "Z6_IOHAH9S0MGCL30Q8668MSU9CJ1",
+              "URL": "https://www.claro.com.gt/personas/servicios/iot",
+              "Descripcion": " Internet of Things",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "true",
+              "ClassAccesosRap": "",
+              "ClassContenido": "level3",
+              "ClassMenu": "iot",
+              "Hijos": [
+                {
+                  "Unico": "Z6_IOHAH9S0MGCL30Q8668MSU9I33",
+                  "URL": "https://www.claro.com.gt/personas/servicios/iot/espacios-inteligentes",
+                  "Descripcion": " Espacios Inteligentes",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "true",
+                  "HiddenPestana": "true",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "",
+                  "Hijos": [
+                    {
+                      "Unico": "Z6_IOHAH9S0MGRK30QOVCO1HU2LN2",
+                      "URL": "https://www.claro.com.gt/personas/servicios/iot/espacios-inteligentes/planes",
+                      "Descripcion": " Planes",
+                      "HiddenHeader": "true",
+                      "HiddenFooter": "true",
+                      "HiddenPestana": "false",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "level4",
+                      "ClassMenu": "",
+                      "Hijos": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Unico": "Z6_4808HGO0MO4I60AT95H7TTBR65",
+              "URL": "https://www.claro.com.gt/personas/servicios/entretenimiento",
+              "Descripcion": " Entretenimiento",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "entretenimiento",
+              "Hijos": [
+                {
+                  "Unico": "Z6_4808HGO0MO4I60AT95H7TTBRR3",
+                  "URL": "https://www.claro.com.gt/personas/servicios/entretenimiento/claro-musica",
+                  "Descripcion": " Claro m&uacute;sica",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "movil",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_4808HGO0MO4I60AT95H7TTR837",
+                  "URL": "https://www.claro.com.gt/personas/servicios/entretenimiento/claro-video",
+                  "Descripcion": " Claro video",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "movil",
+                  "Hijos": [
+                    {
+                      "Unico": "Z6_4808HGO0MO4I60AT95H7TTRC61",
+                      "URL": "https://www.claro.com.gt/personas/servicios/entretenimiento/claro-video/como-usar",
+                      "Descripcion": " &iquest;C&oacute;mo usar&#63;",
+                      "HiddenHeader": "true",
+                      "HiddenFooter": "false",
+                      "HiddenPestana": "false",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "level3",
+                      "ClassMenu": "movil",
+                      "Hijos": []
+                    }
+                  ]
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0M05250ANOMOFQK2NM4",
+                  "URL": "https://www.claro.com.gt/personas/servicios/entretenimiento/claro-play",
+                  "Descripcion": " Claro play",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "true",
+                  "HiddenPestana": "true",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "",
+                  "Hijos": []
+                }
+              ]
+            },
+            {
+              "Unico": "Z6_6Q00G202M8UVE0A7J4GVA42060",
+              "URL": "https://www.claro.com.gt/personas/servicios/promociones",
+              "Descripcion": " Promociones",
+              "HiddenHeader": "true",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "level3",
+              "ClassMenu": "promocion",
+              "Hijos": [
+                {
+                  "Unico": "Z6_6Q00G202M8UVE0A7J4GVA420M4",
+                  "URL": "https://www.claro.com.gt/personas/servicios/promociones/detalle",
+                  "Descripcion": " Detalle",
+                  "HiddenHeader": "true",
+                  "HiddenFooter": "true",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level4",
+                  "ClassMenu": "",
+                  "Hijos": []
+                }
+              ]
+            },
+            {
+              "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA3720",
+              "URL": "https://www.claro.com.gt/personas/servicios/promociones",
+              "Descripcion": " Promociones",
+              "HiddenHeader": "false",
+              "HiddenFooter": "true",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "promocion",
+              "Hijos": [
+                {
+                  "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA37Q3",
+                  "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/prepago/promociones",
+                  "Descripcion": " Prepago",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA3762",
+                  "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/recargas/promociones",
+                  "Descripcion": " Recargas",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA3763",
+                  "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/postpago/promociones",
+                  "Descripcion": " Postpago",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA37M2",
+                  "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/internet-movil/promociones",
+                  "Descripcion": " Internet m&oacute;vil",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA37M3",
+                  "URL": "https://www.claro.com.gt/personas/servicios/servicios-hogar/internet/promociones",
+                  "Descripcion": " Internet",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "",
+                  "Hijos": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Unico": "Z6_4808HGO0MO4I60ATDDHDG1IIG7",
+          "URL": "http://asistencia.claro.com.gt/",
+          "Descripcion": " Soporte",
+          "HiddenHeader": "false",
+          "HiddenFooter": "false",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "",
+          "ClassContenido": "",
+          "ClassMenu": "",
+          "Hijos": [
+            {
+              "Unico": "Z6_6Q00G202MOG2E0ANG3LM2J1884",
+              "URL": "http://asistencia.claro.com.gt/",
+              "Descripcion": " Asistencia",
+              "HiddenHeader": "true",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "",
+              "Hijos": []
+            },
+            {
+              "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA31U5",
+              "URL": "https://www.claro.com.gt/personas/ayuda/telefonos",
+              "Descripcion": " Tel&eacute;fonos",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "",
+              "Hijos": []
+            },
+            {
+              "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA3UR3",
+              "URL": "https://www.claro.com.gt/personas/servicios/servicios-hogar/publicidad-claro-tv/",
+              "Descripcion": " Claro publicidad",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "",
+              "Hijos": []
+            }
+          ]
+        },
+        {
+          "Unico": "Z6_4808HGO0MO4I60AT95H7TTRML2",
+          "URL": "https://www.claro.com.gt/personas/mi-claro",
+          "Descripcion": " Mi Claro",
+          "HiddenHeader": "true",
+          "HiddenFooter": "false",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "",
+          "ClassContenido": "",
+          "ClassMenu": "",
+          "Hijos": [
+            {
+              "Unico": "Z6_IOHAH9S0MG4H60AFNDSFBI0BP1",
+              "URL": "https://www.claro.com.gt/personas/mi-claro/inicio-de-sesion",
+              "Descripcion": " Inicio de Sesi&oacute;n",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "",
+              "Hijos": []
+            },
+            {
+              "Unico": "Z6_IOHAH9S0MG4H60AFNDSFBI0B35",
+              "URL": "https://www.claro.com.gt/personas/mi-claro/factura-electronica",
+              "Descripcion": " Factura electr&oacute;nica",
+              "HiddenHeader": "true",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "level3",
+              "ClassMenu": "",
+              "Hijos": [
+                {
+                  "Unico": "Z6_IOHAH9S0MG4H60AFNDSFBI0NJ4",
+                  "URL": "https://www.claro.com.gt/personas/mi-claro/factura-electronica/formulario",
+                  "Descripcion": " Formulario",
+                  "HiddenHeader": "true",
+                  "HiddenFooter": "true",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "",
+                  "Hijos": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Unico": "Z6_6Q00G202M0C980A7SQELJ630G0",
+          "URL": "https://www.claro.com.gt/personas/forms",
+          "Descripcion": " Formularios",
+          "HiddenHeader": "true",
+          "HiddenFooter": "true",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "",
+          "ClassContenido": "",
+          "ClassMenu": "",
+          "Hijos": [
+            {
+              "Unico": "Z6_6Q00G202M0C980A7SQELJ63041",
+              "URL": "https://www.claro.com.gt/personas/forms/contacto",
+              "Descripcion": " formularios.contacto",
+              "HiddenHeader": "true",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "level3",
+              "ClassMenu": "",
+              "Hijos": []
+            },
+            {
+              "Unico": "Z6_6Q00G202M8KAE0A76OPMSV2000",
+              "URL": "https://www.claro.com.gt/personas/forms/gracias",
+              "Descripcion": " formularios.gracias",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "",
+              "Hijos": []
+            },
+            {
+              "Unico": "Z6_6Q00G202MO0Q70A7B3158C2O17",
+              "URL": "https://www.claro.com.gt/personas/forms/solicitud-producto",
+              "Descripcion": " Solicitud de Producto",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "",
+              "Hijos": []
+            },
+            {
+              "Unico": "Z6_6Q00G202MGBV90A7N21GQ210I5",
+              "URL": "https://www.claro.com.gt/personas/forms/formulario-generico",
+              "Descripcion": " Formulario Gen&eacute;rico",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "",
+              "Hijos": []
+            },
+            {
+              "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJAJIR3",
+              "URL": "https://www.claro.com.gt/personas/forms/factura-electronica",
+              "Descripcion": " Factura electr&oacute;nica",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "",
+              "Hijos": []
+            },
+            {
+              "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJABQM6",
+              "URL": "https://www.claro.com.gt/personas/forms/solicitud-producto-postpago",
+              "Descripcion": " Solicitud Producto Postpago",
+              "HiddenHeader": "true",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "level3",
+              "ClassMenu": "",
+              "Hijos": []
+            },
+            {
+              "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJABQL0",
+              "URL": "https://www.claro.com.gt/personas/forms/solicitud-producto-multimedia",
+              "Descripcion": " Solicitud Producto Multimedia",
+              "HiddenHeader": "true",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "level3",
+              "ClassMenu": "",
+              "Hijos": []
+            }
+          ]
+        },
+        {
+          "Unico": "Z6_6Q00G202M0M520A7HOC8UJ1003",
+          "URL": "https://www.claro.com.gt/personas/legal-regulatorio",
+          "Descripcion": " Legal y Regulatorio",
+          "HiddenHeader": "true",
+          "HiddenFooter": "true",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "",
+          "ClassContenido": "",
+          "ClassMenu": "",
+          "Hijos": []
+        },
+        {
+          "Unico": "Z6_6Q00G202MGFG00A73CIN9210O1",
+          "URL": "https://www.claro.com.gt/personas/app",
+          "Descripcion": " app",
+          "HiddenHeader": "true",
+          "HiddenFooter": "true",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "",
+          "ClassContenido": "",
+          "ClassMenu": "",
+          "Hijos": [
+            {
+              "Unico": "Z6_6Q00G202MGFG00A73CIN921040",
+              "URL": "https://www.claro.com.gt/personas/app/filtro-disponibilidad",
+              "Descripcion": " Z6_6Q00G202MGFG00A73CIN921040",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "",
+              "Hijos": []
+            },
+            {
+              "Unico": "Z6_6Q00G202MGBV90A7N21GQ21082",
+              "URL": "https://www.claro.com.gt/personas/app/encuesta",
+              "Descripcion": " Encuesta",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "",
+              "Hijos": []
+            }
+          ]
+        },
+        {
+          "Unico": "Z6_6Q00G202M8AC50A7759ULL20C5",
+          "URL": "https://www.claro.com.gt/personas/buscador",
+          "Descripcion": " Buscador",
+          "HiddenHeader": "true",
+          "HiddenFooter": "true",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "",
+          "ClassContenido": "level3",
+          "ClassMenu": "",
+          "Hijos": []
+        },
+        {
+          "Unico": "Z6_6Q00G202MO1T10ANGIMQL630E0",
+          "URL": "https://www.claro.com.gt/personas/ayuda",
+          "Descripcion": " Ayuda",
+          "HiddenHeader": "true",
+          "HiddenFooter": "true",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "",
+          "ClassContenido": "",
+          "ClassMenu": "",
+          "Hijos": [
+            {
+              "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA31E6",
+              "URL": "https://www.claro.com.gt/personas/ayuda/telefonos",
+              "Descripcion": " Tel&eacute;fonos",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "",
+              "Hijos": []
+            }
+          ]
+        },
+        {
+          "Unico": "Z6_IOHAH9S0MGCL30Q8668MSUH1A5",
+          "URL": "https://www.claro.com.gt/personas/cacs",
+          "Descripcion": " Centros Claro",
+          "HiddenHeader": "true",
+          "HiddenFooter": "true",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "",
+          "ClassContenido": "level3",
+          "ClassMenu": "",
+          "Hijos": []
+        },
+        {
+          "Unico": "Z6_IOHAH9S0MGRK30QOVCO1HUIVD7",
+          "URL": "https://www.claro.com.gt/personas/buscador-elastic",
+          "Descripcion": " Buscador elastic",
+          "HiddenHeader": "true",
+          "HiddenFooter": "true",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "",
+          "ClassContenido": "level3",
+          "ClassMenu": "",
+          "Hijos": []
+        }
+      ]
+    },
+    {
+      "Unico": "Z6_4808HGO0MO4I60ATDDHDG1I945",
+      "URL": "https://www.claro.com.gt/empresas",
+      "Descripcion": " Empresas",
+      "HiddenHeader": "false",
+      "HiddenFooter": "false",
+      "HiddenPestana": "false",
+      "ClassAccesosRap": "",
+      "ClassContenido": "",
+      "ClassMenu": "movil",
+      "Hijos": [
+        {
+          "Unico": "Z6_4808HGO0MO4I60ATDDHDG1ILP3",
+          "URL": "https://www.claro.com.gt/empresas/soluciones",
+          "Descripcion": " Soluciones",
+          "HiddenHeader": "false",
+          "HiddenFooter": "false",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "",
+          "ClassContenido": "",
+          "ClassMenu": "",
+          "Hijos": [
+            {
+              "Unico": "Z6_4808HGO0MO4I60ATDDHDG1IL37",
+              "URL": "https://www.claro.com.gt/empresas/soluciones/comunicacion-movil",
+              "Descripcion": " Comunicaci&oacute;n M&oacute;vil",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "level2",
+              "ClassMenu": "movil",
+              "Hijos": [
+                {
+                  "Unico": "Z6_4808HGO0MO4I60ATDDHDG1I3N3",
+                  "URL": "https://www.claro.com.gt/empresas/soluciones/comunicacion-movil/planes-moviles-pospago",
+                  "Descripcion": " Planes M&oacute;viles Pospago",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "movil",
+                  "Hijos": [
+                    {
+                      "Unico": "Z6_6Q00G202MO0Q70A7B3158C20E5",
+                      "URL": "https://www.claro.com.gt/empresas/soluciones/comunicacion-movil/planes-moviles-pospago/sin-fronteras",
+                      "Descripcion": " Sin Fronteras",
+                      "HiddenHeader": "true",
+                      "HiddenFooter": "false",
+                      "HiddenPestana": "false",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "",
+                      "ClassMenu": "",
+                      "Hijos": []
+                    }
+                  ]
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0MGD000AN6G7MGMJNL1",
+                  "URL": "https://www.claro.com.gt/empresas/soluciones/comunicacion-movil/paquetes-de-internet-y-sms",
+                  "Descripcion": " Paquetes de Internet y SMS",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "true",
+                  "HiddenPestana": "true",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level2",
+                  "ClassMenu": "",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_4808HGO0MO4I60ATDDHDG1A0C1",
+                  "URL": "https://www.claro.com.gt/empresas/soluciones/comunicacion-movil/roaming-larga-distancia-internacional",
+                  "Descripcion": " Roaming y Larga Distancia Internacional",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "movil",
+                  "Hijos": []
+                }
+              ]
+            },
+            {
+              "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJAB284",
+              "URL": "https://www.claro.com.gt/empresas/soluciones/paquetes",
+              "Descripcion": " Paquetes",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "ico_armaPaqueteC",
+              "Hijos": [
+                {
+                  "Unico": "Z6_IOHAH9S0MGD000AN6G7MGMBD43",
+                  "URL": "https://www.claro.com.gt/empresas/soluciones/paquetes/paquetes-pymes",
+                  "Descripcion": " Paquetes Pymes",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "true",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "",
+                  "Hijos": [
+                    {
+                      "Unico": "Z6_IOHAH9S0MGCL30Q8668MSUPA44",
+                      "URL": "https://www.claro.com.gt/empresas/soluciones/paquetes/paquetes-pymes/planes-y-precios",
+                      "Descripcion": " Planes y precios",
+                      "HiddenHeader": "true",
+                      "HiddenFooter": "true",
+                      "HiddenPestana": "false",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "level3",
+                      "ClassMenu": "",
+                      "Hijos": []
+                    }
+                  ]
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0MGD000AN6G7MGMBJ83",
+                  "URL": "https://www.claro.com.gt/empresas/soluciones/paquetes/paquete-empresas",
+                  "Descripcion": " Paquete Empresas",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "true",
+                  "HiddenPestana": "true",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level2",
+                  "ClassMenu": "",
+                  "Hijos": []
+                }
+              ]
+            },
+            {
+              "Unico": "Z6_4808HGO0MO4I60ATDDHDG1A440",
+              "URL": "https://www.claro.com.gt/empresas/soluciones/comunicacion-fija",
+              "Descripcion": " Comunicaci&oacute;n Fija",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "level2",
+              "ClassMenu": "ico_asesoriaEficienteE",
+              "Hijos": [
+                {
+                  "Unico": "Z6_4808HGO0MO4I60ATDDHDG1ALD1",
+                  "URL": "https://www.claro.com.gt/empresas/soluciones/comunicacion-fija/telefonia-fija-empresarial",
+                  "Descripcion": " Telefon&iacute;a Fija Empresarial",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "movil",
+                  "Hijos": [
+                    {
+                      "Unico": "Z6_IOHAH9S0MGD000AN6G7MGMB054",
+                      "URL": "https://www.claro.com.gt/empresas/soluciones/comunicacion-fija/telefonia-fija-empresarial/financiamiento-de-equipos",
+                      "Descripcion": " Financiamiento de equipos",
+                      "HiddenHeader": "true",
+                      "HiddenFooter": "true",
+                      "HiddenPestana": "false",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "level3",
+                      "ClassMenu": "",
+                      "Hijos": []
+                    }
+                  ]
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0MGD000AN6G7MGMBO92",
+                  "URL": "https://www.claro.com.gt/empresas/soluciones/comunicacion-fija/1-801-nacional",
+                  "Descripcion": " 1-801 Nacional",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "true",
+                  "HiddenPestana": "true",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level2",
+                  "ClassMenu": "",
+                  "Hijos": []
+                }
+              ]
+            },
+            {
+              "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJAB285",
+              "URL": "https://www.claro.com.gt/empresas/soluciones/conectividad",
+              "Descripcion": " Conectividad",
+              "HiddenHeader": "false",
+              "HiddenFooter": "true",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "ico_megasPlanC",
+              "Hijos": [
+                {
+                  "Unico": "Z6_4808HGO0MO4I60ATDDHDG1I7H3",
+                  "URL": "https://www.claro.com.gt/empresas/soluciones/conectividad/internet-movil",
+                  "Descripcion": " Internet m&oacute;vil",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "movil",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_4808HGO0MO4I60ATDDHDG1AEN1",
+                  "URL": "https://www.claro.com.gt/empresas/soluciones/conectividad/internet-empresarial",
+                  "Descripcion": " Internet Empresarial",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "movil",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0MGD000AN6G7MGMBS80",
+                  "URL": "https://www.claro.com.gt/empresas/soluciones/conectividad/enlace-de-datos",
+                  "Descripcion": " Enlace de Datos",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "true",
+                  "HiddenPestana": "true",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level2",
+                  "ClassMenu": "",
+                  "Hijos": []
+                }
+              ]
+            },
+            {
+              "Unico": "Z6_6Q00G202MO0Q70A7B3158C2OP3",
+              "URL": "https://www.claro.com.gt/empresas/soluciones/soluciones-claro",
+              "Descripcion": " Soluciones Claro",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "level2",
+              "ClassMenu": "ico_erpC",
+              "Hijos": [
+                {
+                  "Unico": "Z6_6Q00G202MO0Q70A7B3158C2IU2",
+                  "URL": "https://www.claro.com.gt/empresas/soluciones/soluciones-claro/mensaje-empresarial",
+                  "Descripcion": " Mensajer&iacute;a Empresarial",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "true",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "movil",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_6Q00G202MO0Q70A7B3158C2CH1",
+                  "URL": "https://www.claro.com.gt/empresas/soluciones/soluciones-claro/pbx-movil",
+                  "Descripcion": " PBX M&oacute;vil",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "true",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "movil",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_6Q00G202MO0Q70A7B3158C2LC3",
+                  "URL": "https://www.claro.com.gt/empresas/soluciones/soluciones-claro/formularios-moviles",
+                  "Descripcion": " Formularios M&oacute;viles",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "true",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "movil",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_6Q00G202MO0Q70A7B3158C26M2",
+                  "URL": "https://www.claro.com.gt/empresas/soluciones/soluciones-claro/fuerza-de-ventas",
+                  "Descripcion": " Fuerza de Ventas",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "true",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "movil",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_6Q00G202MO0Q70A7B3158C2UQ0",
+                  "URL": "https://www.claro.com.gt/empresas/soluciones/soluciones-claro/wifi-empresarial-analytics",
+                  "Descripcion": " Wifi Empresarial + Analytics",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "true",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "movil",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_6Q00G202MO0Q70A7B3158C2923",
+                  "URL": "https://www.claro.com.gt/empresas/soluciones/soluciones-claro/videovigilancia",
+                  "Descripcion": " Videovigilancia",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "true",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "movil",
+                  "Hijos": []
+                }
+              ]
+            },
+            {
+              "Unico": "Z6_6Q00G202MOSE90ANK5KHVE10H0",
+              "URL": "https://www.claro.com.gt/empresas/soluciones/comunicacion-movil/planes-moviles-pospago/",
+              "Descripcion": " Comunicaci&oacute;n M&oacute;vil",
+              "HiddenHeader": "true",
+              "HiddenFooter": "true",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "",
+              "Hijos": []
+            },
+            {
+              "Unico": "Z6_6Q00G202MOSE90ANK5KHVE1064",
+              "URL": "https://www.claro.com.gt/empresas/soluciones/comunicacion-fija/telefonia-fija-empresarial/",
+              "Descripcion": " Comunicaci&oacute;n Fija",
+              "HiddenHeader": "true",
+              "HiddenFooter": "true",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "",
+              "Hijos": []
+            },
+            {
+              "Unico": "Z6_6Q00G202MOSE90ANK5KHVE10H1",
+              "URL": "https://www.claro.com.gt/empresas/soluciones/soluciones-claro/pbx-movil",
+              "Descripcion": " Soluciones Claro",
+              "HiddenHeader": "true",
+              "HiddenFooter": "true",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "",
+              "Hijos": []
+            },
+            {
+              "Unico": "Z6_6Q00G202M8QM30ANG41O5H1002",
+              "URL": "http://www.clarocloud.com.gt/",
+              "Descripcion": " Cloud",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "claroCloud",
+              "Hijos": [
+                {
+                  "Unico": "Z6_6Q00G202M8QM30ANG41O5H1GV3",
+                  "URL": "http://www.clarocloud.com.gt/portal/gt/cld/colaboracion/office-365",
+                  "Descripcion": " Microsoft Office 365",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_6Q00G202M8QM30ANG41O5H1GV2",
+                  "URL": "http://www.clarocloud.com.gt/portal/gt/cld/presencia-web/presencia-web",
+                  "Descripcion": " P&aacute;gina Web",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_6Q00G202M8QM30ANG41O5H18O0",
+                  "URL": "http://www.clarocloud.com.gt/portal/gt/cld/colaboracion/correo-exchange-administrado",
+                  "Descripcion": " Correo Empresas",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_6Q00G202M8QM30ANG41O5H18I7",
+                  "URL": "http://www.clarocloud.com.gt/portal/gt/cld/seguridad/respaldo-en-linea",
+                  "Descripcion": " Respaldo en L&iacute;nea",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_6Q00G202M8QM30ANG41O5H1GF2",
+                  "URL": "http://www.clarocloud.com.gt/portal/gt/cld/infraestructura/servidores_virtuales",
+                  "Descripcion": " Servidores Virtuales",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "",
+                  "Hijos": []
+                }
+              ]
+            },
+            {
+              "Unico": "Z6_4808HGO0MO4I60ATDDHDG1Q0I4",
+              "URL": "https://www.claro.com.gt/empresas/soluciones/promociones",
+              "Descripcion": " Promociones",
+              "HiddenHeader": "true",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "level3",
+              "ClassMenu": "",
+              "Hijos": []
+            },
+            {
+              "Unico": "Z6_IOHAH9S0MG4H60AFNDSFBI0972",
+              "URL": "https://www.claro.com.gt/empresas/soluciones/forms",
+              "Descripcion": " Formularios",
+              "HiddenHeader": "true",
+              "HiddenFooter": "true",
+              "HiddenPestana": "true",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "",
+              "Hijos": [
+                {
+                  "Unico": "Z6_IOHAH9S0MG4H60AFNDSFBI0P07",
+                  "URL": "https://www.claro.com.gt/empresas/soluciones/forms/escribenos",
+                  "Descripcion": " Escr&iacute;benos",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "",
+                  "Hijos": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Unico": "Z6_4808HGO0M8KG60AT7UH18N0AE2",
+          "URL": "https://www.claro.com.gt/empresas/soporte/contactanos/",
+          "Descripcion": " Soporte",
+          "HiddenHeader": "false",
+          "HiddenFooter": "true",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "",
+          "ClassContenido": "",
+          "ClassMenu": "",
+          "Hijos": []
+        },
+        {
+          "Unico": "Z6_IOHAH9S0MG4H60AFNDSFBI0HG1",
+          "URL": "https://www.claro.com.gt/empresas/soporte",
+          "Descripcion": " Soporte",
+          "HiddenHeader": "true",
+          "HiddenFooter": "false",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "",
+          "ClassContenido": "",
+          "ClassMenu": "",
+          "Hijos": [
+            {
+              "Unico": "Z6_IOHAH9S0MG4H60AFNDSFBI0165",
+              "URL": "https://www.claro.com.gt/empresas/soporte/contactanos",
+              "Descripcion": " Cont&aacute;ctanos",
+              "HiddenHeader": "true",
+              "HiddenFooter": "false",
+              "HiddenPestana": "true",
+              "ClassAccesosRap": "",
+              "ClassContenido": "level3",
+              "ClassMenu": "",
+              "Hijos": []
+            }
+          ]
+        },
+        {
+          "Unico": "Z6_6Q00G202M8AC50A7759ULL20M1",
+          "URL": "https://www.claro.com.gt/empresas/buscador",
+          "Descripcion": " Buscador",
+          "HiddenHeader": "true",
+          "HiddenFooter": "true",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "",
+          "ClassContenido": "level3",
+          "ClassMenu": "",
+          "Hijos": []
+        },
+        {
+          "Unico": "Z6_IOHAH9S0MGRK30QOVCO1HUA0O1",
+          "URL": "https://www.claro.com.gt/empresas/buscador-elastic",
+          "Descripcion": " Buscador elastic",
+          "HiddenHeader": "true",
+          "HiddenFooter": "true",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "",
+          "ClassContenido": "level3",
+          "ClassMenu": "",
+          "Hijos": []
+        }
+      ]
+    },
+    {
+      "Unico": "Z6_4808HGO0MO4I60AT95H7TTRH84",
+      "URL": "https://www.claro.com.gt/corporaciones",
+      "Descripcion": " Corporaciones",
+      "HiddenHeader": "false",
+      "HiddenFooter": "false",
+      "HiddenPestana": "false",
+      "ClassAccesosRap": "",
+      "ClassContenido": "",
+      "ClassMenu": "movil",
+      "Hijos": [
+        {
+          "Unico": "Z6_4808HGO0MO4I60AT95H7TTR5I6",
+          "URL": "https://www.claro.com.gt/corporaciones/soluciones",
+          "Descripcion": " Soluciones",
+          "HiddenHeader": "false",
+          "HiddenFooter": "false",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "",
+          "ClassContenido": "",
+          "ClassMenu": "",
+          "Hijos": [
+            {
+              "Unico": "Z6_IOHAH9S0MGD000AN6G7MGM3GA4",
+              "URL": "https://www.claro.com.gt/corporaciones/soluciones/comunicacion-movil",
+              "Descripcion": " Comunicaci&oacute;n M&oacute;vil",
+              "HiddenHeader": "false",
+              "HiddenFooter": "true",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "level3",
+              "ClassMenu": "movil",
+              "Hijos": [
+                {
+                  "Unico": "Z6_IOHAH9S0MGD000AN6G7MGM34Q5",
+                  "URL": "https://www.claro.com.gt/corporaciones/soluciones/comunicacion-movil/planes-moviles-pospago",
+                  "Descripcion": " Planes M&oacute;viles Pospago",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "",
+                  "Hijos": [
+                    {
+                      "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA3IC2",
+                      "URL": "https://www.claro.com.gt/corporaciones/soluciones/comunicacion-movil/planes-moviles-pospago/sin-fronteras",
+                      "Descripcion": " Sin Fronteras",
+                      "HiddenHeader": "true",
+                      "HiddenFooter": "true",
+                      "HiddenPestana": "false",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "level3",
+                      "ClassMenu": "",
+                      "Hijos": []
+                    }
+                  ]
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0MGD000AN6G7MGM3AA5",
+                  "URL": "https://www.claro.com.gt/corporaciones/soluciones/comunicacion-movil/paquetes-de-internet-sms",
+                  "Descripcion": " Paquetes de Internet y SMS",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "true",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0MGD000AN6G7MGM3S64",
+                  "URL": "https://www.claro.com.gt/corporaciones/soluciones/comunicacion-movil/roaming-y-larga-distancia-internacional",
+                  "Descripcion": " Roaming y Larga Distancia Internacional",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "true",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "",
+                  "Hijos": []
+                }
+              ]
+            },
+            {
+              "Unico": "Z6_IOHAH9S0MGD000AN6G7MGM3D45",
+              "URL": "https://www.claro.com.gt/corporaciones/soluciones/conectividad",
+              "Descripcion": " Conectividad",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "true",
+              "ClassAccesosRap": "",
+              "ClassContenido": "level3",
+              "ClassMenu": "ico_megasPlanE",
+              "Hijos": [
+                {
+                  "Unico": "Z6_IOHAH9S0MGD000AN6G7MGM3JO4",
+                  "URL": "https://www.claro.com.gt/corporaciones/soluciones/conectividad/internet-movil",
+                  "Descripcion": " Internet M&oacute;vil",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "true",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0MGD000AN6G7MGM37G7",
+                  "URL": "https://www.claro.com.gt/corporaciones/soluciones/conectividad/internet-corporativo",
+                  "Descripcion": " Internet Corporativo",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "true",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0MGD000AN6G7MGM3V06",
+                  "URL": "https://www.claro.com.gt/corporaciones/soluciones/conectividad/enlaces-de-datos",
+                  "Descripcion": " Enlaces de Datos",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "true",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "",
+                  "Hijos": []
+                }
+              ]
+            },
+            {
+              "Unico": "Z6_IOHAH9S0MGD000AN6G7MGM3MI4",
+              "URL": "https://www.claro.com.gt/corporaciones/soluciones/comunicacion-fija",
+              "Descripcion": " Comunicaci&oacute;n Fija",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "true",
+              "ClassAccesosRap": "",
+              "ClassContenido": "level2",
+              "ClassMenu": "ico_asesoriaEficienteE",
+              "Hijos": [
+                {
+                  "Unico": "Z6_IOHAH9S0MGD000AN6G7MGM31S5",
+                  "URL": "https://www.claro.com.gt/corporaciones/soluciones/comunicacion-fija/telefonia-ip",
+                  "Descripcion": " Telefon&iacute;a IP",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "true",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0MGD000AN6G7MGM3PC4",
+                  "URL": "https://www.claro.com.gt/corporaciones/soluciones/comunicacion-fija/1-800-internacional",
+                  "Descripcion": " 1-800 Internacional",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "true",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "",
+                  "Hijos": []
+                }
+              ]
+            },
+            {
+              "Unico": "Z6_IOHAH9S0MGD000AN6G7MGMJGF7",
+              "URL": "https://www.claro.com.gt/corporaciones/soluciones/paquetes",
+              "Descripcion": " Paquetes",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "true",
+              "ClassAccesosRap": "",
+              "ClassContenido": "level3",
+              "ClassMenu": "ico_armaPaqueteE",
+              "Hijos": [
+                {
+                  "Unico": "Z6_IOHAH9S0MGD000AN6G7MGMJ4N3",
+                  "URL": "https://www.claro.com.gt/corporaciones/soluciones/paquetes/paquetes-conectividad-soluciones",
+                  "Descripcion": " Paquetes Conectividad + Soluciones",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "true",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "",
+                  "Hijos": []
+                }
+              ]
+            },
+            {
+              "Unico": "Z6_4808HGO0MO4I60AT95H7TTRRF5",
+              "URL": "https://www.claro.com.gt/corporaciones/soluciones/soluciones-claro",
+              "Descripcion": " Soluciones Claro",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "level2",
+              "ClassMenu": "ico_erpE",
+              "Hijos": [
+                {
+                  "Unico": "Z6_4808HGO0MO4I60AT95H7TT7HP2",
+                  "URL": "https://www.claro.com.gt/corporaciones/soluciones/soluciones-claro/mensajeria-corporativa-sms",
+                  "Descripcion": " Mensajer&iacute;a Corporativa SMS",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "movil",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_4808HGO0MO4I60AT95H7TT7T36",
+                  "URL": "https://www.claro.com.gt/corporaciones/soluciones/soluciones-claro/colaboracion-empresarial",
+                  "Descripcion": " Colaboraci&oacute;n Empresarial",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "movil",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_4808HGO0MO4I60AT95H7TT7BB5",
+                  "URL": "https://www.claro.com.gt/corporaciones/soluciones/soluciones-claro/planificacion-recursos-empresariales-erp",
+                  "Descripcion": " Planificaci&oacute;n de Recursos Empresariales ERP",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "movil",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_4808HGO0MO4I60AT95H7TT7N77",
+                  "URL": "https://www.claro.com.gt/corporaciones/soluciones/soluciones-claro/wifi-corporativo-analytics",
+                  "Descripcion": " Wifi Corporativo + Analytics",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "movil",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0MGD000AN6G7MGMJ5Q7",
+                  "URL": "https://www.claro.com.gt/corporaciones/soluciones/soluciones-claro/videovigilancia",
+                  "Descripcion": " Videovigilancia",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "true",
+                  "HiddenPestana": "true",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "",
+                  "Hijos": []
+                }
+              ]
+            },
+            {
+              "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA3U56",
+              "URL": "https://www.claro.com.gt/corporaciones/soluciones/comunicacion-movil/planes-moviles-pospago/",
+              "Descripcion": " Comunicaci&oacute;n M&oacute;vil",
+              "HiddenHeader": "true",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "",
+              "Hijos": []
+            },
+            {
+              "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA3U57",
+              "URL": "https://www.claro.com.gt/corporaciones/soluciones/conectividad/internet-movil",
+              "Descripcion": " Conectividad",
+              "HiddenHeader": "true",
+              "HiddenFooter": "true",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "",
+              "Hijos": []
+            },
+            {
+              "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA3UL6",
+              "URL": "https://www.claro.com.gt/corporaciones/soluciones/comunicacion-fija/telefonia-ip",
+              "Descripcion": " Comunicaci&oacute;n Fija",
+              "HiddenHeader": "true",
+              "HiddenFooter": "true",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "",
+              "Hijos": []
+            },
+            {
+              "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA3UD1",
+              "URL": "https://www.claro.com.gt/corporaciones/soluciones/paquetes/paquetes-conectividad-soluciones",
+              "Descripcion": " Paquetes",
+              "HiddenHeader": "true",
+              "HiddenFooter": "true",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "",
+              "Hijos": []
+            },
+            {
+              "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA3UT0",
+              "URL": "https://www.claro.com.gt/corporaciones/soluciones/soluciones-claro/mensajeria-corporativa-sms",
+              "Descripcion": " Soluciones Claro",
+              "HiddenHeader": "true",
+              "HiddenFooter": "true",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "",
+              "Hijos": []
+            },
+            {
+              "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA31I2",
+              "URL": "http://www.clarocloud.com.gt/",
+              "Descripcion": " Cloud",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "claroCloud",
+              "Hijos": [
+                {
+                  "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA32B4",
+                  "URL": "http://www.clarocloud.com.gt/portal/gt/cld/colaboracion/office-365",
+                  "Descripcion": " Microsoft Office 365",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA3I02",
+                  "URL": "http://www.clarocloud.com.gt/portal/gt/cld/seguridad/respaldo-en-linea",
+                  "Descripcion": " Respaldo en L&iacute;nea",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA3I03",
+                  "URL": "http://www.clarocloud.com.gt/portal/gt/cld/colaboracion/conferencia-web-negocio",
+                  "Descripcion": " Conferencia Webex",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA3IG2",
+                  "URL": "http://www.clarocloud.com.gt/portal/gt/cld/infraestructura/servidores_virtuales",
+                  "Descripcion": " Servidores Virtuales",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA3IG3",
+                  "URL": "http://www.clarocloud.com.gt/portal/gt/cld/infraestructura/data-center-virtual",
+                  "Descripcion": " Data Center Virtual",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "",
+                  "Hijos": []
+                }
+              ]
+            },
+            {
+              "Unico": "Z6_IOHAH9S0MG4H60AFNDSFBI0P86",
+              "URL": "https://www.claro.com.gt/corporaciones/soluciones/forms",
+              "Descripcion": " Formularios",
+              "HiddenHeader": "true",
+              "HiddenFooter": "true",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "",
+              "Hijos": [
+                {
+                  "Unico": "Z6_IOHAH9S0MG4H60AFNDSFBI0P87",
+                  "URL": "https://www.claro.com.gt/corporaciones/soluciones/forms/escribenos",
+                  "Descripcion": " Escr&iacute;benos",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "",
+                  "Hijos": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Unico": "Z6_4808HGO0MO4I60ATDDHDG1II86",
+          "URL": "https://www.claro.com.gt/corporaciones/soporte/contactenos/",
+          "Descripcion": " Soporte",
+          "HiddenHeader": "false",
+          "HiddenFooter": "true",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "",
+          "ClassContenido": "",
+          "ClassMenu": "",
+          "Hijos": []
+        },
+        {
+          "Unico": "Z6_IOHAH9S0MG4H60AFNDSFBI0H03",
+          "URL": "https://www.claro.com.gt/corporaciones/soporte",
+          "Descripcion": " Soporte",
+          "HiddenHeader": "true",
+          "HiddenFooter": "false",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "",
+          "ClassContenido": "",
+          "ClassMenu": "",
+          "Hijos": [
+            {
+              "Unico": "Z6_IOHAH9S0MG4H60AFNDSFBI01J3",
+              "URL": "https://www.claro.com.gt/corporaciones/soporte/contactenos",
+              "Descripcion": " Cont&aacute;ctenos",
+              "HiddenHeader": "true",
+              "HiddenFooter": "false",
+              "HiddenPestana": "true",
+              "ClassAccesosRap": "",
+              "ClassContenido": "level3",
+              "ClassMenu": "",
+              "Hijos": []
+            }
+          ]
+        },
+        {
+          "Unico": "Z6_IOHAH9S0MG4H60AFNDSFBIKBK0",
+          "URL": "http://mnc.telmexusa.com/",
+          "Descripcion": " Multinacionales",
+          "HiddenHeader": "false",
+          "HiddenFooter": "true",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "",
+          "ClassContenido": "",
+          "ClassMenu": "",
+          "Hijos": []
+        },
+        {
+          "Unico": "Z6_6Q00G202M8AC50A7759ULL2056",
+          "URL": "https://www.claro.com.gt/corporaciones/buscador",
+          "Descripcion": " Buscador",
+          "HiddenHeader": "true",
+          "HiddenFooter": "true",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "",
+          "ClassContenido": "level3",
+          "ClassMenu": "",
+          "Hijos": []
+        },
+        {
+          "Unico": "Z6_IOHAH9S0MGRK30QOVCO1HUA0E5",
+          "URL": "https://www.claro.com.gt/corporaciones/buscador-elastic",
+          "Descripcion": " Buscador elastic",
+          "HiddenHeader": "true",
+          "HiddenFooter": "true",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "",
+          "ClassContenido": "level3",
+          "ClassMenu": "",
+          "Hijos": []
+        }
+      ]
+    }
+  ],
+  "Menus": [
+    {
+      "Unico": "Z6_7QGGH201L0NB40AUO7GB4Q1QJ5",
+      "URL": "https://www.claro.com.gt/wps/portal/gt/claro-menus/ligas-header",
+      "Descripcion": " Ligas Header",
+      "HiddenHeader": "false",
+      "HiddenFooter": "false",
+      "HiddenPestana": "false",
+      "ClassAccesosRap": "",
+      "ClassContenido": "",
+      "ClassMenu": "",
+      "Hijos": [
+        {
+          "Unico": "Z6_7QGGH201L0NB40AUO7GB4Q1QB5 ",
+          "URL": "http://www.claromusica.com/",
+          "Descripcion": " Claro m&uacute;sica",
+          "HiddenHeader": "false",
+          "HiddenFooter": "false",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "",
+          "ClassContenido": "",
+          "ClassMenu": "",
+          "Hijos": []
+        },
+        {
+          "Unico": "Z6_7QGGH201L0NB40AUO7GB4Q1QB4 ",
+          "URL": "https://www.clarovideo.com/",
+          "Descripcion": " Claro video",
+          "HiddenHeader": "false",
+          "HiddenFooter": "false",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "",
+          "ClassContenido": "",
+          "ClassMenu": "",
+          "Hijos": []
+        },
+        {
+          "Unico": "Z6_7QGGH201L0NB40AUO7GB4Q1QR4 ",
+          "URL": "http://claroplay.com/gt/",
+          "Descripcion": " Claro play",
+          "HiddenHeader": "false",
+          "HiddenFooter": "false",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "",
+          "ClassContenido": "",
+          "ClassMenu": "",
+          "Hijos": []
+        },
+        {
+          "Unico": "Z6_7QGGH201L0NB40AUO7GB4Q1QR5 ",
+          "URL": "https://www.claro.com.gt/wps/portal/gt",
+          "Descripcion": " Otros Sitios",
+          "HiddenHeader": "false",
+          "HiddenFooter": "false",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "",
+          "ClassContenido": "",
+          "ClassMenu": "",
+          "Hijos": [
+            {
+              "Unico": "Z6_7QGGH201L0NB40AUO7GB4Q1Q74",
+              "URL": "https://www.clarosync.com/web/#/clarogt",
+              "Descripcion": " Claro Sync",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "",
+              "Hijos": []
+            },
+            {
+              "Unico": "Z6_7QGGH201L0NB40AUO7GB4Q1Q75",
+              "URL": "https://internet.claro.com.gt/",
+              "Descripcion": " Portal de Internet",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "",
+              "Hijos": []
+            },
+            {
+              "Unico": "Z6_6Q00G202MOSE90ANK5KHVE1065",
+              "URL": "http://www.clarofanaticos.com/",
+              "Descripcion": " Claro Fan&aacute;ticos",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "",
+              "Hijos": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Unico": "Z6_7QGGH201L0NB40AUO7GB4Q1QN4",
+      "URL": "https://www.claro.com.gt/wps/portal/gt/claro-menus/ligas-footer",
+      "Descripcion": " Ligas Footer",
+      "HiddenHeader": "false",
+      "HiddenFooter": "false",
+      "HiddenPestana": "false",
+      "ClassAccesosRap": "",
+      "ClassContenido": "",
+      "ClassMenu": "",
+      "Hijos": [
+        {
+          "Unico": "Z6_7QGGH201L0NB40AUO7GB4Q1QF4 ",
+          "URL": "https://www.claro.com.gt/portal/gt/legal-regulatorio/pdf/1500483913650-Archivo.pdf",
+          "Descripcion": " Privacidad",
+          "HiddenHeader": "false",
+          "HiddenFooter": "false",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "",
+          "ClassContenido": "",
+          "ClassMenu": "",
+          "Hijos": []
+        },
+        {
+          "Unico": "Z6_7QGGH201L0NB40AUO7GB4Q1QV4 ",
+          "URL": "https://www.claro.com.gt/personas/legal-regulatorio/",
+          "Descripcion": " Legal y Regulatorio",
+          "HiddenHeader": "false",
+          "HiddenFooter": "false",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "",
+          "ClassContenido": "",
+          "ClassMenu": "",
+          "Hijos": []
+        }
+      ]
+    },
+    {
+      "Unico": "Z6_7QGGH201LORRC0AUASVNO90HK3",
+      "URL": "https://www.claro.com.gt/wps/portal/gt/claro-menus/accesos-rapidos",
+      "Descripcion": " Accesos Rapidos",
+      "HiddenHeader": "false",
+      "HiddenFooter": "false",
+      "HiddenPestana": "false",
+      "ClassAccesosRap": "",
+      "ClassContenido": "",
+      "ClassMenu": "",
+      "Hijos": [
+        {
+          "Unico": "Z6_7QGGH201LORRC0AUASVNO90HC2 ",
+          "URL": "http://autoria1.claro.com/portal/claro/pc/personas/movil/ceq-test-theme",
+          "Descripcion": " Tienda",
+          "HiddenHeader": "false",
+          "HiddenFooter": "false",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "tienda",
+          "ClassContenido": "",
+          "ClassMenu": "",
+          "Hijos": []
+        },
+        {
+          "Unico": "Z6_7QGGH201LORRC0AUASVNO90HC3 ",
+          "URL": "https://www.claro.com.gt/wps/portal/claro/pc/personas/ayuda",
+          "Descripcion": " Ayuda",
+          "HiddenHeader": "false",
+          "HiddenFooter": "false",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "soporte",
+          "ClassContenido": "",
+          "ClassMenu": "",
+          "Hijos": []
+        },
+        {
+          "Unico": "Z6_7QGGH201LORRC0AUASVNO90HS2 ",
+          "URL": "https://www.claro.com.gt#",
+          "Descripcion": " Mi Claro",
+          "HiddenHeader": "false",
+          "HiddenFooter": "false",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "miClaro",
+          "ClassContenido": "",
+          "ClassMenu": "",
+          "Hijos": []
+        }
+      ]
+    }
+  ],
+  "SeccionesHeader": [
+    {
+      "Unico": "Z6_4808HGO0MO4I60AT95H7TT3Q62",
+      "URL": "https://www.claro.com.gt/personas",
+      "Descripcion": " Personas",
+      "HiddenHeader": "false",
+      "HiddenFooter": "false",
+      "HiddenPestana": "false",
+      "ClassAccesosRap": "",
+      "ClassContenido": "",
+      "ClassMenu": "movil",
+      "Hijos": [
+        {
+          "Unico": "Z6_4808HGO0MO4I60AT95H7TT3UJ0",
+          "URL": "https://www.claro.com.gt/personas/servicios",
+          "Descripcion": " Servicios",
+          "HiddenHeader": "false",
+          "HiddenFooter": "false",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "",
+          "ClassContenido": "",
+          "ClassMenu": "",
+          "Hijos": [
+            {
+              "Unico": "Z6_4808HGO0MO4I60AT95H7TT3UF7",
+              "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles",
+              "Descripcion": " Servicios M&oacute;viles",
+              "HiddenHeader": "false",
+              "HiddenFooter": "true",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "level2",
+              "ClassMenu": "movil",
+              "Hijos": [
+                {
+                  "Unico": "Z6_4808HGO0MO4I60AT95H7TT3PE3",
+                  "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/prepago",
+                  "Descripcion": " Prepago",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "movil",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_4808HGO0MO4I60AT95H7TT3BE2",
+                  "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/recargas",
+                  "Descripcion": " Recargas",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "movil",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_4808HGO0MO4I60AT95H7TT3NL2",
+                  "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/postpago",
+                  "Descripcion": " Postpago",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "movil",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_4808HGO0MO4I60AT95H7TTJS70",
+                  "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/internet-movil",
+                  "Descripcion": " Internet M&oacute;vil",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "movil",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_4808HGO0MO4I60AT95H7TTJQ51",
+                  "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/roaming",
+                  "Descripcion": " Roaming",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "movil",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0M05250ANOMOFQK2526",
+                  "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/4g-lte",
+                  "Descripcion": " 4G LTE",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "true",
+                  "HiddenPestana": "true",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "",
+                  "Hijos": []
+                }
+              ]
+            },
+            {
+              "Unico": "Z6_4808HGO0MO4I60AT95H7TTJJ50",
+              "URL": "https://www.claro.com.gt/personas/servicios/servicios-hogar",
+              "Descripcion": " Servicios Hogar",
+              "HiddenHeader": "false",
+              "HiddenFooter": "true",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "level2",
+              "ClassMenu": "hogar",
+              "Hijos": [
+                {
+                  "Unico": "Z6_4808HGO0MO4I60AT95H7TTJ7R0",
+                  "URL": "https://www.claro.com.gt/personas/servicios/servicios-hogar/telefonia-fija",
+                  "Descripcion": " Telefon&iacute;a Fija",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "movil",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_4808HGO0MO4I60AT95H7TTB051",
+                  "URL": "https://www.claro.com.gt/personas/servicios/servicios-hogar/internet",
+                  "Descripcion": " Internet",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "movil",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0MGCL30Q8668MSUHE10",
+                  "URL": "https://www.claro.com.gt/personas/servicios/servicios-hogar/tv",
+                  "Descripcion": " TV",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "",
+                  "Hijos": [
+                    {
+                      "Unico": "Z6_4808HGO0MO4I60AT95H7TTBSG5",
+                      "URL": "https://www.claro.com.gt/personas/servicios/servicios-hogar/tv/claro-tv",
+                      "Descripcion": " Claro TV",
+                      "HiddenHeader": "false",
+                      "HiddenFooter": "false",
+                      "HiddenPestana": "false",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "level3",
+                      "ClassMenu": "movil",
+                      "Hijos": []
+                    },
+                    {
+                      "Unico": "Z6_IOHAH9S0M05250ANOMOFQK2TQ7",
+                      "URL": "https://www.claro.com.gt/personas/servicios/servicios-hogar/tv/tv-satelital",
+                      "Descripcion": " Tv Satelital",
+                      "HiddenHeader": "false",
+                      "HiddenFooter": "false",
+                      "HiddenPestana": "false",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "level3",
+                      "ClassMenu": "",
+                      "Hijos": []
+                    },
+                    {
+                      "Unico": "Z6_IOHAH9S0MGCL30Q8668MSUH040",
+                      "URL": "https://www.claro.com.gt/personas/servicios/servicios-hogar/tv/claro-tv-inalambrico",
+                      "Descripcion": " Claro TV Inal&aacute;mbrico",
+                      "HiddenHeader": "false",
+                      "HiddenFooter": "true",
+                      "HiddenPestana": "false",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "level3",
+                      "ClassMenu": "",
+                      "Hijos": []
+                    }
+                  ]
+                },
+                {
+                  "Unico": "Z6_4808HGO0MO4I60AT95H7TTBH34",
+                  "URL": "https://www.claro.com.gt/personas/servicios/servicios-hogar/todo-claro",
+                  "Descripcion": " Todo Claro",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "",
+                  "Hijos": [
+                    {
+                      "Unico": "Z6_IOHAH9S0MGCL30Q8668MSU9TI6",
+                      "URL": "https://www.claro.com.gt/personas/servicios/servicios-hogar/todo-claro/2-play",
+                      "Descripcion": " Claro Hogar Doble",
+                      "HiddenHeader": "false",
+                      "HiddenFooter": "false",
+                      "HiddenPestana": "false",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "level3",
+                      "ClassMenu": "",
+                      "Hijos": []
+                    },
+                    {
+                      "Unico": "Z6_4808HGO0MO4I60AT95H7TTB9F0",
+                      "URL": "https://www.claro.com.gt/personas/servicios/servicios-hogar/todo-claro/3-play",
+                      "Descripcion": " Claro Hogar Triple",
+                      "HiddenHeader": "false",
+                      "HiddenFooter": "false",
+                      "HiddenPestana": "false",
+                      "ClassAccesosRap": "",
+                      "ClassContenido": "level3",
+                      "ClassMenu": "",
+                      "Hijos": []
+                    }
+                  ]
+                },
+                {
+                  "Unico": "Z6_4808HGO0MO4I60AT95H7TTBPU1",
+                  "URL": "https://www.claro.com.gt/personas/servicios/servicios-hogar/larga-distancia-internacional",
+                  "Descripcion": " Larga Distancia Internacional",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "movil",
+                  "Hijos": []
+                }
+              ]
+            },
+            {
+              "Unico": "Z6_IOHAH9S0M05250ANOMOFQK2U10",
+              "URL": "https://www.claro.com.gt/wps/myportal/gt/pcc/personas/servicios/claro-club/",
+              "Descripcion": " Claro club",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "claroClub",
+              "Hijos": []
+            },
+            {
+              "Unico": "Z6_IOHAH9S0MGCL30Q8668MSU9CJ1",
+              "URL": "https://www.claro.com.gt/personas/servicios/iot",
+              "Descripcion": " Internet of Things",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "true",
+              "ClassAccesosRap": "",
+              "ClassContenido": "level3",
+              "ClassMenu": "iot",
+              "Hijos": [
+                {
+                  "Unico": "Z6_IOHAH9S0MGCL30Q8668MSU9I33",
+                  "URL": "https://www.claro.com.gt/personas/servicios/iot/espacios-inteligentes",
+                  "Descripcion": " Espacios Inteligentes",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "true",
+                  "HiddenPestana": "true",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "",
+                  "Hijos": []
+                }
+              ]
+            },
+            {
+              "Unico": "Z6_4808HGO0MO4I60AT95H7TTBR65",
+              "URL": "https://www.claro.com.gt/personas/servicios/entretenimiento",
+              "Descripcion": " Entretenimiento",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "entretenimiento",
+              "Hijos": [
+                {
+                  "Unico": "Z6_4808HGO0MO4I60AT95H7TTBRR3",
+                  "URL": "https://www.claro.com.gt/personas/servicios/entretenimiento/claro-musica",
+                  "Descripcion": " Claro m&uacute;sica",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "movil",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_4808HGO0MO4I60AT95H7TTR837",
+                  "URL": "https://www.claro.com.gt/personas/servicios/entretenimiento/claro-video",
+                  "Descripcion": " Claro video",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "movil",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0M05250ANOMOFQK2NM4",
+                  "URL": "https://www.claro.com.gt/personas/servicios/entretenimiento/claro-play",
+                  "Descripcion": " Claro play",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "true",
+                  "HiddenPestana": "true",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "",
+                  "Hijos": []
+                }
+              ]
+            },
+            {
+              "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA3720",
+              "URL": "https://www.claro.com.gt/personas/servicios/promociones",
+              "Descripcion": " Promociones",
+              "HiddenHeader": "false",
+              "HiddenFooter": "true",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "promocion",
+              "Hijos": [
+                {
+                  "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA37Q3",
+                  "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/prepago/promociones",
+                  "Descripcion": " Prepago",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA3762",
+                  "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/recargas/promociones",
+                  "Descripcion": " Recargas",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA3763",
+                  "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/postpago/promociones",
+                  "Descripcion": " Postpago",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA37M2",
+                  "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/internet-movil/promociones",
+                  "Descripcion": " Internet m&oacute;vil",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA37M3",
+                  "URL": "https://www.claro.com.gt/personas/servicios/servicios-hogar/internet/promociones",
+                  "Descripcion": " Internet",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "",
+                  "Hijos": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Unico": "Z6_4808HGO0MO4I60ATDDHDG1IIG7",
+          "URL": "http://asistencia.claro.com.gt/",
+          "Descripcion": " Soporte",
+          "HiddenHeader": "false",
+          "HiddenFooter": "false",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "",
+          "ClassContenido": "",
+          "ClassMenu": "",
+          "Hijos": [
+            {
+              "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA31U5",
+              "URL": "https://www.claro.com.gt/personas/ayuda/telefonos",
+              "Descripcion": " Tel&eacute;fonos",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "",
+              "Hijos": []
+            },
+            {
+              "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA3UR3",
+              "URL": "https://www.claro.com.gt/personas/servicios/servicios-hogar/publicidad-claro-tv/",
+              "Descripcion": " Claro publicidad",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "",
+              "Hijos": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Unico": "Z6_4808HGO0MO4I60ATDDHDG1I945",
+      "URL": "https://www.claro.com.gt/empresas",
+      "Descripcion": " Empresas",
+      "HiddenHeader": "false",
+      "HiddenFooter": "false",
+      "HiddenPestana": "false",
+      "ClassAccesosRap": "",
+      "ClassContenido": "",
+      "ClassMenu": "movil",
+      "Hijos": [
+        {
+          "Unico": "Z6_4808HGO0MO4I60ATDDHDG1ILP3",
+          "URL": "https://www.claro.com.gt/empresas/soluciones",
+          "Descripcion": " Soluciones",
+          "HiddenHeader": "false",
+          "HiddenFooter": "false",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "",
+          "ClassContenido": "",
+          "ClassMenu": "",
+          "Hijos": [
+            {
+              "Unico": "Z6_4808HGO0MO4I60ATDDHDG1IL37",
+              "URL": "https://www.claro.com.gt/empresas/soluciones/comunicacion-movil",
+              "Descripcion": " Comunicaci&oacute;n M&oacute;vil",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "level2",
+              "ClassMenu": "movil",
+              "Hijos": [
+                {
+                  "Unico": "Z6_4808HGO0MO4I60ATDDHDG1I3N3",
+                  "URL": "https://www.claro.com.gt/empresas/soluciones/comunicacion-movil/planes-moviles-pospago",
+                  "Descripcion": " Planes M&oacute;viles Pospago",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "movil",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0MGD000AN6G7MGMJNL1",
+                  "URL": "https://www.claro.com.gt/empresas/soluciones/comunicacion-movil/paquetes-de-internet-y-sms",
+                  "Descripcion": " Paquetes de Internet y SMS",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "true",
+                  "HiddenPestana": "true",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level2",
+                  "ClassMenu": "",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_4808HGO0MO4I60ATDDHDG1A0C1",
+                  "URL": "https://www.claro.com.gt/empresas/soluciones/comunicacion-movil/roaming-larga-distancia-internacional",
+                  "Descripcion": " Roaming y Larga Distancia Internacional",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "movil",
+                  "Hijos": []
+                }
+              ]
+            },
+            {
+              "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJAB284",
+              "URL": "https://www.claro.com.gt/empresas/soluciones/paquetes",
+              "Descripcion": " Paquetes",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "ico_armaPaqueteC",
+              "Hijos": [
+                {
+                  "Unico": "Z6_IOHAH9S0MGD000AN6G7MGMBD43",
+                  "URL": "https://www.claro.com.gt/empresas/soluciones/paquetes/paquetes-pymes",
+                  "Descripcion": " Paquetes Pymes",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "true",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0MGD000AN6G7MGMBJ83",
+                  "URL": "https://www.claro.com.gt/empresas/soluciones/paquetes/paquete-empresas",
+                  "Descripcion": " Paquete Empresas",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "true",
+                  "HiddenPestana": "true",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level2",
+                  "ClassMenu": "",
+                  "Hijos": []
+                }
+              ]
+            },
+            {
+              "Unico": "Z6_4808HGO0MO4I60ATDDHDG1A440",
+              "URL": "https://www.claro.com.gt/empresas/soluciones/comunicacion-fija",
+              "Descripcion": " Comunicaci&oacute;n Fija",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "level2",
+              "ClassMenu": "ico_asesoriaEficienteE",
+              "Hijos": [
+                {
+                  "Unico": "Z6_4808HGO0MO4I60ATDDHDG1ALD1",
+                  "URL": "https://www.claro.com.gt/empresas/soluciones/comunicacion-fija/telefonia-fija-empresarial",
+                  "Descripcion": " Telefon&iacute;a Fija Empresarial",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "movil",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0MGD000AN6G7MGMBO92",
+                  "URL": "https://www.claro.com.gt/empresas/soluciones/comunicacion-fija/1-801-nacional",
+                  "Descripcion": " 1-801 Nacional",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "true",
+                  "HiddenPestana": "true",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level2",
+                  "ClassMenu": "",
+                  "Hijos": []
+                }
+              ]
+            },
+            {
+              "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJAB285",
+              "URL": "https://www.claro.com.gt/empresas/soluciones/conectividad",
+              "Descripcion": " Conectividad",
+              "HiddenHeader": "false",
+              "HiddenFooter": "true",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "ico_megasPlanC",
+              "Hijos": [
+                {
+                  "Unico": "Z6_4808HGO0MO4I60ATDDHDG1I7H3",
+                  "URL": "https://www.claro.com.gt/empresas/soluciones/conectividad/internet-movil",
+                  "Descripcion": " Internet m&oacute;vil",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "movil",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_4808HGO0MO4I60ATDDHDG1AEN1",
+                  "URL": "https://www.claro.com.gt/empresas/soluciones/conectividad/internet-empresarial",
+                  "Descripcion": " Internet Empresarial",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "movil",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0MGD000AN6G7MGMBS80",
+                  "URL": "https://www.claro.com.gt/empresas/soluciones/conectividad/enlace-de-datos",
+                  "Descripcion": " Enlace de Datos",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "true",
+                  "HiddenPestana": "true",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level2",
+                  "ClassMenu": "",
+                  "Hijos": []
+                }
+              ]
+            },
+            {
+              "Unico": "Z6_6Q00G202MO0Q70A7B3158C2OP3",
+              "URL": "https://www.claro.com.gt/empresas/soluciones/soluciones-claro",
+              "Descripcion": " Soluciones Claro",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "level2",
+              "ClassMenu": "ico_erpC",
+              "Hijos": [
+                {
+                  "Unico": "Z6_6Q00G202MO0Q70A7B3158C2IU2",
+                  "URL": "https://www.claro.com.gt/empresas/soluciones/soluciones-claro/mensaje-empresarial",
+                  "Descripcion": " Mensajer&iacute;a Empresarial",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "true",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "movil",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_6Q00G202MO0Q70A7B3158C2CH1",
+                  "URL": "https://www.claro.com.gt/empresas/soluciones/soluciones-claro/pbx-movil",
+                  "Descripcion": " PBX M&oacute;vil",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "true",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "movil",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_6Q00G202MO0Q70A7B3158C2LC3",
+                  "URL": "https://www.claro.com.gt/empresas/soluciones/soluciones-claro/formularios-moviles",
+                  "Descripcion": " Formularios M&oacute;viles",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "true",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "movil",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_6Q00G202MO0Q70A7B3158C26M2",
+                  "URL": "https://www.claro.com.gt/empresas/soluciones/soluciones-claro/fuerza-de-ventas",
+                  "Descripcion": " Fuerza de Ventas",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "true",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "movil",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_6Q00G202MO0Q70A7B3158C2UQ0",
+                  "URL": "https://www.claro.com.gt/empresas/soluciones/soluciones-claro/wifi-empresarial-analytics",
+                  "Descripcion": " Wifi Empresarial + Analytics",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "true",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "movil",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_6Q00G202MO0Q70A7B3158C2923",
+                  "URL": "https://www.claro.com.gt/empresas/soluciones/soluciones-claro/videovigilancia",
+                  "Descripcion": " Videovigilancia",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "true",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "movil",
+                  "Hijos": []
+                }
+              ]
+            },
+            {
+              "Unico": "Z6_6Q00G202M8QM30ANG41O5H1002",
+              "URL": "http://www.clarocloud.com.gt/",
+              "Descripcion": " Cloud",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "claroCloud",
+              "Hijos": [
+                {
+                  "Unico": "Z6_6Q00G202M8QM30ANG41O5H1GV3",
+                  "URL": "http://www.clarocloud.com.gt/portal/gt/cld/colaboracion/office-365",
+                  "Descripcion": " Microsoft Office 365",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_6Q00G202M8QM30ANG41O5H1GV2",
+                  "URL": "http://www.clarocloud.com.gt/portal/gt/cld/presencia-web/presencia-web",
+                  "Descripcion": " P&aacute;gina Web",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_6Q00G202M8QM30ANG41O5H18O0",
+                  "URL": "http://www.clarocloud.com.gt/portal/gt/cld/colaboracion/correo-exchange-administrado",
+                  "Descripcion": " Correo Empresas",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_6Q00G202M8QM30ANG41O5H18I7",
+                  "URL": "http://www.clarocloud.com.gt/portal/gt/cld/seguridad/respaldo-en-linea",
+                  "Descripcion": " Respaldo en L&iacute;nea",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_6Q00G202M8QM30ANG41O5H1GF2",
+                  "URL": "http://www.clarocloud.com.gt/portal/gt/cld/infraestructura/servidores_virtuales",
+                  "Descripcion": " Servidores Virtuales",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "",
+                  "Hijos": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Unico": "Z6_4808HGO0M8KG60AT7UH18N0AE2",
+          "URL": "https://www.claro.com.gt/empresas/soporte/contactanos/",
+          "Descripcion": " Soporte",
+          "HiddenHeader": "false",
+          "HiddenFooter": "true",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "",
+          "ClassContenido": "",
+          "ClassMenu": "",
+          "Hijos": []
+        }
+      ]
+    },
+    {
+      "Unico": "Z6_4808HGO0MO4I60AT95H7TTRH84",
+      "URL": "https://www.claro.com.gt/corporaciones",
+      "Descripcion": " Corporaciones",
+      "HiddenHeader": "false",
+      "HiddenFooter": "false",
+      "HiddenPestana": "false",
+      "ClassAccesosRap": "",
+      "ClassContenido": "",
+      "ClassMenu": "movil",
+      "Hijos": [
+        {
+          "Unico": "Z6_4808HGO0MO4I60AT95H7TTR5I6",
+          "URL": "https://www.claro.com.gt/corporaciones/soluciones",
+          "Descripcion": " Soluciones",
+          "HiddenHeader": "false",
+          "HiddenFooter": "false",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "",
+          "ClassContenido": "",
+          "ClassMenu": "",
+          "Hijos": [
+            {
+              "Unico": "Z6_IOHAH9S0MGD000AN6G7MGM3GA4",
+              "URL": "https://www.claro.com.gt/corporaciones/soluciones/comunicacion-movil",
+              "Descripcion": " Comunicaci&oacute;n M&oacute;vil",
+              "HiddenHeader": "false",
+              "HiddenFooter": "true",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "level3",
+              "ClassMenu": "movil",
+              "Hijos": [
+                {
+                  "Unico": "Z6_IOHAH9S0MGD000AN6G7MGM34Q5",
+                  "URL": "https://www.claro.com.gt/corporaciones/soluciones/comunicacion-movil/planes-moviles-pospago",
+                  "Descripcion": " Planes M&oacute;viles Pospago",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0MGD000AN6G7MGM3AA5",
+                  "URL": "https://www.claro.com.gt/corporaciones/soluciones/comunicacion-movil/paquetes-de-internet-sms",
+                  "Descripcion": " Paquetes de Internet y SMS",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "true",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0MGD000AN6G7MGM3S64",
+                  "URL": "https://www.claro.com.gt/corporaciones/soluciones/comunicacion-movil/roaming-y-larga-distancia-internacional",
+                  "Descripcion": " Roaming y Larga Distancia Internacional",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "true",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "",
+                  "Hijos": []
+                }
+              ]
+            },
+            {
+              "Unico": "Z6_IOHAH9S0MGD000AN6G7MGM3D45",
+              "URL": "https://www.claro.com.gt/corporaciones/soluciones/conectividad",
+              "Descripcion": " Conectividad",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "true",
+              "ClassAccesosRap": "",
+              "ClassContenido": "level3",
+              "ClassMenu": "ico_megasPlanE",
+              "Hijos": [
+                {
+                  "Unico": "Z6_IOHAH9S0MGD000AN6G7MGM3JO4",
+                  "URL": "https://www.claro.com.gt/corporaciones/soluciones/conectividad/internet-movil",
+                  "Descripcion": " Internet M&oacute;vil",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "true",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0MGD000AN6G7MGM37G7",
+                  "URL": "https://www.claro.com.gt/corporaciones/soluciones/conectividad/internet-corporativo",
+                  "Descripcion": " Internet Corporativo",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "true",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0MGD000AN6G7MGM3V06",
+                  "URL": "https://www.claro.com.gt/corporaciones/soluciones/conectividad/enlaces-de-datos",
+                  "Descripcion": " Enlaces de Datos",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "true",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "",
+                  "Hijos": []
+                }
+              ]
+            },
+            {
+              "Unico": "Z6_IOHAH9S0MGD000AN6G7MGM3MI4",
+              "URL": "https://www.claro.com.gt/corporaciones/soluciones/comunicacion-fija",
+              "Descripcion": " Comunicaci&oacute;n Fija",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "true",
+              "ClassAccesosRap": "",
+              "ClassContenido": "level2",
+              "ClassMenu": "ico_asesoriaEficienteE",
+              "Hijos": [
+                {
+                  "Unico": "Z6_IOHAH9S0MGD000AN6G7MGM31S5",
+                  "URL": "https://www.claro.com.gt/corporaciones/soluciones/comunicacion-fija/telefonia-ip",
+                  "Descripcion": " Telefon&iacute;a IP",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "true",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0MGD000AN6G7MGM3PC4",
+                  "URL": "https://www.claro.com.gt/corporaciones/soluciones/comunicacion-fija/1-800-internacional",
+                  "Descripcion": " 1-800 Internacional",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "true",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "",
+                  "Hijos": []
+                }
+              ]
+            },
+            {
+              "Unico": "Z6_IOHAH9S0MGD000AN6G7MGMJGF7",
+              "URL": "https://www.claro.com.gt/corporaciones/soluciones/paquetes",
+              "Descripcion": " Paquetes",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "true",
+              "ClassAccesosRap": "",
+              "ClassContenido": "level3",
+              "ClassMenu": "ico_armaPaqueteE",
+              "Hijos": [
+                {
+                  "Unico": "Z6_IOHAH9S0MGD000AN6G7MGMJ4N3",
+                  "URL": "https://www.claro.com.gt/corporaciones/soluciones/paquetes/paquetes-conectividad-soluciones",
+                  "Descripcion": " Paquetes Conectividad + Soluciones",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "true",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "",
+                  "Hijos": []
+                }
+              ]
+            },
+            {
+              "Unico": "Z6_4808HGO0MO4I60AT95H7TTRRF5",
+              "URL": "https://www.claro.com.gt/corporaciones/soluciones/soluciones-claro",
+              "Descripcion": " Soluciones Claro",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "level2",
+              "ClassMenu": "ico_erpE",
+              "Hijos": [
+                {
+                  "Unico": "Z6_4808HGO0MO4I60AT95H7TT7HP2",
+                  "URL": "https://www.claro.com.gt/corporaciones/soluciones/soluciones-claro/mensajeria-corporativa-sms",
+                  "Descripcion": " Mensajer&iacute;a Corporativa SMS",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "movil",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_4808HGO0MO4I60AT95H7TT7T36",
+                  "URL": "https://www.claro.com.gt/corporaciones/soluciones/soluciones-claro/colaboracion-empresarial",
+                  "Descripcion": " Colaboraci&oacute;n Empresarial",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "movil",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_4808HGO0MO4I60AT95H7TT7BB5",
+                  "URL": "https://www.claro.com.gt/corporaciones/soluciones/soluciones-claro/planificacion-recursos-empresariales-erp",
+                  "Descripcion": " Planificaci&oacute;n de Recursos Empresariales ERP",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "movil",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_4808HGO0MO4I60AT95H7TT7N77",
+                  "URL": "https://www.claro.com.gt/corporaciones/soluciones/soluciones-claro/wifi-corporativo-analytics",
+                  "Descripcion": " Wifi Corporativo + Analytics",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "movil",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0MGD000AN6G7MGMJ5Q7",
+                  "URL": "https://www.claro.com.gt/corporaciones/soluciones/soluciones-claro/videovigilancia",
+                  "Descripcion": " Videovigilancia",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "true",
+                  "HiddenPestana": "true",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "level3",
+                  "ClassMenu": "",
+                  "Hijos": []
+                }
+              ]
+            },
+            {
+              "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA31I2",
+              "URL": "http://www.clarocloud.com.gt/",
+              "Descripcion": " Cloud",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "claroCloud",
+              "Hijos": [
+                {
+                  "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA32B4",
+                  "URL": "http://www.clarocloud.com.gt/portal/gt/cld/colaboracion/office-365",
+                  "Descripcion": " Microsoft Office 365",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA3I02",
+                  "URL": "http://www.clarocloud.com.gt/portal/gt/cld/seguridad/respaldo-en-linea",
+                  "Descripcion": " Respaldo en L&iacute;nea",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA3I03",
+                  "URL": "http://www.clarocloud.com.gt/portal/gt/cld/colaboracion/conferencia-web-negocio",
+                  "Descripcion": " Conferencia Webex",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA3IG2",
+                  "URL": "http://www.clarocloud.com.gt/portal/gt/cld/infraestructura/servidores_virtuales",
+                  "Descripcion": " Servidores Virtuales",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "",
+                  "Hijos": []
+                },
+                {
+                  "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA3IG3",
+                  "URL": "http://www.clarocloud.com.gt/portal/gt/cld/infraestructura/data-center-virtual",
+                  "Descripcion": " Data Center Virtual",
+                  "HiddenHeader": "false",
+                  "HiddenFooter": "false",
+                  "HiddenPestana": "false",
+                  "ClassAccesosRap": "",
+                  "ClassContenido": "",
+                  "ClassMenu": "",
+                  "Hijos": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Unico": "Z6_4808HGO0MO4I60ATDDHDG1II86",
+          "URL": "https://www.claro.com.gt/corporaciones/soporte/contactenos/",
+          "Descripcion": " Soporte",
+          "HiddenHeader": "false",
+          "HiddenFooter": "true",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "",
+          "ClassContenido": "",
+          "ClassMenu": "",
+          "Hijos": []
+        },
+        {
+          "Unico": "Z6_IOHAH9S0MG4H60AFNDSFBIKBK0",
+          "URL": "http://mnc.telmexusa.com/",
+          "Descripcion": " Multinacionales",
+          "HiddenHeader": "false",
+          "HiddenFooter": "true",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "",
+          "ClassContenido": "",
+          "ClassMenu": "",
+          "Hijos": []
+        }
+      ]
+    }
+  ],
+  "SeccionesFooter": [
+    {
+      "Unico": "Z6_4808HGO0MO4I60AT95H7TT3Q62",
+      "URL": "https://www.claro.com.gt/personas",
+      "Descripcion": " Personas",
+      "HiddenHeader": "false",
+      "HiddenFooter": "false",
+      "HiddenPestana": "false",
+      "ClassAccesosRap": "",
+      "ClassContenido": "",
+      "ClassMenu": "movil",
+      "Hijos": [
+        {
+          "Unico": "Z6_4808HGO0MO4I60AT95H7TT3UJ0",
+          "URL": "https://www.claro.com.gt/personas/servicios",
+          "Descripcion": " Servicios",
+          "HiddenHeader": "false",
+          "HiddenFooter": "false",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "",
+          "ClassContenido": "",
+          "ClassMenu": "",
+          "Hijos": [
+            {
+              "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA31P4",
+              "URL": "https://www.claro.com.gt/personas/servicios/servicios-moviles/prepago",
+              "Descripcion": " Servicios M&oacute;viles",
+              "HiddenHeader": "true",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "",
+              "Hijos": []
+            },
+            {
+              "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA31P5",
+              "URL": "https://www.claro.com.gt/personas/servicios/servicios-hogar/telefonia-fija",
+              "Descripcion": " Servicios Hogar",
+              "HiddenHeader": "true",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "",
+              "Hijos": []
+            },
+            {
+              "Unico": "Z6_IOHAH9S0M05250ANOMOFQK2U10",
+              "URL": "https://www.claro.com.gt/wps/myportal/gt/pcc/personas/servicios/claro-club/",
+              "Descripcion": " Claro club",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "claroClub",
+              "Hijos": []
+            },
+            {
+              "Unico": "Z6_4808HGO0MO4I60AT95H7TTBR65",
+              "URL": "https://www.claro.com.gt/personas/servicios/entretenimiento",
+              "Descripcion": " Entretenimiento",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "entretenimiento",
+              "Hijos": []
+            },
+            {
+              "Unico": "Z6_6Q00G202M8UVE0A7J4GVA42060",
+              "URL": "https://www.claro.com.gt/personas/servicios/promociones",
+              "Descripcion": " Promociones",
+              "HiddenHeader": "true",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "level3",
+              "ClassMenu": "promocion",
+              "Hijos": []
+            }
+          ]
+        },
+        {
+          "Unico": "Z6_4808HGO0MO4I60ATDDHDG1IIG7",
+          "URL": "http://asistencia.claro.com.gt/",
+          "Descripcion": " Soporte",
+          "HiddenHeader": "false",
+          "HiddenFooter": "false",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "",
+          "ClassContenido": "",
+          "ClassMenu": "",
+          "Hijos": [
+            {
+              "Unico": "Z6_6Q00G202MOG2E0ANG3LM2J1884",
+              "URL": "http://asistencia.claro.com.gt/",
+              "Descripcion": " Asistencia",
+              "HiddenHeader": "true",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "",
+              "Hijos": []
+            },
+            {
+              "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA31U5",
+              "URL": "https://www.claro.com.gt/personas/ayuda/telefonos",
+              "Descripcion": " Tel&eacute;fonos",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "",
+              "Hijos": []
+            },
+            {
+              "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA3UR3",
+              "URL": "https://www.claro.com.gt/personas/servicios/servicios-hogar/publicidad-claro-tv/",
+              "Descripcion": " Claro publicidad",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "",
+              "Hijos": []
+            }
+          ]
+        },
+        {
+          "Unico": "Z6_4808HGO0MO4I60AT95H7TTRML2",
+          "URL": "https://www.claro.com.gt/personas/mi-claro",
+          "Descripcion": " Mi Claro",
+          "HiddenHeader": "true",
+          "HiddenFooter": "false",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "",
+          "ClassContenido": "",
+          "ClassMenu": "",
+          "Hijos": [
+            {
+              "Unico": "Z6_IOHAH9S0MG4H60AFNDSFBI0BP1",
+              "URL": "https://www.claro.com.gt/personas/mi-claro/inicio-de-sesion",
+              "Descripcion": " Inicio de Sesi&oacute;n",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "",
+              "Hijos": []
+            },
+            {
+              "Unico": "Z6_IOHAH9S0MG4H60AFNDSFBI0B35",
+              "URL": "https://www.claro.com.gt/personas/mi-claro/factura-electronica",
+              "Descripcion": " Factura electr&oacute;nica",
+              "HiddenHeader": "true",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "level3",
+              "ClassMenu": "",
+              "Hijos": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Unico": "Z6_4808HGO0MO4I60ATDDHDG1I945",
+      "URL": "https://www.claro.com.gt/empresas",
+      "Descripcion": " Empresas",
+      "HiddenHeader": "false",
+      "HiddenFooter": "false",
+      "HiddenPestana": "false",
+      "ClassAccesosRap": "",
+      "ClassContenido": "",
+      "ClassMenu": "movil",
+      "Hijos": [
+        {
+          "Unico": "Z6_4808HGO0MO4I60ATDDHDG1ILP3",
+          "URL": "https://www.claro.com.gt/empresas/soluciones",
+          "Descripcion": " Soluciones",
+          "HiddenHeader": "false",
+          "HiddenFooter": "false",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "",
+          "ClassContenido": "",
+          "ClassMenu": "",
+          "Hijos": [
+            {
+              "Unico": "Z6_4808HGO0MO4I60ATDDHDG1IL37",
+              "URL": "https://www.claro.com.gt/empresas/soluciones/comunicacion-movil",
+              "Descripcion": " Comunicaci&oacute;n M&oacute;vil",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "level2",
+              "ClassMenu": "movil",
+              "Hijos": []
+            },
+            {
+              "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJAB284",
+              "URL": "https://www.claro.com.gt/empresas/soluciones/paquetes",
+              "Descripcion": " Paquetes",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "ico_armaPaqueteC",
+              "Hijos": []
+            },
+            {
+              "Unico": "Z6_4808HGO0MO4I60ATDDHDG1A440",
+              "URL": "https://www.claro.com.gt/empresas/soluciones/comunicacion-fija",
+              "Descripcion": " Comunicaci&oacute;n Fija",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "level2",
+              "ClassMenu": "ico_asesoriaEficienteE",
+              "Hijos": []
+            },
+            {
+              "Unico": "Z6_6Q00G202MO0Q70A7B3158C2OP3",
+              "URL": "https://www.claro.com.gt/empresas/soluciones/soluciones-claro",
+              "Descripcion": " Soluciones Claro",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "level2",
+              "ClassMenu": "ico_erpC",
+              "Hijos": []
+            },
+            {
+              "Unico": "Z6_6Q00G202M8QM30ANG41O5H1002",
+              "URL": "http://www.clarocloud.com.gt/",
+              "Descripcion": " Cloud",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "claroCloud",
+              "Hijos": []
+            },
+            {
+              "Unico": "Z6_4808HGO0MO4I60ATDDHDG1Q0I4",
+              "URL": "https://www.claro.com.gt/empresas/soluciones/promociones",
+              "Descripcion": " Promociones",
+              "HiddenHeader": "true",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "level3",
+              "ClassMenu": "",
+              "Hijos": []
+            }
+          ]
+        },
+        {
+          "Unico": "Z6_IOHAH9S0MG4H60AFNDSFBI0HG1",
+          "URL": "https://www.claro.com.gt/empresas/soporte",
+          "Descripcion": " Soporte",
+          "HiddenHeader": "true",
+          "HiddenFooter": "false",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "",
+          "ClassContenido": "",
+          "ClassMenu": "",
+          "Hijos": []
+        }
+      ]
+    },
+    {
+      "Unico": "Z6_4808HGO0MO4I60AT95H7TTRH84",
+      "URL": "https://www.claro.com.gt/corporaciones",
+      "Descripcion": " Corporaciones",
+      "HiddenHeader": "false",
+      "HiddenFooter": "false",
+      "HiddenPestana": "false",
+      "ClassAccesosRap": "",
+      "ClassContenido": "",
+      "ClassMenu": "movil",
+      "Hijos": [
+        {
+          "Unico": "Z6_4808HGO0MO4I60AT95H7TTR5I6",
+          "URL": "https://www.claro.com.gt/corporaciones/soluciones",
+          "Descripcion": " Soluciones",
+          "HiddenHeader": "false",
+          "HiddenFooter": "false",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "",
+          "ClassContenido": "",
+          "ClassMenu": "",
+          "Hijos": [
+            {
+              "Unico": "Z6_4808HGO0MO4I60AT95H7TTRRF5",
+              "URL": "https://www.claro.com.gt/corporaciones/soluciones/soluciones-claro",
+              "Descripcion": " Soluciones Claro",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "level2",
+              "ClassMenu": "ico_erpE",
+              "Hijos": []
+            },
+            {
+              "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA3U56",
+              "URL": "https://www.claro.com.gt/corporaciones/soluciones/comunicacion-movil/planes-moviles-pospago/",
+              "Descripcion": " Comunicaci&oacute;n M&oacute;vil",
+              "HiddenHeader": "true",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "",
+              "Hijos": []
+            },
+            {
+              "Unico": "Z6_IOHAH9S0M0VHE0AN6BVRJA31I2",
+              "URL": "http://www.clarocloud.com.gt/",
+              "Descripcion": " Cloud",
+              "HiddenHeader": "false",
+              "HiddenFooter": "false",
+              "HiddenPestana": "false",
+              "ClassAccesosRap": "",
+              "ClassContenido": "",
+              "ClassMenu": "claroCloud",
+              "Hijos": []
+            }
+          ]
+        },
+        {
+          "Unico": "Z6_IOHAH9S0MG4H60AFNDSFBI0H03",
+          "URL": "https://www.claro.com.gt/corporaciones/soporte",
+          "Descripcion": " Soporte",
+          "HiddenHeader": "true",
+          "HiddenFooter": "false",
+          "HiddenPestana": "false",
+          "ClassAccesosRap": "",
+          "ClassContenido": "",
+          "ClassMenu": "",
+          "Hijos": []
+        }
+      ]
+    }
+  ],
+  "MiClaro": "http://www.claro.com.co/personas/&#63;showMiClaro=true",
+  "Eslogan": "La red donde todo es posible.",
+  "RedesSociales": [
+    {
+      "facebook": "https://es-la.facebook.com/claroelsalvador/",
+      "youtube": "https://www.youtube.com/playlist&#63;list=PLr0ckWUpaxVMJXjdAmuw9_g2EH-hXEKhr",
+      "google": "",
+      "twitter": "",
+      "twitter1": "",
+      "instagram": ""
+    }
+  ]
+}

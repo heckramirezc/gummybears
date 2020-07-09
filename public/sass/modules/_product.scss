@@ -1,0 +1,418 @@
+.product {width: 100%;
+
+  // box
+  &--box {display: inline-block; width: 100%; padding-bottom: 1em;
+    // @include desk {max-width: 247px;}
+    a {@include padblock(0.5em); width: 100%;
+      h3 {display: block; font-size: 1.25rem; font-weight: 300; min-height: 50px;}
+      picture {padding: 1em 0; text-align: center;
+        img {height: 180px; width: auto; margin: 0 auto;}
+      }
+      p {padding-bottom: 0.5em; font-size: 1em;}
+      p.price {display: inline-block; width: auto; font-size: 2rem; font-weight: 300; padding-bottom: 0.25rem;
+        &.is-promo {color: $red; display: block;
+          &::before { display: inline-block; font-size: 1rem; margin-right: 0.5rem; content: "Oferta "; }
+        }
+      }
+      del.price {display: block; width: auto; font-size: 1.25rem; font-weight: 300; color: $grey; padding-bottom: 0.5rem; // margin-right: 1rem;
+        &::before { display: inline-block; font-size: 1rem; margin-right: 0.5rem; content: "Normal "; }
+      }
+      p.whitespace { margin-bottom: 1.5rem; }
+      .color {width: 100%; @include flexbox; @include flow-rn; @include just-between; @include items-start; padding: 0.5em 0;
+        > p {display: inline-block; font-size: 0.9em; font-weight: 400;}
+        ul {display: inline-block; max-width: 60%;
+          li {@include padblock(0); overflow: hidden; margin: 0 0 0.25em 0.25em;
+            p { display: inline-block; @include size(14px, 14px); @include radius(99px); padding: 0; text-align: center;
+              span { display: inline-block; @include size(12px, 12px); @include radius(99px); transform: translateY(-2px); }
+            }
+            &:first-child p { border: 1px solid $blue; }
+            &.disabled { opacity: 0.3; }
+          }
+        }
+      }
+      > b {@include padblock(0.6em); width: 100%; text-align: center; @include trans;
+        background-color: white; color: $red; border: 1px solid $red; @include radius(3px);
+        span {font-weight: 300;
+          &::after {content: "\f105"; font-family: $icon; display: inline-block; padding-left: 7px;}
+        }
+      }
+      &:hover {box-shadow: 0 1px 4px rgba(0,0,0,0.6);
+        > b {background-color: $red; color: white;}
+      }
+    }
+    // &-pospago {@include padblock(0.5em 1em); width: 100%; text-align: center; font-size: 0.85em; color: $blue;
+    //   b {display: inline; font-weight: 500;}
+    //   span {display: inline; padding: 0 3px;}
+    //   &:hover {text-decoration: underline;}
+    // }
+
+  }
+
+  // main
+  &--main {width: 100%;  @include module; overflow: hidden;
+    @include tablet {@include flexbox; @include flow-rw; @include just-between; @include items-start; padding: 0;}
+  }
+
+  &--image {width: 100%; @include padbox(0 1em); position: relative; z-index: 3;
+    @include tablet {width: 50%;}
+    @include desk {width: 40%; min-height: 505px; }
+    &-type { display: none; width: auto; position: absolute; top: 0; left: 0; z-index: 1;
+      @include desk { display: inline-block; }
+      a { display: block; font-weight: 500; color: $black; margin-bottom: 0.5rem; font-size: 0.9rem;
+        &::before { content: "\f00e"; font-family: $icon; display: inline-block; padding-right: 6px; }
+        & + a::before { content: "\f01e"; }
+        // &.active, &:hover { opacity: 0.4; }
+      }
+    }
+    &-rotate { cursor: ew-resize; margin: 0 auto; }
+    &-thumbs { width: 100%; overflow-x: scroll; overflow-y: hidden; margin: 0 auto; padding-bottom: 10px;
+      @include flexbox_i; @include flow-rn; @include just-start; @include items-center;
+      @include tablet { width: 80%; }
+      a { display: inline-block; min-width: 25%; }
+    }
+    .slick {
+      // &-list { overflow: visible; }
+      &-slide {
+        > div {
+          @include desk { width: 80%; margin: 0 auto; }
+        }
+      }
+      &-current { z-index: 1; }
+      &-dots { width: 100%; overflow-x: hidden; overflow-y: hidden; margin: 0 auto; padding-bottom: 10px;
+        @include flexbox_i; @include flow-rn; @include just-start; @include items-center;
+        @include tablet { width: 80%; }
+        li { display: inline-block; min-width: 25%; @include trans;
+          &:first-child { margin-left: 0; 
+            &.active { margin-left: -100%; }
+          }
+        }
+      }
+      &-dotnav { width: auto; position: absolute; bottom: 2rem; font-size: 2.5rem;
+        @include tablet { font-size: 3rem; }
+        &.active { opacity: 0.6; } 
+        &-prev { left: 0.5rem;
+          &::before { content: "\f104"; font-family: $icon; display: inline-block; }
+        }
+        &-next { right: 0.5rem;
+          &::before { content: "\f105"; font-family: $icon; display: inline-block; }
+        }
+      }
+      &-arrow { font-size: 2.6rem; padding: 0.5rem; position: absolute; bottom: 1.5rem; z-index: 1;
+        &:hover { opacity: 0.6; }
+        &.slick-prev { left: -0.75rem; right: auto; }
+        &.slick-next { left: auto; right: -0.75rem; }
+      }
+    }
+  }
+
+  &--info {width: 100%; @include flexbox; @include flow-rw; @include just-between; @include items-start;
+    @include padbox(0 1em); margin-bottom: 2em; z-index: 1;
+    @include tablet {width: 50%; padding: 0 1em;}
+    @include desk {width: 56%; padding: 0; position: relative; }
+    .cart--warning { margin-top: 1rem; }
+  }
+
+  &--header {width: 100%; margin-bottom: 1.25em;
+    h2 {font-size: 2em; font-weight: 300;}
+    p {font-size: 1em; margin-top: 0.5em; color: $grey;}
+  }
+
+  &--purchase {width: 100%; margin-bottom: 2em;
+    @include flexbox; @include flow-rw; @include just-between; @include items-center;
+    section {display: inline-block;
+      @include desk {width: 60%;}
+      p.price {font-size: 1.875em; font-weight: 300; padding: 0;
+        &.is-promo { color: $red; margin-bottom: 0.5rem;
+          &::before { display: inline-block; font-size: 1.25rem; margin-right: 0.5rem; content: "Oferta "; }
+        }
+      }
+      del.price {font-size: 1.5em; font-weight: 300; padding: 0; color: $grey; display: block;
+        &::before { display: inline-block; font-size: 1rem; margin-right: 0.5rem; content: "Normal "; }
+      }
+      p {font-size: 0.875em; font-weight: 400; margin-top: 0.5em;
+        @include tablet {
+          display: inline-block; padding-left: 1em;
+          &.block {display: block; padding-left: 0;}
+        }
+      }
+      a {color: $blue; width: 100%; margin-top: 0.5em; font-size: 0.9em;
+        b, span {display: inline;}
+        &::after {content: "\f105"; font-family: $icon; display: inline-block; padding-left: 6px; vertical-align: baseline;}
+        &:hover {text-decoration: underline;}
+      }
+    }
+    > a {color: white; background-color: $red; width: 100%;
+      text-align: center; margin-top: 0.5em; @include radius(3px);
+      @include desk {width: 40%;}
+      span {@include padblock(0.5em);
+        &::after {content: "\f105"; font-family: $icon; display: inline-block; padding-left: 6px; vertical-align: baseline; @include trans;}
+      }
+      &:hover span::after {@include transform(translateX(6px));}
+      &.custom { background-color: $blue; }
+    }
+    > p {
+      color: $grey; background-color: $light; width: 100%; @include padblock(0.5em);
+      text-align: center; margin-top: 0.5em; @include radius(3px);
+      cursor: no-drop;
+      @include desk {width: 40%;}
+    }
+    .disabled { opacity: 0.5; cursor: default; 
+      span::after { display: none; }
+    }
+    .restricted {position: relative; margin-bottom: 3rem;
+      color: white; background-color: $blue; width: 100%;
+      text-align: center; margin-top: 0.5em; @include radius(3px);
+      @include desk {width: 40%; margin-bottom: 0;}
+      span {@include padblock(0.5em);
+        &::after {content: "\f105"; font-family: $icon; display: inline-block; padding-left: 6px; vertical-align: baseline; @include trans;}
+      }
+      &:hover span::after {@include transform(translateX(6px));}
+      i {
+        position: absolute; left: 0; right: 0; top: calc( 100% + 1rem ); @include radius(6px);
+        @include padblock(0.4rem); font-size: 0.8rem; font-style: normal; color: $red; background-color: #eee;
+      }
+    }
+    .notification {
+      @include padblock(0.5rem); background-color: #eee; color: $red; margin: 1rem 0; @include radius(9px);
+    }
+  }
+
+  &--color {margin-bottom: 1em; width: 100%;
+    p {font-weight: 400; margin-bottom: 0.5em;
+      &::before {content: "1"; display: inline-block; @include size(20px, 20px); margin-right: 0.5em;
+        color: $red; border: 1px solid $light; text-align: center; @include radius(99px);
+      }
+    }
+    div {width: 100%;
+      label {width: auto; margin-right: 6px; @include radius(99px);
+        text-align: center; line-height: 2;
+        i {display: inline-block; @include size(22px, 22px); @include radius(99px); line-height: 1.9; border: 2px solid $soft; @include trans;
+          span {@include radius(99px); @include size(18px, 18px); @include inset;}
+        }
+        input {display: none;
+          &:checked + i {border-color: $blue;}
+        }
+        &:hover {
+          i {border-color: $blue;}
+        }
+      }
+    }
+  }
+
+  &--size {width: 100%; margin-bottom: 1.5em; width: 100%;
+    p {font-weight: 400; margin-bottom: 0.5em;
+      &::before {content: "2"; display: inline-block; @include size(20px, 20px); margin-right: 0.5em;
+        color: $red; border: 1px solid $light; text-align: center; @include radius(99px);
+      }
+    }
+    div {width: 100%;
+      label {margin: 0.5em 0.5em 0 0; width: 100px;
+        span {width: 100%; @include padbox(0.5em); text-align: center; color: $grey; border: 1px solid $light; @include trans;}
+        input {display: none;
+          &:checked + span {@include box-border; color: $dark;}
+        }
+        &:hover {
+          span {@include box-border; color: $dark;}
+        }
+      }
+    }
+  }
+
+  &--check {width: 100%;
+    span {color: $grey;
+      &::before {content: "\f1b9"; font-family: $icon; display: inline-block; padding-right: 6px;}
+    }
+    a {color: $blue; display: inline;
+      &::after {content: "\f105"; font-family: $icon; display: inline-block; padding-left: 6px; vertical-align: baseline; @include trans;}
+      &:hover {text-decoration: underline;}
+    }
+  }
+
+  &--card {
+    font-size: 0.9rem; color: $dark; width: 100%; text-align: left;
+    padding-bottom: 0.5rem; margin-bottom: 0rem; // border-bottom: 1px solid $grey;
+    // &::before { font-family: $icon; display: inline-block; content: "\f283"; padding-right: 6px; }
+  }
+
+  &--share {
+    width: 100%;
+    a { font-size: 0.75rem; font-weight: 500; @include padblock(0.3em 0.5rem); border-radius: 4px; color: white; margin-right: 1rem;
+      &::before { font-family: $icon; display: inline-block; padding-right: 4px; }
+      &.facebook { background-color: $facebook;
+        &::before { content: "\f082"; }
+        &:hover { background-color: darken( $facebook, 10% ); }
+      }
+      &.twitter { background-color: $twitter;
+        &::before { content: "\f099"; }
+        &:hover { background-color: darken( $twitter, 10% ); }
+      }
+    }
+  }
+
+  // &--geo {width: 100%; height: 0; overflow: visible; position: fixed; @include full0; z-index: 9999; display: none;
+  //   &-bg {width: 100%; position: fixed; @include full0; background-color: black; opacity: 0.8; display: none;}
+  //   &-xclose {position: absolute; top: 0.5em; right: 0.5em;
+  //     @include tablet {top: 1em; right: 1em;}
+  //     svg {display: block;
+  //       * {stroke: white;}
+  //     }
+  //   }
+  //   &-container {width: 90%; min-height: 100vh; margin: 0 auto; z-index: 1;
+  //     @include flexbox; @include flow-rn; @include just-center; @include items-center;
+  //     @include desk {width: 64%;}
+  //   }
+  //   &-modal {width: 100%; background-color: white; @include padblock(1em);
+  //     @include transform(scale(0)); @include trans;
+  //     @include tablet {padding: 2em;}
+  //     &.active {@include transform(scale(1));}
+  //     header {width: 100%; text-align: center; margin-bottom: 1em;
+  //       h2 {font-size: 1.875em; font-weight: 300;}
+  //     }
+  //     form {width: 100%; margin-bottom: 1em;
+  //       @include flexbox; @include flow-rw; @include just-between; @include items-center;
+  //       label {@include selectbox; width: 24%;}
+  //       div {display: inline-block; width: 24%;
+  //         button {@include padblock(0.6em); color: white; background-color: $blue; width: 100%; text-align: center; @include radius(3px);}
+  //       }
+  //     }
+  //     aside {width: 100%;
+  //       iframe {width: 100%; height: 16em;
+  //         @include tablet {height: 23em;}
+  //       }
+  //     }
+  //   }
+  // }
+
+  // specs
+  &--specs {width: 100%; background-color: $soft; margin-top: 2.5em;
+    .module {@include padbox(2em 0.5em);
+      @include tablet {padding: 2em 1em; @include flexbox; @include flow-rw; @include just-between; @include items-stretch;}
+      @include desk {padding: 2em 0;}
+    }
+    h2 {width: 100%; font-size: 1.75em; font-weight: 300; text-align: center; margin-bottom: 1.5em;
+      @include tablet {text-align: left;}
+    }
+    article {width: 100%; @include padblock(1em); text-align: center; border-bottom: 1px solid $light;
+      @include tablet {border-bottom: none; border-right: 1px solid $light; width: 25%;
+        &:last-of-type {border-right: none;}
+      }
+      i {margin-bottom: 0.5em; height: 38px;
+        svg {max-width: 38px; max-height: 38px; width: 100%;
+          vertical-align: -webkit-baseline-middle; vertical-align: -moz-middle-with-baseline;
+        }
+      }
+      h3 {font-size: 1.125em; font-weight: 400; margin-bottom: 0.5em;}
+      // p {}
+    }
+  }
+
+  // details
+  &--details {width: 100%; @include padbox(2.5em 0 0 0);}
+
+  // description
+  &--tabs {width: 100%; text-align: center; border-bottom: 1px solid $light;
+    a {font-size: 0.85em; @include padbox(0.5em); border-bottom: 2px solid white; margin: 0 0.25em;
+      @include tablet {font-size: 1em;}
+      &.active {border-color: $blue;}
+    }
+  }
+
+  &--description {width: 100%; @include padbox(2em 0 1rem 0); display: none;
+    &.active {display: block;}
+
+    .module {@include padbox(2.5em 1em);
+      @include flexbox; @include flow-rw; @include just-between; @include items-start;
+      @include desk {padding: 2.5em 0 1rem 0;}
+    }
+
+    &-white, &-gray {width: 100%;
+      header {width: 100%; color: $grey; 
+        @include tablet {width: 50%;}
+        h3 {font-size: 2em; font-weight: 300; margin-bottom: 1em; text-align: left;}
+        p {margin-bottom: 1em;}
+      }
+      picture {@include padbox(0 1em);
+        @include tablet {width: 50%;}
+      }
+    }
+
+    // &-white {
+    //   header {}
+    //   picture {}
+    // }
+
+    &-gray {background-color: $soft;
+      // header {}
+      picture {
+        @include tablet {@include order(-1);}
+      }
+    }
+
+    &-switch {width: 100%;
+      // .module {}
+      h3 {width: 100%; text-align: center; font-size: 1.5em; font-weight: 300; margin-bottom: 1em;}
+      &-menu {width: 100%; @include flexbox; @include flow-rn; @include just-around; @include items-stretch; margin-bottom: 1.25em;
+        @include tablet {@include just-center;}
+        li {display: inline-block; text-align: center; width: 30%;
+          @include tablet {width: 160px;}
+          a {text-align: center; color: #888; @include size(50px, 50px); @include radius(99px); position: relative;
+            border: 1px solid $light; opacity: 0.4;
+            &.active, &:hover {box-shadow: 0 0 4px rgba(0, 0, 0, 0.6); border-color: $blue; opacity: 1;}
+            i {font-family: $icon; font-style: normal; font-size: 1em; color: #888;}
+            &.first i::before {content: "\f10b"; font-size: 2em; line-height: 1.6;}
+            &.second i::before {content: "\f030"; font-size: 1.5em; line-height: 2;}
+            &.third i::before {content: "\f240"; font-size: 1.5em; line-height: 2;}
+          }
+          span {width: 100%; font-size: 0.875em; margin-top: 1em;}
+        }
+      }
+      &-content {width: 100%;
+        > section {display: none;
+          &.active {display: block;}
+        }
+      }
+    }
+
+  }
+
+  &--datasheet {display: none;
+    &.active {display: block;}
+    section {width: 100%; background-color: white; @include padbox(2em 1em);
+      &:nth-child(even) {background-color: $soft;}
+      .module {
+        @include tablet {@include flexbox; @include flow-rw; @include just-end; @include items-center;}
+        header {width: 100%; margin-bottom: 1.5em;
+          @include flexbox; @include flow-rn; @include just-start; @include items-center;
+          i {width: 90px; height: 38px; text-align: center; //@include perfect-center;
+            svg {display: inline-block; max-width: 38px; max-height: 38px;}
+          }
+          h3 {display: inline-block; font-size: 1.625em; font-weight: 300;}
+        }
+        div {width: 100%; @include padblock(0.5em 0); border-bottom: 1px solid $light; margin-bottom: 0.25em;
+          @include tablet {width: calc(100% - 90px); @include flexbox; @include flow-rn; @include just-between; @include items-center;}
+          h6 {font-size: 1em; font-weight: 400; padding-bottom: 0.5em; width: 100%;
+            @include tablet {width: 26%; padding-bottom: 0;}
+          }
+          p {display: inline-block; width: 100%;
+            @include tablet {width: 74%;}
+          }
+        }
+      }
+    }
+  }
+
+  // faq
+  &--faq {width: 100%; margin: 0; @include padbox(0 1em 1em 1em);
+    &-block {width: 100%; border: 1px solid $light; margin-bottom: 0.5em;
+      a {width: 100%; @include padbox(0.5em); @include flexbox; @include flow-rn; @include just-between; @include items-center;
+        h4 {font-weight: 400;}
+        span {font-family: $icon; color: $blue;}
+      }
+      article {width: 100%; @include padbox(0.5em); display: none;
+        p {font-size: 0.9em; color: $grey;}
+      }
+    }
+  }
+
+}
+

@@ -1,0 +1,14 @@
+node_modules/
+.DS_Store
+coverage/
+.package-lock.json.icloud
+.vscode
+public/media/demo/
+public/scripts/main.js
+public/scripts/main.js.map
+public/styles.css
+public/styles.css.map
+public/index.html
+NOTES.txt
+target
+log-camel-lsp.out

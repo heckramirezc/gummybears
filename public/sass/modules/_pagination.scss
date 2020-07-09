@@ -1,0 +1,42 @@
+.pagination {width: 100%; margin: 1em 0;
+  @include flexbox; @include flow-rw; @include just-center; @include items-center;
+  @include tablet { @include flow-rn; @include just-between; }
+  @include desk { padding-left: 22%; }
+
+
+  section {width: 100%; margin-bottom: 1em; text-align: center;
+    @include tablet {width: auto; margin-bottom: 0;}
+    a {@include padbox(0.25em); margin: 0 0.25em; color: $grey;
+      &.active {box-shadow: 0px 0px 3px #333; color: $black; font-weight: 500;}
+      &::before, &::after {font-family: $icon; display: inline-block; color: $blue; font-size: 130%; vertical-align: middle;}
+      &::before {padding-right: 4px;}
+      &::after {padding-left: 4px;}
+    }
+  }
+
+  &-first {color: $blue !important;
+    &::before {content: "\f100";}
+    span {font-size: 80%; display: none;
+      @include tablet {display: inline-block;}
+    }
+  }
+  &-last {color: $blue !important;
+    &::after {content: "\f101";}
+    span {font-size: 80%; display: none;
+      @include tablet {display: inline-block;}
+    }
+  }
+  &-prev {
+    &::before {content: "\f104";}
+  }
+  &-next {
+    &::after {content: "\f105";}
+  }
+
+  aside {
+    p {display: inline-block; margin-right: 0.5em; font-size: 14px; font-weight: 400;}
+    label {@include selectbox; width: 5em;
+      select { padding: .5em 2.5em .5em .5em; }
+    }
+  }
+}
