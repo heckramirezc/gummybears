@@ -5,12 +5,12 @@ const Dotenv = require('dotenv-webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const credentials = process.env.NODE_ENV || 'UAT';
-let uri = 'http://uat-gummybears.com'; // UAT
+let uri = 'https://uat-gummybears.com'; // UAT
 
 if (credentials === 'PROD') {
-  uri = 'https://test.tienda-sv.tmx-internacional.com';
+  uri = 'https://uat-gummybears.com';
 } else if (credentials === 'QA') {
-  uri = 'https://clarosv.wcaas.net';
+  uri = 'https://uat-gummybears.com';
 }
 console.warn(`${uri} ---> ${credentials}`);
 
