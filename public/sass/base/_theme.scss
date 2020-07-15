@@ -1,0 +1,74 @@
+// General
+.hide {display: none !important;}
+.hidden {visibility: hidden !important;}
+.overhidden {overflow: hidden !important;}
+.grayscale {-webkit-filter: grayscale(1); filter: grayscale(1);}
+.disabled { opacity: 0.5; cursor: not-allowed;
+  input { background-color: #eee; }
+}
+
+// Layout
+.module {@include module;}
+.symbol {display: inline-block !important; font-size: 60% !important; vertical-align: top !important;}
+.fastlinks {width: 100%; @include padbox(1em);
+  @include desk {padding: 1em 0;}
+  section {width: 100%; @include module;
+    @include flexbox; @include flow-rw; @include just-between; @include items-center;
+    > a {font-size: 0.9em; color: $blue;
+      &::before {content: "\f104"; font-family: $icon; display: inline-block; padding-right: 6px;}
+      &:hover {text-decoration: underline;}
+    }
+    p {font-size: 0.9em;
+      span {display: inline;}
+      a {color: $blue; display: inline;
+        &::after {content: "\f105"; font-family: $icon; display: inline-block; padding-left: 6px;}
+        &:hover {text-decoration: underline;}
+      }
+    }
+  }
+}
+
+// Product
+.zoomWindow {border-width: 1px  !important;}
+.zoomContainer {z-index: 1 !important;}
+.SocialMediaShareButton { width: auto; display: inline-block; outline: none; }
+
+// Forms
+.select {@include selectbox;}
+.error {color: $red;}
+label.error, span.error {color: $red; font-size: 0.8rem; margin: 0 !important;
+  &::before, &::after { display: none; }
+}
+@include ie11 {
+  label.error, span.error { display: none; }
+}
+.cvv {
+  i {color: $blue; position: absolute; top: 0.4em; right: 0.5em; font-style: normal; text-align: center;
+    &::after {content: "\f129"; font-family: $icon; display: inline-block; font-size: 0.8em; font-weight: 300;
+      @include size(20px, 20px); @include radius(99px); border: 1px solid $blue; line-height: 1.6;
+    }
+  }
+  &-block {background-color: $soft; @include padbox(0.5em); font-size: 0.7em;
+    position: absolute; top: 100%; left: 0; right: 0; display: none;
+    img {margin-bottom: 9px;}
+  }
+  i:hover {
+    & + span.cvv-block {display: inline-block;}
+  }
+}
+.checkbox {width: 100%; @include flexbox; @include flow-rw; @include just-start; @include items-center;
+  span {font-size: 1em;}
+  i {@include padblock(3px); @include size(17px, 17px); @include radius(99px); position: relative;
+    border: 1px solid $light; background-color: white; margin-right: 0.5em; text-align: center;
+    &::before {content: ""; display: block; @include size(9px, 9px); @include radius(99px); @include trans;
+      background-color: white;
+    }
+  }
+  input {display: none;
+    &:checked + i::before {background-color: $blue;}
+  }
+}
+.full {
+  width: 100%;
+  label { width: 100%; }
+}

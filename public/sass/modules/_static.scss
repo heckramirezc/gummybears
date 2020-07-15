@@ -1,0 +1,32 @@
+.static {
+
+  &--e404 {width: 100%; text-align: center; @include module;
+    @include flexbox; @include flow-cn; @include just-center; @include items-center;
+    h1 {font-size: 3em; font-weight: 400; color: $red; margin-top: 20vh;
+      @include tablet {font-size: 4em;}
+    }
+    p {color: $grey; margin: 1em;}
+    a {@include padbox(0.5em); background-color: $red; color: white; @include radius(3px); min-width: 180px;}
+  }
+
+  &--terms { @include module; padding: 2rem 0.5rem;
+    h1 { font-size: 1.4rem; margin: 1rem 0; text-align: center; }
+    h3 { font-size: 1rem; margin: 1rem 0 0.5rem 0; }
+    h4 { font-size: 0.9rem; margin: 1rem 0 0.5rem 0; }
+    p { margin: 1rem 0; }
+    ul { @include padbox(1rem);
+      li { display: block; margin: 1rem 0; }
+    }
+    aside { margin: 2rem 0; text-align: center;
+      div { margin: 1rem 0; }
+      h4 { margin: 2rem 0 0 0; }
+      h5 { margin: 1rem 0; }
+      h4, p, ul { text-align: left; }
+    }
+
+  }
+
+  &--conditions {
+    li {list-style-type: disc; display: list-item}
+  }
+}

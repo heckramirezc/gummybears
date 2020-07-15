@@ -1,0 +1,376 @@
+.cart {@include module;
+
+  &--header {width: 100%; @include padbox(1em);
+    h1 {font-size: 2em; font-weight: 300;}
+    @include desk {padding: 1em 0;}
+  }
+  &--footer {width: 100%; @include padbox(1em);
+    @include flexbox; @include flow-rw; @include just-between; @include items-start;
+    @include desk {padding: 0.5em 0; margin-bottom: 2em;}
+    a:nth-of-type(1)  {width: 100%; margin-bottom: 1em; text-align: center; @include btn-back;
+      @include tablet {width: 180px;}
+      // &:first-of-type {@include btn-back;}
+      // &:last-of-type {@include btn-go;}
+    }
+    button, a:nth-of-type(2) {width: 100%; margin-bottom: 1em; text-align: center; @include btn-go;
+      @include tablet {width: 180px;}
+    }
+    div { display: block; width: 100%;
+      .notification {
+        @include padblock(0.5rem); background-color: #eee; color: $red; margin-bottom: 1rem; @include radius(9px);
+      }
+    }
+  }
+  .product--card { @include padbox(0.5rem); text-align: center;
+    @include desk { @include transform(translateX(1.5rem)); }
+  }
+  &--warning { @include flexbox; @include flow-rn; @include just-start; @include items-center;
+    width: 100%; background-color: $sky; @include padbox(0.75rem); margin-bottom: 1rem; 
+    img { width: 40px; display: inline-block; margin-right: 1rem; }
+    p { display: inline-block; color: $dark; opacity: 0.8;
+      @include desk { font-size: 1.2rem; }
+      b { display: inline-block; padding: 0 4px; }
+    }
+  }
+
+  // summary
+  &--summary {
+    &-header {width: 100%; @include padbox(1em);
+      @include radius(5px);
+      background: linear-gradient(90deg, rgba(240,90,36,1) 0%, rgba(246,146,30,1) 35%);
+      text-align: center;
+      @include flexbox; @include flow-rn; @include just-between; @include items-center;
+      p {font-weight: 500; font-size: 0.9em; color: white; text-align: center; margin: auto;}
+    }
+    &-total {width: 100%; @include padbox(1em);
+      @include flexbox; @include flow-rn; @include just-between; @include items-start;
+      b {font-size: 1.75em; font-weight: 300; color: $red;}
+      p {font-size: 1.75em;}
+    }
+  }
+
+  // empty
+  &--empty {width: 100%; text-align: center; min-height: 40vh;
+    @include flexbox; @include flow-cn; @include just-center; @include items-center;
+    p {margin-bottom: 1em;}
+    a {@include padblock(0.5em); @include radius(3px); color: $blue; background-color: white; border: 1px solid $blue; width: 280px;
+      span {
+        &::before {content: "\f104"; font-family: $icon; display: inline-block; padding-right: 6px; @include trans;}
+      }
+      &:hover {
+        span::before {@include transform(translateX(-6px));}
+      }
+    }
+  }
+
+  // detail
+  &--content {width: 100%; @include padblock(1em); // margin-bottom: 1rem;
+    @include desk {padding: 0;}
+    & + & { opacity: 0.3; }
+  }
+
+  &--box {width: 100%; // border-bottom: 1px solid $light;
+    @include flexbox; @include flow-rw; @include just-between; @include items-start;
+  }
+
+  &--image {text-align: center; width: 100%; margin-bottom: 1em; 
+    @include flexbox; @include flow-cn; @include just-center; @include items-center;
+    @include tablet {width: 30%;}
+    h2 {font-size: 1em; font-weight: 400; padding-bottom: 0.5em; text-align: left;
+      width: 100%; border-bottom: 1px solid $light;
+    }
+    &-link {
+      picture { text-align: center; @include padbox(1em);
+        img {display: inline-block; height: 90px; width: auto;}
+      }
+      &:hover { opacity: 0.5; }
+    }
+    
+    a {font-size: 0.8em; color: $blue;
+      &:hover {text-decoration: underline;}
+      &.delete {
+        &::before { content: "\f1f8"; font-family: $icon; display: inline-block; padding-right: 4px; }
+      }
+    }
+  }
+
+  &--qty { background-color: white; border: 1px solid $light; color: $dark; @include padblock(0.5rem); text-align: center; margin-top: 0.5rem;
+    p { font-size: 0.9rem; display: inline-block; padding-right: 0.5rem; border-right: 1px solid $light; }
+    i { display: inline-block; padding-left: 9px; cursor: not-allowed; opacity: 0.5;
+      &::before, &::after { font-family: $icon; font-style: normal; display: block; line-height: 0; font-size: 0.9rem; }
+      &::before { content: "\f0de"; }
+      &::after { content: "\f0dd"; }
+    }
+  }
+
+  &--number {width: 100%; margin-top: 2em;
+    b {font-size: 0.8em; margin-bottom: 0.8em;}
+    p {font-size: 0.9em; font-weight: 400;
+      span {
+        svg {height: 1em; width: auto; display: inline-block; padding-right: 6px; vertical-align: text-top;}
+      }
+    }
+  }
+
+  &--head, &--detail {width: 100%; position: relative;
+    header {width: 100%; margin-bottom: 1em;
+      @include flexbox; @include flow-cn; @include just-start; @include items-start;
+      @include tablet {width: 73%; margin-bottom: 0em;}
+      h3 {font-size: 0.85em; font-weight: 500;}
+      a, p {font-size: 0.875rem; margin: 10px 0 5px 0;
+        & + p {margin-top: 0;}
+        span {color: $grey;}
+      }
+      a:hover { color: $blue; }
+      ul {width: 100%; margin-top: 1.15em;
+        li {width: 100%; margin-bottom: 5px; color: $grey;
+          &::before {content: "\· "; color: $red; font-size: 2em; vertical-align: middle; line-height: 0;}
+          b {font-size: 0.85em; padding-right: 3px;}
+          span {font-size: 0.85em;}
+        }
+      }
+    }
+    section {width: 50%;
+      @include tablet {width: 27%;}
+      p {font-size: 0.9em; text-align: left;
+        @include tablet {@include padbox(1.5em 0 0 0);}
+      }
+      .price {font-size: 1.15em; text-align: left;
+        .legend {font-size: 0.8em; width: 100%;}
+      }
+      // b {}
+    }
+  }
+
+  &--head {padding-bottom: 0.5rem;
+    @include flexbox; @include flow-rw; @include just-between; @include items-start; border-bottom: 1px solid $light;
+    header {
+      h2 {display: none;
+        @include tablet {font-size: 1em; font-weight: 400; padding-bottom: 0.5em; text-align: left; width: 100%;
+          border-bottom: 1px solid $light; margin-bottom: 1em; display: inline-block;
+        }
+      }
+    }
+    section {
+      h2 {font-size: 1em; font-weight: 400; padding-bottom: 0.5em; text-align: left; width: 100%; margin-bottom: 0;
+        border-bottom: none;
+        @include tablet {border-bottom: 1px solid $light; margin-bottom: 0.5em;}
+      }
+    }
+  }
+
+  &--detail {padding: 0.5rem 0;
+    @include flexbox; @include flow-rw; @include just-between; @include items-start; border-bottom: 1px solid $light;
+    &:last-of-type {border-bottom: none;}
+    section {
+      h2 {display: inline-block; font-size: 1em; font-weight: 400; padding-bottom: 0.5em; text-align: left;
+        @include tablet {display: none;}
+      }
+    }
+  }
+
+  &--description {width: 100%; // border-bottom: 1px solid $light;
+    @include flexbox; @include flow-rw; @include just-between; @include items-start;
+    @include tablet {width: 70%;}
+  }
+
+  // &--sub {width: 100%; @include padbox(1em);
+  //   @include flexbox; @include flow-rw; @include just-start; @include items-center;
+  //   @include tablet {padding-left: 30%;}
+  //   header {width: 100%; margin-bottom: 1em;
+  //     @include tablet {width: 75%; margin-bottom: 0em;}
+  //     h3 {font-size: 1em; font-weight: 400;}
+  //   }
+  //   section {width: 50%;
+  //     @include tablet {width: 25%;}
+  //     h2 {display: inline-block; font-size: 1em; font-weight: 400; padding-bottom: 0.5em; text-align: left;
+  //       @include tablet {display: none;}
+  //     }
+  //     p {font-size: 1em; text-align: left;
+  //       @include tablet {@include padbox(0em);}
+  //     }
+  //     .price {font-size: 1.15em; text-align: left;
+  //       .legend {font-size: 0.8em; width: 100%;}
+  //     }
+  //     // b {}
+  //   }
+  // }
+
+  &--total {width: 100%; @include padblock(0 1em 1em 1em);
+    @include desk {padding: 0 0 1em 0;}
+    section {width: 100%; @include padblock(1em); background-color: $soft;
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3); text-align: right;
+      > p { 
+        @include tablet { margin-right: 3.5rem; }
+        @include desk { margin-right: 7.5rem; }
+      }
+      b, p {font-size: 2em; display: inline-block;}
+      b {font-weight: 300; color: $red; padding-right: 6px;}
+    }
+  }
+
+  &--limit-msg { opacity: 0.6; width: auto !important;
+    span::after { display: none !important; }
+  }
+
+  &--modal {
+
+    @mixin base--cart_modal {
+      p { font-size: 1rem; margin-bottom: 1rem; text-align: left; }
+      a, button { @include padblock(0.5rem); width: 44%; border: 1px solid $blue; color: $blue; text-align: center; margin-bottom: 0.5rem; background-color: white;
+        span { display: inline-block;
+          &::before { font-family: $icon; display: inline-block; padding-right: 6px; }
+        }
+        // &:hover { background-color: $blue; color: white; }
+      }
+    }
+
+    &-one_time { @include base--cart_modal; text-align: center;
+      a { margin: 1rem 0;
+        span::before { content: "\f00d"; }
+      }
+    }
+
+    &-switch_item { @include base--cart_modal;
+      nav { width: 100%; @include flexbox; @include flow-rw; @include just-around; @include items-center; margin-bottom: 1rem;
+        button {
+          &:nth-of-type(1) {
+            span::before { content: "\f088";  }
+          }
+          &:nth-of-type(2) {
+            span::before { content: "\f087";  }
+          }
+        }
+      }
+      > span { color: $grey; font-size: 0.9rem; }
+    }
+  }
+
+  // pospago
+  // &-pospago {
+  //
+  //   &--content {width: 100%; @include padblock(1em);
+  //     @include desk {padding: 0;}
+  //   }
+  //
+  //   &--box {width: 100%; border-bottom: 1px solid $light;
+  //     @include flexbox; @include flow-rw; @include just-between; @include items-start;
+  //   }
+  //
+  //   &--image {text-align: center; width: 100%; margin-bottom: 2em;
+  //     @include tablet {width: 30%;}
+  //     h2 {font-size: 1em; font-weight: 400; padding-bottom: 0.5em; text-align: left;
+  //       width: 100%; border-bottom: 1px solid $light;
+  //     }
+  //     picture {text-align: center; @include padbox(1em);
+  //       img {display: inline-block; height: 180px; width: auto;}
+  //     }
+  //     a {font-size: 0.8em; color: $blue;
+  //       &:hover {text-decoration: underline;}
+  //     }
+  //   }
+  //
+  //   &--number {width: 100%; margin-top: 2em;
+  //     b {font-size: 0.8em; margin-bottom: 0.8em;}
+  //     p {font-size: 0.9em; font-weight: 400;
+  //       span {
+  //         svg {height: 1em; width: auto; display: inline-block; padding-right: 6px; vertical-align: text-top;}
+  //       }
+  //     }
+  //   }
+  //
+  //   &--head, &--detail {width: 100%; position: relative;
+  //     header {width: 100%; margin-bottom: 1em;
+  //       @include flexbox; @include flow-cn; @include just-start; @include items-start;
+  //       @include tablet {width: 46%; margin-bottom: 0em;}
+  //       h3 {font-size: 0.85em; font-weight: 500;}
+  //       p {font-size: 1em; margin: 10px 0 5px 0;
+  //         & + p {margin-top: 0;}
+  //         span {color: $grey;}
+  //       }
+  //       ul {width: 100%; margin-top: 1.15em;
+  //         li {width: 100%; margin-bottom: 5px; color: $grey;
+  //           &::before {content: "\· "; color: $red; font-size: 2em; vertical-align: middle; line-height: 0;}
+  //           b {font-size: 0.85em; padding-right: 3px;}
+  //           span {font-size: 0.85em;}
+  //         }
+  //       }
+  //     }
+  //     section {width: 50%;
+  //       @include tablet {width: 27%;}
+  //       p {font-size: 0.9em; text-align: left;
+  //         @include tablet {@include padbox(1.5em 0 0 0);}
+  //       }
+  //       .price {font-size: 1.15em; text-align: left;
+  //         .legend {font-size: 0.8em; width: 100%;}
+  //       }
+  //       b {}
+  //     }
+  //   }
+  //
+  //   &--head {padding-bottom: 1em;
+  //     @include flexbox; @include flow-rw; @include just-between; @include items-start; border-bottom: 1px solid $light;
+  //     header {
+  //       h2 {display: none;
+  //         @include tablet {font-size: 1em; font-weight: 400; padding-bottom: 0.5em; text-align: left; width: 100%;
+  //           border-bottom: 1px solid $light; margin-bottom: 1em; display: inline-block;
+  //         }
+  //       }
+  //     }
+  //     section {
+  //       h2 {font-size: 1em; font-weight: 400; padding-bottom: 0.5em; text-align: left; width: 100%; margin-bottom: 0;
+  //         border-bottom: none;
+  //         @include tablet {border-bottom: 1px solid $light; margin-bottom: 0.5em;}
+  //       }
+  //     }
+  //   }
+  //
+  //   &--detail {padding: 1em 0;
+  //     @include flexbox; @include flow-rw; @include just-between; @include items-start; border-bottom: 1px solid $light;
+  //     &:last-of-type {border-bottom: none;}
+  //     section {
+  //       h2 {display: inline-block; font-size: 1em; font-weight: 400; padding-bottom: 0.5em; text-align: left;
+  //         @include tablet {display: none;}
+  //       }
+  //     }
+  //   }
+  //
+  //   &--description {width: 100%; // border-bottom: 1px solid $light;
+  //     @include flexbox; @include flow-rw; @include just-between; @include items-start;
+  //     @include tablet {width: 70%;}
+  //   }
+  //
+  //   &--sub {width: 100%; @include padbox(1em);
+  //     @include flexbox; @include flow-rw; @include just-start; @include items-center;
+  //     @include tablet {padding-left: 30%;}
+  //     header {width: 100%; margin-bottom: 1em;
+  //       @include tablet {width: 46%; margin-bottom: 0em;}
+  //       h3 {font-size: 1.25em; font-weight: 400;}
+  //     }
+  //     section {width: 50%;
+  //       h2 {display: inline-block; font-size: 1em; font-weight: 400; padding-bottom: 0.5em; text-align: left;
+  //         @include tablet {display: none;}
+  //       }
+  //       @include tablet {width: 27%;}
+  //       p {font-size: 1em; text-align: left;
+  //         @include tablet {@include padbox(1.5em 0 0 0);}
+  //       }
+  //       .price {font-size: 1.15em; text-align: left;
+  //         .legend {font-size: 0.8em; width: 100%;}
+  //       }
+  //       b {}
+  //     }
+  //   }
+  //
+  //   &--total {width: 100%; @include padblock(1em);
+  //     @include desk {padding: 1em 0;}
+  //     section {width: 100%; @include padblock(1em); background-color: $soft;
+  //       box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3); text-align: right;
+  //       b, p {font-size: 2em; display: inline-block;}
+  //       b {font-weight: 300; color: $red; padding-right: 6px;}
+  //     }
+  //   }
+  //
+  // }
+
+}

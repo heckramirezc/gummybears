@@ -1,0 +1,13 @@
+{
+    "name": "Gyssa",
+    "icons": [
+        {
+            "src": "/media/favicon/android-chrome-72x72.png",
+            "sizes": "72x72",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#da532c",
+    "background_color": "#da532c",
+    "display": "standalone"
+}

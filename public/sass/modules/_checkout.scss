@@ -1,0 +1,227 @@
+.checkout {
+
+  &--steps {width: 100%; max-width: 280px; margin: 0 auto; @include padbox(2em 0);
+    @include tablet {max-width: 580px;}
+    .module {position: relative; padding: 0;}
+    ul {width: 100%; position: relative; @include flexbox; @include flow-rw; @include just-between; @include items-center;
+      li {@include size(35px, 35px); position: relative; @include trans; z-index: 1;
+        span {display: block; @include padbox(10px); position: absolute; top: 50%; left: 50%; @include transform(translate(-50%, -50%));
+          background-color: transparent; @include radius(50%); box-shadow: 0px 0px 10px 0px transparent; @include trans;
+          &::after {content: ""; display: block; @include size(15px, 15px); @include radius(50%); @include trans; background-color: $light;}
+        }
+        p {position: absolute; @include transform(translateX(-50%)); color: $grey; text-align: center;
+          top: -35px; left: 18px; width: 64px; font-size: 0.65em;
+          @include tablet {width: 200px; font-size: 0.9em;}
+        }
+        &.active {
+          span {background-color: white; box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.7);
+            &::after {background-color: $blue;}
+          }
+          p {color: $blue;}
+        }
+      }
+    }
+    .line {display: block; position: absolute; top: 50%; left: 50%; width: calc(100% - 30px); @include transform(translate(-50%, -50%));
+      &-border {content: ""; display: block; width: 100%; border-top: 1px solid $light; border-bottom: 1px solid $light;}
+      &-progress {content: ""; display: block; margin-top: -2px; border-top: 1px solid $blue; border-bottom: 1px solid $blue; width: 0%;
+        &.half {width: 50%;}
+        &.full {width: 100%;}
+      }
+    }
+  }
+
+  &--content {@include module; @include padbox(1em);
+    @include flexbox; @include flow-rw; @include just-between; @include items-start;
+    @include tablet {margin-bottom: 2em;}
+    .cart--summary {width: 100%;
+      @include tablet {width: 41%;}
+      @include desk {width: 31%;}
+    }
+  }
+
+  &--continue {width: 100%; @include flexbox; @include flow-rw; @include just-between; @include items-center; margin: 1em 0;
+    a {@include btn-back; width: 100%; margin-bottom: 1em;
+      @include tablet {width: auto; margin-bottom: 0;}
+    }
+    button, a + a {@include btn-go; width: 100%;
+      @include tablet {width: auto;}
+      span::before {display: none !important;}
+    }
+  }
+
+  &--info {width: 100%;
+    @include tablet {width: 40%;}
+    @include desk {width: 56%;}
+    form {
+      h2 {font-size: 1.375em; font-weight: 400;}
+      h3 {font-size: 1.125em; margin: 1.5em 0; font-weight: 300;}
+      p {font-size: 0.9em; font-weight: 400; padding-bottom: 4px;
+        &::before {content: "* ";}
+      }
+      label {width: 100%; margin-bottom: 1em; position: relative;
+        input {width: 100%; @include padbox(0.5em); border: 1px solid $light;}
+        .error {color: $red; font-size: 0.8em;}
+      }
+      aside { width: 100%; 
+        h6, ul { font-size: 0.8rem; }
+      }
+      b {font-size: 0.8em; font-weight: 300; margin: 1em 0;}
+      .birth {
+        width: 100%; @include flexbox; @include flow-rw; @include just-between; @include items-center;
+        p { width: 100%; }
+        label {
+          @include desk {
+            width: 32%;
+          }
+        }
+      }
+    }
+    &-comply { margin: 0.5rem 0 1.5rem 0; font-size: 0.85rem;
+      @include tablet { font-size: 1rem; }
+      label { width: auto !important; margin-bottom: 0 !important; padding-right: 4px;
+        input { -webkit-appearance: checkbox; -moz-appearance: checkbox; appearance: checkbox; border: inherit; 
+          width: auto !important; display: inline-block; margin-right: 6px; vertical-align: text-top;
+        }
+      }
+      a { color: $blue; }
+    }
+  }
+  // &--info-temp {width: 100%;
+  //   @include tablet {width: 40%;}
+  //   @include desk {width: 56%;}
+  //   h2 {font-size: 1.375em; font-weight: 400; margin-bottom: 0.5rem;}
+  //   h3 {font-size: 1.125em; margin: 1.5em 0; font-weight: 300;}
+  //   p {font-size: 0.9em; font-weight: 400; padding-bottom: 4px;
+  //     // &::before {content: "* ";}
+  //   }
+  //   label {width: 100%; margin-bottom: 1em; position: relative;
+  //     span {width: 100%; @include padbox(0.5em); border-bottom: 1px solid $light;}
+  //     .error {color: $red; font-size: 0.8em;}
+  //   }
+  //   b {font-size: 0.8em; font-weight: 300; margin: 1em 0;}
+  // }
+
+  &--address {width: 100%;
+    @include tablet {width: 55%;}
+    @include desk {width: 65%;}
+    h1 {font-weight: bold; font-size: 2.2em; width: 100%;}
+    h2 {font-size: 1.375em; font-weight: 400; margin-bottom: 1em;}
+    h3 {font-size: 1.125em; font-weight: 300; margin-bottom: 0.5em;
+      & + p { font-size: 0.85rem; font-weight: 400; margin-bottom: 1.5rem; color: $gray; }
+    }
+    form { margin-bottom: 1rem; }
+    &-form {width: 100%; margin-bottom: 1.5em;
+      section {@include flexbox; @include flow-rw; @include just-between; @include items-start; width: 100%;
+        p {font-size: 0.9em; font-weight: 400; padding-bottom: 4px; 
+          // &::before {content: "* ";}
+          span {
+            font-size: 0.7rem; color: $blue; width: 100%;
+          }
+        }
+        .full {width: 100%;}
+        .mid {width: 100%;
+          @include tablet {width: 48%;}
+        }
+        .optional p::before { display: none; }
+      }
+      label {width: 100%; margin-bottom: 1em;}
+      textarea { width: 100%; min-height: 4.4rem; }
+      
+      b {font-size: 0.8em; font-weight: 300; margin: 1em 0;}
+    }
+    &-store {
+      section {width: 100%; @include flexbox; @include flow-rw; @include just-between; @include items-start;}
+      p {font-size: 0.9em; font-weight: 400; padding-bottom: 4px; width: 100%;
+        // &::before {content: "* ";}
+      }
+      label {width: 100%; margin-bottom: 1em; position: relative;
+        input {width: 100%; @include padbox(0.5em); border: 1px solid $light;}
+      }
+      h3 {font-size: 1em; font-weight: 300; margin-bottom: 2rem;
+        span {color: $black;}
+      }
+      div { width: 100%;
+        &.mid { @include tablet { width: 49%; } }
+      }
+      &-border {
+        border: 1px solid #ccc !important;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        h3 {
+          margin-top: 10px;
+          margin-block-start: inherit;
+          margin-block-end: inherit;
+          margin-inline-start: 10px;
+          margin-inline-end: 10px;
+        }
+        ul {
+          margin-block-start: inherit;
+          margin-block-end: inherit;
+          margin-inline-start: 10px;
+          margin-inline-end: 10px;
+          font-size: .9em;
+          font-weight: 400;
+          padding-bottom: 4px;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &--payment {width: 100%;
+    @include tablet {width: 50%;}
+    @include desk {width: 56%;}
+    h2 {font-size: 1.375em; font-weight: 400;}
+    h3 {font-size: 1.125em; margin: 1.5em 0; font-weight: 300;}
+    p {font-size: 0.9em; font-weight: 400; padding-bottom: 4px;
+      &::before {content: "* ";}
+    }
+    label {width: 100%; margin-bottom: 1em; position: relative;
+      input {width: 100%; @include padbox(0.5em); border: 1px solid $light;
+        &[type="radio"] {width: auto;}
+      }
+      .card-icons {display: inline-block; position: absolute; top: 5px; bottom: 0; right: 5px;
+        span {@include trans;
+          svg {display: inline-block; margin: 0 2px; height: 1.5em; width: auto; max-width: 45px;}
+        }
+        .card-off {@include grayscale(1); opacity: 0.4;}
+      }
+    }
+    section {width: 100%; margin-bottom: 1.5em;
+      @include flexbox; @include flow-rw; @include just-between; @include items-start;
+      .part1 {width: 100%; @include flexbox; @include flow-rw; @include just-between; @include items-center;
+        @include desk {width: 60%;}
+        p {width: 100%;}
+        label {width: 48%;}
+      }
+      .part2 {width: 100%;
+        @include desk {width: 38%;}
+      }
+    }
+    .checkout--options {@include just-start;
+      label {width: 20%;}
+    }
+    b {font-size: 0.8em; font-weight: 300; margin: 1em 0;}
+    &-radio {
+      width: 100%; @include flexbox; @include flow-rw; @include just-between; @include items-center; margin-bottom: 1rem;
+      label { width: 50%; 
+        input { display: inline-block; margin-right: 6px; @include form-check(radio); }
+        span { font-size: 0.9rem; vertical-align: baseline; margin-top: -3px;
+          b { font-size: 0.9rem; font-weight: 500; margin: 0; }
+        }
+      }
+    }
+  }
+
+  &--options {width: 100%; margin: 1em 0 1.5em 0;
+    @include flexbox; @include flow-rw; @include just-between; @include items-center;
+    label {width: 50%;
+      span {font-size: 0.9em; font-weight: 400;}
+      input {display: inline-block; width: auto; margin-right: 6px; font-size: 1em;
+        &[type="radio"] {-webkit-appearance: radio; -moz-appearance: radio; appearance: radio;}
+        &[type="checkbox"] {-webkit-appearance: checkbox; -moz-appearance: checkbox; appearance: checkbox;}
+      }
+    }
+  }
+
+}

@@ -1,0 +1,13 @@
+.box {
+
+  &--path {width: 100%; text-align: left; margin: 0.5em 0;
+    a {@include padblock(0.25em); font-size: 0.8em; font-weight: 300; color: gray; vertical-align: baseline;
+      &:hover {color: lightgray;}
+      &::after {display: inline-block; content: "\f105"; font-family: $icon; color: dimgray; margin-left: 0.5em;}
+      &:last-child {color: lightgray;
+        &::after {display: none;}
+      }
+    }
+  }
+
+}
