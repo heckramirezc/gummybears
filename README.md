@@ -1,21 +1,14 @@
-# ClaroGT
+# Gummybears
 
 | Modulo | Inico | Fin | Observaciones |
 | ------ | ------ | ------ | ------ |
 | Facetas | Proceso | --- | Se rehace componente y se quiere reducir complejidad. |
 | Buscador | Proceso | --- | Se quiere rehacer componente para reducir complejidad. |
-| Header cart | Fin | Fin | N/A |
 | Catalogo | Fin | Fin | Se rehace store. |
 | Detalle de producto | Proceso | --- | Falta una sección visual. |
 | Detalle de producto | Fin | Fin | Se reconstruye funcionaidad. |
 | Detalle de producto | Fin | Fin | Se rehace store. |
-| Agregar al carrito | Fin | Fin | Se crea store y se hace implementación de funcionalidad. |
-| Consultar carrito | Fin | Fin | Se crea store para consulta de información. |
-| Agregar billing address | Fin | Fin | |
-| Agregar shipping address | Fin | Fin | Api retorna error 504. |
 | Validación de formularios | Fin | Fin | N/A |
-| Pantalla de pagos | Fin | Fin | Payment instruction retorna error 500. |
-| Confirmación | Proceso | --- | Se crea mock para prepara template debido a que no se puede concluir una compra. |
 
 | Dependencias | nueva | Observaciones|
 | ------ | ------ | ------ |
