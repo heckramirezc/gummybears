@@ -1,4 +1,0 @@
-User-Agent: *
-Disallow: /app/components/checkout
-Disallow: /app/components/account
-Disallow: /app/cart
