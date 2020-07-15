@@ -120,7 +120,7 @@ const NavMain = (props) => {
             <div className="nav--menu-detail-soluciones">
               <div className="nav--grid-container-soluciones">
                 <div className="grid-item">
-                  <Link to="/erp">
+                  <Link to="/soluciones/erp">
                     <div>
                       <img src="https://uat-gummybears.com/wp-content/uploads/2020/06/iERP@2x.png" alt="" />
                       <b>ERP</b>
@@ -129,7 +129,7 @@ const NavMain = (props) => {
                   </Link>
                 </div>
                 <div className="grid-item">
-                  <Link to="/crm">
+                  <Link to="/soluciones/crm">
                     <div>
                       <img src="https://uat-gummybears.com/wp-content/uploads/2020/06/product_icon@2x.png" alt="" />
                       <b>CRM</b>
@@ -138,7 +138,7 @@ const NavMain = (props) => {
                   </Link>
                 </div>
                 <div className="grid-item">
-                  <Link to="/administracion-de-talento-humano">
+                  <Link to="/soluciones/administracion-de-talento-humano">
                     <div>
                       <img src="https://uat-gummybears.com/wp-content/uploads/2020/06/iAdminHum@2x.png" alt="" />
                       <b>Administración del Talento Humano</b>
@@ -147,7 +147,7 @@ const NavMain = (props) => {
                   </Link>
                 </div>
                 <div className="grid-item">
-                  <Link to="/big-data">
+                  <Link to="/soluciones/big-data">
                     <div>
                       <img src="https://uat-gummybears.com/wp-content/uploads/2020/06/iBigData@2x.png" alt="" />
                       <b>Big Data</b>
@@ -156,7 +156,7 @@ const NavMain = (props) => {
                   </Link>
                 </div>
                 <div className="grid-item">
-                  <Link to="/gobierno-de-datos">
+                  <Link to="/soluciones/gobierno-de-datos">
                     <div>
                       <img src="https://uat-gummybears.com/wp-content/uploads/2020/06/iGobDat@2x.png" alt="" />
                       <b>Gobierno de Datos</b>
@@ -165,7 +165,7 @@ const NavMain = (props) => {
                   </Link>
                 </div>
                 <div className="grid-item">
-                  <Link to="/omnicanalidad">
+                  <Link to="/soluciones/omnicanalidad">
                     <div>
                       <img src="https://uat-gummybears.com/wp-content/uploads/2020/06/iOmni@2x.png" alt="" />
                       <b>Omnicanalidad</b>
@@ -178,7 +178,7 @@ const NavMain = (props) => {
             <div className="nav--menu-detail-industria">
               <div className="nav--grid-container-industria">
                 <div className="grid-item">
-                  <Link to="/banca-y-aseguradora">
+                  <Link to="/industria/banca-y-aseguradora">
                     <div>
                       <img src="http://uat-gummybears.com/wp-content/uploads/2020/06/pymes@2x.png" alt="" />
                       <b>Banca y seguros</b>
@@ -187,7 +187,7 @@ const NavMain = (props) => {
                   </Link>
                 </div>
                 <div className="grid-item">
-                  <Link to="/agroindustria">
+                  <Link to="/industria/agroindustria">
                     <div>
                       <img src="http://uat-gummybears.com/wp-content/uploads/2020/06/agroindustria@2x-1.png" alt="" />
                       <b>Agroindustria</b>
@@ -196,7 +196,7 @@ const NavMain = (props) => {
                   </Link>
                 </div>
                 <div className="grid-item">
-                  <Link to="/distribucion">
+                  <Link to="/industria/distribucion">
                     <div>
                       <img src="https://uat-gummybears.com/wp-content/uploads/2020/06/distribucion@2x.png" alt="" />
                       <b>Distribución</b>
@@ -205,16 +205,16 @@ const NavMain = (props) => {
                   </Link>
                 </div>
                 <div className="grid-item">
-                  <Link to="/manufactura">
+                  <Link to="/industria/manufactura">
                     <div>
-                      <img src="http://uat-gummybears.com/wp-content/uploads/2020/06/manufactura@2x-1.png" alt="" />
+                      <img src="https://uat-gummybears.com/wp-content/uploads/2020/07/manufactura@2x.png" alt="" />
                       <b>Manufactura</b>
                     </div>
                     <img src="https://uat-gummybears.com/wp-content/uploads/2020/06/btn_env@2x.png" alt="" />
                   </Link>
                 </div>
                 <div className="grid-item">
-                  <Link to="/pymes">
+                  <Link to="/industria/pymes">
                     <div>
                       <img src="http://uat-gummybears.com/wp-content/uploads/2020/06/pymes@2x-1.png" alt="" />
                       <b>Pymes</b>
@@ -227,7 +227,7 @@ const NavMain = (props) => {
             <div className="nav--menu-detail-tecnologia">
               <div className="nav--grid-container-industria">
                 <div className="grid-item">
-                  <Link to="/tecnologia-sap">
+                  <Link to="/tecnologia">
                     <div>
                       <img src="http://uat-gummybears.com/wp-content/uploads/2020/07/iSAP@2x.png" alt="" />
                       <b>SAP</b>
@@ -236,7 +236,7 @@ const NavMain = (props) => {
                   </Link>
                 </div>
                 <div className="grid-item">
-                  <Link to="/tecnologia-microsoft">
+                  <Link to="/tecnologia">
                     <div>
                       <img src="http://uat-gummybears.com/wp-content/uploads/2020/07/iMicrosoft@2x.png" alt="" />
                       <b>Microsoft</b>
