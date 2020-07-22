@@ -42,6 +42,11 @@
       @include flexbox; @include flow-rn; @include just-between; @include items-center;
       p {font-weight: 500; font-size: 0.9em; color: white; text-align: center; margin: auto;}
     }
+    &-form {@include padbox(1em);
+      @include radius(10px); box-shadow: 0px 5px 12px 0px #A6A6A6;
+      p {font-size: 0.7em; padding: 1em 1em 1.5em 1em;}
+      b {font-size: 0.6em;  font-weight: bold;}
+    }
     &-total {width: 100%; @include padbox(1em);
       @include flexbox; @include flow-rn; @include just-between; @include items-start;
       b {font-size: 1.75em; font-weight: 300; color: $red;}

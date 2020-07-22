@@ -40,6 +40,25 @@ export const productList = (value) => {
   });
 };
 
+export const servicesList = () => {
+  const options = {
+    method: 'GET',
+    url: `${process.env.SERVICE}/servicios?per_page=100`,
+  };
+
+  return request.genericHandler(options, null).then((res) => {
+    let callback = { action: 'servicios', success: false };
+    if (!res.error) {
+      // const data = _.sortBy(res.data.data, val => val.position);
+      callback = Object.assign({}, callback, { data: res.data.data, success: true });
+    } else {
+      callback = Object.assign({}, callback, { error: res.error });
+    }
+
+    return callback;
+  });
+};
+
 export const solutionsList = () => {
   const options = {
     method: 'GET',

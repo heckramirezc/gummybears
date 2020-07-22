@@ -155,7 +155,26 @@
       }
     }
   }
-  &--detail {width: 100%;}
+  &--detail {width: 100%;
+    .key-content {font-size: 0.8em; width: 100%;  color: $black;
+      margin-top: 2em;
+      ul {
+        // padding: 0;
+        margin: 0em 5em;
+        li {
+          &::before {
+            content: "\2022";
+            color: $black;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+          }
+        }
+      }
+      p  {font-size: 0.8em; width: 100%; font-weight: bold; color: $black;}
+    }
+  }
   &--info {width: 100%; @include flexbox; @include flow-rw; @include just-between; @include items-start;
     @include padbox(0 1em); margin-bottom: 2em; z-index: 1;
     @include tablet {width: 100%; padding: 0 1em;}
@@ -234,6 +253,7 @@
     p{
       font-size: 0.75em;
       color: #808080;
+      white-space: pre-wrap;
     }
     h2, h3{
       font-size: 0.75em;

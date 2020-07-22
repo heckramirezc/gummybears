@@ -17,9 +17,11 @@ import './../public/sass/style.scss';
 import Layout from './containers/Layout/DefaultLayout';
 import LayoutBlank from './containers/Layout/BlankLayout';
 import Catalog from './containers/Catalog/Catalog';
+import AboutUs from './containers/AboutUs/AboutUs';
 import Category from './containers/Category/Category';
 import SubCategory from './containers/SubCategory/SubCategory';
 import Industry from './containers/Industry/Industry';
+import Service from './containers/Service/Service';
 import Search from './containers/Catalog/Search';
 import Product from './containers/Product/Product';
 import MiniCart from './containers/Cart/MiniCart/MiniCart';
@@ -95,12 +97,14 @@ const Root = () => (
       <Router history={history}>
         <Switch>
           <DefaultLayout exact path="/" component={Catalog} />
+          <DefaultLayout exact path="/conozca-mas" component={AboutUs} />
           <DefaultLayout exact path="/soluciones" component={Category} />
           <DefaultLayout exact path="/industria" component={Category} />
           <DefaultLayout exact path="/tecnologia" component={Category} />
           <DefaultLayout exact path="/soluciones/*" component={SubCategory} />
           <DefaultLayout exact path="/industria/*" component={Industry} />
           <DefaultLayout exact path="/search/*" component={Search} />
+          <DefaultLayout exact path="/servicios/*" component={Service} />
           <DefaultLayout exact path="/producto/*" component={Product} />
           <DefaultLayout path="/cart/more/" component={MiniCart} />
           <DefaultLayout path="/cart" component={Cart} />

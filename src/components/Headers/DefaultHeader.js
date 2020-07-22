@@ -150,6 +150,11 @@ class Header extends Component {
         handleSubmenuMobileTienda={this.handleSubmenuMobileTienda}
         layoutData={this.props.layoutdata}
         socialData={this.props.socialdata}
+        menuData={this.props.menudata}
+        solutionsList={this.props.solutionsList}
+        industriesList={this.props.industriesList}
+        tecnologiesType={this.props.tecnologiesType}
+        productsType={this.props.productsType}
       />
     );
   }
@@ -158,6 +163,11 @@ class Header extends Component {
 Header.propTypes = {
   layoutdata: PropTypes.shape({}).isRequired,
   socialdata: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  menudata: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  solutionsList: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  industriesList: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  tecnologiesType: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  productsType: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 };
 
 export default inject()(observer(Header));

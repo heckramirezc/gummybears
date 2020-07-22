@@ -11,6 +11,7 @@ import DefaultHeader from './../../components/Headers/DefaultHeader';
 import DefaultFooter from './../../components/Footer/DefaultFooter';
 import CheckoutHeader from './../../components/Headers/CheckoutHeader';
 import CheckoutFooter from './../../components/Footer/CheckoutFooter';
+import { solutionsList, industriesList, tecnologiesType } from './../../store/Catalog/Catalog';
 
 class DefaultLayout extends Component {
   static contextTypes = {
@@ -22,12 +23,21 @@ class DefaultLayout extends Component {
     this.state = {
       layout: {},
       social_media: [],
+      menu_principal: [],
+      taxonomias_productos: [],
+      solutionsList: [],
+      industriesList: [],
+      tecnologiesType: [],
     };
   }
 
   componentDidMount() {
-    this.fetchLayout();
+    this.fetchMenu();
+    this.fetchTaxonomias();
     this.fetchRedesSociales();
+    this.solutionsList();
+    this.industriesList();
+    this.tecnologiesType();
   }
 
   componentDidUpdate() {
@@ -38,26 +48,42 @@ class DefaultLayout extends Component {
     clearInterval(this.interval);
   }
 
-  fetchLayout() {
-    this.setState({ layout: {} });
-    /* const options = {
+  fetchMenu() {
+    const options = {
       method: 'GET',
-      url: process.env.LAYOUT,
+      url: `${process.env.SERVICE_V1}/menus/v1/menus/principal`,
     };
     request.genericHandler(options).then((res) => {
-      let callback = { action: 'layout', success: false };
+      let callback = { action: 'menu_principal', success: false };
       if (!res.error) {
-        // firefox request data null on production
-        if (res.data.data !== null) callback = Object.assign({}, callback, { data: res.data.data, success: true });
-        else callback = Object.assign({}, callback, { data: locaLayout, success: true });
-
-        this.setState({ layout: callback.data });
+        callback = Object.assign({}, callback, { data: res.data.data.items, success: true });
+        this.setState({ menu_principal: callback.data });
       } else {
         callback = Object.assign({}, callback, { error: res.error, success: false });
       }
       return callback;
-    }); */
+    });
   }
+
+  fetchTaxonomias() {
+    const options = {
+      method: 'GET',
+      url: `${process.env.SERVICE}/taxonomies`,
+    };
+    request.genericHandler(options).then((res) => {
+      let callback = { action: 'taxonomias', success: false };
+      if (!res.error) {
+        const dataFiltered = Object.values(res.data.data)
+          .filter(value => value.types[0] === 'products');
+        callback = Object.assign({}, callback, { data: dataFiltered, success: true });
+        this.setState({ taxonomias_productos: callback.data });
+      } else {
+        callback = Object.assign({}, callback, { error: res.error, success: false });
+      }
+      return callback;
+    });
+  }
+
 
   fetchRedesSociales() {
     const options = {
@@ -76,10 +102,28 @@ class DefaultLayout extends Component {
     });
   }
 
+  solutionsList() {
+    solutionsList().then((res) => {
+      this.setState({ solutionsList: res.data });
+    });
+  }
+
+  industriesList() {
+    industriesList().then((res) => {
+      this.setState({ industriesList: res.data });
+    });
+  }
+
+  tecnologiesType() {
+    tecnologiesType().then((res) => {
+      this.setState({ tecnologiesType: res.data });
+    });
+  }
+
   render() {
     return (
       <div id="layout-default">
-        {(this.context.router.route.location.pathname.match(/\/checkout/) ? <CheckoutHeader /> : <DefaultHeader layoutdata={this.state.layout} socialdata={this.state.social_media} />)}
+        {(this.context.router.route.location.pathname.match(/\/checkout/) ? <CheckoutHeader /> : <DefaultHeader layoutdata={this.state.layout} socialdata={this.state.social_media} menudata={this.state.menu_principal} solutionsList={this.state.solutionsList} industriesList={this.state.industriesList} tecnologiesType={this.state.tecnologiesType} productsType={this.state.taxonomias_productos} />)}
         <div id="initial">
           {this.props.children}
         </div>

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withCookies, Cookies } from 'react-cookie';
 
-import UI from './Catalog.ui';
+import UI from './AboutUs.ui';
 import { servicesList } from './../../store/Catalog/Catalog';
 // import { espots } from './../../store/ESpots/ESpots';
 // import { addonsList } from './../../store/Addons/Addons';

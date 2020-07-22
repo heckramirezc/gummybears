@@ -31,6 +31,7 @@
   }
 
   &--content {@include module; @include padbox(1em);
+    h2 {margin: auto;}
     @include flexbox; @include flow-rw; @include just-between; @include items-start;
     @include tablet {margin-bottom: 2em;}
     .cart--summary {width: 100%;
@@ -43,7 +44,7 @@
     a {@include btn-back; width: 100%; margin-bottom: 1em;
       @include tablet {width: auto; margin-bottom: 0;}
     }
-    button, a + a {@include btn-go; width: 100%;
+    button, a + a {@include btn-go; width: 100%; margin: auto;
       @include tablet {width: auto;}
       span::before {display: none !important;}
     }
@@ -110,9 +111,9 @@
       & + p { font-size: 0.85rem; font-weight: 400; margin-bottom: 1.5rem; color: $gray; }
     }
     form { margin-bottom: 1rem; }
-    &-form {width: 100%; margin-bottom: 1.5em;
+    &-form {margin-bottom: 1.5em; padding: 0em 1em;
       section {@include flexbox; @include flow-rw; @include just-between; @include items-start; width: 100%;
-        p {font-size: 0.9em; font-weight: 400; padding-bottom: 4px; 
+        p {font-size: 0.7em; font-weight: bold; padding: 0 0 0.3em 0;
           // &::before {content: "* ";}
           span {
             font-size: 0.7rem; color: $blue; width: 100%;
@@ -124,7 +125,7 @@
         }
         .optional p::before { display: none; }
       }
-      label {width: 100%; margin-bottom: 1em;}
+      label {width: 100%; margin-bottom: 0.8em;}
       textarea { width: 100%; min-height: 4.4rem; }
       
       b {font-size: 0.8em; font-weight: 300; margin: 1em 0;}

@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import Scroll from 'react-scroll';
+
 // import _ from 'lodash';
 import { Helmet } from 'react-helmet';
 import he from 'he';
@@ -15,6 +17,7 @@ import IEnotification from '../../components/ui/IENotification';
 import { logo, iconMovil, iconHogar, iconClub, iconEntretenimiento, iconPromociones, iconIOT } from '../../helpers/svg'; // iconLocation
 import { isDesktop } from '../../helpers/ui';
 
+const ScrollLink = Scroll.Link;
 const isIE = (navigator.userAgent.indexOf('MSIE') !== -1 || navigator.appVersion.indexOf('Trident/') > -1);
 
 const NavTop = (props) => {
@@ -80,22 +83,69 @@ const NavTop = (props) => {
 const NavMain = (props) => {
   if (!props.socialData || !props.socialData.length || !props.socialData.length === 0) return null;
   const RedesSociales = props.socialData.map((data, key) => <a key={key} href={data.acf.enlace} target="_blank" rel="noopener noreferrer nofollow"><img src={data.acf.icono} alt={data.title.rendered} /></a>);
+  const MenuPrincipal = props.menuData.map((data, key) => {
+    if (data.url === '/products') {
+      return (<li key={key}><a className="nav--links-trigger nav--link" onClick={props.handleMenuLinks} >{data.title.toUpperCase()}</a></li>);
+    } else if (data.url === '#services') {
+      return (
+        <li key={key}>
+          <ScrollLink to="servicios" spy="true" smooth="true" offset={-50} duration={500} className="nav--links-trigger nav--link">
+            {data.title.toUpperCase()}
+          </ScrollLink>
+        </li>);
+    }
+    return (<li key={key}><Link to={data.url.replace('https://uat-gummybears.com/wp/', '/')} className="nav--links-trigger nav--link" >{data.title.toUpperCase()}</Link></li>);
+  });
+  const MenuProductos = props.productsType.map((data, key) => {
+    switch (data.slug) {
+      case 'industria':
+        return (<li key={key}><a onMouseEnter={props.handleMenuIndustria} >{data.name}</a></li>);
+      case 'tecnologia':
+        return (<li key={key}><a onMouseEnter={props.handleMenuTecnologia}>{data.name}</a></li>);
+      default:
+        return (<li key={key}><a onMouseEnter={props.handleMenuSoluciones} >{data.name}</a></li>);
+    }
+  });
+  const MenuSoluciones = props.solutionsList.map((data, key) => (
+    <div className="grid-item">
+      <Link key={key} to={`/soluciones/${data.slug}`}>
+        <div>
+          <img src={data.acf.icon} alt={data.name} />
+          <b>{data.name}</b>
+        </div>
+        <img src="https://uat-gummybears.com/wp/wp-content/uploads/2020/06/btn_env@2x.png" alt={data.name} />
+      </Link>
+    </div>));
+
+  const MenuIndustrias = props.industriesList.map((data, key) => (
+    <div className="grid-item">
+      <Link key={key} to={`/industria/${data.slug}`}>
+        <div>
+          <img src={data.acf.small_image} alt={data.name} />
+          <b>{data.name}</b>
+        </div>
+        <img src="https://uat-gummybears.com/wp/wp-content/uploads/2020/06/btn_env@2x.png" alt={data.name} />
+      </Link>
+    </div>));
+
+  const MenuTecnologias = props.tecnologiesType.map((data, key) => (
+    <div className="grid-item">
+      <Link key={key} to="/tecnologia">
+        <div>
+          <img src={data.acf.icon} alt={data.name} />
+          <b>{data.name}</b>
+        </div>
+        <img src="https://uat-gummybears.com/wp/wp-content/uploads/2020/06/btn_env@2x.png" alt={data.name} />
+      </Link>
+    </div>));
   return (
     <div className="nav--main">
       <div className="nav--main-content">
         <nav className="nav--links">
-          <ul key="11">
-            <li key="1"><a href="https://uat-gummybears.com/" className="nav--logo">{logo}</a></li>
-            {/* <li><a className="nav--links-trigger nav--link"  onFocus={props.handleMenuLinks} >PRODUCTOS</a></li> */}
-            <li key="2">
-              <a className="nav--links-trigger nav--link" onClick={props.handleMenuLinks} >PRODUCTOS</a>
-            </li>
-            <li key="3"><a className="nav--links-trigger nav--link" >SERVICIOS</a></li>
-            <li key="4"><a className="nav--links-trigger nav--link" >CONOZCA MÁS</a></li>
-            <li key="5"><a className="nav--links-trigger nav--link" >BLOG</a></li>
-            <li key="6"><a className="nav--links-trigger nav--link" >CONTÁCTENOS</a></li>
+          <ul>
+            <li><a href="https://uat-gummybears.com/" className="nav--logo">{logo}</a></li>
+            {MenuPrincipal}
           </ul>
-          {/* {seccionesHeader} */}
         </nav>
         <div className="nav--trigger">
           <a onClick={props.handleSearchToggle}><span className="nav--trigger-search fa-search" /></a>
@@ -110,140 +160,24 @@ const NavMain = (props) => {
       <div className="nav--menu" onMouseLeave={isDesktop ? props.handleMenuLinks : null}>
         <section className="nav--menu-content">
           <div className="nav--menu-list">
-            <ul key="10">
-              <li key="7"><a onMouseEnter={props.handleMenuSoluciones} >Soluciones</a></li>
-              <li key="8"><a onMouseEnter={props.handleMenuIndustria} >Industria</a></li>
-              <li key="9"><a onMouseEnter={props.handleMenuTecnologia}>Tecnologia</a></li>
+            <ul>
+              {MenuProductos}
             </ul>
           </div>
           <div className="nav--menu-detail">
             <div className="nav--menu-detail-soluciones">
               <div className="nav--grid-container-soluciones">
-                <div className="grid-item">
-                  <Link to="/soluciones/erp">
-                    <div>
-                      <img src="https://uat-gummybears.com/wp-content/uploads/2020/06/iERP@2x.png" alt="" />
-                      <b>ERP</b>
-                    </div>
-                    <img src="https://uat-gummybears.com/wp-content/uploads/2020/06/btn_env@2x.png" alt="" />
-                  </Link>
-                </div>
-                <div className="grid-item">
-                  <Link to="/soluciones/crm">
-                    <div>
-                      <img src="https://uat-gummybears.com/wp-content/uploads/2020/06/product_icon@2x.png" alt="" />
-                      <b>CRM</b>
-                    </div>
-                    <img src="https://uat-gummybears.com/wp-content/uploads/2020/06/btn_env@2x.png" alt="" />
-                  </Link>
-                </div>
-                <div className="grid-item">
-                  <Link to="/soluciones/administracion-de-talento-humano">
-                    <div>
-                      <img src="https://uat-gummybears.com/wp-content/uploads/2020/06/iAdminHum@2x.png" alt="" />
-                      <b>Administración del Talento Humano</b>
-                    </div>
-                    <img src="https://uat-gummybears.com/wp-content/uploads/2020/06/btn_env@2x.png" alt="" />
-                  </Link>
-                </div>
-                <div className="grid-item">
-                  <Link to="/soluciones/big-data">
-                    <div>
-                      <img src="https://uat-gummybears.com/wp-content/uploads/2020/06/iBigData@2x.png" alt="" />
-                      <b>Big Data</b>
-                    </div>
-                    <img src="https://uat-gummybears.com/wp-content/uploads/2020/06/btn_env@2x.png" alt="" />
-                  </Link>
-                </div>
-                <div className="grid-item">
-                  <Link to="/soluciones/gobierno-de-datos">
-                    <div>
-                      <img src="https://uat-gummybears.com/wp-content/uploads/2020/06/iGobDat@2x.png" alt="" />
-                      <b>Gobierno de Datos</b>
-                    </div>
-                    <img src="https://uat-gummybears.com/wp-content/uploads/2020/06/btn_env@2x.png" alt="" />
-                  </Link>
-                </div>
-                <div className="grid-item">
-                  <Link to="/soluciones/omnicanalidad">
-                    <div>
-                      <img src="https://uat-gummybears.com/wp-content/uploads/2020/06/iOmni@2x.png" alt="" />
-                      <b>Omnicanalidad</b>
-                    </div>
-                    <img src="https://uat-gummybears.com/wp-content/uploads/2020/06/btn_env@2x.png" alt="" />
-                  </Link>
-                </div>
+                {MenuSoluciones}
               </div>
             </div>
             <div className="nav--menu-detail-industria">
               <div className="nav--grid-container-industria">
-                <div className="grid-item">
-                  <Link to="/industria/banca-y-aseguradora">
-                    <div>
-                      <img src="http://uat-gummybears.com/wp-content/uploads/2020/06/pymes@2x.png" alt="" />
-                      <b>Banca y seguros</b>
-                    </div>
-                    <img src="https://uat-gummybears.com/wp-content/uploads/2020/06/btn_env@2x.png" alt="" />
-                  </Link>
-                </div>
-                <div className="grid-item">
-                  <Link to="/industria/agroindustria">
-                    <div>
-                      <img src="http://uat-gummybears.com/wp-content/uploads/2020/06/agroindustria@2x-1.png" alt="" />
-                      <b>Agroindustria</b>
-                    </div>
-                    <img src="https://uat-gummybears.com/wp-content/uploads/2020/06/btn_env@2x.png" alt="" />
-                  </Link>
-                </div>
-                <div className="grid-item">
-                  <Link to="/industria/distribucion">
-                    <div>
-                      <img src="https://uat-gummybears.com/wp-content/uploads/2020/06/distribucion@2x.png" alt="" />
-                      <b>Distribución</b>
-                    </div>
-                    <img src="https://uat-gummybears.com/wp-content/uploads/2020/06/btn_env@2x.png" alt="" />
-                  </Link>
-                </div>
-                <div className="grid-item">
-                  <Link to="/industria/manufactura">
-                    <div>
-                      <img src="https://uat-gummybears.com/wp-content/uploads/2020/07/manufactura@2x.png" alt="" />
-                      <b>Manufactura</b>
-                    </div>
-                    <img src="https://uat-gummybears.com/wp-content/uploads/2020/06/btn_env@2x.png" alt="" />
-                  </Link>
-                </div>
-                <div className="grid-item">
-                  <Link to="/industria/pymes">
-                    <div>
-                      <img src="http://uat-gummybears.com/wp-content/uploads/2020/06/pymes@2x-1.png" alt="" />
-                      <b>Pymes</b>
-                    </div>
-                    <img src="https://uat-gummybears.com/wp-content/uploads/2020/06/btn_env@2x.png" alt="" />
-                  </Link>
-                </div>
+                {MenuIndustrias}
               </div>
             </div>
             <div className="nav--menu-detail-tecnologia">
               <div className="nav--grid-container-industria">
-                <div className="grid-item">
-                  <Link to="/tecnologia">
-                    <div>
-                      <img src="http://uat-gummybears.com/wp-content/uploads/2020/07/iSAP@2x.png" alt="" />
-                      <b>SAP</b>
-                    </div>
-                    <img src="https://uat-gummybears.com/wp-content/uploads/2020/06/btn_env@2x.png" alt="" />
-                  </Link>
-                </div>
-                <div className="grid-item">
-                  <Link to="/tecnologia">
-                    <div>
-                      <img src="http://uat-gummybears.com/wp-content/uploads/2020/07/iMicrosoft@2x.png" alt="" />
-                      <b>Microsoft</b>
-                    </div>
-                    <img src="https://uat-gummybears.com/wp-content/uploads/2020/06/btn_env@2x.png" alt="" />
-                  </Link>
-                </div>
+                {MenuTecnologias}
               </div>
             </div>
           </div>
@@ -388,7 +322,7 @@ const NavMenuLinks = (props) => {
   ); */
 };
 
-const UI = ({ handleHover, handleLeave, handleScroll, handleSearchToggle, handleMenuToggle, handleMenuLinks, handleMenuLinksTienda, handleMenuSoluciones, handleMenuIndustria, handleMenuTecnologia, handleClicks, handleSubmenuMobile, handleSubmenuMobileTienda, layoutData, socialData }) => (
+const UI = ({ handleHover, handleLeave, handleScroll, handleSearchToggle, handleMenuToggle, handleMenuLinks, handleMenuLinksTienda, handleMenuSoluciones, handleMenuIndustria, handleMenuTecnologia, handleClicks, handleSubmenuMobile, handleSubmenuMobileTienda, layoutData, socialData, menuData, solutionsList, industriesList, tecnologiesType, productsType }) => (
   <div className="nav">
     <Helmet title="GYSSA" />
     <NavTop
@@ -408,6 +342,11 @@ const UI = ({ handleHover, handleLeave, handleScroll, handleSearchToggle, handle
       handleMenuTecnologia={handleMenuTecnologia}
       layoutData={layoutData}
       socialData={socialData}
+      menuData={menuData}
+      solutionsList={solutionsList}
+      industriesList={industriesList}
+      tecnologiesType={tecnologiesType}
+      productsType={productsType}
     />
     {isIE ? <IEnotification /> : null}
     <NavMenuLinks
@@ -436,6 +375,11 @@ UI.propTypes = {
   handleSubmenuMobile: PropTypes.func.isRequired,
   layoutData: PropTypes.shape({}).isRequired,
   socialData: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  menuData: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  solutionsList: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  industriesList: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  tecnologiesType: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  productsType: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 };
 
 NavTop.propTypes = {
@@ -465,6 +409,11 @@ NavMain.propTypes = {
     SeccionesHeader: PropTypes.array,
   }),
   socialData: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  menuData: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  solutionsList: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  industriesList: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  tecnologiesType: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  productsType: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 };
 
 NavMain.defaultProps = {

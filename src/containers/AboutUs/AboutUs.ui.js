@@ -1,8 +1,8 @@
 // component
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { Element } from 'react-scroll';
+// import { Element } from 'react-scroll';
 
 // import $ from 'jquery';
 
@@ -19,7 +19,7 @@ const CatalogBanner = ({ eSpot }) => {
   console.log(eSpot);
   return (
     <section className="catalog--banner">
-      <img src="https://uat-gummybears.com/wp/wp-content/uploads/2020/06/Enmascarar-grupo-1920.png" alt="" />
+      <img src="http://uat-gummybears.com/wp/wp-content/uploads/2020/07/cm_bk.png" alt="" />
     </section>
   );
 };
@@ -48,63 +48,20 @@ const CatalogBanner = ({ eSpot }) => {
 
 const UI = (props) => {
   if (!props.servicesList || !props.servicesList.length || !props.servicesList.length === 0) return null;
-  const Servicios = props.servicesList.map((servicio, key) => (
+  /* const Servicios = props.servicesList.map((servicio, key) => (
     <div className="grid-item">
       <Link key={key} to={`/servicios/${servicio.slug}`}>
         <img src={servicio.acf.icon} alt={servicio.title.rendered} />
         <h3>{servicio.title.rendered}</h3>
       </Link>
     </div>
-  ));
+  )); */
   return (
     <main>
       <section className="catalog">
         <CatalogBanner eSpot={props.eSpot} />
-        <Element id="servicios" name="servicios">
-          <div className="catalog--header-servicios">
-            <h1>SERVICIOS</h1>
-          </div>
-        </Element>
-        <div className="catalog--grid-container-servicios">
-          {Servicios}
-        </div>
         <div className="catalog--header-productos">
-          <h1>PRODUCTOS</h1>
-        </div>
-        <div className="catalog--grid-container-soluciones">
-          <div className="grid-item">
-            <Link to="/soluciones">
-              <a>
-                <div>
-                  <h3>SOLUCIONES</h3>
-                  <p>Conozca nuestras soluciones enfocadas a cubrir las necesidades de cada área de su empresa y potencialice la productividad de sus colaboradores.</p>
-                </div>
-                <img src="https://uat-gummybears.com/wp-content/uploads/2020/06/btn_env@2x.png" alt="" />
-              </a>
-            </Link>
-          </div>
-          <div className="grid-item">
-            <Link to="/industria">
-              <a>
-                <div>
-                  <h3>INDUSTRIA</h3>
-                  <p>Conviértase en la empresa líder en su giro de negocios y comience el viaje de la transformación digital con soluciones que se adaptan a su empresa e industria.</p>
-                </div>
-                <img src="https://uat-gummybears.com/wp-content/uploads/2020/06/btn_env@2x.png" alt="" />
-              </a>
-            </Link>
-          </div>
-          <div className="grid-item">
-            <Link to="/tecnologia">
-              <a>
-                <div>
-                  <h3>TECNOLOGÍA</h3>
-                  <p>Explore las soluciones integrales de nuestros partners líderes en la Industria tecnológica.  Y encuentre la opción que se adapta mejor a su empresa.</p>
-                </div>
-                <img src="https://uat-gummybears.com/wp-content/uploads/2020/06/btn_env@2x.png" alt="" />
-              </a>
-            </Link>
-          </div>
+          <h1>CONOZCA MÁS</h1>
         </div>
         <br /><br /><br /><br />
         <div className="catalog--module">

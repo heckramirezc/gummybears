@@ -125,7 +125,10 @@
 }
 // -- FORMS
 @mixin no-form {-webkit-appearance: none; -moz-appearance: none; appearance: none;
-  border: none; outline: none; display: inline-block; background-color: transparent; @include radius(0px);
+  outline: none; display: inline-block; background-color: transparent; @include radius(5px);
+  border: 1px solid #CBD6E2 !important;
+  font-size: 0.7em !important;
+
 }
 @mixin form-check($appearance) {-webkit-appearance: $appearance; -moz-appearance: $appearance; appearance: $appearance;}
 @mixin placeholder($color) {
@@ -253,11 +256,8 @@
 
 // buttons
 @mixin btn-go {
-  @include padblock(0.5em 1em); background-color: $red; color: white; border: 1px solid $red; font-weight: 300;
-  @include radius(3px); text-align: center;
-  span {
-    &::after {content: "\f105"; font-family: $icon; padding-left: 6px; display: inline-block; @include trans;}
-  }
+  @include padblock(0.5em 3em); background-color: $red; color: white; border: 1px solid $red; font-weight: 300;
+  @include radius(15px); text-align: center;
   &:hover span::after {@include transform(translateX(6px));}
 }
 @mixin btn-back {
