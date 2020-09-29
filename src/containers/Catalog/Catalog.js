@@ -2,11 +2,11 @@ import $ from 'jquery';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withCookies, Cookies } from 'react-cookie';
+import _ from 'lodash';
 
 import UI from './Catalog.ui';
-import { servicesList } from './../../store/Catalog/Catalog';
-// import { espots } from './../../store/ESpots/ESpots';
-// import { addonsList } from './../../store/Addons/Addons';
+import { categoriesList, postsList, servicesList } from './../../store/Catalog/Catalog';
+import request from '../../bin/httpRequest';
 
 
 class ProductList extends Component {
@@ -19,6 +19,10 @@ class ProductList extends Component {
     this.state = ({
       productList: [],
       servicesList: [],
+      categoriesList: [],
+      postsList: [],
+      clientes: [],
+      categoriasClientes: [],
       espotsResponse: {},
       addonsList: [],
       currentPage: 1,
@@ -36,13 +40,35 @@ class ProductList extends Component {
     this.handleOnChangePaginationByPage = this.handleOnChangePaginationByPage.bind(this);
   }
 
+  /* <script type="text/javascript">(function () {
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ldk, s);
+})();</script> */
   componentDidMount() {
     document.getElementById('initial').scrollIntoView(true);
     this.servicesList();
+    this.categoriesList();
+    this.postsList();
     this.productList();
     this.addonsList();
     this.espotsResponse();
     this.startPagination();
+    this.fetchClientes();
+    this.fetchCategoriasClientes();
+    const script = document.createElement('script');
+    script.src = 'https://s.cliengo.com/weboptimizer/5a778044e4b07055bb4d45b1/5a778055e4b032738dd21403.js';
+    script.type = 'text/javascript';
+    script.async = true;
+    document.body.appendChild(script);
+  }
+
+  componentDidUpdate() {
+    if (window.location.hash) {
+      if (document.getElementById(window.location.hash.slice(1))) {
+        document.getElementById(window.location.hash.slice(1)).scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // document.getElementById(window.location.hash.slice(1)).scrollTop += 50;
+      }
+    }
   }
 
   setPaginatorIndex(currentPage) {
@@ -75,6 +101,18 @@ class ProductList extends Component {
     });
   }
 
+  categoriesList() {
+    categoriesList().then((res) => {
+      this.setState({ categoriesList: res.data });
+    });
+  }
+
+  postsList() {
+    postsList().then((res) => {
+      this.setState({ postsList: res.data });
+    });
+  }
+
   productList() {
     console.log('test');
     /* productList('prepago').then((res) => {
@@ -88,6 +126,41 @@ class ProductList extends Component {
     /* addonsList().then((res) => {
       this.setState({ addonsList: res.data[0].filter(x => x.enabled === true && x.show_home === false), currentPage: 1 });
     }); */
+  }
+
+  fetchClientes() {
+    const options = {
+      method: 'GET',
+      url: `${process.env.SERVICE}/settings?per_page=100`,
+    };
+    request.genericHandler(options).then((res) => {
+      let callback = { action: 'clientes', success: false };
+      if (!res.error) {
+        const data = _.sortBy(res.data.data.filter(x => x.clientes.length !== 0), val => parseInt(val.acf.posicion, 10));
+        callback = Object.assign({}, callback, { data, success: true });
+        this.setState({ clientes: callback.data });
+      } else {
+        callback = Object.assign({}, callback, { error: res.error, success: false });
+      }
+      return callback;
+    });
+  }
+
+  fetchCategoriasClientes() {
+    const options = {
+      method: 'GET',
+      url: `${process.env.SERVICE}/clientes`,
+    };
+    request.genericHandler(options).then((res) => {
+      let callback = { action: 'categorias-clientes', success: false };
+      if (!res.error) {
+        callback = Object.assign({}, callback, { data: res.data.data, success: true });
+        this.setState({ categoriasClientes: callback.data });
+      } else {
+        callback = Object.assign({}, callback, { error: res.error, success: false });
+      }
+      return callback;
+    });
   }
 
   resetCatalog() {
@@ -180,6 +253,10 @@ class ProductList extends Component {
         itemsPerPageValue={itemsPerPage}
         addonsList={this.state.addonsList}
         servicesList={this.state.servicesList}
+        postsList={this.state.postsList}
+        categoriesList={this.state.categoriesList}
+        clientes={this.state.clientes}
+        categoriasClientes={this.state.categoriasClientes}
       />
     );
   }

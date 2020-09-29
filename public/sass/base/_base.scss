@@ -8,7 +8,7 @@ span, b, del, i {display: inline-block;}
 ul, ol, li {list-style-type: none;}
 label {display: inline-block; cursor: pointer;}
 input, textarea {@include no-form; @include trans; width: 100%; font-size: 16px; font-family: $font; font-weight: 300;}
-input[type="text"], input[type="email"], input[type="password"], textarea {@include padblock(0.6em); border: 1px solid $light; width: 100%;
+input[type="text"], input[type="email"], input[type="password"], input[type="file"], textarea {@include padblock(0.6em); border: 1px solid $light; width: 100%;
   &:focus {border-color: $blue;}
 }
 button {cursor: pointer; @include no-form; font-size: 1em; font-weight: 300; font-family: $font;}

@@ -201,15 +201,63 @@ class OrderStore {
   }
 
   @action
-  async validateMaxActiveClient(query) {
+  async subscribe(query) {
     const sessionIdDisable = true;
     const options = {
       method: 'POST',
-      url: `${process.env.AMXGW_HOST}/${process.env.MERCHANT}/mac`,
+      url: `${process.env.SERVICE_V1}/newsletter/v1/subscribe`,
       data: query,
     };
 
-    const response = await genericFunction(options, sessionIdDisable, 'validateMaxActiveClient');
+    const response = await genericFunction(options, sessionIdDisable, 'newsletter');
+    this.maxActivClientResponse = response;
+
+    return response;
+  }
+
+  @action
+  async contactenos(query) {
+    const sessionIdDisable = true;
+    const options = {
+      method: 'POST',
+      url: `${process.env.SERVICE_V1}/contact-form-7/v1/contact-forms/1165/feedback`,
+      data: query,
+      headers: { 'Content-Type': 'multipart/form-data' },
+    };
+
+    const response = await genericFunction(options, sessionIdDisable, 'contactenos');
+    this.maxActivClientResponse = response;
+
+    return response;
+  }
+
+  @action
+  async trabaje(query) {
+    const sessionIdDisable = true;
+    const options = {
+      method: 'POST',
+      url: `${process.env.SERVICE_V1}/contact-form-7/v1/contact-forms/1171/feedback`,
+      data: query,
+      headers: { 'Content-Type': 'multipart/form-data' },
+    };
+
+    const response = await genericFunction(options, sessionIdDisable, 'contactenos');
+    this.maxActivClientResponse = response;
+
+    return response;
+  }
+
+  @action
+  async socios(query) {
+    const sessionIdDisable = true;
+    const options = {
+      method: 'POST',
+      url: `${process.env.SERVICE_V1}/contact-form-7/v1/contact-forms/1233/feedback`,
+      data: query,
+      headers: { 'Content-Type': 'multipart/form-data' },
+    };
+
+    const response = await genericFunction(options, sessionIdDisable, 'contactenos');
     this.maxActivClientResponse = response;
 
     return response;

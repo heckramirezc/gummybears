@@ -20,16 +20,24 @@
     section {@include flexbox; @include flow-rw; @include just-between; @include items-start;}
     ul {display: inline-block; width: 20%;
       @include phone {width: 100%; margin-bottom: 1em;}
-      @include tablet {width: 20%;}
-      @include desk {margin-bottom: 0;}
+      @include tablet {width: 100%; margin-bottom: 1em;}
+      @include desk {
+        width: 20%;
+        margin-bottom: 0;}
       li {width: 100%; text-align: left;
         a {font-size: 0.8em; @include padbox(0.35em 0em); color:  white;}
         b {font-size: 0.9em; @include padbox(0.5em 0em); color:  white;}
         ul { margin-right: 0; width: auto; margin-bottom: 0;
-          ul { top: calc(100% + 0.9em); right: 0; display: inline-block;
-            a {font-size: 0.5em; @include padbox(0.2em 0em); color:  white; vertical-align: middle;}
+          ul { 
+            right: 0; 
+            a {font-size: 0.6em; @include padbox(0.2em 0em); color:  white; 
+              vertical-align: top;
+            }
             span {font-family: $icon; margin-right: 0.5em; color: white; 
-              font-size: 0.8em; width: auto; float: left; vertical-align: middle;}
+              font-size: 0.8em; width: auto; 
+              padding: .2em 0;
+              vertical-align: top;
+            }
           }}
       }
       // &:last-of-type {
@@ -40,13 +48,42 @@
     }
   }
 
-  &--end {width: 100%; background-color: $black; @include padbox(1em 0); position: absolute;
+  &--end { width: 100%; background-color: $black; @include padbox(1em 0); position: absolute;
     section {@include flexbox; @include flow-rw; @include just-between;}
     //@include items-center;
-    nav {width: 100%; text-align: right;
+    nav {width: 100%; 
+      @include phone {
+        text-align: center;
+      }
+      @include tablet {
+        text-align: center;
+      }
+      @include desk {
+        text-align: right;
+      }
       div {width: 100%; margin-top: 1em;
-        a {font-family: $icon; margin-right: 0.4em; color:  white; font-size: 1.4em;
-          img {display: inline-block; color: white; height: 20px; width: auto;}
+        a {font-family: $icon;
+          @include phone {
+            margin-right: 1em;
+          }
+          @include tablet {
+            margin-right: 1em;
+          }
+          @include desk {
+            margin-right: 0.4em;
+          }
+          color:  white; font-size: 1.4em;
+          img {display: inline-block; color: white;
+            @include phone {
+              height: 30px;
+            }
+            @include tablet {
+              height: 30px;
+            }
+            @include desk {
+              height: 20px;
+            }
+            width: auto;}
         }
       }
     }

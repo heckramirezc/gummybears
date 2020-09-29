@@ -25,7 +25,7 @@ const Activation = (props) => {
         </div>
         <div>
           <span>4</span>
-          <p>Ingresa tu número de orden. Puedes encontrarlo en , en tu correo de orden recibida o en tu correo de pago procesado.</p>
+          <p>ingrese su número de orden. Puedes encontrarlo en , en tu correo de orden recibida o en tu correo de pago procesado.</p>
         </div>
         <div>
           <span>5</span>
@@ -37,7 +37,7 @@ const Activation = (props) => {
         </div>
         <div>
           <span>7</span>
-          <p>Marca <b>*999 SEND</b> desde tu Claro e ingresa el código de acceso de tu tarjeta de recarga.</p>
+          <p>Marca <b>*999 SEND</b> desde tu Claro e ingrese el código de acceso de tu tarjeta de recarga.</p>
         </div>
         <div>
           <span>8</span>

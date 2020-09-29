@@ -17,7 +17,10 @@ import './../public/sass/style.scss';
 import Layout from './containers/Layout/DefaultLayout';
 import LayoutBlank from './containers/Layout/BlankLayout';
 import Catalog from './containers/Catalog/Catalog';
-import AboutUs from './containers/AboutUs/AboutUs';
+import Page from './containers/Page/Page';
+import Blog from './containers/Blog/Blog';
+import BlogCategory from './containers/BlogCategory/BlogCategory';
+import Post from './containers/Post/Post';
 import Category from './containers/Category/Category';
 import SubCategory from './containers/SubCategory/SubCategory';
 import Industry from './containers/Industry/Industry';
@@ -40,6 +43,7 @@ import AddressEdit from './containers/Account/Addresses/AddressEdit';
 
 
 import Terms from './containers/Views/Common/Terms';
+import Support from './containers/Views/Common/Support';
 import Activation from './containers/Views/Common/Activation';
 import PurchaseLimit from './containers/Views/Notification/PurchaseLimit';
 import Error404 from './containers/Views/Error404';
@@ -97,10 +101,13 @@ const Root = () => (
       <Router history={history}>
         <Switch>
           <DefaultLayout exact path="/" component={Catalog} />
-          <DefaultLayout exact path="/conozca-mas" component={AboutUs} />
+          <DefaultLayout exact path="/paginas/*" component={Page} />
+          <DefaultLayout exact path="/blog" component={Blog} />
+          <DefaultLayout exact path="/blog/articulos/*" component={Post} />
+          <DefaultLayout exact path="/blog/*" component={BlogCategory} />
           <DefaultLayout exact path="/soluciones" component={Category} />
           <DefaultLayout exact path="/industria" component={Category} />
-          <DefaultLayout exact path="/tecnologia" component={Category} />
+          <DefaultLayout exact path="/tecnologia/*" component={Category} />
           <DefaultLayout exact path="/soluciones/*" component={SubCategory} />
           <DefaultLayout exact path="/industria/*" component={Industry} />
           <DefaultLayout exact path="/search/*" component={Search} />
@@ -118,7 +125,8 @@ const Root = () => (
           <DefaultLayout exact path="/account/profile" component={Profile} />
           <DefaultLayout exact path="/account/addresses" component={Addresses} />
           <DefaultLayout exact path="/account/addresses-edit" component={AddressEdit} />
-          <DefaultLayout path="/terms" component={Terms} />
+          <DefaultLayout path="/politicas-de-privacidad" component={Terms} />
+          <DefaultLayout path="/soporte" component={Support} />
           <DefaultLayout path="/activar" component={Activation} />
           <BlankLayout path="/maintenance" component={Maintenance} />
           <BlankLayout path="*" component={Error404} />

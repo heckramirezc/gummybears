@@ -30,10 +30,32 @@
     }
   }
 
-  &--content {@include module; @include padbox(1em);
+  &--main {@include module; @include padbox(1em);
+    h2 {margin: auto;}
+    @include tablet {margin-bottom: 2em;}
+  }
+  
+  &--content {@include module; 
+    @include phone {
+      @include padbox(1em);
+    }
+    @include tablet {
+      padding: 0;
+    }
+    @include desk {
+      padding: 0;
+    }
     h2 {margin: auto;}
     @include flexbox; @include flow-rw; @include just-between; @include items-start;
     @include tablet {margin-bottom: 2em;}
+    .cart--summary {width: 100%;
+      @include desk {width: 31%;}
+    }
+  }
+
+  &--content-service {@include module; @include padbox(1em);
+    h2 {margin: auto;}
+    @include flexbox; @include flow-rw; @include just-between; @include items-start;
     .cart--summary {width: 100%;
       @include tablet {width: 41%;}
       @include desk {width: 31%;}
@@ -103,9 +125,12 @@
   // }
 
   &--address {width: 100%;
-    @include tablet {width: 55%;}
-    @include desk {width: 65%;}
-    h1 {font-weight: bold; font-size: 2.2em; width: 100%;}
+    @include desk {width: 68%;}
+    h1 {font-weight: 500; font-size: 2.2em; width: 100%;
+      @include phone {text-align: center;}
+      @include tablet {text-align: center;}
+      @include desk {text-align: start;}
+    }
     h2 {font-size: 1.375em; font-weight: 400; margin-bottom: 1em;}
     h3 {font-size: 1.125em; font-weight: 300; margin-bottom: 0.5em;
       & + p { font-size: 0.85rem; font-weight: 400; margin-bottom: 1.5rem; color: $gray; }
@@ -113,7 +138,75 @@
     form { margin-bottom: 1rem; }
     &-form {margin-bottom: 1.5em; padding: 0em 1em;
       section {@include flexbox; @include flow-rw; @include just-between; @include items-start; width: 100%;
-        p {font-size: 0.7em; font-weight: bold; padding: 0 0 0.3em 0;
+        p {font-size: 0.7em; font-weight: 500; padding: 0 0 0.3em 0; margin: 0;
+          // &::before {content: "* ";}
+          span {
+            font-size: 0.7rem; color: $blue; width: 100%;
+          }
+        }
+        .full {width: 100%;}
+        .mid {width: 100%;
+          @include tablet {width: 48%;}
+        }
+        .optional p::before { display: none; }
+      }
+      label {width: 100%; margin-bottom: 0.8em;}
+      textarea { width: 100%; min-height: 4.4rem; }
+      
+      b {font-size: 0.8em; font-weight: 300; margin: 1em 0;}
+    }
+    &-store {
+      section {width: 100%; @include flexbox; @include flow-rw; @include just-between; @include items-start;}
+      p {font-size: 0.9em; font-weight: 400; padding-bottom: 4px; width: 100%;
+        // &::before {content: "* ";}
+      }
+      label {width: 100%; margin-bottom: 1em; position: relative;
+        input {width: 100%; @include padbox(0.5em); border: 1px solid $light;}
+      }
+      h3 {font-size: 1em; font-weight: 300; margin-bottom: 2rem;
+        span {color: $black;}
+      }
+      div { width: 100%;
+        &.mid { @include tablet { width: 49%; } }
+      }
+      &-border {
+        border: 1px solid #ccc !important;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        h3 {
+          margin-top: 10px;
+          margin-block-start: inherit;
+          margin-block-end: inherit;
+          margin-inline-start: 10px;
+          margin-inline-end: 10px;
+        }
+        ul {
+          margin-block-start: inherit;
+          margin-block-end: inherit;
+          margin-inline-start: 10px;
+          margin-inline-end: 10px;
+          font-size: .9em;
+          font-weight: 400;
+          padding-bottom: 4px;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &--address-blog {
+    @include phone {width: 100%;}
+    @include tablet {width: 100%;}
+    @include desk {width: 65%;}
+    h1 {font-weight: 500; font-size: 2.2em; width: 100%;}
+    h2 {font-size: 1.375em; font-weight: 400; margin-bottom: 1em;}
+    h3 {font-size: 1.125em; font-weight: 300; margin-bottom: 0.5em;
+      & + p { font-size: 0.85rem; font-weight: 400; margin-bottom: 1.5rem; color: $gray; }
+    }
+    form { margin-bottom: 1rem; }
+    &-form {margin-bottom: 1.5em; padding: 0em 1em;
+      section {@include flexbox; @include flow-rw; @include just-between; @include items-start; width: 100%;
+        p {font-size: 0.7em; font-weight: 500; padding: 0 0 0.3em 0;
           // &::before {content: "* ";}
           span {
             font-size: 0.7rem; color: $blue; width: 100%;

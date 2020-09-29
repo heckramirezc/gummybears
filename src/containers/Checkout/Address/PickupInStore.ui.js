@@ -51,7 +51,7 @@ const BillingAddressForm = ({ handleChangeAddress, billingAddress, storeAddress 
           <label htmlFor="b_first_name">
             <input
               type="text"
-              placeholder="ingresa tu nombre"
+              placeholder="ingrese su nombre"
               name="b_first_name"
               id="b_first_name"
               maxLength={30}
@@ -67,7 +67,7 @@ const BillingAddressForm = ({ handleChangeAddress, billingAddress, storeAddress 
           <label htmlFor="b_last_name">
             <input
               type="text"
-              placeholder="Ingresa tus apellidos"
+              placeholder="ingrese sus apellidos"
               name="b_last_name"
               id="b_last_name"
               maxLength={30}
@@ -83,7 +83,7 @@ const BillingAddressForm = ({ handleChangeAddress, billingAddress, storeAddress 
           <label htmlFor="b_address_line_1">
             <textarea
               type="text"
-              placeholder="Ingresa tu dirección de facturación completa"
+              placeholder="ingrese su dirección de facturación completa"
               name="b_address_line_1"
               id="b_address_line_1"
               maxLength={140}
@@ -100,7 +100,7 @@ const BillingAddressForm = ({ handleChangeAddress, billingAddress, storeAddress 
             <input
               type="text"
               tabIndex={0}
-              placeholder="Ingresa tu número de teléfono a 8 dígitos"
+              placeholder="ingrese su número de teléfono a 8 dígitos"
               name="b_phone_1"
               id="b_phone_1"
               maxLength={8}
@@ -160,7 +160,7 @@ const BillingAddressForm = ({ handleChangeAddress, billingAddress, storeAddress 
           <label htmlFor="b_email_1">
             <input
               type="text"
-              placeholder="Ingresa tu correo electrónico"
+              placeholder="ingrese su correo electrónico"
               name="b_email_1"
               id="b_email_1"
               maxLength={70}
@@ -189,7 +189,7 @@ const InvoiceForm = ({ handleChange, handleChangeAddress, billingAddress, storeA
           <label htmlFor="fiscal_number">
             <input
               type="text"
-              placeholder="Ingresa nümero fiscal"
+              placeholder="ingrese nümero fiscal"
               name="fiscal_number"
               id="fiscal_number"
               maxLength={15}
@@ -204,7 +204,7 @@ const InvoiceForm = ({ handleChange, handleChangeAddress, billingAddress, storeA
           <label htmlFor="b_address_line_1">
             <textarea
               type="text"
-              placeholder="Ingresa tu dirección de facturación completa"
+              placeholder="ingrese su dirección de facturación completa"
               name="b_address_line_1"
               id="b_address_line_1"
               required="true"
@@ -318,7 +318,7 @@ const UI = ({ error, addressList, storeAddress, handleChange, addressText, handl
             <label htmlFor="s_email_1">
               <input
                 type="text"
-                placeholder="ingresa tu correo electronico"
+                placeholder="ingrese su correo electronico"
                 name="s_email_1"
                 id="s_email_1"
                 maxLength={70}
@@ -329,7 +329,7 @@ const UI = ({ error, addressList, storeAddress, handleChange, addressText, handl
             </label>
           </div>
           <div className="mid">
-            <p>* Ingresa DUI</p>
+            <p>* ingrese DUI</p>
             <label htmlFor="dpi">
               <input
                 id="dpi"

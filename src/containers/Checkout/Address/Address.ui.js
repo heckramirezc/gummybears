@@ -92,7 +92,7 @@ const ShippingAddressForm = ({ handleChange, duiChars, shippingAddress, customIn
             <label htmlFor="s_first_name">
               <input
                 type="text"
-                placeholder="ingresa tu nombre"
+                placeholder="ingrese su nombre"
                 name="s_first_name"
                 id="s_first_name"
                 maxLength={30}
@@ -107,7 +107,7 @@ const ShippingAddressForm = ({ handleChange, duiChars, shippingAddress, customIn
             <label htmlFor="s_last_name">
               <input
                 type="text"
-                placeholder="Ingresa tus apellidos"
+                placeholder="ingrese sus apellidos"
                 name="s_last_name"
                 id="s_last_name"
                 maxLength={30}
@@ -122,7 +122,7 @@ const ShippingAddressForm = ({ handleChange, duiChars, shippingAddress, customIn
             <label htmlFor="s_address_line_1">
               <input
                 type="text"
-                placeholder="Ingresa la calle y número de tu vivienda"
+                placeholder="ingrese la calle y número de tu vivienda"
                 name="s_address_line_1"
                 id="s_address_line_1"
                 maxLength={70}
@@ -138,7 +138,7 @@ const ShippingAddressForm = ({ handleChange, duiChars, shippingAddress, customIn
               <input
                 type="text"
                 tabIndex={0}
-                placeholder="Ingresa tu número a 8 dígitos"
+                placeholder="ingrese su número a 8 dígitos"
                 name="s_phone_1"
                 id="s_phone_1"
                 maxLength={8}
@@ -219,7 +219,7 @@ const ShippingAddressForm = ({ handleChange, duiChars, shippingAddress, customIn
             <label htmlFor="s_email_1">
               <input
                 type="text"
-                placeholder="Ingresa tu correo electrónico"
+                placeholder="ingrese su correo electrónico"
                 name="s_email_1"
                 id="s_email_1"
                 maxLength={70}
@@ -230,7 +230,7 @@ const ShippingAddressForm = ({ handleChange, duiChars, shippingAddress, customIn
             </label>
           </div>
           <div className="mid">
-            <p>* Ingresa DUI</p>
+            <p>* ingrese DUI</p>
             <label htmlFor="dpi">
               <input
                 id="dpi"
@@ -280,7 +280,7 @@ const ShippingAddressForm = ({ handleChange, duiChars, shippingAddress, customIn
             <label htmlFor="allowed_recipient_1">
               <input
                 type="text"
-                placeholder="ingresa el nombre (opcional)"
+                placeholder="ingrese el nombre (opcional)"
                 name="allowed_recipient_1"
                 id="allowed_recipient_1"
                 maxLength={80}
@@ -297,7 +297,7 @@ const ShippingAddressForm = ({ handleChange, duiChars, shippingAddress, customIn
             <label htmlFor="allowed_recipient_2">
               <input
                 type="text"
-                placeholder="ingresa el nombre (opcional)"
+                placeholder="ingrese el nombre (opcional)"
                 name="allowed_recipient_2"
                 id="allowed_recipient_2"
                 maxLength={80}
@@ -385,7 +385,7 @@ const InvoiceForm = ({ handleChange, billingAddress, customInfo }) => {
           <label htmlFor="b_fiscal_number">
             <input
               type="text"
-              placeholder="Ingresa nümero fiscal"
+              placeholder="ingrese nümero fiscal"
               name="b_fiscal_number"
               id="b_fiscal_number"
               maxLength={15}
@@ -401,7 +401,7 @@ const InvoiceForm = ({ handleChange, billingAddress, customInfo }) => {
           <label htmlFor="b_address_line_1">
             <textarea
               type="text"
-              placeholder="Ingresa tu dirección de facturación completa"
+              placeholder="ingrese su dirección de facturación completa"
               name="b_address_line_1"
               id="b_address_line_1"
               maxLength={140}
@@ -444,7 +444,7 @@ const BillingAddressForm = ({ handleChange, billingAddress, shippingAddress }) =
           <label htmlFor="b_first_name">
             <input
               type="text"
-              placeholder="ingresa tu nombre"
+              placeholder="ingrese su nombre"
               name="b_first_name"
               id="b_first_name"
               maxLength={30}
@@ -459,7 +459,7 @@ const BillingAddressForm = ({ handleChange, billingAddress, shippingAddress }) =
           <label htmlFor="b_last_name">
             <input
               type="text"
-              placeholder="Ingresa tus apellidos"
+              placeholder="ingrese sus apellidos"
               name="b_last_name"
               id="b_last_name"
               maxLength={30}
@@ -474,7 +474,7 @@ const BillingAddressForm = ({ handleChange, billingAddress, shippingAddress }) =
           <label htmlFor="b_address_line_1">
             <textarea
               type="text"
-              placeholder="Ingresa tu dirección de facturación completa"
+              placeholder="ingrese su dirección de facturación completa"
               name="b_address_line_1"
               id="b_address_line_1"
               maxLength={140}
@@ -491,7 +491,7 @@ const BillingAddressForm = ({ handleChange, billingAddress, shippingAddress }) =
             <input
               type="text"
               tabIndex={0}
-              placeholder="Ingresa tu número a 8 dígitos"
+              placeholder="ingrese su número a 8 dígitos"
               name="b_phone_1"
               id="b_phone_1"
               maxLength={8}
@@ -551,7 +551,7 @@ const BillingAddressForm = ({ handleChange, billingAddress, shippingAddress }) =
           <label htmlFor="b_email_1">
             <input
               type="text"
-              placeholder="Ingresa tu correo electrónico"
+              placeholder="ingrese su correo electrónico"
               name="b_email_1"
               id="b_email_1"
               maxLength={70}

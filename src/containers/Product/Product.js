@@ -44,10 +44,29 @@ class Product extends Component {
     this.productsList();
     this.productResponse(this.props.location.pathname);
     // this.catalogResponse();
-    document.getElementById('initial').scrollIntoView(true);
   }
 
   componentDidUpdate(prevProps) {
+    const coll = document.getElementsByClassName('colapsable');
+    for (let i = 0, len = coll.length; i < len; i += 1) {
+      coll[i].addEventListener('click', function () {
+        this.classList.toggle('active');
+        const content = this.nextElementSibling;
+        if (content.classList.contains('active')) {
+          content.classList.remove('active');
+        } else if (content.style.display === 'block') {
+          content.style.display = 'none';
+        } else {
+          content.style.display = 'block';
+        }
+      });
+    }
+    /* const elements = document.getElementsByClassName('collapse');
+    if (elements && elements.length && elements.length !== 0) {
+      Array.prototype.forEach.call(elements, (element) => {
+        console.log(element.childNodes);
+      });
+    } */
     const elementos = document.getElementsByClassName('lazyload');
     if (elementos && elementos.length && elementos.length !== 0) {
       Array.prototype.forEach.call(elementos, (elemento) => {

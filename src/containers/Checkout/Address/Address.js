@@ -293,7 +293,7 @@ class AddressCheckout extends Component {
             } else if (activClient.data.data.Resultado === '2') {
               this.context.router.history.push('/checkout/purchase-limit');
             } else if (activClient.data.data.Resultado === '3') {
-              this.setState({ error: 'Ingresa un DUI válido.' });
+              this.setState({ error: 'ingrese un DUI válido.' });
             } else {
               this.setState({ error: 'Error al procesar la solicitud.' });
             }
@@ -302,7 +302,7 @@ class AddressCheckout extends Component {
           }
         });
       } else {
-        this.setState({ error: 'Ingresa un NIT valido.' });
+        this.setState({ error: 'ingrese un NIT valido.' });
       }
       return res;
     }).catch(err => err);

@@ -4,19 +4,33 @@
   // @include desk {padding: 0;} // for quiz + margin-bottom: 51px;
 
   &--grid-container-servicios {
-    padding: 2em 4em;
+    position: relative;
     @include module;
     display: grid;
+    @include phone {
+      grid-template-columns: 1fr;
+      grid-auto-rows: 90px;
+    }
     @include tablet {
-      grid-template-columns: repeat(2, minmax(0, 1fr));  
-      grid-template-rows: repeat(4, minmax(90px, 90px));
+      padding: 2em 1.5em;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-auto-rows: 90px;
     }
     @include desk {
+      padding: 2em 0.5em;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      grid-template-rows: repeat(2, minmax(90px, 90px));
+      grid-auto-rows: 90px;
     }
     grid-gap: 1.5em;
     .grid-item {
+      @include phone {
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+      }
+      @include tablet {
+        margin: 0;
+      }
+      @include desk { margin: 0;}
       @include flexbox;
       @include radius(5px); box-shadow: 0px 5px 10px 0px #A6A6A6;
       transition: 1s ease;
@@ -28,14 +42,83 @@
         -ms-transform: scale(1.1);
         transform: scale(1.1);
         transition: 1s ease;
+        img{
+          filter: brightness(0) invert(1);
+        }
+        a{
+          color: white;
+        }
       }
       a {
         @include flexbox;
         width: 100%;
         color: $black;
         font-size: 0.7em;
-        font-weight: bold;
-        &:hover {color: white; font-weight: normal;}
+        font-weight: 500;
+      }
+      img {
+        height: 40px;
+        width: auto;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 0.8em;
+      }
+      h3  {
+        display: inline-block;
+        width: auto;
+        vertical-align: middle;
+      }
+    }
+    &--grid-item {
+      height: 55px;
+      margin: 0.75em 1.5em 0.75em 1.5em;
+      @include flexbox;
+      @include radius(5px); box-shadow: 0px 5px 10px 0px #A6A6A6;
+      transition: 1s ease;
+      padding: 1.5em;
+      @include phone {
+        &:hover {
+          color: $black;
+          background: white;
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+          transition: 1s ease;
+          img{
+            filter: unset;
+          }
+          a{
+            color: $black;
+          }
+        }
+      }
+      @include tablet {
+        &:hover{
+          
+        }
+      }
+      @include desk {
+        &:hover {
+          color: white;
+          background: linear-gradient(90deg, rgba(240,90,36,1) 0%, rgba(246,146,30,1) 35%);
+          -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+          transform: scale(1.1);
+          transition: 1s ease;
+          img{
+            filter: brightness(0) invert(1);
+          }
+          a{
+            color: white;
+          }
+        }
+      }
+      a {
+        @include flexbox;
+        width: 100%;
+        color: $black;
+        font-size: 0.7em;
+        font-weight: 500;
       }
       img {
         height: 40px;
@@ -58,33 +141,85 @@
     display: grid;
     @include tablet {
       grid-template-columns: repeat(2, minmax(0, 1fr));  
-      grid-template-rows: repeat(4, minmax(90px, 90px));
+      // grid-template-rows: repeat(4, minmax(90px, 90px));
+      grid-auto-rows: 90px;
     }
     @include desk {
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      grid-template-rows: repeat(2, minmax(90px, 90px));
+      // grid-template-rows: repeat(2, minmax(90px, 90px));
+      grid-auto-rows: 90px;
     }
     grid-gap: 1.5em;
     .grid-item {
+      text-align: start;
       @include flexbox;
       @include radius(5px); box-shadow: 0px 5px 10px 0px #A6A6A6;
       transition: 1s ease;
       padding: 0.9em 1em;
-      &:hover {
+      &.active {
         color: white;
         background: linear-gradient(90deg, rgba(240,90,36,1) 0%, rgba(246,146,30,1) 35%);
-        -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        transform: scale(1.1);
-        transition: 1s ease;
+        img{
+          filter: brightness(0) invert(1);
+        }
+        a{
+          color: white;
+        }
+      }
+      @include phone {
+        &:hover {
+          color: $black;
+          background: white;
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+          transition: 1s ease;
+          img{
+            filter: none;
+          }
+          a{
+            color: $black;
+          }
+        }
+      }
+      @include tablet {
+        &:hover {
+          color: white;
+          background: linear-gradient(90deg, rgba(240,90,36,1) 0%, rgba(246,146,30,1) 35%);
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+          transition: 1s ease;
+          img{
+            filter: brightness(0) invert(1);
+          }
+          a{
+            color: white;
+          }
+        }
+      }
+      @include desk {
+        &:hover {
+          color: white;
+          background: linear-gradient(90deg, rgba(240,90,36,1) 0%, rgba(246,146,30,1) 35%);
+          -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+          transform: scale(1.1);
+          transition: 1s ease;
+          img{
+            filter: brightness(0) invert(1);
+          }
+          a{
+            color: white;
+          }
+        }
       }
       a {
         @include flexbox;
         width: 100%;
         color: $black;
         font-size: 0.7em;
-        font-weight: bold;
-        &:hover {color: white; font-weight: normal;}
+        font-weight: 500;
       }
       img {
         height: 40px;
@@ -105,73 +240,220 @@
     @include module;
     display: grid;
     padding-top: 0.8em;
-    grid-template-columns: repeat(2, minmax(0, 190px));  
-    grid-template-rows: repeat(1, minmax(29px, 29px));
+    @include phone {
+      grid-template-columns: repeat(3, minmax(0, 100px));  
+      grid-template-rows: repeat(1, minmax(29px, 29px));
+    }
+    @include tablet {
+      grid-template-columns: repeat(3, minmax(0, 200px));  
+      grid-template-rows: repeat(1, minmax(29px, 29px));
+    }
+    @include desk {
+      grid-template-columns: repeat(3, minmax(0, 200px));  
+      grid-template-rows: repeat(1, minmax(29px, 29px));
+    }
     grid-gap: 1.5em;
     .grid-item {
-      background: linear-gradient(90deg, rgba(240,90,36,1) 0%, rgba(246,146,30,1) 35%);
-      @include radius(5px); box-shadow: 0px 5px 10px 0px #A6A6A6;
+      background: linear-gradient(180deg, rgba(52,195,244,1) 0%, rgba(0,57,114,1) 98%);
+      @include radius(5px); box-shadow: 0px 5px 7px 0px #A6A6A6;
       transition: 1s ease;
       @include items-center;
-      // padding: 0.9em 1.5em;
+      &.active {
+        background: linear-gradient(180deg, rgba(246,146,30,1) 0%, rgba(240,90,36,1) 98%);
+        // background: linear-gradient(90deg, rgba(240,90,36,1) 0%, rgba(246,146,30,1) 35%);
+        a {color: white; font-weight: 500;}
+      }
       &:hover {
         color: white;
-        // background: linear-gradient(90deg, rgba(240,90,36,1) 0%, rgba(246,146,30,1) 35%);
         -webkit-transform: scale(1.1);
         -ms-transform: scale(1.1);
         transform: scale(1.1);
         transition: 1s ease;
+        a {font-weight: 500;}
       }
       a {
-        font-size: 0.6em;
+        font-size: 0.5em;
+        font-weight: normal;
         width: 100%;
         text-align: center;
         color: white;
-        &:hover {color: $black; font-weight: normal;}
       }
+    }
+  }
+  &--cookie-consent {
+    background-color: $black !important;
+    width: 85% !important;
+    left: 7.5% !important;
+    bottom: 1.5em !important;
+    padding-bottom: 1.5em !important;
+    padding-top: 1.5em !important;
+    @include radius(10px); box-shadow: 0px 5px 12px 0px #A6A6A6;
+    &-botones{
+      background: linear-gradient(180deg, rgba(246,146,30,1) 0%, rgba(240,90,36,1) 98%) !important;
+      color: white !important;
+      border: none !important; 
+      font-weight: 500 !important;
+      @include radius(5px); box-shadow: 0px 5px 7px 0px #A6A6A6;
+      font-size: 1em !important;
+      width: 10em !important;
+      margin-right: 3em !important;
     }
   }
 
   &--grid-container-subcategory-header {
     @include module;
-    display: grid;
-    padding-top: 0.8em;
+    // padding-top: 0.8em;
     grid-template-columns: repeat(3, minmax(0, 200px));  
     grid-template-rows: repeat(2, minmax(29px, 29px));
     grid-gap: 1.5em;
     margin: 0em 0em 0em 2em;
+    @include phone {
+      display: none;
+    }
+    @include tablet {
+      display: none;
+    }
+    @include desk {
+      display: grid;
+    }
     .grid-item {
-      background: linear-gradient(90deg, rgba(240,90,36,1) 0%, rgba(246,146,30,1) 35%);
-      @include radius(5px); box-shadow: 0px 5px 10px 0px #A6A6A6;
+      background: linear-gradient(180deg, rgba(52,195,244,1) 0%, rgba(0,57,114,1) 98%);
+      @include radius(5px); box-shadow: 0px 5px 7px 0px #A6A6A6;
       transition: 1s ease;
       @include items-center;
-      // padding: 0.9em 1.5em;
+      &.active {
+        background: linear-gradient(180deg, rgba(246,146,30,1) 0%, rgba(240,90,36,1) 98%);
+        // background: linear-gradient(90deg, rgba(240,90,36,1) 0%, rgba(246,146,30,1) 35%);
+        a {color: white; font-weight: 500;}
+      }
       &:hover {
         color: white;
-        // background: linear-gradient(90deg, rgba(240,90,36,1) 0%, rgba(246,146,30,1) 35%);
         -webkit-transform: scale(1.1);
         -ms-transform: scale(1.1);
         transform: scale(1.1);
         transition: 1s ease;
+        a {font-weight: 500;}
       }
       a {
         font-size: 0.5em;
+        font-weight: normal;
         width: 100%;
         text-align: center;
         color: white;
-        &:hover {color: $black; font-weight: normal;}
       }
     }
   }
 
-  &--grid-container-industry-header {
+  &--grid-container-subcategory-footer-title {
+    text-align: center;
+    margin: 1em;
+    @include desk {
+      display: none;
+    }
+  }
+  &--grid-container-subcategory-footer {
     @include module;
     display: grid;
-    padding-top: 0.8em;
-    grid-template-columns: repeat(1, minmax(0, 400px));  
-    grid-template-rows: repeat(5, minmax(100px, 100px));
+    // padding-top: 0.8em;
     grid-gap: 1.5em;
-    margin: 45% 0em 0em 4em;
+    @include phone {
+      grid-template-columns: repeat(1, minmax(0, 1fr));  
+      grid-auto-rows: 35px;
+    }
+    @include tablet {
+      grid-template-columns: repeat(2, minmax(0, 1fr));  
+      grid-auto-rows: 35px;
+    }
+    @include desk {
+      display: none;
+    }
+    grid-gap: 1.5em;
+    margin-bottom: 3em;
+    .grid-item {
+      background: linear-gradient(180deg, rgba(52,195,244,1) 0%, rgba(0,57,114,1) 98%);
+      @include radius(5px); box-shadow: 0px 5px 7px 0px #A6A6A6;
+      transition: 1s ease;
+      margin: 0em 1.5em;
+      @include items-center;
+      @include phone {
+        &:hover {
+          color: $black;
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+          transition: 1s ease;
+          a {font-weight: normal;}
+        }
+      }
+      @include tablet{
+        &:hover {
+          color: $black;
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+          transition: 1s ease;
+          a {font-weight: normal;}
+        }
+      }
+      @include desk{
+        &:hover {
+          color: white;
+          -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+          transform: scale(1.1);
+          transition: 1s ease;
+          a {font-weight: 500;}
+        }
+      }
+      &.active {
+        background: linear-gradient(180deg, rgba(246,146,30,1) 0%, rgba(240,90,36,1) 98%);
+        a {color: white; font-weight: 500;}
+      }
+      a {
+        font-size: 0.7em;
+        font-weight: normal;
+        width: 100%;
+        text-align: center;
+        color: white;
+      }
+    }
+  }
+  &--header-lateral-industry {
+    display: inline-block;
+    @include phone {
+      margin: 0;
+      width: 100%;
+    }
+    @include tablet {
+      margin: 0;
+      width: 100%;
+    }
+    @include desk {
+      margin: 45% 0em 0em 4em;
+    }
+  }
+
+  &--grid-container-industry-header {
+    width: 100%;
+    display: grid;
+    @include module;
+    padding-top: 0.8em;
+    @include phone {
+      grid-template-columns: 1fr;
+      grid-auto-rows: 100px;
+    }
+
+    @include tablet {
+      grid-template-columns: repeat(2, minmax(0, 1fr));  
+      grid-auto-rows: 100px;
+    }
+
+    @include desk {
+      grid-template-columns: 1fr;
+      grid-auto-rows: 100px;
+    }
+    grid-gap: 1.5em;
+    
     .header-item {
       display: inherit;
       align-items: center;
@@ -189,6 +471,89 @@
         margin: auto;
       }
     }
+    .grid-item {
+      @include radius(10px); box-shadow: 0px 5px 10px 0px #A6A6A6;
+      transition: 1s ease;
+      @include items-center;
+      position: relative;
+      padding: 0 0 0.8em 0;
+      @include phone {
+        &:hover {
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+          transition: 1s ease;
+        }
+      }
+      @include tablet{
+        &:hover {
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+          transition: 1s ease;
+        }
+      }
+      @include desk{
+        &:hover {
+          -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+          transform: scale(1.1);
+          transition: 1s ease;
+        }
+      }
+      a {
+        display: grid;
+        flex-direction: column;
+        justify-content: space-between;
+        // &:hover {color: white; font-weight: normal;}
+      }
+      img {
+        border-radius: 10px;
+        height: 100%;
+        position: absolute;
+        object-fit: cover;
+        display: block;
+      }
+      h3  {
+        position: absolute;
+        padding: 0.5em 1em;
+        font-weight: 500;
+        font-size: 1em;
+        display: inline-block;
+        width: auto;
+      }
+      h4  {
+        font-weight: 500;
+        text-align: end;
+        font-size: 0.6em;
+        display: inline-block;
+        position: relative;
+        bottom: -1em;
+        width: 95%;
+      }
+      p {
+        padding: 0 1em;
+        color: black;
+        @include tablet {
+          font-size: 0.5em;
+        }
+        @include desk {
+          font-size: 0.7em;
+        }
+        font-weight: normal;
+        // &:hover {color: white; font-weight: normal;}
+      }
+    }
+  }
+
+  &--grid-container-blog-main-category {
+    @include module;
+    display: grid;
+    padding-top: 0.8em;
+    grid-template-columns: repeat(3, minmax(0, 400px));  
+    grid-template-rows: repeat(1, minmax(100px, 100px));
+    grid-gap: 1.5em;
+    margin: 0;
     .grid-item {
       @include radius(10px); box-shadow: 0px 5px 10px 0px #A6A6A6;
       transition: 1s ease;
@@ -216,56 +581,46 @@
         object-fit: cover;
         display: block;
       }
-      h3  {
-        position: absolute;
-        padding: 0.5em 1em;
-        font-weight: bold;
-        font-size: 1em;
-        display: inline-block;
+      button {
+        @include radius(15px);
+        background-color: white;
+        color: $black;
+        font-size: 0.8em !important;
+        font-weight: 500;
         width: auto;
-      }
-      h4  {
-        font-weight: bold;
-        text-align: end;
-        font-size: 0.6em;
-        display: inline-block;
-        position: relative;
-        bottom: -1em;
-        width: 95%;
-      }
-      p {
-        padding: 0 1em;
-        color: black;
-        @include tablet {
-          font-size: 0.5em;
-        }
-        @include desk {
-          font-size: 0.7em;
-        }
-        font-weight: normal;
-        // &:hover {color: white; font-weight: normal;}
+        padding: 0.4em 3em;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        width: 80%;
       }
     }
   }
-  
-  &--grid-container-category-industry {
-    padding: 0 4em;
+
+  &--grid-container-blog-categories {
     @include module;
     display: grid;
+    padding-top: 0.8em;
+    grid-gap: 1.5em;
+    @include phone {
+      grid-template-columns: 1fr;  
+      grid-auto-rows: 60px;
+    }
     @include tablet {
       grid-template-columns: repeat(2, minmax(0, 1fr));  
-      grid-template-rows: repeat(3, minmax(90px, 90px));
+      grid-auto-rows: 60px;
     }
     @include desk {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      grid-template-rows: repeat(2, minmax(185px, 185px));
+      grid-template-columns: 1fr;  
+      grid-auto-rows: 60px;
     }
-    grid-gap: 1.5em;
-    .grid-item-solution {
-      @include radius(5px); box-shadow: 0px 5px 10px 0px #A6A6A6;
+    .grid-item {
+      @include radius(30px); box-shadow: 0px 5px 10px 0px #A6A6A6;
       transition: 1s ease;
       @include items-center;
-      padding: 0.8em 1em;
+      position: relative;
+      padding: 0 0 0.8em 0;
       &:hover {
         // color: white;
         // background: linear-gradient(90deg, rgba(240,90,36,1) 0%, rgba(246,146,30,1) 35%);
@@ -275,10 +630,683 @@
         transition: 1s ease;
       }
       a {
+        color: $black;
+        font-size: 0.8em !important;
+        font-weight: 500;
+        width: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+      }
+    }
+    &--banner {
+      height: 1.82em;
+      width: 300px;
+      background-color: white;
+      @include radius(30px); box-shadow: 0px 5px 10px 0px #A6A6A6;
+      transition: 1s ease;
+      @include items-center;
+      position: relative;
+      padding: 0 0 0.8em 0;
+      @include phone {
+        &:hover {
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+          transition: 1s ease;
+        }
+      }
+      @include tablet {
+        &:hover {
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+          transition: 1s ease;
+        }
+      }
+      @include desk {
+        &:hover {
+          -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+          transform: scale(1.1);
+          transition: 1s ease;
+        }
+      }
+      a {
+        color: $black;
+        font-size: 0.8em !important;
+        font-weight: 500;
+        width: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+      }
+    }
+  }
+
+  &--grid-container-detail-blog-categories {
+    @include module;
+    display: grid;
+    padding-top: 0.8em;
+    @include phone {
+      grid-template-columns: 1fr;  
+      grid-auto-rows: 60px;
+    }
+    @include tablet {
+      grid-template-columns: repeat(2, minmax(0, 1fr));  
+      grid-auto-rows: 60px;
+    }
+    @include desk {
+      grid-template-columns: 1fr;  
+      grid-auto-rows: 60px;
+    }
+    grid-gap: 1.5em;
+    .grid-item {
+      @include radius(30px); box-shadow: 0px 5px 10px 0px #A6A6A6;
+      transition: 1s ease;
+      @include items-center;
+      position: relative;
+      padding: 0 0 0.8em 0;
+      &:hover {
+        // color: white;
+        // background: linear-gradient(90deg, rgba(240,90,36,1) 0%, rgba(246,146,30,1) 35%);
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+        transition: 1s ease;
+      }
+      a {
+        color: $black;
+        font-size: 0.8em !important;
+        font-weight: 500;
+        width: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+      }
+    }
+  }
+
+  &--grid-container-blog-favorites {
+    padding-top: 1em;
+    @include module;
+    display: grid;
+    @include phone {
+      grid-template-columns: 1fr;
+      grid-auto-rows: 90px;
+    }
+    @include tablet {
+      grid-template-columns: repeat(2, minmax(0, 1fr));  
+      grid-auto-rows: 90px;
+    }
+    @include desk {
+      grid-template-columns: 1fr;
+      grid-auto-rows: 90px;
+    }
+    grid-gap: 0.3em;
+    .grid-item {
+      @include flexbox;
+      // @include radius(5px); box-shadow: 0px 5px 10px 0px #A6A6A6;
+      transition: 1s ease;
+      // padding: 0.9em 1em;
+      &:hover {
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+        transition: 1s ease;
+      }
+      a {
+        @include flexbox;
+        width: 100%;
+        color: $black;
+        font-size: 0.7em;
+        font-weight: 500;
+      }
+      img {
+        @include radius(10px);
+        height: 60px;
+        width: 60px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 1.2em;
+      }
+      &-content{
+        width: 100%;
+        text-align: start;
+        h3  {
+          display: inline-block;
+          width: auto;
+          font-size: 1.5em;
+          font-weight: 500;
+          vertical-align: middle;
+        }
+        p{
+          color: $black;
+          padding: 0;
+          font-size: 1em;
+        }
+      }
+    }
+  }
+
+
+  &--blog-lateral {
+    @include phone {width: 100%; padding: 1.5em;}
+    @include tablet {width: 100%; padding: 1.5em;}
+    @include desk {width: 30%; padding: 0;}
+    padding-top: 0.7em;
+    // background-color: $black;
+    text-align: center;
+    &-header {
+      padding-bottom: 2em;
+      width: 100%;
+      text-align: center;
+      // @include flexbox; @include flow-rn; @include just-between; @include items-center;
+      &-header{
+        @include radius(10px); box-shadow: 0px 5px 12px 0px #A6A6A6;
+        background: linear-gradient(180deg, rgba(52,195,244,1) 0%, rgba(0,57,114,1) 98%);
+        width: 100%;
+        height: 3.5em;
+        display: flex;
+        h1{
+          width: auto;
+          height: auto;
+          margin: auto;
+          color: white;
+        }
+      }
+      &-social{
+        padding-top: 1.5em;
+        a {
+          @include phone {padding-left: 1em;
+            padding-right: 1em;}
+          @include tablet {padding-left: 1em;
+            padding-right: 1em;}
+          @include desk {padding-left: 1.4em;
+            padding-right: 1.4em;}
+        }
+        img{
+          height: 30px;
+          width: 30px;
+        };
+      }
+      p {font-weight: 500; font-size: 0.9em; color: white; text-align: center; margin: auto;}
+    }
+    &-form {
+      padding-bottom: 2em;
+      width: 100%;
+      text-align: center;
+      // @include flexbox; @include flow-rn; @include just-between; @include items-center;
+      &-header{
+        @include radius(10px); box-shadow: 0px 5px 12px 0px #A6A6A6;
+        background: linear-gradient(180deg, rgba(52,195,244,1) 0%, rgba(0,57,114,1) 98%);
+        width: 100%;
+        height: 3.5em;
+        display: flex;
+        h1{
+          width: auto;
+          height: auto;
+          margin: auto;
+          color: white;
+        }
+      }
+      p {font-size: 0.7em; padding: 1em 1em 1.5em 1em;}
+      b {font-size: 0.6em;  font-weight: 500;}
+    }
+    &-total {
+      width: 100%;
+      padding-bottom: 2em;
+      text-align: center;
+      // @include flexbox; @include flow-rn; @include just-between; @include items-center;
+      &-header{
+        @include radius(10px); box-shadow: 0px 5px 12px 0px #A6A6A6;
+        background: linear-gradient(180deg, rgba(52,195,244,1) 0%, rgba(0,57,114,1) 98%);
+        width: 100%;
+        height: 3.5em;
+        display: flex;
+        h1{
+          width: auto;
+          height: auto;
+          margin: auto;
+          color: white;
+        }
+      }
+      b {font-size: 1.75em; font-weight: 300; color: $red;}
+      p {font-size: 1.75em;}
+    }
+  }
+
+  &--blog-newsletter {
+    padding: 4em 0 1em 0;
+    &-header {width: 100%; @include padbox(1.5em);
+      @include radius(10px);
+      background: linear-gradient(90deg, rgba(240,90,36,1) 0%, rgba(246,146,30,1) 35%);
+      form{
+        width: 100%;
+        text-align: center;
+        @include flexbox;
+        @include items-center;
+      }
+      div{
+        @include flexbox; 
+        width: 85%;
+        margin: auto;
+      }
+      p {font-weight: 500; font-size: 1em; color: white; text-align: center; 
+        // margin: auto;
+        width: 62%;
+        margin-right: 2em;
+        vertical-align: middle;
+      }
+      label{
+        width: -webkit-fill-available;
+        vertical-align: middle;
+        height: auto;
+        input{
+          padding: .6em;
+          box-sizing: border-box;
+          display: inline-block;
+          background-color: #F9C6A6;
+          border: none !important;
+          width: 100%;
+          height: 3em;
+          &::placeholder {color: #333333; opacity: 1;}
+        }
+      }
+      button {
+        vertical-align: middle;
+        margin-left: 2em;
+        @include radius(15px);
+        background-color: white;
+        color: $black;
+        font-size: 0.8em;
+        font-weight: 500;
+        width: auto;
+        padding: 0.4em 3em;
+      }
+    }
+  }
+
+  &--service-banner {
+    padding: 0 0 2em 0;
+    &-header {width: 100%; @include padbox(1.5em);
+      @include radius(10px);
+      background: linear-gradient(90deg, rgba(240,90,36,1) 0%, rgba(246,146,30,1) 35%);
+      form{
+        width: 100%;
+        text-align: center;
+        @include flexbox;
+        @include items-center;
+      }
+      div{
+        @include flexbox; 
+        width: 85%;
+        margin: auto;
+      }
+      p {font-weight: 500; font-size: 1em; color: white; text-align: center; 
+        // margin: auto;
+        width: 62%;
+        margin-right: 2em;
+        vertical-align: middle;
+      }
+      label{
+        width: -webkit-fill-available;
+        vertical-align: middle;
+        height: auto;
+        input{
+          padding: .6em;
+          box-sizing: border-box;
+          display: inline-block;
+          background-color: #F9C6A6;
+          border: none !important;
+          width: 100%;
+          height: 3em;
+          &::placeholder {color: #333333; opacity: 1;}
+        }
+      }
+      button {
+        vertical-align: middle;
+        margin-left: 2em;
+        @include radius(15px);
+        background-color: white;
+        color: $black;
+        font-size: 0.8em;
+        font-weight: 500;
+        width: auto;
+        padding: 0.4em 3em;
+      }
+    }
+  }
+
+  &--blog-detail-newsletter {
+    padding: 4em 0 1em 0;
+    &-header {width: 100%; @include padbox(1.5em);
+      @include radius(10px);
+      background: linear-gradient(90deg, rgba(240,90,36,1) 0%, rgba(246,146,30,1) 35%);
+      form{
+        width: 100%;
+        text-align: center;
+        @include items-center;
+      }
+      div{
+        width: 100%;
+        margin: auto;
+      }
+      h3 {font-weight: 500; font-size: 1em; color: white; text-align: center; 
+        margin: auto;
+        width: 100%;
+      }
+      p {font-size: 0.7em; color: white; text-align: center; 
+        margin: auto;
+        font-weight: normal;
+        width: 100%;
+        padding-top: 1em;
+        padding-bottom: 1em;
+      }
+      label{
+        width: 100%;
+        height: auto;
+        padding-bottom: 1em;
+        padding-top: 1em;
+        text-align: center;
+        input{
+          padding: .6em;
+          box-sizing: border-box;
+          display: inline-block;
+          text-align: center;
+          background-color: #F9C6A6;
+          border: none !important;
+          width: 100%;
+          height: 3em;
+          &::placeholder {color: #333333; opacity: 1;}
+        }
+      }
+      button {        
+        @include radius(15px);
+        background-color: white;
+        color: $black;
+        font-size: 0.8em;
+        font-weight: 500;
+        width: auto;
+        padding: 0.4em 3em;
+        margin-bottom: 1.5em;
+      }
+    }
+  }
+
+  &--grid-container-blog {
+    padding-top: 2em;
+    @include module;
+    display: grid;
+    padding-top: 0.8em;
+
+    @include phone {
+      grid-auto-rows: 300px;
+      grid-gap: 3.5em;
+    }
+
+    @include tablet {
+      grid-auto-rows: 300px;
+      grid-gap: 3.5em;
+    }
+
+    @include desk {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-auto-rows: 420px;
+      grid-gap: 1.5em;
+    }
+    
+    // margin: 45% 0em 0em 4em;
+    .grid-item {
+      @include phone {
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+        &:hover {
+          box-shadow: none;
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+          transition: 1s ease;
+        }
+      }
+      @include tablet {
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+        &:hover {
+          box-shadow: none;
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+          transition: 1s ease;
+        }
+      }
+      @include desk {
+        margin: 0;
+        &:hover {
+          box-shadow:10px 10 px 5px 0px #a6a6a6;
+          -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+          transform: scale(1.1);
+          transition: 1s ease;
+        }
+      }
+      @include radius(10px); 
+      box-shadow: 0px 5px 10px 0px #A6A6A6;
+      transition: 1s ease;
+      @include items-center;
+      position: relative;
+      padding: 0 0 0.8em 0;
+      &-content {
+        box-shadow: 0px 5px 12px 0px #A6A6A6;
+        @include radius(5px);
+        bottom: -1.5em;
+        width: 85%;
+        height: 7em;
+        margin-left: 7.5%;
+        background-color: white;
+        position: absolute;
+        text-align: center;
+        b{
+          color: #34C3F4;
+          margin: .5em;
+          font-size: .7em;
+          font-weight: lighter;
+        }
+        h3  {
+          font-weight: 500;
+          font-size: .8em;
+          margin-top: .5em;
+          padding: 0 2em;
+          height: 3em;
+        }
+        p{
+          color: $black;
+          font-size: .7em;
+          margin-top: 1.5em;
+          font-weight: 400;
+        }
+      }
+      a {
         display: grid;
         flex-direction: column;
         justify-content: space-between;
         // &:hover {color: white; font-weight: normal;}
+      }
+      img {
+        border-radius: 10px;
+        height: 100%;
+        position: absolute;
+        object-fit: cover;
+        display: block;
+      }
+      h4  {
+        font-weight: 500;
+        text-align: end;
+        font-size: 0.6em;
+        display: inline-block;
+        position: relative;
+        bottom: -1em;
+        width: 95%;
+      }
+    }
+  }
+
+  &--grid-container-blog-posts {
+    padding-top: 2em;
+    padding-bottom: 1em;
+    @include module;
+    display: grid;
+    padding-top: 0.8em;
+    @include phone {
+      grid-template-columns: 1fr;
+      grid-auto-rows: 300px;
+      grid-gap: 3em 1.5em;
+      margin: 1em;
+    }
+    @include tablet {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-auto-rows: 300px;
+      grid-gap: 3em 1.5em;
+      margin: 0;
+    }
+    @include desk {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-auto-rows: 300px;
+      grid-gap: 3em 1.5em;
+      margin: 0;
+    }
+
+    .grid-item {
+      @include radius(10px); box-shadow: 0px 5px 10px 0px #A6A6A6;
+      @include items-center;
+      position: relative;
+      padding: 0 0 0.8em 0;
+      &:hover {
+        img {
+          // object-position: top;
+          -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+          transform: scale(1.1);
+          transition: 0.5s ease;
+        }
+      }
+      &-content {
+        box-shadow: 0px 5px 12px 0px #A6A6A6;
+        @include radius(5px);
+        bottom: -1.5em;
+        width: 82%;
+        height: 8em;
+        margin-left: 6%;
+        padding: 0em 3% 0em 3%;
+        background-color: white;
+        position: absolute;
+        text-align: center;
+        b{
+          color: #34C3F4;
+          margin: 0.5em;
+          font-size: 0.7em;
+          font-weight: lighter;
+        }
+        h3  {
+          font-weight: 500;
+          font-size: 1em;
+          margin-top: 0.5em;
+          // padding: 0em 2em;
+          height: 3em;
+        }
+        p{
+          color: $black;
+          font-size: .7em;
+          margin: auto;
+          margin-top: 1.5em;
+          font-weight: normal;
+        }
+      }
+      a {
+        display: grid;
+        flex-direction: column;
+        justify-content: space-between;
+        // &:hover {color: white; font-weight: normal;}
+      }
+      img {
+        transition: 0.5s ease;
+        border-radius: 10px;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        object-fit: cover;
+        display: block;
+      }
+      h4  {
+        font-weight: 500;
+        text-align: end;
+        font-size: 0.6em;
+        display: inline-block;
+        position: relative;
+        bottom: -1em;
+        width: 95%;
+      }
+    }
+  }
+  
+  &--grid-container-category-industry {
+    padding: 0 4em;
+    @include module;
+    display: grid;
+    @include phone {
+      padding: 0 1.5em;
+      grid-template-columns: 1fr;
+      grid-auto-rows: 185px;
+    }
+    @include tablet {
+      padding: 0 1.5em;
+      margin-bottom: 3em;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-auto-rows: 185px;
+    }
+    @include desk {
+      padding: 0 4em;
+      margin-bottom: 3em;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-auto-rows: 185px;
+    }
+    grid-gap: 1.5em;
+    .grid-item-solution {
+      @include radius(5px); box-shadow: 0px 5px 10px 0px #A6A6A6;
+      transition: 1s ease;
+      @include items-center;
+      padding: 0.8em 1em;
+      @include phone {
+        &:hover {
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+          transition: 1s ease;
+        }
+      }
+      @include tablet{
+        &:hover {
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+          transition: 1s ease;
+        }
+      }
+      @include desk {
+        &:hover {
+          -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+          transform: scale(1.1);
+          transition: 1s ease;
+        }
+      }
+      a {
+        display: grid;
+        flex-direction: column;
+        justify-content: space-between;
       }
       img {
         height: 50px;
@@ -287,13 +1315,13 @@
         margin-right: 0.8em;
       }
       h3  {
-        font-weight: bold;
+        font-weight: 500;
         font-size: 0.8em;
         display: inline-block;
         width: auto;
       }
       h4  {
-        font-weight: bold;
+        font-weight: 500;
         text-align: end;
         font-size: 0.6em;
         display: inline-block;
@@ -316,16 +1344,26 @@
   }
 
   &--grid-container-category {
-    padding: 0 4em;
     @include module;
+    padding-bottom: 6em;
     display: grid;
+    @include phone {
+      padding: 0em 1.5em 0.5em 1.5em;
+      margin-bottom: 5em;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-auto-rows: 300px;
+    }
     @include tablet {
-      grid-template-columns: repeat(2, minmax(0, 1fr));  
-      grid-template-rows: repeat(3, minmax(90px, 90px));
+      padding: 0 1.5em;
+      margin-bottom: 5em;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-auto-rows: 185px;
     }
     @include desk {
+      padding: 0 4em;
+      margin-bottom: 5em;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      grid-template-rows: repeat(2, minmax(185px, 185px));
+      grid-auto-rows: 185px;
     }
     grid-gap: 1.5em;
     .grid-item-solution {
@@ -333,19 +1371,34 @@
       transition: 1s ease;
       @include items-center;
       padding: 0.8em 1em;
-      &:hover {
-        // color: white;
-        // background: linear-gradient(90deg, rgba(240,90,36,1) 0%, rgba(246,146,30,1) 35%);
-        -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        transform: scale(1.1);
-        transition: 1s ease;
+      @include phone {
+        &:hover {
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+          transition: 1s ease;
+        }
+      }
+      @include tablet{
+        &:hover {
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+          transition: 1s ease;
+        }
+      }
+      @include desk {
+        &:hover {
+          -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+          transform: scale(1.1);
+          transition: 1s ease;
+        }
       }
       a {
         display: grid;
         flex-direction: column;
         justify-content: space-between;
-        // &:hover {color: white; font-weight: normal;}
       }
       img {
         height: 50px;
@@ -354,13 +1407,13 @@
         margin-right: 0.8em;
       }
       h3  {
-        font-weight: bold;
+        font-weight: 500;
         font-size: 0.8em;
         display: inline-block;
         width: auto;
       }
       h4  {
-        font-weight: bold;
+        font-weight: 500;
         text-align: end;
         font-size: 0.6em;
         display: inline-block;
@@ -370,14 +1423,8 @@
       }
       p {
         color: black;
-        @include tablet {
-          font-size: 0.5em;
-        }
-        @include desk {
-          font-size: 0.7em;
-        }
+        font-size: 0.7em;
         font-weight: normal;
-        // &:hover {color: white; font-weight: normal;}
       }
     }
 
@@ -385,14 +1432,208 @@
       @include radius(5px); box-shadow: 0px 5px 10px 0px #A6A6A6;
       transition: 1s ease;
       @include items-center;
-      padding: 2em 1em;
-      &:hover {
-        // color: white;
-        // background: linear-gradient(90deg, rgba(240,90,36,1) 0%, rgba(246,146,30,1) 35%);
-        -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        transform: scale(1.1);
-        transition: 1s ease;
+      @include phone {
+        padding: 1em;
+        &:hover {
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+          transition: 1s ease;
+        }
+      }
+      @include tablet{
+        padding: 1.3em;
+        &:hover {
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+          transition: 1s ease;
+        }
+      }
+      @include desk {
+        padding: 1.3em;
+        &:hover {
+          -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+          transform: scale(1.1);
+          transition: 1s ease;
+        }
+      }
+      a {
+        display: grid;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      img {
+        @include phone {
+          height: 30px;
+        }
+        @include tablet {
+          height: 40px;
+        }
+        @include desk {
+          height: 40px;
+        }
+        width: auto;
+        display: inline-block;
+        margin-right: 0.8em;
+        padding-bottom: 1em;
+      }
+      h3  {
+        font-weight: 500;
+        font-size: 0.8em;
+        display: inline-block;
+        width: auto;
+        @include phone {
+          height: 5.5em;
+        }
+        @include tablet {
+          height: auto;
+        }
+        @include desk {
+          height: auto;
+        }
+      }
+      h4  {
+        font-weight: 500;
+        text-align: end;
+        font-size: 0.7em;
+        display: inline-block;
+        position: relative;
+        bottom: -1em;
+        width: 100%;
+      }
+      p {
+        color: black;
+        font-size: 0.7em;
+        @include phone {
+          height: 11.5em;
+        }
+        @include tablet {
+          height: 5em;
+        }
+        @include desk {
+          height: 5em;
+        }
+        font-weight: normal;
+      }
+    }
+
+    .grid-item-industry {
+      @include radius(10px); box-shadow: 0px 5px 10px 0px #A6A6A6;
+      transition: 1s ease;
+      @include items-center;
+      padding: 0 0 0.8em 0;
+      @include phone {
+        &:hover {
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+          transition: 1s ease;
+        }
+      }
+      @include tablet{
+        &:hover {
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+          transition: 1s ease;
+        }
+      }
+      @include desk {
+        &:hover {
+          -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+          transform: scale(1.1);
+          transition: 1s ease;
+        }
+      }
+      a {
+        display: grid;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      img {
+        border-radius: 10px 10px 0 0;
+        height: 60px;
+        width: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      h3  {
+        padding: 0.5em 1em;
+        font-weight: 500;
+        font-size: 0.8em;
+        display: inline-block;
+        width: auto;
+        @include phone {
+          height: 2.5em;
+        }
+        @include tablet {
+          height: auto;
+        }
+        @include desk {
+          height: auto;
+        }
+      }
+      h4  {
+        font-weight: 500;
+        text-align: end;
+        font-size: 0.7em;
+        display: inline-block;
+        position: relative;
+        bottom: -1em;
+        width: 95%;
+      }
+      p {
+        padding: 0 1em;
+        color: black;
+        font-size: 0.7em;
+        @include phone {
+          height: 14em;
+        }
+        @include tablet {
+          height: 5em;
+        }
+        @include desk {
+          height: 5em;
+        }
+        font-weight: normal;
+      }
+    }
+
+    .grid-item-sap {
+      display: none;
+      &.active {display: block;}
+      @include radius(5px); box-shadow: 0px 5px 10px 0px #A6A6A6;
+      transition: 1s ease;
+      @include items-center;
+      @include phone {
+        padding: 1em;
+        &:hover {
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+          transition: 1s ease;
+        }
+      }
+      @include tablet {
+        padding: 1em;
+        &:hover {
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+          transition: 1s ease;
+        }
+      }
+      @include desk {
+        padding: 1.3em;
+        &:hover {
+          -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+          transform: scale(1.1);
+          transition: 1s ease;
+        }
       }
       a {
         display: grid;
@@ -401,41 +1642,175 @@
         // &:hover {color: white; font-weight: normal;}
       }
       img {
-        height: 50px;
-        width: 50px;
+        @include phone {
+          height: 30px;
+        }
+        @include tablet {
+          height: 40px;
+        }
+        @include desk {
+          height: 40px;
+        }
+        width: auto;
         display: inline-block;
         margin-right: 0.8em;
+        padding-bottom: 0.7em;
       }
       h3  {
-        font-weight: bold;
+        font-weight: 500;
         font-size: 0.8em;
-        padding-bottom: 0.5em;
         display: inline-block;
         width: auto;
+        @include phone {
+          height: 4em;
+        }
+        @include tablet {
+          height: auto;
+        }
+        @include desk {
+          height: auto;
+        }
       }
       h4  {
-        font-weight: bold;
+        font-weight: 500;
         text-align: end;
-        font-size: 0.6em;
+        font-size: 0.7em;
         display: inline-block;
         position: relative;
-        bottom: -3.5em;
+        bottom: -1em;
         width: 100%;
       }
       p {
+        padding: 0.5em 0em 0em 0em;
         color: black;
+        font-size: 0.7em;
+        @include phone {
+          height: 12.5em;
+        }
         @include tablet {
-          font-size: 0.5em;
+          height: 4.5em;
         }
         @include desk {
-          font-size: 0.7em;
+          height: 4.5em;
         }
         font-weight: normal;
         // &:hover {color: white; font-weight: normal;}
       }
     }
 
-    .grid-item-industry {
+    .grid-item-ms {
+      display: none;
+      &.active {display: block;}
+      @include radius(5px); box-shadow: 0px 5px 10px 0px #A6A6A6;
+      transition: 1s ease;
+      @include items-center;
+      @include phone {
+        padding: 1em;
+        &:hover {
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+          transition: 1s ease;
+        }
+      }
+      @include tablet {
+        padding: 1em;
+        &:hover {
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+          transition: 1s ease;
+        }
+      }
+      @include desk {
+        padding: 1.3em;
+        &:hover {
+          -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+          transform: scale(1.1);
+          transition: 1s ease;
+        }
+      }
+      a {
+        display: grid;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      img {
+        @include phone {
+          height: 30px;
+        }
+        @include tablet {
+          height: 40px;
+        }
+        @include desk {
+          height: 40px;
+        }
+        width: auto;
+        display: inline-block;
+        margin-right: 0.8em;
+        padding-bottom: 0.7em;
+      }
+      h3  {
+        font-weight: 500;
+        font-size: 0.8em;
+        display: inline-block;
+        width: auto;
+        @include phone {
+          height: 5.5em;
+        }
+        @include tablet {
+          height: auto;
+        }
+        @include desk {
+          height: auto;
+        }
+      }
+      h4  {
+        font-weight: 500;
+        text-align: end;
+        font-size: 0.7em;
+        display: inline-block;
+        position: relative;
+        bottom: -1em;
+        width: 100%;
+      }
+      p {
+        padding: 0.5em 0em 0em 0em;
+        color: black;
+        font-size: 0.7em;
+        @include phone {
+          height: 11.5em;
+        }
+        @include tablet {
+          height: 4.5em;
+        }
+        @include desk {
+          height: 4.5em;
+        }
+        font-weight: normal;
+        // &:hover {color: white; font-weight: normal;}
+      }
+    }
+  }
+
+  &--grid-container-cases {
+    @include module;
+    padding-bottom: 3em;
+    display: grid;
+    @include tablet {
+      grid-template-columns: repeat(2, minmax(0, 1fr));  
+      // grid-template-rows: repeat(3, minmax(, 90px));
+      grid-auto-rows: 315px;
+    }
+    @include desk {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      // grid-template-rows: repeat(2, minmax(185px, 185px));
+      grid-auto-rows: 315px;
+    }
+    grid-gap: 1.5em;
+
+    .grid-item-cases {
       @include radius(10px); box-shadow: 0px 5px 10px 0px #A6A6A6;
       transition: 1s ease;
       @include items-center;
@@ -461,24 +1836,13 @@
         object-fit: cover;
         display: block;
       }
-      h3  {
-        padding: 0.5em 1em;
-        font-weight: bold;
-        font-size: 0.8em;
-        display: inline-block;
-        width: auto;
-      }
-      h4  {
-        font-weight: bold;
-        text-align: end;
-        font-size: 0.6em;
-        display: inline-block;
-        position: relative;
-        bottom: -1em;
-        width: 95%;
+      iframe{
+        border-radius: 10px 10px 0 0;
+        width: 99%;
+        height: 11em;
       }
       p {
-        padding: 0 1em;
+        padding: 2em 3em;
         color: black;
         @include tablet {
           font-size: 0.5em;
@@ -489,141 +1853,70 @@
         font-weight: normal;
         // &:hover {color: white; font-weight: normal;}
       }
-    }
-
-    .grid-item-sap {
-      display: none;
-      &.active {display: block;}
-      @include radius(5px); box-shadow: 0px 5px 10px 0px #A6A6A6;
-      transition: 1s ease;
-      @include items-center;
-      padding: 0.8em 1em;
-      &:hover {
-        // color: white;
-        // background: linear-gradient(90deg, rgba(240,90,36,1) 0%, rgba(246,146,30,1) 35%);
-        -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        transform: scale(1.1);
-        transition: 1s ease;
-      }
-      a {
-        display: grid;
-        flex-direction: column;
-        justify-content: space-between;
-        // &:hover {color: white; font-weight: normal;}
-      }
-      img {
-        height: 50px;
-        width: 50px;
-        display: inline-block;
-        margin-right: 0.8em;
-      }
       h3  {
-        font-weight: bold;
-        font-size: 0.8em;
         display: inline-block;
         width: auto;
-      }
-      h4  {
-        font-weight: bold;
-        text-align: end;
-        font-size: 0.6em;
-        display: inline-block;
-        position: relative;
-        bottom: -1em;
-        width: 100%;
-      }
-      p {
-        color: black;
-        @include tablet {
-          font-size: 0.5em;
-        }
-        @include desk {
-          font-size: 0.7em;
-        }
-        font-weight: normal;
-        // &:hover {color: white; font-weight: normal;}
-      }
-    }
-
-    .grid-item-ms {
-      display: none;
-      &.active {display: block;}
-      @include radius(5px); box-shadow: 0px 5px 10px 0px #A6A6A6;
-      transition: 1s ease;
-      @include items-center;
-      padding: 0.8em 1em;
-      &:hover {
-        // color: white;
-        // background: linear-gradient(90deg, rgba(240,90,36,1) 0%, rgba(246,146,30,1) 35%);
-        -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        transform: scale(1.1);
-        transition: 1s ease;
-      }
-      a {
-        display: grid;
-        flex-direction: column;
-        justify-content: space-between;
-        // &:hover {color: white; font-weight: normal;}
-      }
-      img {
-        height: 50px;
-        width: 50px;
-        display: inline-block;
-        margin-right: 0.8em;
-      }
-      h3  {
-        font-weight: bold;
-        font-size: 0.8em;
-        display: inline-block;
-        width: auto;
-      }
-      h4  {
-        font-weight: bold;
-        text-align: end;
-        font-size: 0.6em;
-        display: inline-block;
-        position: relative;
-        bottom: -1em;
-        width: 100%;
-      }
-      p {
-        color: black;
-        @include tablet {
-          font-size: 0.5em;
-        }
-        @include desk {
-          font-size: 0.7em;
-        }
-        font-weight: normal;
-        // &:hover {color: white; font-weight: normal;}
+        font-size: 1em;
+        padding-top: 1em;
+        font-weight: 500;
+        vertical-align: middle;
       }
     }
   }
   
 
   &--grid-container-soluciones {
-    padding: 2em 4em;
     @include module;
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-      grid-template-rows: repeat(1, minmax(180px, 180px));
+    @include phone {
+      padding: 0;
+      grid-template-columns: 1fr;
+    }
+    @include tablet {
+      padding: 2em 1.5em;
+      grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+    @include desk {
+      padding: 2em 4em;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    grid-auto-rows: 180px;
     grid-gap: 1.5em;
     .grid-item {
       transition: 1s ease;
+      @include phone {
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+        &:hover {
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+          transition: 1s ease;
+        }
+      }
+      @include tablet {
+        margin: 0;
+        &:hover {
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+          transition: 1s ease;
+        }
+      }
+      @include desk {
+        &:hover {
+          -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+          transform: scale(1.1);
+          transition: 1s ease;
+        }
+      }
       @include items-center;
       @include radius(10px); box-shadow: 0px 5px 10px 0px #A6A6A6;
       padding: 1.5em 1em;
       background: linear-gradient(180deg, rgba(52,195,244,1) 0%, rgba(0,57,114,1) 98%);
       font-size: 1em;
       text-align: center;
-      &:hover {
-        -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        transform: scale(1.1);
-        transition: 1s ease;
-      }
       div {
         height: 100px;
       }
@@ -636,23 +1929,13 @@
       }
       p {
         color: white;
-        @include tablet {
-          font-size: 0.5em;
-        }
-        @include desk {
-          font-size: 0.7em;
-        }
+        font-size: 0.7em;
         font-weight: normal;
       }
       h3  {
-        font-weight: bold;
+        font-weight: 500;
         color: white;
-        @include tablet {
-          font-size: 0.9em;
-        }
-        @include desk {
-          font-size: 1.2em;
-        }
+        font-size: 1.2em;
         width: auto;
         margin-bottom: 0.2em;
       }
@@ -668,26 +1951,242 @@
       }
     }
   }
+
+  &--grid-container-partners {
+    @include module;
+    display: grid;
+    @include phone {
+      grid-auto-rows: auto;
+    }
+    @include tablet {
+      grid-auto-rows: auto;
+    }
+    @include desk {
+      padding: 2em 4em;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-auto-rows: 180px;
+    }
+    grid-gap: 1.5em;
+    .grid-item {
+      transition: 1s ease;
+      @include phone {
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+        padding: 1.5em;
+      }
+      @include tablet {
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+        padding: 3.5em;
+      }
+      @include desk {
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+        padding: 1.5em;
+      }
+      @include items-center;
+      @include radius(10px); box-shadow: 0px 5px 10px 0px #A6A6A6;
+      padding: 1.5em 1em;
+      background: linear-gradient(180deg, rgba(52,195,244,1) 0%, rgba(0,57,114,1) 98%);
+      font-size: 1em;
+      text-align: center;
+      /*&:hover {
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+        transition: 1s ease;
+      }*/
+      div {
+        height: auto;
+      }
+      p {
+        color: white;
+        font-size: 0.7em;
+        @include phone {
+          padding: 0em 0.5em;
+        }
+        @include tablet {
+          padding: 0em 0.5em;
+        }
+        @include desk {
+          padding: 0em 5em;
+        }
+        font-weight: normal;
+      }
+      h3  {
+        font-weight: 500;
+        color: white;
+        @include tablet {
+          font-size: 0.9em;
+        }
+        @include desk {
+          font-size: 1.2em;
+        }
+        width: auto;
+        margin-bottom: 0.2em;
+      }
+    }
+    .grid-item-image {
+      transition: 1s ease;
+      @include flexbox;
+      @include items-center;
+      // @include radius(10px); box-shadow: 0px 5px 10px 0px #A6A6A6;
+      padding: 1.5em 1em;
+      // background: linear-gradient(180deg, rgba(52,195,244,1) 0%, rgba(0,57,114,1) 98%);
+      font-size: 1em;
+      text-align: center;
+      /*&:hover {
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+        transition: 1s ease;
+      }*/
+      img{
+        margin-left: 1em;
+        width: 50%;
+        @include phone {
+          width: 44%;
+        }
+        @include tablet {
+          width: 44%;
+        }
+      }
+    }
+  }
   
-  &--header-category {width: 100%; padding: 1em 0; @include module;
+  &--header-category {width: 100%; @include module;
     @include flexbox;
-    h1 {font-weight: bold; font-size: 2.2em; width: 100%;}
+    @include phone {flex-direction: column-reverse; margin-bottom: 1em;}
+    @include tablet {flex-direction: column-reverse; margin-bottom: 1em;}
+    @include desk {flex-direction: unset; padding: 1em 0; margin-bottom: 1.5em;}
+    h1 {font-weight: 500; font-size: 2.2em; width: 100%;
+      @include phone {text-align: center; padding: 1em 0;}
+      @include tablet {text-align: center; padding: 1em 0;}
+      @include desk {text-align: start; padding: 0}
+    }
   }
 
-  &--header-subcategory {width: 100%; padding: 1em 0 3em 0; @include module;
+  &--header-subcategory {width: 100%; padding: 0 0 3em 0; @include module;
     @include flexbox;
-    align-items: flex-end;
+    align-items: flex-start;
     div {
       width: 100%;
     }
-    h1 {font-weight: bold; font-size: 2.2em; width: 100%;}
-    p  {font-size: 0.7em; width: 100%; white-space: pre-wrap;}
+    h1 {font-weight: 500; font-size: 2.2em; width: 100%;}
+    p  {font-size: 0.7em; white-space: pre-wrap;
+      @include phone {width: -webkit-fill-available; padding-left: 1.5em; padding-right: 1.5em;}
+      @include tablet {width: 95%; padding-left: 1.5em;}
+      @include desk {width: 100%; padding-left: 0;}
+    }
   }
 
-  &--header-subcategory-industry {width: 100%; padding: 1em 0 3em 0; @include module;
+  &--header-subcategory-industry {
+    @include phone {
+      display: block;
+    }
+    @include tablet {
+      display: block;
+    }
+    @include desk {
+      @include flexbox;
+    }
+    width: 100%;
+    padding: 1em 0 3em 0; @include module;
+    position: inherit;
+    h1 {font-weight: 500; font-size: 2.2em; width: 100%;
+      @include phone {
+        text-align: center;
+        margin-bottom: 0.5em;
+      }
+      @include tablet {
+        text-align: center;
+        margin-bottom: 0.5em;
+      }
+      @include desk {
+        text-align: start;
+        margin-bottom: 0;
+      }
+    }
+    &-p  {font-size: 0.75em; white-space: pre-wrap; color: #808080;
+      @include phone {
+        width: 100%;
+      }
+      @include tablet {
+        width: 100%;
+      }
+      @include desk {
+        width: 90%;
+      }
+    }
+    &-key-content {
+      font-size: 0.9em !important; 
+      @include phone {
+        width: 95%; 
+      }
+      @include tablet {
+        width: 95%; 
+      }
+      @include desk {
+        width: 100%; 
+      }
+      white-space: pre-wrap; color: $black;
+      margin-top: 2em;
+      ul {
+        font-size: 1em !important;
+        margin: 0em 2.5em;
+        li {
+          font-size: 1em !important;
+          &::before {
+            content: "\2022";
+            color: $black;
+            font-weight: 500;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+          }
+        }
+      }
+      p  {font-size: 0.9em !important; width: 100%; font-weight: 500 !important; color: $black !important;}
+    }
+    .download-item {
+      align-items: center;
+      @include radius(20px);
+      background: linear-gradient(90deg, rgba(240,90,36,1) 0%, rgba(246,146,30,1) 35%);
+      position: relative;
+      padding: 0.2em 2em;
+      width: fit-content;
+      text-align: center;
+      a {
+        color: white;
+        text-align: center;
+        margin: auto;
+        font-size: 0.7em;
+      }
+    }
+    &-related-items {
+      display: inherit;
+      align-items: center;
+      @include radius(5px);
+      background: linear-gradient(180deg, rgba(52,195,244,1) 0%, rgba(0,57,114,1) 98%);
+      height: 40px;
+      position: relative;
+      margin-top: 2em;
+      width: 100%;
+      text-align: center;
+      a {
+        font-size: 1.1em;
+        font-weight: 500;
+        color: white;
+        text-align: center;
+        margin: auto;
+      }
+    }
+  }
+
+  &--header-pages-layout-1 {width: 100%; padding: 1em 0 3em 0; @include module;
     position: inherit;
     @include flexbox;
-    h1 {font-weight: bold; font-size: 2.2em; width: 100%;}
+    h1 {font-weight: 500; font-size: 2.2em; width: 100%;}
     p  {font-size: 0.7em; width: 100%; white-space: pre-wrap; color: #808080;}
     .key-content {font-size: 0.8em; width: 100%; white-space: pre-wrap; color: $black;
       margin-top: 2em;
@@ -697,14 +2196,14 @@
           &::before {
             content: "\2022";
             color: $black;
-            font-weight: bold;
+            font-weight: 500;
             display: inline-block;
             width: 1em;
             margin-left: -1em;
           }
         }
       }
-      p  {font-size: 0.8em; width: 100%; font-weight: bold; color: $black;}
+      p  {font-size: 0.8em; width: 100%; font-weight: 500; color: $black;}
     }
     .download-item {
       align-items: center;
@@ -733,7 +2232,7 @@
       text-align: center;
       a {
         font-size: 1.1em;
-        font-weight: bold;
+        font-weight: 500;
         color: white;
         text-align: center;
         margin: auto;
@@ -741,27 +2240,399 @@
     }
   }
 
-  &--header-content-industry {width: 100%
+  &--header-pages-layout-2 {width: 100%; 
+    @include phone {padding: 0; }
+    @include tablet {padding: 1em 0 3em 0; }
+    @include desk {padding: 1em 0 3em 0; }
+    @include module;
+    padding-bottom: 10em;
+    position: inherit;
+    @include flexbox;
+    h1 {font-weight: 500; font-size: 2.2em; width: 100%;
+      @include phone {text-align: center; }
+      @include tablet {text-align: center; }
+      @include desk {text-align: start; }
+    }
+    p  {font-size: 0.7em; width: 100%; white-space: pre-wrap; color: #808080;}
+    .key-content {font-size: 0.8em; width: 100%; white-space: pre-wrap; color: $black;
+      margin-top: 2em;
+      ul {
+        margin: 0em 5em;
+        li {
+          &::before {
+            content: "\2022";
+            color: $black;
+            font-weight: 500;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+          }
+        }
+      }
+      p  {font-size: 0.8em; width: 100%; font-weight: 500; color: $black;}
+    }
+    .download-item {
+      align-items: center;
+      @include radius(20px);
+      background: linear-gradient(90deg, rgba(240,90,36,1) 0%, rgba(246,146,30,1) 35%);
+      position: relative;
+      padding: 0.2em 2em;
+      width: fit-content;
+      text-align: center;
+      a {
+        color: white;
+        text-align: center;
+        margin: auto;
+        font-size: 0.7em;
+      }
+    }
+    .related-items {
+      display: inherit;
+      align-items: center;
+      @include radius(5px);
+      background: linear-gradient(180deg, rgba(52,195,244,1) 0%, rgba(0,57,114,1) 98%);
+      height: 40px;
+      position: relative;
+      margin-top: 2em;
+      width: 100%;
+      text-align: center;
+      a {
+        font-size: 1.1em;
+        font-weight: 500;
+        color: white;
+        text-align: center;
+        margin: auto;
+      }
+    }
   }
 
-  &--grid-container-rel {
-    padding: 2em 0;
+  &--header-content-industry {
+    @include phone {
+      width: 100%;
+      margin: 0em 1.5em 0em 1.5em;
+    }
+    @include tablet {
+      width: 100%;
+      margin: 0em 1.5em 0em 1.5em;
+    }
+    @include desk {
+      width: 62.5%;
+      margin: auto;
+    }
+  }
+
+  &--page-content-layout-1 {
+    width: 100%;
+    text-align: center;
+    @include phone {padding: 1.5em;}
+    @include tablet {padding: 1.5em;}
+    @include desk {padding: 0;}
+  }
+
+  &--page-content-layout-2 {width: 100%;
+    p {
+      color: $black;
+      @include phone {width: -webkit-fill-available; padding: 2em 1.5em 0em 1.5em; margin: 0;}
+      @include tablet {width: 50%; padding: 2em 3em 0 0;}
+      @include desk {width: 50%; padding: 2em 0 0 0;}
+    }
+  }
+
+  &--page-layout-2-section {
+      @include phone {margin: 0; padding-top: 3em;}
+      @include tablet {margin:1,5em; padding-top: 0;}
+      @include desk {padding: 0; padding-top: 3em;}
+    &-form {
+      // text-align: center;
+      background-color: white;
+      @include phone {
+        box-shadow: none;
+        @include padbox(1.5em);
+      }
+      @include tablet {
+        box-shadow: none;
+        @include padbox(1.5em);
+      }
+      @include desk {
+        @include radius(10px); box-shadow: 0px 5px 12px 0px #A6A6A6;
+        @include padbox(3em);
+      }
+      p {font-size: 0.7em; padding: 1em 1em 1.5em 1em;}
+      b {font-size: 0.6em;  font-weight: 500;}
+      &-footer-form {
+        width: 55%;
+        text-align: center;
+        margin: auto;
+        p {
+          padding: 0;
+          color: $black;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &--continue {width: 100%; @include flexbox; @include flow-rw; @include just-between; @include items-center; margin: 1em 0;
+    a {@include btn-back; width: 100%; margin-bottom: 1em;
+      @include tablet {width: auto; margin-bottom: 0;}
+    }
+    button, a + a {@include btn-go; width: 100%; margin: auto;
+      @include phone {margin-right: 0 !important;}
+      @include tablet {width: auto; margin-right: 1em !important;}
+      @include desk{ margin-right: 1em !important;}
+      span::before {display: none !important;}
+    }
+  }
+
+  &--layout-1-section-1 {
+    @include phone {padding: 0em 0em 1.5em 0em;}
+    @include tablet {padding: 19em 0 5em 0;}
+    @include desk {padding: 19em 0 5em 0;}
+    &-form {
+      @include phone {@include padbox(1.5em);}
+      @include tablet {@include padbox(1.7em);}
+      @include desk {@include padbox(1.7em);}
+      text-align: center;
+      background-color: white;
+      @include radius(10px); box-shadow: 0px 5px 12px 0px #A6A6A6;
+      p {font-size: 0.8em; margin: auto; width: 45%; color: $black; padding-top: 2em;
+        display: none;
+        &.active {display: block;}
+        @include phone {width: 75%;}
+        @include tablet {width: 45%;}
+        @include desk {width: 45%;}
+      }
+      b {font-size: 0.6em;  font-weight: 500;}
+    }
+  }
+
+  &--layout-1-section-2 {
+    white-space: pre-wrap;
+    margin-bottom: 2.5em;
+    @include phone {
+      margin-right: 3em;
+      margin-left: 3em;
+    }
+    @include tablet {
+      margin-right: 5em;
+      margin-left: 5em;
+    }
+    @include desk {
+      margin-right: 5em;
+      margin-left: 5em;
+    }
+    font-size: 0.9em;
+  }
+  
+  &--layout-1-section-3 {
+    // padding: 5em 0 3em 0;
+  }
+
+  &--layout-1-section-4 {
+    padding: 2em 0 2em 0;
+    &-header {width: 100%; 
+      @include padbox(1.5em);
+      @include radius(10px);
+      background: linear-gradient(90deg, rgba(240,90,36,1) 0%, rgba(246,146,30,1) 35%);
+      text-align: center;
+      @include phone {
+        display: block;
+      }
+      @include tablet {
+        @include flexbox;
+      }
+      @include desk {
+        @include flexbox;
+      }
+      @include items-center;
+      div{
+        @include phone {
+          display: block;
+        }
+        @include tablet {
+          @include flexbox;
+        }
+        @include desk {
+          @include flexbox;
+        }
+        width: auto;
+        margin: auto;
+      }
+      p {font-weight: 500; font-size: 1em; color: white; text-align: center; 
+        // margin: auto;
+        width: auto;
+        @include phone {
+          margin: auto;
+          margin-bottom: 0.5em;
+        }
+        @include tablet {
+          margin-right: 2em;
+          margin-bottom: 0;
+        }
+        @include desk {
+          margin-right: 2em;
+          margin-bottom: 0;
+        }
+      }
+      a {
+        @include radius(15px);
+        background-color: white;
+        color: $black;
+        font-size: 0.8em;
+        font-weight: 500;
+        @include phone {padding: 0.5em 4em 0.5em 4em; width: auto;}
+        @include tablet {padding: 0.4em 3em; width: auto;}
+        @include desk {padding: 0.4em 3em; width: auto;}
+      }
+    }
+  }
+
+  &--layout-1-section-5 {
+    padding: 0 0 3em 0;
+    div {
+      @include phone {width: 90%;}
+      @include tablet {width: 60%;}
+      @include desk {width: 60%;}
+      margin: auto;
+      padding: 1.5em 0;
+      white-space: pre-wrap;
+      color: $black;
+      font-size: 0.85em;
+      p {
+        color: $black;
+        font-size: 0.85em;
+      }
+    }
+    a {
+      @include radius(15px);
+      background-color:$black;
+      color: white;
+      font-size: 0.8em;
+      font-weight: 500;
+      width: auto;
+      padding: 0.5em 4em;
+    }
+  }
+
+  &--layout-1-section-6 {
+    // padding: 5em 0 3em 0;
+    div {
+      width: 100%;
+      @include radius(10px);
+      iframe{
+        @include radius(10px);
+        width: 100%;
+        height: 37em;
+      }
+    }
+  }
+  
+  iframe{
+    @include module;
+    display: block;
+    @include radius(10px);
+    width: 100%;
+    height: 37em;
+  }
+
+  &--tabs {width: 100%;
+    // @include flexbox;
+    a {font-weight: 500 !important;
+       
+      @include phone {margin: 0 0.75em 0 0; font-size: 1.3em !important; }
+      @include tablet {margin: 0 1.25em 0 0; font-size: 1.8em !important; }
+      @include desk {margin: 0 1.25em 0 0; font-size: 1.8em !important; }
+      color: #B8C0C8;
+      @include tablet {font-size: 1em;}
+      vertical-align: middle;
+      &.active {color: $black;}
+    }
+    &-first {
+      display: inline-block;
+    }
+    &-separator {
+      border-left: 2.5px solid $black;
+      vertical-align: middle;
+      @include phone {height: 1.8em; }
+      @include tablet { height: 2.3em; }
+      @include desk {height: 2.3em; }
+      display: inline-block;
+      margin: 0 1.25em 0 0;
+    }
+  }
+
+  &--banner-layout-1 {width: 100%; margin-bottom: 1em; margin-top: 3.2em;
+    @include phone {display: none;}
+    @include tablet {display: unset;}
+    @include desk {display: unset;}
+    position: absolute;
+    @include phone {margin-top: -1.7em;}
+    img {
+      display: none;
+      position: absolute;
+      &.active {display: block;}
+    }
+  }
+
+  &--banner-cliente {width: 100%; margin-bottom: 1em;
+    @include module;
+    display: block;
+    background-color: white;
+    padding-bottom: 2em;
+    @include radius(10px); box-shadow: 0px 5px 12px 0px #A6A6A6;
+    .slick {
+      &-track {width: 100%; @include flexbox; @include flow-rn; @include just-start; @include items-center;        
+      }
+      &-slide {width: 100%;
+        img{
+          @include phone {width: auto; height: 7em; margin: auto;}
+          @include tablet {width: auto; height: 7em; margin: auto;}
+          @include desk {width: inherit;}
+        }
+      }
+      &-arrow {position: absolute; top: 40%; z-index: 1; //top: 30%;
+        svg {@include size(32px, 32px);
+          path:first-child {fill: #bbbbbb; @include trans;}
+          path:last-child {fill: white;}
+        }
+        &:hover {
+          svg {
+            path:first-child {fill: #DDDDDD;}
+          }
+        }
+      }
+      &-prev {left: 0.5em;}
+      &-next {right: 0.5em;}
+      &-dots {width: 100%; position: absolute; left: 0; right: 0; bottom: 0.5em;
+        @include flexbox_i; @include flow-rw; @include just-center; @include items-center;
+        li {display: inline-block; font-size: 0.8em; margin: 0 1em; opacity: 0.5; @include trans;
+          &.slick-active {opacity: 1; @include transform(scale(1.5));}
+          a {color: white;}
+
+        }
+      }
+    }
+  }
+
+  &--grid-container-layout-1 {
+    text-align: left;
+    padding: 1em 0;
     @include module;
     display: grid;
     @include tablet {
       grid-template-columns: repeat(2, minmax(0, 1fr));  
-      grid-template-rows: repeat(3, minmax(90px, 90px));
+      grid-template-rows: repeat(3, minmax(170px, 170px));
     }
     @include desk {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      grid-template-rows: repeat(3, minmax(160px, 160px));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-rows: repeat(2, minmax(170px, 170px));
     }
-    grid-gap: 2em;
-    .grid-item-industry-rel {
+    grid-gap: 1.5em;
+    .grid-item {   
       @include radius(5px); box-shadow: 0px 5px 10px 0px #A6A6A6;
       transition: 1s ease;
       @include items-center;
-      padding: 0 1em;
+      padding: 1.3em;
       &:hover {
         // color: white;
         // background: linear-gradient(90deg, rgba(240,90,36,1) 0%, rgba(246,146,30,1) 35%);
@@ -769,6 +2640,90 @@
         -ms-transform: scale(1.1);
         transform: scale(1.1);
         transition: 1s ease;
+      }
+      a {
+        display: grid;
+        flex-direction: column;
+        justify-content: space-between;
+        // &:hover {color: white; font-weight: normal;}
+      }
+      img {
+        height: 40px;
+        width: auto;
+        display: inline-block;
+        margin-right: 0.8em;
+        padding-bottom: 1em;
+      }
+      h3  {
+        font-weight: 500;
+        font-size: 0.8em;
+        display: inline-block;
+        width: auto;
+      }
+      p {
+        color: black;
+        @include tablet {
+          font-size: 0.5em;
+        }
+        @include desk {
+          font-size: 0.7em;
+        }
+        height: 4.5em;
+        font-weight: normal;
+        // &:hover {color: white; font-weight: normal;}
+      }
+    }
+  }
+
+  &--grid-container-rel {
+    
+    padding: 2em 0;
+    @include module;
+    display: grid;
+    @include phone {
+      grid-template-columns: 1fr;
+      grid-auto-rows: 175px;
+      margin: 0 0.5em;
+    }
+    @include tablet {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-auto-rows: 175px;
+      margin: 0;
+    }
+    @include desk {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-auto-rows: 175px;
+      margin: 0;
+    }
+    grid-gap: 2em;
+    .grid-item-industry-rel {
+      @include radius(5px); box-shadow: 0px 5px 10px 0px #A6A6A6;
+      transition: 1s ease;
+      @include items-center;
+      padding: 0 1em;
+      @include phone {
+        &:hover {
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+          transition: 1s ease;
+        }
+      }
+      @include tablet{
+        &:hover {
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+          transition: 1s ease;
+        }
+      }
+      @include desk{
+        &:hover {
+          -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+          transform: scale(1.1);
+          transition: 1s ease;
+        }
       }
       a {
         display: grid;
@@ -785,15 +2740,27 @@
         right: 0px;
         position: absolute;
       }
+      b {
+        width: fit-content;
+        padding: 0.1em 1em;
+        font-size: 0.7em;
+        border-radius: 0 0 10px 10px;
+        margin: auto;
+        margin-bottom: .6em;
+        right: 0;
+        position: absolute;
+        color: white;
+      }
       h3  {
         margin-top: 2em;
-        font-weight: bold;
+        font-weight: 500;
         font-size: 0.9em;
         display: inline-block;
         width: auto;
+        height: 3em;
       }
       h4  {
-        font-weight: bold;
+        font-weight: 500;
         text-align: end;
         font-size: 0.8em;
         display: inline-block;
@@ -803,55 +2770,156 @@
       }
       p {
         color: black;
-        @include tablet {
-          font-size: 0.7em;
-        }
-        @include desk {
-          font-size: 0.8em;
-        }
+        font-size: 0.7em;
+        height: 4.5em;
         font-weight: normal;
+        margin-bottom: 0;
         // &:hover {color: white; font-weight: normal;}
       }
     }
   }
 
-  &--header-servicios {width: 100%; padding: 1em 0; @include module; text-align: center;
-    @include tablet {
-      background-image: url("http://uat-gummybears.com/wp-content/uploads/2020/07/bk_servicios@2x.png");
-      background-repeat: no-repeat;
-      background-size: 95%;
-      background-position: center;}
+  &--header-servicios-container {
+    width: 100%;
+    @include phone {padding-top: 0;}
+    @include tablet {padding-top: 0;}
+    @include desk {padding-top: 88px;}
+  }
+  &--header-servicios {width: 100%;
+    @include module; text-align: center;
+    @include tablet {height: 5em;}
+    @include phone {height: 3em;}
+    height: 9em;
+    position: relative;
+    h1 {
+      font-weight: 500;
+      font-size: 1.6em;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      position: absolute;
+    }
+    img{
+      @include phone {display: none;}
+      @include tablet {display: none;}
+      width: 95%;
+      height: 100%;
+      position: absolute;
+      padding: 0em 2.5%;
+    }
+  }
+
+  &--header-productos {width: 100%; padding: 1em 0; @include module;
+    text-align: center !important;
+    h1 {font-weight: 500 !important; font-size: 1.6em !important; text-align: center !important;
+    }
+    // p {font-size: 0.9em; display: inline-block;
+    //   span {display: inline;}
+    //   a {display: inline; color: $blue;
+    //     &::after {content: "\f105"; font-family: $icon; display: inline-block; padding-left: 6px;}
+    //     &:hover {text-decoration: underline;}
+    //   }
+    // }
+  }
+
+  &--module { @include items-center; @include module; margin-bottom: 2rem; text-align: center;
+    @include phone {padding: 0em 1.5em 0em 1.5em;}
+    @include tablet {padding: 0em 1.5em 0em 1.5em;}
+    @include desk {padding: 0;}
+  }
+  
+  &--module-blog { @include items-center; @include module; margin-bottom: 2rem; text-align: center;
+    @include phone {padding: 0; height: 150px;}
+    @include tablet {padding: 0; height: 200px;}
+    @include desk {padding: 0; height: 200px;}
+    &--banner{
+      position: relative;
+      height: -webkit-fill-available;
+      width: 100%;
+      img {
+        width: 100%;
+        height: -webkit-fill-available;
+        position: absolute;
+      }
+    }
+    &--contenido{
+      position: absolute;
+      @include phone {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        
+      }
+      @include tablet {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+      @include desk {
+        top: 50%;
+        left: 20%;
+        transform: translate(-50%, -50%);
+        text-align: start;
+      }
+      span {
+        font-weight: 500;
+        font-size: 1.62em;
+        color: white;
+        margin-bottom: 0.3em;
+      }
+    }
+  }
+  &--module-subcategory { @include items-center; @include module; text-align: start;
+    padding: 1em 0 0em;
+    h1 {
+      font-weight: 500;
+      font-size: 2.2em;
+      @include phone {
+        text-align: center;
+        width: -webkit-fill-available;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+      }
+      @include tablet {
+        text-align: center;
+        width: 100%;
+      }
+      @include desk {
+        text-align: start;
+        width: 100%;
+      }
+    }
+  }
+
+  &--banner {
+    width: 100%;
+    margin-bottom: 0;
+    @include phone {
+      margin-top: 1em;
+    }
+    @include tablet {  
+      margin-top: 0%;
+    }
     @include desk {
-      background-image: url("http://uat-gummybears.com/wp-content/uploads/2020/07/bk_servicios@2x.png");
-      background-repeat: no-repeat;
-      background-size: 100%;
-      background-position: center;}
-    h1 {font-weight: bold; font-size: 1.6em;}
-    // p {font-size: 0.9em; display: inline-block;
-    //   span {display: inline;}
-    //   a {display: inline; color: $blue;
-    //     &::after {content: "\f105"; font-family: $icon; display: inline-block; padding-left: 6px;}
-    //     &:hover {text-decoration: underline;}
-    //   }
-    // }
-  }
-
-  &--header-productos {width: 100%; padding: 1em 0; @include module; text-align: center;
-    h1 {font-weight: bold; font-size: 1.6em;
+      margin-top: -2%;
     }
-    // p {font-size: 0.9em; display: inline-block;
-    //   span {display: inline;}
-    //   a {display: inline; color: $blue;
-    //     &::after {content: "\f105"; font-family: $icon; display: inline-block; padding-left: 6px;}
-    //     &:hover {text-decoration: underline;}
-    //   }
-    // }
-  }
-
-  &--module { @include flexbox; @include flow-rw; @include just-between; @include items-start; @include module; margin-bottom: 2rem; }
-
-  &--banner {width: 100%; margin-bottom: 1em; margin-top: 3.2em;
-    @include phone {margin-top: -1.7em;}
+    margin-top: -4.3%;
+    position: relative;
+    &-recorte{
+      @include tablet {
+        bottom: -15%;
+      }
+      position: absolute;
+      bottom: -15%;
+    }
+    --banner{
+      position: absolute;
+    }
+    a{
+      display: unset;
+    }
     .slick {
       &-track {width: 100%; @include flexbox; @include flow-rn; @include just-start; @include items-center;}
       &-slide {width: 100%;}
@@ -879,8 +2947,109 @@
     }
   }
 
-  &--banner-industry {width: 100%; margin-bottom: 1em; margin-top: 3.2em;
+  &--banner-industry {width: 100%; margin-bottom: 1em; margin-top: -0.8em;
+    z-index: -1;
+    @include phone {
+      display: none;
+    }
+    @include tablet {
+      display: none;
+    }
+    @include desk {
+      display: unset;
+    }
     position: absolute;
+    .slick {
+      &-track {width: 100%; @include flexbox; @include flow-rn; @include just-start; @include items-center;}
+      &-slide {width: 100%;}
+      &-arrow {position: absolute; top: 40%; z-index: 1; //top: 30%;
+        svg {@include size(32px, 32px);
+          path:first-child {fill: #bbbbbb; @include trans;}
+          path:last-child {fill: white;}
+        }
+        &:hover {
+          svg {
+            path:first-child {fill: #DDDDDD;}
+          }
+        }
+      }
+      &-prev {left: 0.5em;}
+      &-next {right: 0.5em;}
+      &-dots {width: 100%; position: absolute; left: 0; right: 0; bottom: 0.5em;
+        @include flexbox_i; @include flow-rw; @include just-center; @include items-center;
+        li {display: inline-block; font-size: 0.8em; margin: 0 1em; opacity: 0.5; @include trans;
+          &.slick-active {opacity: 1; @include transform(scale(1.5));}
+          a {color: white;}
+
+        }
+      }
+    }
+  }
+
+  &--banner-services {width: 100%; margin-bottom: 1em; margin-top: 3.2em;
+      width: 100%;
+      height: 470px;
+      margin-bottom: 1em;
+      margin-top: -0.8em;
+      @include phone {
+        display: none;
+      }
+      @include tablet {
+        display: none;
+      }
+      @include desk {
+        display: unset;
+      }
+      position: absolute;
+      z-index: -1;
+      &-contenedor{
+        position: relative;
+        height: 470px;
+        width: 100%;
+        img{
+          position: absolute;
+          height: 98%;
+          right: 0;
+          width: inherit;
+          top: 1%;
+        }
+        &-mascara{
+          position: absolute!important;
+          height: 100% !important;
+          top: 0 !important;
+          // width: 100%!important;
+        }
+      }
+    .slick {
+      &-track {width: 100%; @include flexbox; @include flow-rn; @include just-start; @include items-center;}
+      &-slide {width: 100%;}
+      &-arrow {position: absolute; top: 40%; z-index: 1; //top: 30%;
+        svg {@include size(32px, 32px);
+          path:first-child {fill: #bbbbbb; @include trans;}
+          path:last-child {fill: white;}
+        }
+        &:hover {
+          svg {
+            path:first-child {fill: #DDDDDD;}
+          }
+        }
+      }
+      &-prev {left: 0.5em;}
+      &-next {right: 0.5em;}
+      &-dots {width: 100%; position: absolute; left: 0; right: 0; bottom: 0.5em;
+        @include flexbox_i; @include flow-rw; @include just-center; @include items-center;
+        li {display: inline-block; font-size: 0.8em; margin: 0 1em; opacity: 0.5; @include trans;
+          &.slick-active {opacity: 1; @include transform(scale(1.5));}
+          a {color: white;}
+
+        }
+      }
+    }
+  }
+
+  &--banner-category-blog {width: 100%; margin-bottom: 1em; margin-top: -0.8em;
+    position: relative;
+    height: 200px;
     @include phone {margin-top: -1.7em;}
     .slick {
       &-track {width: 100%; @include flexbox; @include flow-rn; @include just-start; @include items-center;}
@@ -906,6 +3075,27 @@
 
         }
       }
+    }
+    img{
+      position: absolute;
+      height: 200px;
+      object-fit: cover;
+    }
+    button {
+      @include radius(15px);
+      background-color: white;
+      color: $black;
+      font-size: 0.8em !important;
+      font-weight: 500;
+      width: auto;
+      padding: 0.4em 3em;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      @include phone {width: 60%;}
+      @include tablet {width: 40%;}
+      @include desk {width: 20%;}
     }
   }
 

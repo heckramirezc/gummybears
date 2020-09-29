@@ -16,12 +16,12 @@ import PropTypes from 'prop-types';
 const Solutions = ({ solutionsList }) => {
   if (!solutionsList || !solutionsList.length || !solutionsList.length === 0) return null;
   const Soluciones = solutionsList.map((solucion, key) => (
-    <div className="grid-item-solution">
+    <div className="grid-item-industry">
       <Link key={key} to={`/soluciones/${solucion.slug}`}>
         <img src={solucion.acf.icon} alt={key} />
         <h3>{solucion.name}</h3>
         <p>{solucion.acf.short_description}</p>
-        <h4>Conocer más</h4>
+        <h4>Conozca más</h4>
       </Link>
     </div>
   ));
@@ -36,7 +36,7 @@ const Industries = ({ industriesList }) => {
         <img src={solucion.acf.small_image} alt={key} />
         <h3>{solucion.name}</h3>
         <p>{solucion.acf.short_description}</p>
-        <h4>Conocer más</h4>
+        <h4>Conozca más</h4>
       </Link>
     </div>
   ));
@@ -45,75 +45,91 @@ const Industries = ({ industriesList }) => {
 
 
 const Tecnologies = ({ tecnologiesList, tecnologiesType }) => {
-  console.log(tecnologiesList);
-  console.log(tecnologiesType);
   if (!tecnologiesType || !tecnologiesType.length || !tecnologiesType.length === 0) return null;
   if (!tecnologiesList || !tecnologiesList.length || !tecnologiesList.length === 0) return null;
-  const Tecnologias = tecnologiesList.map((tecnologia, key) => {
-    if (tecnologia.tecnologia[0] === tecnologiesType[0].id) {
-      console.log('A--tecnologia.tecnologia[0]', tecnologia.tecnologia[0]);
-      console.log('A--tecnologiesType[0].id', tecnologiesType[0].id);
-      console.log('MS', tecnologia.title.rendered);
+  let slugs = window.location.pathname.split(/(\/)/g);
+  slugs = slugs.filter(x => x !== '/');
+  const tecnologieType = tecnologiesType.find(x => x.slug === slugs[slugs.length - 1]);
+  const tecnologies = tecnologiesList.filter(x => x.tecnologia[0] === tecnologieType.id);
+  console.log('tecnologies', tecnologies);
+  const Tecnologias = tecnologies.map((tecnologia, key) => {
+    if (slugs[slugs.length - 1] === 'sap') {
+      return (
+        <div className="grid-item-sap active">
+          <Link to={`/producto/${tecnologia.slug}`}>
+            <img src={tecnologia.acf.small_image} alt={key} />
+            <h3>{tecnologia.title.rendered}</h3>
+            <p>{tecnologia.acf.short_description}</p>
+            <h4>Conozca más</h4>
+          </Link>
+        </div>);
+    } else {
       return (
         <div className="grid-item-ms active">
           <Link to={`/producto/${tecnologia.slug}`}>
             <img src={tecnologia.acf.small_image} alt={key} />
             <h3>{tecnologia.title.rendered}</h3>
             <p>{tecnologia.acf.short_description}</p>
-            <h4>Conocer más</h4>
-          </Link>
-        </div>);
-    } else {
-      console.log('B--tecnologia.tecnologia[0]', tecnologia.tecnologia[0]);
-      console.log('B--tecnologiesType[0].id', tecnologiesType[0].id);
-      console.log('SAP', tecnologia.title.rendered);
-      return (
-        <div className="grid-item-sap">
-          <Link to={`/producto/${tecnologia.slug}`}>
-            <img src={tecnologia.acf.small_image} alt={key} />
-            <h3>{tecnologia.title.rendered}</h3>
-            <p>{tecnologia.acf.short_description}</p>
-            <h4>Conocer más</h4>
+            <h4>Conozca más</h4>
           </Link>
         </div>);
     }
   });
-  // console.log(Tecnologias);
   return Tecnologias;
 };
 
-const UI = ({ solutionsList, industriesList, productsList, tecnologiesType, handleTabs }) => {
-  const categoryName = window.location.pathname.replace(/(\/)/g, '').replace(/[-_]/g, ' ').toUpperCase();
-  let categories = [['soluciones', 'SOLUCIONES'], ['industria', 'INDUSTRIA'], ['tecnologia', 'TECNOLOGÍA']];
-  categories = categories.filter(x => x[0] !== window.location.pathname.replace(/(\/)/g, '').replace(/[-_]/g, ' '));
-  const Categorias = categories.map((categoria, key) => (
-    <div className="grid-item">
-      <Link key={key} to={`/${categoria[0]}`}>{categoria[1]}</Link>
-    </div>
-  ));
+const UI = ({ solutionsList, industriesList, productsList, tecnologiesType }) => {
+  let slugs = window.location.pathname.split(/(\/)/g);
+  slugs = slugs.filter(x => x !== '/');
+  const categoryName = slugs[slugs.length - 1].toUpperCase();
+  const categories = [['soluciones', 'SOLUCIONES'], ['industria', 'INDUSTRIA'], ['tecnologia/sap', 'TECNOLOGÍA']];
+  /* categories = categories.filter(x => x[0] !== slugs[slugs.length - 1]);
+  if (typeof slugs[slugs.length - 2] !== 'undefined' && slugs[slugs.length - 2] === 'tecnologia') {
+    categories = categories.filter(x => x[0] !== 'tecnologia/sap');
+  } */
+  const Categorias = categories.map((categoria, key) => {
+    if (categoria[0] === slugs[slugs.length - 1]) {
+      return (
+        <div className="grid-item active">
+          <Link key={key} to={`/${categoria[0]}`}>{categoria[1]}</Link>
+        </div>
+      );
+    } else if (typeof slugs[slugs.length - 2] !== 'undefined' && slugs[slugs.length - 2] === 'tecnologia' && categoria[0] === 'tecnologia/sap') {
+      return (
+        <div className="grid-item active">
+          <Link key={key} to={`/${categoria[0]}`}>{categoria[1]}</Link>
+        </div>
+      );
+    } else {
+      return (
+        <div className="grid-item">
+          <Link key={key} to={`/${categoria[0]}`}>{categoria[1]}</Link>
+        </div>
+      );
+    }
+  });
+  const tecnologieType = tecnologiesType.find(x => x.slug === slugs[slugs.length - 1]);
   let DetalleCategorias = '';
   switch (window.location.pathname.replace(/(\/)/g, '').replace(/[-_]/g, ' ')) {
     case 'industria':
       DetalleCategorias = <Industries industriesList={industriesList} />;
       break;
-    case 'tecnologia':
-      DetalleCategorias = <Tecnologies tecnologiesList={productsList} tecnologiesType={tecnologiesType} />;
+    case 'soluciones':
+      DetalleCategorias = <Solutions solutionsList={solutionsList} />;
       break;
     default:
-      DetalleCategorias = <Solutions solutionsList={solutionsList} />;
+      DetalleCategorias = <Tecnologies tecnologiesList={productsList} tecnologiesType={tecnologiesType} />;
       break;
   }
   let categoryHeader = '';
-  if (window.location.pathname.replace(/(\/)/g, '').replace(/[-_]/g, ' ') !== 'tecnologia') {
+  if (!window.location.pathname.includes('tecnologia')) {
     categoryHeader = <h1>{categoryName}</h1>;
   } else {
-    let isFirst = false;
     const TiposTecnoogia = tecnologiesType.map((tecnologia, key) => {
-      if (!isFirst) {
-        isFirst = true;
-        return (<a key={key} onClick={(e) => { handleTabs(e); }} className="active">{tecnologia.name.toUpperCase()}</a>);
+      if (tecnologia.id === tecnologieType.id) {
+        return (<Link key={key} to={`/tecnologia/${tecnologia.slug}`} className="active">{tecnologia.name.toUpperCase()}</Link>);
       } else {
-        return (<a key={key} onClick={(e) => { handleTabs(e); }}>{tecnologia.name.toUpperCase()}</a>);
+        return (<Link key={key} to={`/tecnologia/${tecnologia.slug}`} >{tecnologia.name.toUpperCase()}</Link>);
       }
     });
     categoryHeader = (

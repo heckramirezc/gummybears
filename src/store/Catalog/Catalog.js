@@ -49,7 +49,45 @@ export const servicesList = () => {
   return request.genericHandler(options, null).then((res) => {
     let callback = { action: 'servicios', success: false };
     if (!res.error) {
-      // const data = _.sortBy(res.data.data, val => val.position);
+      const data = _.sortBy(res.data.data, val => parseInt(val.acf.position, 10));
+      callback = Object.assign({}, callback, { data, success: true });
+    } else {
+      callback = Object.assign({}, callback, { error: res.error });
+    }
+
+    return callback;
+  });
+};
+
+export const categoriesList = () => {
+  const options = {
+    method: 'GET',
+    url: `${process.env.SERVICE}/categories?per_page=100`,
+  };
+
+  return request.genericHandler(options, null).then((res) => {
+    let callback = { action: 'categories', success: false };
+    if (!res.error) {
+      // const data = _.sortBy(res.data.data, val => val.acf.position);
+      callback = Object.assign({}, callback, { data: res.data.data, success: true });
+    } else {
+      callback = Object.assign({}, callback, { error: res.error });
+    }
+
+    return callback;
+  });
+};
+
+export const postsList = () => {
+  const options = {
+    method: 'GET',
+    url: `${process.env.SERVICE}/posts?per_page=100`,
+  };
+
+  return request.genericHandler(options, null).then((res) => {
+    let callback = { action: 'posts', success: false };
+    if (!res.error) {
+      // const data = _.sortBy(res.data.data, val => val.acf.position);
       callback = Object.assign({}, callback, { data: res.data.data, success: true });
     } else {
       callback = Object.assign({}, callback, { error: res.error });
@@ -68,8 +106,8 @@ export const solutionsList = () => {
   return request.genericHandler(options, null).then((res) => {
     let callback = { action: 'soluciones', success: false };
     if (!res.error) {
-      // const data = _.sortBy(res.data.data, val => val.position);
-      callback = Object.assign({}, callback, { data: res.data.data, success: true });
+      const data = _.sortBy(res.data.data, val => val.acf.position);
+      callback = Object.assign({}, callback, { data, success: true });
     } else {
       callback = Object.assign({}, callback, { error: res.error });
     }
@@ -87,8 +125,8 @@ export const industriesList = () => {
   return request.genericHandler(options, null).then((res) => {
     let callback = { action: 'industria', success: false };
     if (!res.error) {
-      // const data = _.sortBy(res.data.data, val => val.position);
-      callback = Object.assign({}, callback, { data: res.data.data, success: true });
+      const data = _.sortBy(res.data.data, val => parseInt(val.acf.position, 10));
+      callback = Object.assign({}, callback, { data, success: true });
     } else {
       callback = Object.assign({}, callback, { error: res.error });
     }
@@ -106,8 +144,8 @@ export const productsList = () => {
   return request.genericHandler(options, null).then((res) => {
     let callback = { action: 'productos', success: false };
     if (!res.error) {
-      // const data = _.sortBy(res.data.data, val => val.position);
-      callback = Object.assign({}, callback, { data: res.data.data, success: true });
+      const data = _.sortBy(res.data.data, val => parseInt(val.acf.position, 10));
+      callback = Object.assign({}, callback, { data, success: true });
     } else {
       callback = Object.assign({}, callback, { error: res.error });
     }
@@ -119,14 +157,14 @@ export const productsList = () => {
 export const tecnologiesType = () => {
   const options = {
     method: 'GET',
-    url: `${process.env.SERVICE}/tecnologia?orderby=name&order=desc`,
+    url: `${process.env.SERVICE}/tecnologia`,
   };
 
   return request.genericHandler(options, null).then((res) => {
     let callback = { action: 'tecnologia', success: false };
     if (!res.error) {
-      // const data = _.sortBy(res.data.data, val => val.position);
-      callback = Object.assign({}, callback, { data: res.data.data, success: true });
+      const data = _.sortBy(res.data.data, val => parseInt(val.acf.position, 10));
+      callback = Object.assign({}, callback, { data, success: true });
     } else {
       callback = Object.assign({}, callback, { error: res.error });
     }
@@ -188,21 +226,17 @@ class CatalogStore {
     });
   }
 
-  @action autoSuggest(query, addonsList) {
+  @action autoSuggest(query) {
     const options = {
-      method: 'POST',
-      url: `${process.env.WCAAS}${process.env.MERCHANTSV}/productlookup/autoSuggest`,
-      data: query,
+      method: 'GET',
+      // url: `${process.env.WCAAS}${process.env.MERCHANTSV}/productlookup/autoSuggest`,
+      url: `${process.env.SERVICE}/search?search=${query.keyword}&subtype=servicios,products,post`,
+      // data: query,
     };
 
     return request.genericHandler(options).then((res) => {
       let callback = { action: 'autoSuggest', success: false };
       if (!res.error) {
-        console.log('addons1', addonsList);
-        const searchWithOutAddOns = res.data.data.filter(e => !addonsList.some(x => x.item_part_number === e.part_number));
-        console.log('searchWithOutAddOns', searchWithOutAddOns);
-        res.data.data = searchWithOutAddOns;
-        console.log('res.data.data', res.data.data);
         callback = Object.assign({}, callback, { data: res.data, success: true });
         this.autoSuggestResult = callback;
       } else {

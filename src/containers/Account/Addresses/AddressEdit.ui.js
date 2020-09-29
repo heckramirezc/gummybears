@@ -78,7 +78,7 @@ const UI = ({ handleChange, handleSubmit, addressForm, state }) => {
           <label htmlFor="a_first_name">
             <input
               type="text"
-              placeholder="Ingresa tu nombre"
+              placeholder="ingrese su nombre"
               name="a_first_name"
               id="a_first_name"
               maxLength={30}
@@ -94,7 +94,7 @@ const UI = ({ handleChange, handleSubmit, addressForm, state }) => {
           <label htmlFor="a_last_name">
             <input
               type="text"
-              placeholder="Ingresa tus apellidos"
+              placeholder="ingrese sus apellidos"
               name="a_last_name"
               id="a_last_name"
               maxLength={30}
@@ -110,7 +110,7 @@ const UI = ({ handleChange, handleSubmit, addressForm, state }) => {
           <label htmlFor="a_address_line_1">
             <input
               type="text"
-              placeholder="Ingresa calle y número"
+              placeholder="ingrese calle y número"
               onKeyPress={alphanumericChars}
               value={addressForm.address_line_1 || ''}
               onChange={(e) => { handleChange(e, 'addressForm.address_line_1'); }}
@@ -122,7 +122,7 @@ const UI = ({ handleChange, handleSubmit, addressForm, state }) => {
           <label htmlFor="a_phone_1">
             <input
               type="text"
-              placeholder="Ingresa los 8 dígitos"
+              placeholder="ingrese los 8 dígitos"
               name="a_phone_1"
               id="a_phone_1"
               maxLength={8}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import he from 'he';
 
@@ -15,31 +15,6 @@ import { logo } from './../../helpers/svg';
 //     </a>
 //   </div>
 // );
-
-const FooterBreadcrumbBox = ({ location }) => {
-  // console.log('breadcrumbBox', location);
-  const name = location.pathname.replace(/(\/)/g, '')
-    .replace(/[-_]/g, ' ')
-    .replace(/(product.*)/, 'Equipos')
-    .replace(/(cart.*)/, 'Carrito')
-    .replace('terms', 'Términos y condiciones')
-    .replace('search', 'Búsqueda: ')
-    .replace(/(account)/, 'Mi Cuenta')
-    .replace(/(.*orders.*)/, 'Mis Órdenes')
-    .replace(/(.*address.*)/, 'Mis Direcciones')
-    .replace(/(.*profile.*)/, 'Mi Perfil');
-  console.log(name);
-  return (
-    <div className="footer--breadcrumb">
-      <section>
-        <p><span>{logo}</span></p>
-        <hr />
-      </section>
-    </div>
-  );
-};
-const FooterBreadcrumb = withRouter(FooterBreadcrumbBox);
-
 
 const FooterLinks = ({ layoutData }) => {
   // console.log('layoutData:::', layoutData);
@@ -76,44 +51,47 @@ const FooterLinks = ({ layoutData }) => {
         <ul>
           <li><b>PRODUCTOS</b></li>
           <li><a href="/soluciones">Solución</a></li>
-          <li><a href="/industria">Industría</a></li>
-          <li><a href="/tecnologia">Tecnología</a></li>
+          <li><a href="/industria">Industria</a></li>
+          <li><a href="/tecnologia/sap">Tecnología</a></li>
         </ul>
         <ul>
           <li><b>SERVICIOS</b></li>
-          <li><a>Transformación digital</a></li>
-          <li><a>Implementación de proyectos ERP</a></li>
-          <li><a>Implementación de proyectos CRM</a></li>
-          <li><a>Gobierno de Datos</a></li>
-          <li><a>Data Management</a></li>
-          <li><a>Diseño y arquitectura de proyectos de data warehouse</a></li>
-          <li><a>Análitica avanzada</a></li>
-          <li><a>Omnicanalidad</a></li>
+          <li><a href="/servicios/transformacion-digital">Transformación digital</a></li>
+          <li><a href="/servicios/implementacion-de-proyectos-de-erp">Implementación de proyectos ERP</a></li>
+          <li><a href="/servicios/implementacion-de-proyectos-de-crm">Implementación de proyectos CRM</a></li>
+          <li><a href="/servicios/gobierno-de-datos-maestros">Gobierno de Datos</a></li>
+          <li><a href="/servicios/data-management">Data Management</a></li>
+          <li><a href="/servicios/diseno-y-arquitectura-de-proyectos-de-data-warehouse">Diseño y arquitectura de proyectos de data warehouse</a></li>
+          <li><a href="/servicios/analitica-avanzada">Análitica avanzada</a></li>
+          <li><a href="/servicios/omnicanalidad">Omnicanalidad</a></li>
+          <li><a href="/servicios/tco-costo-total-de-propiedad">TCO Costo Total de Propiedad</a></li>
         </ul>
         <ul>
-          <li><b>CONOZCA MÁS</b></li>
-          <li><a>Visión / Misión</a></li>
-          <li><a>Valores</a></li>
-          <li><a>Programa de socios</a></li>
+          <li><b>QUIÉNES SOMOS</b></li>
+          <li><a href="/paginas/conozca-mas">Visión / Misión</a></li>
+          <li><a href="/paginas/conozca-mas">Valores</a></li>
+          <li><a href="/paginas/conozca-mas">Programa de asociados</a></li>
         </ul>
         <ul>
           <li><b>BLOG</b></li>
-          <li><a>Solución</a></li>
-          <li><a>Industría</a></li>
-          <li><a>Tecnología</a></li>
-          <li><a>Temas</a></li>
+          <li><a href="/blog">Solución</a></li>
+          <li><a href="/blog">Industria</a></li>
+          <li><a href="/blog">Tecnología</a></li>
+          <li><a href="/blog">Temas</a></li>
         </ul>
         <ul>
           <li><b>CONTÁCTENOS</b></li>
-          <li><ul><ul><span className="fa-map-marker" /></ul><ul><a href="#">11 Calle 7-66 Zona 9,<br />Centro Corporativo Heidelberg, Nivel 9,<br />Guatemala, Guatemala</a></ul></ul></li>
+          <li><ul><ul><span className="fa-map-marker" /></ul><ul><a href="https://goo.gl/maps/JkDd6XmdDs82b8pt9">11 Calle 7-66 Zona 9,<br />Centro Corporativo Heidelberg, Nivel 9,<br />Guatemala, Guatemala</a></ul></ul></li>
           <li><br /></li>
-          <li><ul><ul><span className="fa-envelope-o" /></ul><ul><a href="#">info@gyssa.com<br />mercadeo@gyssa.com</a></ul></ul></li>
+          <li><ul><ul><span className="fa-envelope-o" /></ul><ul><a href="mailto:mercadeo@gyssa.com">mercadeo@gyssa.com</a></ul></ul></li>
           <li><br /></li>
-          <li><ul><ul><span className="fa-phone" /></ul><ul><a href="#">+502 2326-6100</a></ul></ul></li>
+          <li><ul><ul><span className="fa-phone" /></ul><ul><a href="tel:+50223266100">+502 2326-6100</a></ul></ul></li>
+          {/* <li><br /></li>
+          <li><ul><ul><span className="fa-clock-o" /></ul><ul><a>Lunes a Viernes<br />05:15 a 17:15 horas</a></ul></ul></li> */}
           <li><br /></li>
-          <li><ul><ul><span className="fa-clock-o" /></ul><ul><a>Lunes a Viernes<br />8:00 a 17:00 horas</a></ul></ul></li>
-          <li><br /></li>
-          <li><b href="#">EMPLEO</b></li>
+          <li><Link to="/paginas/trabaje-con-nosotros"><strong>TRABAJE CON NOSOTROS</strong></Link></li>
+          <li><Link to="/politicas-de-privacidad"><strong>POLÍTICAS DE PRIVACIDAD</strong></Link></li>
+          <li><Link to="/soporte"><strong>SOPORTE A CLIENTES</strong></Link></li>
         </ul>
         {/* {list} */}
       </section>
@@ -138,7 +116,7 @@ const FooterEnd = ({ layoutData, socialData }) => {
     }
   }
   if (!socialData || !socialData.length || !socialData.length === 0) return null;
-  const RedesSociales = socialData.map((data, key) => <a key={key} href={data.acf.enlace} target="_blank" rel="noopener noreferrer nofollow"><img src={data.acf.icono} alt={data.title.rendered} /></a>);
+  const RedesSociales = socialData.map((data, key) => <a key={key} href={data.acf.enlace} target="_blank" rel="noopener noreferrer nofollow"><img src={data.acf.icon} alt={data.title.rendered} /></a>);
   return (
     <div className="footer--end">
       <section>
@@ -154,7 +132,12 @@ const FooterEnd = ({ layoutData, socialData }) => {
 
 const Footer = props => (
   <footer className="footer" role="presentation" onClick={props.closeMenus}>
-    <FooterBreadcrumb />
+    <div className="footer--breadcrumb">
+      <section>
+        <p><span>{logo}</span></p>
+        <hr />
+      </section>
+    </div>
     <FooterLinks layoutData={props.layoutData} />
     <FooterEnd layoutData={props.layoutData} socialData={props.socialData} />
     {/* <FooterChat /> */}
@@ -175,10 +158,6 @@ FooterEnd.propTypes = {
 
 FooterLinks.propTypes = {
   layoutData: PropTypes.shape({}).isRequired,
-};
-
-FooterBreadcrumbBox.propTypes = {
-  location: PropTypes.shape({}).isRequired,
 };
 
 export default Footer;

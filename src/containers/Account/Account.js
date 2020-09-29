@@ -83,11 +83,11 @@ export const Number = () => (
   <section className="modal--number">
     <header>
       <h2>Trae tu número a Claro</h2>
-      <p>Ingresa tu número para verificar la disponibilidad</p>
+      <p>ingrese su número para verificar la disponibilidad</p>
     </header>
     <form>
       <label>
-        <input type="text" placeholder="Ingresa los 10 dígitos de tu número" />
+        <input type="text" placeholder="ingrese los 10 dígitos de tu número" />
         <i>{iconCheck}</i>
       </label>
       <p>Tú número esta listo y disponible para transferirlo a Claro</p>

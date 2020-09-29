@@ -18,9 +18,10 @@ const Solutions = ({ solutionsList, slug }) => {
   const Soluciones = solutionsList.map((solucion, key) => (
     <div className="grid-item-solution-category">
       <Link key={key} to={`/producto/${slug}/${solucion.slug}`}>
+        <img src={solucion.acf.small_image} alt={key} />
         <h3>{solucion.title.rendered}</h3>
         <p>{solucion.acf.short_description}</p>
-        <h4>Conocer más</h4>
+        <h4>Conozca más</h4>
       </Link>
     </div>
   ));
@@ -34,7 +35,7 @@ const Industries = ({ industriesList }) => {
       <Link key={key} to={`/producto/${solucion.slug}`}>
         <h3>{solucion.name}</h3>
         <p>{solucion.acf.short_description}</p>
-        <h4>Conocer más</h4>
+        <h4>Conozca más</h4>
       </Link>
     </div>
   ));
@@ -67,12 +68,21 @@ const UI = ({ solutionsList, industriesList, productsList, tecnologiesType, hand
       break;
     default:
       categoryName = solucion.name.toUpperCase();
-      categories = solutionsList.filter(x => x.slug !== slugs[slugs.length - 1]);
-      Categorias = categories.map((categoria, key) => (
-        <div className="grid-item">
-          <Link key={key} to={`${categoria.slug}`}>{categoria.name}</Link>
-        </div>
-      ));
+      Categorias = solutionsList.map((categoria, key) => {
+        if (categoria.slug !== slugs[slugs.length - 1]) {
+          return (
+            <div className="grid-item">
+              <Link key={key} to={`${categoria.slug}`}>{categoria.name}</Link>
+            </div>
+          );
+        } else {
+          return (
+            <div className="grid-item active">
+              <Link key={key} to={`${categoria.slug}`}>{categoria.name}</Link>
+            </div>
+          );
+        }
+      });
       categoryDescripcion = (
         <p>{solucion.description}</p>
       );
@@ -103,9 +113,11 @@ const UI = ({ solutionsList, industriesList, productsList, tecnologiesType, hand
     <main>
       <section className="catalog">
         <br /><br />
+        <div className="catalog--module-subcategory">
+          {categoryHeader}
+        </div>
         <div className="catalog--header-subcategory">
           <div>
-            {categoryHeader}
             {categoryDescripcion}
           </div>
           <div className="catalog--grid-container-subcategory-header">
@@ -114,6 +126,10 @@ const UI = ({ solutionsList, industriesList, productsList, tecnologiesType, hand
         </div>
         <div className="catalog--grid-container-category">
           {DetalleCategorias}
+        </div>
+        <h1 className="catalog--grid-container-subcategory-footer-title">Más soluciones</h1>
+        <div className="catalog--grid-container-subcategory-footer">
+          {Categorias}
         </div>
       </section>
     </main>

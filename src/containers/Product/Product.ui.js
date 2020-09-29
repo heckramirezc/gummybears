@@ -13,16 +13,28 @@ const UI = (props) => {
   let slugs = window.location.pathname.split(/(\/)/g);
   slugs = slugs.filter(x => x !== '/');
   const producto = props.productsList.find(x => x.slug === slugs[slugs.length - 1]);
-  let productosRelacionados = props.productsList.filter(product => product.tecnologia.some(tecno => tecno === producto.tecnologia[0]));
-  productosRelacionados = productosRelacionados.filter(product => product.id !== producto.id);
-  const ProductosRelacionados = productosRelacionados.map((productoRelacionado, key) => (
-    <div className="grid-item">
-      <Link key={key} to={`/producto/${productoRelacionado.slug}`}>
-        <img src={productoRelacionado.acf.small_image} alt={key} />
-        <h3>{productoRelacionado.title.rendered}</h3>
-      </Link>
-    </div>
-  ));
+  const productosRelacionados = props.productsList.filter(product => product.tecnologia.some(tecno => tecno === producto.tecnologia[0]));
+  // productosRelacionados = productosRelacionados.filter(product => product.id !== producto.id);
+  const ProductosRelacionados = productosRelacionados.map((productoRelacionado, key) => {
+    if (productoRelacionado.id !== producto.id) {
+      return (
+        <div className="grid-item">
+          <Link key={key} to={`/producto/${productoRelacionado.slug}`}>
+            <img src={productoRelacionado.acf.small_image} alt={key} />
+            <h3>{productoRelacionado.title.rendered}</h3>
+          </Link>
+        </div>
+      );
+    }
+    return (
+      <div className="grid-item active">
+        <Link key={key} to={`/producto/${productoRelacionado.slug}`}>
+          <img src={productoRelacionado.acf.small_image} alt={key} />
+          <h3>{productoRelacionado.title.rendered}</h3>
+        </Link>
+      </div>
+    );
+  });
 
   const holamundo = (
     <main>

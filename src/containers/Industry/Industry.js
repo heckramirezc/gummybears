@@ -2,9 +2,11 @@ import $ from 'jquery';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withCookies, Cookies } from 'react-cookie';
+import _ from 'lodash';
 
 import UI from './Industry.ui';
 import { solutionsList, industriesList, productsList, tecnologiesType } from './../../store/Catalog/Catalog';
+import request from '../../bin/httpRequest';
 // import { espots } from '../../store/ESpots/ESpots';
 // import { addonsList } from '../../store/Addons/Addons';
 
@@ -21,6 +23,8 @@ class ProductList extends Component {
       industriesList: [],
       productsList: [],
       tecnologiesType: [],
+      clientes: [],
+      categoriasClientes: [],
       espotsResponse: {},
       addonsList: [],
       currentPage: 1,
@@ -48,6 +52,8 @@ class ProductList extends Component {
     this.addonsList();
     this.espotsResponse();
     this.startPagination();
+    this.fetchClientes();
+    this.fetchCategoriasClientes();
   }
 
   setPaginatorIndex(currentPage) {
@@ -95,6 +101,41 @@ class ProductList extends Component {
   tecnologiesType() {
     tecnologiesType().then((res) => {
       this.setState({ tecnologiesType: res.data });
+    });
+  }
+
+  fetchClientes() {
+    const options = {
+      method: 'GET',
+      url: `${process.env.SERVICE}/settings?per_page=100`,
+    };
+    request.genericHandler(options).then((res) => {
+      let callback = { action: 'clientes', success: false };
+      if (!res.error) {
+        const data = _.sortBy(res.data.data.filter(x => x.clientes.length !== 0), val => parseInt(val.acf.posicion, 10));
+        callback = Object.assign({}, callback, { data, success: true });
+        this.setState({ clientes: callback.data });
+      } else {
+        callback = Object.assign({}, callback, { error: res.error, success: false });
+      }
+      return callback;
+    });
+  }
+
+  fetchCategoriasClientes() {
+    const options = {
+      method: 'GET',
+      url: `${process.env.SERVICE}/clientes`,
+    };
+    request.genericHandler(options).then((res) => {
+      let callback = { action: 'categorias-clientes', success: false };
+      if (!res.error) {
+        callback = Object.assign({}, callback, { data: res.data.data, success: true });
+        this.setState({ categoriasClientes: callback.data });
+      } else {
+        callback = Object.assign({}, callback, { error: res.error, success: false });
+      }
+      return callback;
     });
   }
 
@@ -181,6 +222,8 @@ class ProductList extends Component {
         industriesList={this.state.industriesList}
         productsList={this.state.productsList}
         tecnologiesType={this.state.tecnologiesType}
+        clientes={this.state.clientes}
+        categoriasClientes={this.state.categoriasClientes}
         handleTabs={this.handleTabs}
         productsFilter={this.productsFilter}
         resetCategory={this.resetCategory}

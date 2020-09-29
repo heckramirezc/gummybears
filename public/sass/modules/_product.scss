@@ -1,5 +1,13 @@
 .product {width: 100%;
-  margin-top: 4em;
+  @include phone {
+    margin-top: 2.5em;
+  }
+  @include tablet {
+    margin-top: 4em;
+  }
+  @include desk{
+    margin-top: 4em;
+  }
 
   // box
   &--box {display: inline-block; width: 100%; padding-bottom: 1em;
@@ -110,13 +118,17 @@
     padding: .5em 0em;
     @include module;
     display: grid;
+    @include phone {
+      grid-template-columns: 1fr;  
+      grid-auto-rows: 90px;
+    }
     @include tablet {
-      grid-template-columns: repeat(1, minmax(0, 1fr));  
-      grid-template-rows: repeat(10, minmax(90px, 90px));
+      grid-template-columns: repeat(2, minmax(0, 1fr));  
+      grid-auto-rows: 90px;
     }
     @include desk {
       grid-template-columns: repeat(1, minmax(0, 1fr));
-      grid-template-rows: repeat(10, minmax(0, 80px));
+      grid-auto-rows: 90px;
     }
     grid-gap: 1.5em;
     .grid-item {
@@ -124,12 +136,32 @@
       @include radius(5px); box-shadow: 0px 5px 10px 0px #A6A6A6;
       transition: 1s ease;
       padding: 0.9em 1.5em;
+      &.active {
+        background: linear-gradient(90deg, rgba(240,90,36,1) 0%, rgba(246,146,30,1) 35%);
+        color: white;
+        img{
+          filter: brightness(0) invert(1);
+        }
+        a{
+          color: white;
+        }
+    }
       &:hover {
-        // color: white;
-        // background: linear-gradient(90deg, rgba(240,90,36,1) 0%, rgba(246,146,30,1) 35%);
-        -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        transform: scale(1.1);
+        @include phone {
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+        }
+        @include tablet {
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+        }
+        @include desk{
+          -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+          transform: scale(1.1);
+        }
         transition: 1s ease;
       }
       a {
@@ -137,16 +169,16 @@
         width: 100%;
         color: $black;
         font-size: 0.7em;
-        font-weight: bold;
+        font-weight: 500;
         margin: auto;
-        // &:hover {color: white; font-weight: normal;}
       }
       img {
-        height: 40px;
+        height: 30px;
         width: auto;
         display: inline-block;
         vertical-align: middle;
         margin-right: 0.8em;
+        padding-bottom: 1.5em;
       }
       h3  {
         display: inline-block;
@@ -156,6 +188,65 @@
     }
   }
   &--detail {width: 100%;
+    p{
+      // font-size: .7em !important;
+      @include phone {
+        width: 100%!important;
+      }
+      @include tablet {
+        width: 100%!important;
+      }
+      @include desk {
+        width: 100% !important;
+      }
+      white-space: pre-wrap;
+      color: gray;
+    }
+    .related-items {
+      // padding-bottom: 1em;
+      display: inherit;
+      align-items: center;
+      @include radius(5px);
+      background: linear-gradient(180deg, rgba(52,195,244,1) 0%, rgba(0,57,114,1) 98%);
+      height: 40px;
+      position: relative;
+      margin-top: 2em;
+      width: 100%;
+      text-align: center;
+      a {
+        font-size: 1.1em;
+        font-weight: 500;
+        color: white;
+        text-align: center;
+        margin: auto;
+      }
+    }
+  }
+  &--post-detail {width: 100%;
+    b{
+      margin: 1.5em 0;
+      font-size: 0.9em;
+      color: $black !important;
+    }
+    .related-items {
+      // padding-bottom: 1em;
+      display: inherit;
+      align-items: center;
+      @include radius(5px);
+      background: linear-gradient(180deg, rgba(52,195,244,1) 0%, rgba(0,57,114,1) 98%);
+      height: 40px;
+      position: relative;
+      margin-top: 2em;
+      width: 100%;
+      text-align: center;
+      a {
+        font-size: 1.1em;
+        font-weight: 500;
+        color: white;
+        text-align: center;
+        margin: auto;
+      }
+    }
     .key-content {font-size: 0.8em; width: 100%;  color: $black;
       margin-top: 2em;
       ul {
@@ -165,26 +256,139 @@
           &::before {
             content: "\2022";
             color: $black;
-            font-weight: bold;
+            font-weight: 500;
             display: inline-block;
             width: 1em;
             margin-left: -1em;
           }
         }
       }
-      p  {font-size: 0.8em; width: 100%; font-weight: bold; color: $black;}
+      p  {font-size: 0.8em; width: 100%; font-weight: 500; color: $black;}
     }
   }
-  &--info {width: 100%; @include flexbox; @include flow-rw; @include just-between; @include items-start;
-    @include padbox(0 1em); margin-bottom: 2em; z-index: 1;
-    @include tablet {width: 100%; padding: 0 1em;}
-    @include desk {width: 100%; padding: 0; position: relative; }
+  
+  &--info {width: -webkit-fill-available; @include flexbox; @include flow-rw; @include just-between; @include items-start;
+    margin-bottom: 2em; z-index: 1;
+    @include phone {width: 100%;
+      @include padbox(0);
+      }
+    @include tablet {width: 100%;
+      @include padbox(0 1.5em);
+      }
+    @include desk {width: 100%;
+      @include padbox(0 1.5em);
+      position: relative; }
+    &-content {
+      padding-bottom: 1em;
+      width: 100%;
+      text-align: center;
+      b{
+        color: #34C3F4;
+        // padding-top: 1em;
+          margin: 0 !important;
+      }
+      h1  {
+        // font-weight: 500 !important;
+        // font-size: 2em !important;
+        // padding: 1em 1em 1em 1em !important;
+      //  margin-top: 0; 
+      }
+      p{
+        color: $black !important;
+        font-size: 0.8em;
+      }
+    }
     video { width: 100%; @include radius(10px);}
     .wp-block-embed-youtube { width: 100%; @include radius(10px);
+      margin-top: 0.7em;
       iframe{
         @include radius(10px);
         width: 100%;
-        height: 24em;
+        @include phone {
+          height: 11em;
+        }
+        @include tablet {
+          height: 24em;
+        }
+        @include desk {
+          height: 24em;
+        }
+      }
+    }
+    .wp-block-media-text{
+      padding-top: 1.5em;
+      @include flexbox;
+    }
+    .media-texto-abajo
+    {
+      padding: 1.5em;
+      @include phone {display: block; padding: 1em;}
+      @include tablet {@include flexbox; padding: 1.5em;}
+      @include desk {@include flexbox; padding: 1.5em;}
+      @include items-end;
+      figure {
+        padding: 0 !important;
+        margin-right: 2em;
+        img{
+          width: 100%;
+        }
+      }
+      p{
+        width: 95% !important;
+      }
+    }
+    .media-texto-centro
+    {
+      @include phone {
+        display: block;
+        padding: 0;
+      }
+      @include tablet {
+        padding: 1.5em;
+        @include flexbox;
+      }
+      @include desk {
+        padding: 1.5em;
+        @include flexbox;
+      }
+      @include items-center;
+      figure {
+        padding: 0 !important;
+        margin-right: 2em;
+      }
+      p{
+        width: 95% !important;
+      }
+    }
+    .media-texto
+    {
+      @include phone {
+        display: block;
+        padding: 0;
+      }
+      @include tablet {
+        padding: 1.5em;
+        @include flexbox;
+      }
+      @include desk {
+        padding: 1.5em;
+        @include flexbox;
+      }
+      figure {
+        padding: 0 !important;
+        margin-right: 2em;
+      }
+      p{
+        width: 95% !important;
+      }
+    }
+    .wp-block-media-text__media
+    {
+      padding-right: 1.5em;
+    }
+    .wp-block-media-text__content{
+      h2, h3, h4{
+        padding-bottom: 0.7em;
       }
     }
     .wp-block-buttons{
@@ -199,11 +403,1123 @@
       a {
         margin: 0.5em 0;
         color: white;
-        font-weight: bold;
+        font-weight: 500;
         font-size: 1em;
       } 
     }
-    .wp-block-group {display: none;}
+    .grupo-colapsable {
+      user-select: none; /* standard syntax */
+      -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+      -moz-user-select: none; /* mozilla browsers */
+      -khtml-user-select: none; /* webkit (konqueror) browsers */
+      -ms-user-select: none; /* IE10+ */
+      margin-bottom: 0.5em;
+      .colapsable {
+        cursor: pointer;
+        @include flexbox;
+        @include items-center;
+        background: white;
+        text-align: start;
+        padding-left: 1em;
+        width: -webkit-fill-available;
+        // border-radius: 5px 5px 0px 0px;
+        margin-bottom: 0;
+        border: 1px solid #003972;
+        &.active {
+          background: #003972;
+          text-align: start;
+          padding-left: 1em;
+          width: -webkit-fill-available;
+          border-radius: 5px 5px 0px 0px;
+          margin-bottom: 0;
+          a {
+            color: white;
+          }
+          &::after {content: "\f105"; color: white;}
+        }
+        .wp-block-button{
+          width: 90%;
+        }
+        a {
+          color:  #003972;
+        }
+        &::after {
+          content: "\f107"; 
+          font-family: $icon; 
+          display: inline-block; 
+          padding-left: 7px; 
+          color: $black;
+          font-size: 1.2em;
+        }
+      }
+      .contenido{
+        display: none;
+        padding: 0em 1em;
+        border: 1px solid #003972;
+        &.active {
+          display: block;
+        }
+      }
+    }
+    .wp-block-image {
+      padding: 1.5em 0em;
+    }
+    .grid-tres-contenido{
+      padding: 1.5em .5em;
+      @include module;
+      display: grid;
+      @include phone {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+      }
+      @include tablet {
+        grid-template-columns: repeat(3, minmax(0, 1fr));  
+        grid-auto-rows: auto;
+      }
+      @include desk {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-auto-rows: auto;
+        grid-template-rows: none !important;
+      }
+      grid-gap: 1.5em;
+      align-items: center;
+      margin: 1em 0em;
+      .wp-block-column{
+        @include radius(5px); box-shadow: 0px 5px 10px 0px #A6A6A6;
+        transition: 1s ease;
+        padding: 0.7em 0.7em 0em 0.7em;
+        height: 100%;
+        &:hover {
+          @include phone {
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+          }
+          @include tablet {
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+          }
+          @include desk{
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1);
+          }
+          transition: 1s ease;
+        }
+        p {
+          @include flexbox;
+          width: 100% !important;
+          color: black;
+          font-size: 0.7em;
+          font-weight: 300 !important;
+          margin: 0;
+        }
+        h2, h3, h4  {
+          font-size: 0.8em;
+          padding-bottom: 0.7em;
+          margin: 0;
+          font-weight: 500;
+          display: inline-block;
+          width: auto;
+          vertical-align: middle;
+        }
+      }
+    }
+    .grid-tres-contenido-mas{
+      padding: 1.5em .5em 0em 0.5em;
+      @include module;
+      display: grid;
+      @include phone {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+      }
+      @include tablet {
+        grid-template-columns: repeat(3, minmax(0, 1fr));  
+        grid-auto-rows: auto;
+      }
+      @include desk {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-auto-rows: auto;
+        grid-template-rows: none !important;
+      }
+      grid-gap: 1.5em;
+      align-items: center;
+      margin: 1em 0em;
+      .wp-block-column{
+        // padding: 0.7em 0.7em 0em 0.7em;
+        // height: 100%;
+        @include flexbox;
+        align-items: center;
+        .wp-block-image {
+          padding: 0;
+        }
+        img {
+          height: 40px;
+          width: 40px;
+          margin-right: 1em;
+        }
+        p {
+          @include flexbox;
+          width: 100% !important;
+          color: #003972;
+          font-size: 0.7em;
+          font-weight: 300 !important;
+          margin: 0;
+        }
+        h2, h3, h4  {
+          font-size: 0.8em;
+          padding-bottom: 0.7em;
+          margin: 0;
+          font-weight: 500;
+          display: inline-block;
+          width: auto;
+          vertical-align: middle;
+        }
+      }
+    }
+    .grid-uno{
+      padding: 1.5em .5em;
+      @include module;
+      display: grid;
+      @include tablet {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+      }
+      @include desk {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        grid-template-rows: none !important;
+      }
+      grid-gap: 1.5em;
+      align-items: center;
+      margin: 1em 0em;
+      .wp-block-column{
+        @include radius(5px); box-shadow: 0px 5px 10px 0px #A6A6A6;
+        transition: 1s ease;
+        padding: 0.7em 0.7em 0em 0.7em;
+        height: 100%;
+        &:hover {
+          @include phone {
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+          }
+          @include tablet {
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+          }
+          @include desk{
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1);
+          }
+          transition: 1s ease;
+        }
+        p {
+          @include flexbox;
+          width: 100% !important;
+          color: black;
+          font-size: 0.7em;
+          font-weight: 300 !important;
+          margin: 0;
+        }
+        h2, h3, h4  {
+          font-size: 0.8em;
+          padding-bottom: 0.7em;
+          margin: 0;
+          font-weight: 500;
+          display: inline-block;
+          width: auto;
+          vertical-align: middle;
+        }
+      }
+    }
+    .grid-tres-item{
+      padding: 1.5em .5em;
+      @include module;
+      display: grid;
+      @include tablet {
+        grid-template-columns: repeat(3, minmax(0, 1fr));  
+        grid-auto-rows: 65px;
+      }
+      @include desk {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-auto-rows: 65px;
+        grid-template-rows: none !important;
+      }
+      grid-gap: 1.5em;
+      align-items: center;
+      margin: 1em 0em;
+      .wp-block-column{
+        @include radius(5px); box-shadow: 0px 5px 10px 0px #A6A6A6;
+        transition: 1s ease;
+        padding: 0.7em 0.7em 0em 0.7em;
+        height: 100%;
+        &:hover {
+          @include phone {
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+          }
+          @include tablet {
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+          }
+          @include desk{
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1);
+          }
+          transition: 1s ease;
+        }
+        p {
+          @include flexbox;
+          width: 100% !important;
+          color: black;
+          font-size: 0.7em;
+          font-weight: 300 !important;
+          margin: 0;
+        }
+        h2, h3, h4  {
+          font-size: 0.8em;
+          padding-bottom: 0.7em;
+          margin: 0;
+          font-weight: 500;
+          display: inline-block;
+          width: auto;
+          vertical-align: middle;
+        }
+      }
+    }
+    .grid-tres-item-mas{
+      padding: 1.5em .5em 0em 0.5em;
+      @include module;
+      display: grid;
+      @include tablet {
+        grid-template-columns: repeat(3, minmax(0, 1fr));  
+        grid-auto-rows: 65px;
+      }
+      @include desk {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-auto-rows: 65px;
+        grid-template-rows: none !important;
+      }
+      grid-gap: 1.5em;
+      align-items: center;
+      margin: 1em 0em;
+      .wp-block-column{
+        @include radius(5px); box-shadow: 0px 5px 10px 0px #A6A6A6;
+        transition: 1s ease;
+        padding: 0.7em 0.7em 0em 0.7em;
+        height: 100%;
+        &:hover {
+          @include phone {
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+          }
+          @include tablet {
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+          }
+          @include desk{
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1);
+          }
+          transition: 1s ease;
+        }
+        p {
+          @include flexbox;
+          width: 100% !important;
+          color: black;
+          font-size: 0.7em;
+          font-weight: 300 !important;
+          margin: 0;
+        }
+        h2, h3, h4  {
+          font-size: 0.8em;
+          padding-bottom: 0.7em;
+          margin: 0;
+          font-weight: 500;
+          display: inline-block;
+          width: auto;
+          vertical-align: middle;
+        }
+      }
+    }
+    .grid-tres-item-detalle{
+      padding: 0.7em 0.5em 0em 0.5em;
+      @include module;
+      display: grid;
+      @include tablet {
+        grid-template-columns: repeat(3, minmax(0, 1fr));  
+        grid-auto-rows: auto;
+      }
+      @include desk {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-auto-rows: auto;
+        grid-template-rows: none !important;
+      }
+      grid-gap: 1.5em;
+      align-items: center;
+      margin: 1em 0em;
+      .wp-block-column{
+        @include radius(5px); box-shadow: 0px 5px 10px 0px #A6A6A6;
+        transition: 1s ease;
+        padding: 0.7em 0.7em 0em 0.7em;
+        height: auto;
+        &:hover {
+          background: linear-gradient(180deg, rgba(52,195,244,1) 0%, rgba(0,57,114,1) 98%);
+          @include phone {
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+          }
+          @include tablet {
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+          }
+          @include desk{
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1);
+          }
+          transition: 1s ease;
+          h2, h3, h4 {
+            color: white;
+          }
+          p {
+            display: block;
+            color: white;
+          }
+        }
+        p {
+          @include flexbox;
+          width: 100% !important;
+          color: black;
+          font-size: 0.7em;
+          font-weight: 300 !important;
+          margin: 0;
+          display: none;
+          margin-bottom: 1em;
+        }
+        h2, h3, h4  {
+          font-size: 0.8em;
+          padding-bottom: 0.7em;
+          margin: 0;
+          font-weight: 500;
+          display: inline-block;
+          width: auto;
+          vertical-align: middle;
+        }
+      }
+    }
+    .grid-tres-item-detalle-mas{
+      padding: 0.7em 0.5em 0em 0.5em;
+      @include module;
+      display: grid;
+      @include tablet {
+        grid-template-columns: repeat(3, minmax(0, 1fr));  
+        grid-auto-rows: auto;
+      }
+      @include desk {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-auto-rows: auto;
+        grid-template-rows: none !important;
+      }
+      grid-gap: 1.5em;
+      align-items: center;
+      margin: 1em 0em;
+      .wp-block-column{
+        @include radius(5px); box-shadow: 0px 5px 10px 0px #A6A6A6;
+        transition: 1s ease;
+        padding: 0.7em 0.7em 0em 0.7em;
+        height: auto;
+        &:hover {
+          background: linear-gradient(180deg, rgba(52,195,244,1) 0%, rgba(0,57,114,1) 98%);
+          @include phone {
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+          }
+          @include tablet {
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+          }
+          @include desk{
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1);
+          }
+          transition: 1s ease;
+          h2, h3, h4 {
+            color: white;
+          }
+          p {
+            display: block;
+            color: white;
+          }
+        }
+        p {
+          @include flexbox;
+          width: 100% !important;
+          color: black;
+          font-size: 0.7em;
+          font-weight: 300 !important;
+          margin: 0;
+          display: none;
+          margin-bottom: 1em;
+        }
+        h2, h3, h4  {
+          font-size: 0.8em;
+          padding-bottom: 0.7em;
+          margin: 0;
+          font-weight: 500;
+          display: inline-block;
+          width: auto;
+          vertical-align: middle;
+        }
+      }
+    }
+    .grid-dos{
+      padding: 1.5em .5em;
+      @include module;
+      display: grid;
+      @include tablet {
+        grid-template-columns: repeat(2, minmax(0, 1fr));  
+        grid-auto-rows: auto;
+      }
+      @include desk {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-rows: auto;
+        grid-template-rows: none !important;
+      }
+      grid-gap: 1.5em;
+      align-items: center;
+      margin: 1em 0em;
+      .wp-block-column{
+        @include radius(5px); box-shadow: 0px 5px 10px 0px #A6A6A6;
+        transition: 1s ease;
+        padding: 0.7em 0.7em 0em 0.7em;
+        height: 100%;
+        &:hover {
+          @include phone {
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+          }
+          @include tablet {
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+          }
+          @include desk{
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1);
+          }
+          transition: 1s ease;
+        }
+        p {
+          @include flexbox;
+          width: 100% !important;
+          color: black;
+          font-size: 0.7em;
+          font-weight: 300 !important;
+          margin: 0;
+        }
+        h2, h3, h4  {
+          font-size: 0.8em;
+          padding-bottom: 0.7em;
+          margin: 0;
+          font-weight: 500;
+          display: inline-block;
+          width: auto;
+          vertical-align: middle;
+        }
+      }
+    }
+    .grid-dos-mas{
+      padding: 1.5em .5em 0em 0.5em;
+      @include module;
+      display: grid;
+      @include tablet {
+        grid-template-columns: repeat(2, minmax(0, 1fr));  
+        grid-auto-rows: auto;
+      }
+      @include desk {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-rows: auto;
+        grid-template-rows: none !important;
+      }
+      grid-gap: 1.5em;
+      align-items: center;
+      margin: 1em 0em;
+      .wp-block-column{
+        @include radius(5px); box-shadow: 0px 5px 10px 0px #A6A6A6;
+        transition: 1s ease;
+        padding: 0.7em 0.7em 0em 0.7em;
+        height: 100%;
+        &:hover {
+          @include phone {
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+          }
+          @include tablet {
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+          }
+          @include desk{
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1);
+          }
+          transition: 1s ease;
+        }
+        p {
+          @include flexbox;
+          width: 100% !important;
+          color: black;
+          font-size: 0.7em;
+          font-weight: 300 !important;
+          margin: 0;
+        }
+        h2, h3, h4  {
+          font-size: 0.8em;
+          padding-bottom: 0.7em;
+          margin: 0;
+          font-weight: 500;
+          display: inline-block;
+          width: auto;
+          vertical-align: middle;
+        }
+      }
+    }
+    .grid-tres{
+      @include module;
+      display: grid;
+      @include phone {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        padding: 1.5em .5em;
+      }
+      @include tablet {
+        padding: 1.5em 0em;
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+      }
+      @include desk {
+        padding: 1.5em .5em;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-auto-rows: auto;
+        grid-template-rows: none !important;
+      }
+      grid-gap: 1.5em;
+      align-items: center;
+      margin: 1em 0em;
+      .wp-block-column{
+        @include radius(5px); box-shadow: 0px 5px 10px 0px #A6A6A6;
+        transition: 1s ease;
+        padding: 0.7em 0.7em 0em 0.7em;
+        height: 100%;
+        &:hover {
+          @include phone {
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+          }
+          @include tablet {
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+          }
+          @include desk{
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1);
+          }
+          transition: 1s ease;
+        }
+        p {
+          @include flexbox;
+          width: 100% !important;
+          color: black;
+          font-size: 0.7em;
+          font-weight: 300 !important;
+          margin: 0;
+        }
+        h2, h3, h4  {
+          font-size: 0.8em;
+          padding-bottom: 0.7em;
+          margin: 0;
+          font-weight: 500;
+          display: inline-block;
+          width: auto;
+          vertical-align: middle;
+        }
+      }
+    }
+    .grid-tres-mas{
+      @include module;
+      display: grid;
+      @include phone {
+        padding: 1.5em .5em;
+        grid-auto-rows: auto;
+      }
+      @include tablet {
+        padding: 1.5em 0em 0em 0em;
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+      }
+      @include desk {
+        padding: 1.5em .5em 0em 0.5em;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-auto-rows: auto;
+        grid-template-rows: none !important;
+      }
+      grid-gap: 1.5em;
+      align-items: center;
+      margin: 1em 0em;
+      .wp-block-column{
+        @include radius(5px); box-shadow: 0px 5px 10px 0px #A6A6A6;
+        transition: 1s ease;
+        padding: 0.7em 0.7em 0em 0.7em;
+        height: 100%;
+        &:hover {
+          @include phone {
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+          }
+          @include tablet {
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+          }
+          @include desk{
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1);
+          }
+          transition: 1s ease;
+        }
+        p {
+          @include flexbox;
+          width: 100% !important;
+          color: black;
+          font-size: 0.7em;
+          font-weight: 300 !important;
+          margin: 0;
+        }
+        h2, h3, h4  {
+          font-size: 0.8em;
+          padding-bottom: 0.7em;
+          margin: 0;
+          font-weight: 500;
+          display: inline-block;
+          width: auto;
+          vertical-align: middle;
+        }
+      }
+    }
+    .grid-cuatro{
+      padding: 1.5em .5em;
+      @include module;
+      display: grid;
+      @include tablet {
+        grid-template-columns: repeat(2, minmax(0, 1fr));  
+        grid-auto-rows: auto;
+      }
+      @include desk {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-auto-rows: auto;
+        grid-template-rows: none !important;
+      }
+      grid-gap: 1.5em;
+      align-items: center;
+      margin: 1em 0em;
+      .wp-block-column{
+        @include radius(5px); box-shadow: 0px 5px 10px 0px #A6A6A6;
+        transition: 1s ease;
+        padding: 0.7em 0.7em 0em 0.7em;
+        height: 100%;
+        &:hover {
+          @include phone {
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+          }
+          @include tablet {
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+          }
+          @include desk{
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1);
+          }
+          transition: 1s ease;
+        }
+        p {
+          @include flexbox;
+          width: 100% !important;
+          color: black;
+          font-size: 0.7em;
+          font-weight: 300 !important;
+          margin: 0;
+        }
+        h2, h3, h4  {
+          font-size: 0.8em;
+          padding-bottom: 0.7em;
+          margin: 0;
+          font-weight: 500;
+          display: inline-block;
+          width: auto;
+          vertical-align: middle;
+        }
+      }
+    }
+    .grid-cuatro-mas{
+      padding: 1.5em .5em 0em 0.5em;
+      @include module;
+      display: grid;
+      @include tablet {
+        grid-template-columns: repeat(2, minmax(0, 1fr));  
+        grid-auto-rows: auto;
+      }
+      @include desk {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-auto-rows: auto;
+        grid-template-rows: none !important;
+      }
+      grid-gap: 1.5em;
+      align-items: center;
+      margin: 1em 0em;
+      .wp-block-column{
+        @include radius(5px); box-shadow: 0px 5px 10px 0px #A6A6A6;
+        transition: 1s ease;
+        padding: 0.7em 0.7em 0em 0.7em;
+        height: 100%;
+        &:hover {
+          @include phone {
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+          }
+          @include tablet {
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+          }
+          @include desk{
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1);
+          }
+          transition: 1s ease;
+        }
+        p {
+          @include flexbox;
+          width: 100% !important;
+          color: black;
+          font-size: 0.7em;
+          font-weight: 300 !important;
+          margin: 0;
+        }
+        h2, h3, h4  {
+          font-size: 0.8em;
+          padding-bottom: 0.7em;
+          margin: 0;
+          font-weight: 500;
+          display: inline-block;
+          width: auto;
+          vertical-align: middle;
+        }
+      }
+    }
+    b{
+      margin: 1.5em 0;
+      font-size: 0.9em;
+    }
+    p{
+      font-size: 0.75em;
+      color: #808080;
+      white-space: pre-wrap;
+    }
+    h2, h3{
+      font-size: 0.75em;
+      font-weight: 500;
+      color: $black;
+      margin-top: 2em;
+      margin-bottom: 0em;
+    }
+    img{
+      margin: auto;
+      width: -webkit-fill-available; height: auto;
+    }
+    ul {
+      padding: 1em 1.5em; font-size: 0.75em;
+      li {
+        &::before {
+          content: "\2022";
+          color: $black;
+          font-weight: 500;
+          display: inline-block;
+          width: 1em;
+          margin-left: -1em;
+        }
+      }
+    }
+    // {}
+  }
+
+  &--info-service {    
+    @include phone {
+      width: -webkit-fill-available; 
+      padding: 0;
+      z-index: 0;
+    }
+    @include tablet {width: 100%; padding: 0 1em;
+      z-index: 0;
+      @include flexbox; 
+      @include flow-rw; 
+      @include just-between; 
+      @include items-start;
+      @include padbox(0 1em); 
+    }
+    @include desk {width: 100%; padding: 0; position: relative; 
+      z-index: 1;
+      @include flexbox; 
+      @include flow-rw; 
+      @include just-between; 
+      @include items-start;
+      @include padbox(0 1em); 
+    }
+    .key-content {width: 100%; white-space: pre-wrap;
+      margin-top: 2em;
+      ul {
+        @include phone {margin: 0em 1em;}
+        @include tablet {margin: 0em 3em;}
+        @include desk {margin: 0em 5em;}
+        margin-top: -3em;
+        li {
+          &::before {
+            content: "\2022";
+            color: $black;
+            font-weight: 500;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+          }
+        }
+      }
+      p  {
+        font-weight: 500; color: $black !important; font-size: .8em !important;
+        @include phone {width: 100%;}
+        @include tablet {width: 100%;}
+        @include desk {width: 90%;}
+      }
+    }
+    &-content {
+      padding-bottom: 1em;
+      width: 100%;
+      text-align: center;
+      b{
+        color: #34C3F4;
+        // padding-top: 1em;
+          margin: 0 !important;
+      }
+      h1  {
+        // font-weight: 500 !important;
+        // font-size: 2em !important;
+        // padding: 1em 1em 1em 1em !important;
+      //  margin-top: 0; 
+      }
+      p{
+        color: $black !important;
+        font-size: 0.8em;
+      }
+    }
+    b{
+      margin: 1.5em 0;
+      font-size: 0.9em;
+    }
+    p{
+      font-size: 0.7em;
+      color: #808080;
+      white-space: pre-wrap;
+      @include phone {width: 100%;}
+      @include tablet {width: 100%;}
+      @include desk {width: 90%;}
+    }
+    h2, h3{
+      font-size: 0.75em;
+      font-weight: 500;
+      color: $black;
+      margin-top: 2em;
+      margin-bottom: 0em;
+    }
+    img{
+      margin: auto;
+      width: auto;
+    }
+    ul {
+      padding: 1em 1.5em; font-size: 0.8em;
+      li {
+        &::before {
+          content: "\2022";
+          color: $black;
+          font-weight: 500;
+          display: inline-block;
+          width: 1em;
+          margin-left: -1em;
+        }
+      }
+    }
+    // {}
+  }
+
+  &--post-info {width: 100%; @include flexbox; @include flow-rw; @include just-between; @include items-start;
+    @include padbox(0 1em); margin-bottom: 2em; z-index: 1;
+    @include tablet {width: 100%; padding: 0 1em;}
+    @include desk {width: 100%; padding: 0; position: relative; }
+    &-content {
+      padding-bottom: 1em;
+      width: 100%;
+      text-align: center;
+      b{
+        color: #34C3F4;
+        // padding-top: 1em;
+          margin: 0 !important;
+      }
+      h1  {
+        // font-weight: 500 !important;
+        // font-size: 2em !important;
+        // padding: 1em 1em 1em 1em !important;
+      //  margin-top: 0; 
+      }
+      p{
+        color: $black !important;
+        font-size: 0.8em;
+      }
+      img{
+        margin-top: 1em !important;
+        margin-bottom: 1em !important;
+        width: 100% !important;
+        height: 18.75em;
+        object-fit: cover;
+        @include radius(10px);
+      }
+      &-share{
+        padding-top: 0.5em;
+        border-bottom: 1px solid #34C3F4;
+        border-top: 1px solid #34C3F4;
+        text-align: start;
+        @include flexbox;
+        p{
+          vertical-align: middle;
+          color: $black !important;
+          font-size: 0.8em;
+          width: 100%;
+        }
+        &-networks{
+          vertical-align: middle;
+          text-align: end;
+          width: 100%;
+        }
+        &-button{
+          padding-left: 0.5em;
+        }
+      }
+    }
+    video { width: 100%; @include radius(10px);}
+    .wp-block-embed-youtube { width: 100%; @include radius(10px);
+      margin-top: 0.7em;
+      iframe{
+        @include radius(10px);
+        width: 100%;
+        @include phone {
+          height: 11em;
+        }
+        @include tablet {
+          height: 24em;
+        }
+        @include desk {
+          height: 24em;
+        }
+      }
+    }
+    .wp-block-media-text{
+      @include flexbox;
+    }
+    .wp-block-media-text__media
+    {
+      padding-right: 1.5em;
+    }
+    .wp-block-media-text__content{
+      h2, h3, h4{
+        padding-bottom: 0.7em;
+      }
+    }
+    .wp-block-buttons{
+      margin: 1em 0;
+      width: 100%;
+      text-align: center;
+      @include radius(5px);
+      background: linear-gradient(180deg, rgba(52,195,244,1) 0%, rgba(0,57,114,1) 98%);
+      display: inline-grid
+    }
+    .wp-block-button {
+      a {
+        margin: 0.5em 0;
+        color: white;
+        font-weight: 500;
+        font-size: 1em;
+      } 
+    }
+    .wp-block-group {
+      // display: none;
+    }
+    .wp-block-gallery{
+      width: 100%;
+    }
+    .wp-block-image {
+      padding: 1.5em 0em;
+    }
+    .blocks-gallery-grid{
+      @include module;
+      display: grid;
+      @include tablet {
+        grid-template-columns: repeat(2, minmax(0, 1fr));  
+        grid-template-rows: repeat(4, minmax(90px, 90px));
+      }
+      @include desk {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-columns: auto;
+        grid-template-rows: repeat(1, auto);
+      }
+      padding: 0;
+      grid-gap: 1.5em;
+      li{
+        &::before {content:""; display: none;}
+      }
+      .blocks-gallery-item{
+        img{
+          width: 100%;
+          @include radius(10px);
+        }
+      }
+    }
     .wp-block-columns{
       padding: 1.5em .5em;
       @include module;
@@ -224,9 +1540,21 @@
         transition: 1s ease;
         padding: .7em .7em;
         &:hover {
-          -webkit-transform: scale(1.1);
-          -ms-transform: scale(1.1);
-          transform: scale(1.1);
+          @include phone {
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+          }
+          @include tablet {
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+          }
+          @include desk{
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1);
+          }
           transition: 1s ease;
         }
         p {
@@ -239,7 +1567,7 @@
         h3  {
           font-size: 0.8em;
           margin: 0;
-          font-weight: bold;
+          font-weight: 500;
           display: inline-block;
           width: auto;
           vertical-align: middle;
@@ -252,12 +1580,14 @@
     }
     p{
       font-size: 0.75em;
-      color: #808080;
+      color: $black;
       white-space: pre-wrap;
+      margin-top: 1em;
+      margin-bottom: 1em;
     }
     h2, h3{
       font-size: 0.75em;
-      font-weight: bold;
+      font-weight: 500;
       color: $black;
       margin-top: 2em;
       margin-bottom: 0em;
@@ -272,7 +1602,7 @@
         &::before {
           content: "\2022";
           color: $black;
-          font-weight: bold;
+          font-weight: 500;
           display: inline-block;
           width: 1em;
           margin-left: -1em;
@@ -481,7 +1811,19 @@
 
   // description
   &--tabs {width: 100%;
-    a {font-weight: bold !important; font-size: 2.2em !important; margin: 0 1.25em 0 0; color: #B8C0C8;
+    @include phone {
+      text-align: center;
+      margin: 1em 0em;
+    }
+    @include tablet {
+      text-align: center;
+      margin: 1em 0em;
+    }
+    @include desk {
+      text-align: start;
+      margin: 0;
+    }
+    a {font-weight: 500 !important; font-size: 2.2em !important; margin: 0 1.25em 0 0; color: #B8C0C8;
       @include tablet {font-size: 1em;}
       &.active {color: $black;}
     }

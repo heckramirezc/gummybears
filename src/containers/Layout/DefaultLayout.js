@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withCookies } from 'react-cookie';
+import _ from 'lodash';
 
 // Helpers
 import request from '../../bin/httpRequest';
@@ -28,6 +29,7 @@ class DefaultLayout extends Component {
       solutionsList: [],
       industriesList: [],
       tecnologiesType: [],
+      pagesList: [],
     };
   }
 
@@ -88,12 +90,13 @@ class DefaultLayout extends Component {
   fetchRedesSociales() {
     const options = {
       method: 'GET',
-      url: `${process.env.SERVICE}/settings`,
+      url: `${process.env.SERVICE}/settings?per_page=100`,
     };
     request.genericHandler(options).then((res) => {
       let callback = { action: 'redes_sociales', success: false };
       if (!res.error) {
-        callback = Object.assign({}, callback, { data: res.data.data.filter(x => x.social_media), success: true });
+        const data = _.sortBy(res.data.data.filter(x => x.social_media.length !== 0), val => parseInt(val.acf.posicion, 10));
+        callback = Object.assign({}, callback, { data, success: true });
         this.setState({ social_media: callback.data });
       } else {
         callback = Object.assign({}, callback, { error: res.error, success: false });

@@ -14,7 +14,7 @@ import IEnotification from '../../components/ui/IENotification';
 
 // utilities
 // iconPlus, iconMinus
-import { logo, iconMovil, iconHogar, iconClub, iconEntretenimiento, iconPromociones, iconIOT } from '../../helpers/svg'; // iconLocation
+import { logo } from '../../helpers/svg'; // iconLocation
 import { isDesktop } from '../../helpers/ui';
 
 const ScrollLink = Scroll.Link;
@@ -40,10 +40,10 @@ const NavTop = (props) => {
   const getTopMenu = props && props.layoutData && props.layoutData.Menus && props.layoutData.Menus[0] && props.layoutData.Menus[0].Hijos; */
   const navTopMenu = (
     <nav className="nav--top-second">
-      <ul className="nav--top-ul"><ul><span className="fa-map-marker" /></ul><ul><a href="#">11 Calle 7-66 Zona 9,<br />Centro Corporativo Heidelberg, Nivel 9,<br />Guatemala, Guatemala</a></ul></ul>
-      <ul className="nav--top-ul"><ul><span className="fa-envelope-o" /></ul><ul><a href="#">info@gyssa.com<br />mercadeo@gyssa.com</a></ul></ul>
-      <ul className="nav--top-ul"><ul><span className="fa-phone" /></ul><ul><a href="#">+502 2326-6100</a></ul></ul>
-      <ul className="nav--top-ul"><ul><span className="fa-clock-o" /></ul><ul><a>Lunes a Viernes<br />8:00 a 17:00 horas</a></ul></ul>
+      <ul className="nav--top-ul"><ul><span className="fa-map-marker" /></ul><ul><a href="https://goo.gl/maps/JkDd6XmdDs82b8pt9">11 Calle 7-66 Zona 9,<br />Centro Corporativo Heidelberg, Nivel 9,<br />Guatemala, Guatemala</a></ul></ul>
+      <ul className="nav--top-ul"><ul><span className="fa-envelope-o" /></ul><ul><a href="mailto:mercadeo@gyssa.com">mercadeo@gyssa.com</a></ul></ul>
+      <ul className="nav--top-ul"><ul><span className="fa-phone" /></ul><ul><a href="tel:+50223266100">+502 2326-6100</a></ul></ul>
+      {/* <ul className="nav--top-ul"><ul><span className="fa-clock-o" /></ul><ul><a>Lunes a Viernes<br />05:15 a 17:15 horas</a></ul></ul> */}
     </nav>
   );
   /* if (getTopMenu) {
@@ -70,7 +70,6 @@ const NavTop = (props) => {
           {navTopMenu}
         </section>
         <section className="nav--actions">
-          <a onClick={props.handleSearchToggle} className="nav--trigger-search fa-search" />
           <div className="nav--search" onFocus={props.handleClicks}>
             <SearchBox />
           </div>
@@ -82,33 +81,70 @@ const NavTop = (props) => {
 
 const NavMain = (props) => {
   if (!props.socialData || !props.socialData.length || !props.socialData.length === 0) return null;
-  const RedesSociales = props.socialData.map((data, key) => <a key={key} href={data.acf.enlace} target="_blank" rel="noopener noreferrer nofollow"><img src={data.acf.icono} alt={data.title.rendered} /></a>);
+  const slugActive = window.location.pathname;
+  const RedesSociales = props.socialData.map((data, key) => <a key={key} href={data.acf.enlace} target="_blank" rel="noopener noreferrer nofollow"><img src={data.acf.icon} alt={data.title.rendered} /></a>);
   const MenuPrincipal = props.menuData.map((data, key) => {
     if (data.url === '/products') {
-      return (<li key={key}><a className="nav--links-trigger nav--link" onClick={props.handleMenuLinks} >{data.title.toUpperCase()}</a></li>);
+      if (slugActive.includes('soluciones') || slugActive.includes('tecnologia') || slugActive.includes('industria') || slugActive.includes('producto')) {
+        return (<li key={key}><a className="nav--links-trigger nav--link active" onClick={props.handleMenuLinks} >{data.title.toUpperCase()}</a></li>);
+      } else {
+        return (<li key={key}><a className="nav--links-trigger nav--link" onClick={props.handleMenuLinks} >{data.title.toUpperCase()}</a></li>);
+      }
     } else if (data.url === '#services') {
-      return (
-        <li key={key}>
-          <ScrollLink to="servicios" spy="true" smooth="true" offset={-50} duration={500} className="nav--links-trigger nav--link">
-            {data.title.toUpperCase()}
-          </ScrollLink>
-        </li>);
+      if (slugActive === '/') {
+        return (
+          <li key={key}>
+            <ScrollLink to="servicios" spy="true" smooth="true" offset={0} duration={500} className="nav--links-trigger nav--link">
+              {data.title.toUpperCase()}
+            </ScrollLink>
+          </li>);
+      } else if (slugActive.includes('servicios')) {
+        return (
+          <li key={key}>
+            <Link to="/#servicios" className="nav--links-trigger nav--link active">
+              {data.title.toUpperCase()}
+            </Link>
+          </li>);
+      } else {
+        return (
+          <li key={key}>
+            <Link to="/#servicios" className="nav--links-trigger nav--link">
+              {data.title.toUpperCase()}
+            </Link>
+          </li>);
+      }
     }
-    return (<li key={key}><Link to={data.url.replace('https://uat-gummybears.com/wp/', '/')} className="nav--links-trigger nav--link" >{data.title.toUpperCase()}</Link></li>);
+    let url = '';
+    if (data.slug) {
+      if (data.slug.includes('blog')) {
+        url = `/${data.slug}`;
+      } else {
+        url = `/paginas/${data.slug}`;
+      }
+    } else if (data.url.includes('blog')) {
+      url = data.url.replace('https://uat-gummybears.com/wp/', '/');
+    } else {
+      url = data.url.replace('https://uat-gummybears.com/wp/', '/paginas/');
+    }
+    if (slugActive.includes(url)) {
+      return (<li key={key}><Link to={url} onClick={props.handleMenuLink} className="nav--links-trigger nav--link active" >{data.title.toUpperCase()}</Link></li>);
+    } else {
+      return (<li key={key}><Link to={url} onClick={props.handleMenuLink} className="nav--links-trigger nav--link" >{data.title.toUpperCase()}</Link></li>);
+    }
   });
   const MenuProductos = props.productsType.map((data, key) => {
     switch (data.slug) {
       case 'industria':
-        return (<li key={key}><a onMouseEnter={props.handleMenuIndustria} >{data.name}</a></li>);
+        return (<li key={key}><Link to={`/${data.slug}`} onMouseEnter={props.handleMenuIndustria} onClick={props.handleMenuClick}>{data.name}</Link></li>);
       case 'tecnologia':
-        return (<li key={key}><a onMouseEnter={props.handleMenuTecnologia}>{data.name}</a></li>);
+        return (<li key={key}><Link to={`/${data.slug}/sap`} onMouseEnter={props.handleMenuTecnologia} onClick={props.handleMenuClick}>{data.name}</Link></li>);
       default:
-        return (<li key={key}><a onMouseEnter={props.handleMenuSoluciones} >{data.name}</a></li>);
+        return (<li key={key}><Link to="/soluciones" onMouseEnter={props.handleMenuSoluciones} onClick={props.handleMenuClick}>{data.name}</Link></li>);
     }
   });
   const MenuSoluciones = props.solutionsList.map((data, key) => (
     <div className="grid-item">
-      <Link key={key} to={`/soluciones/${data.slug}`}>
+      <Link key={key} to={`/soluciones/${data.slug}`} onClick={props.handleMenuClick}>
         <div>
           <img src={data.acf.icon} alt={data.name} />
           <b>{data.name}</b>
@@ -119,7 +155,7 @@ const NavMain = (props) => {
 
   const MenuIndustrias = props.industriesList.map((data, key) => (
     <div className="grid-item">
-      <Link key={key} to={`/industria/${data.slug}`}>
+      <Link key={key} to={`/industria/${data.slug}`} onClick={props.handleMenuClick}>
         <div>
           <img src={data.acf.small_image} alt={data.name} />
           <b>{data.name}</b>
@@ -130,7 +166,7 @@ const NavMain = (props) => {
 
   const MenuTecnologias = props.tecnologiesType.map((data, key) => (
     <div className="grid-item">
-      <Link key={key} to="/tecnologia">
+      <Link key={key} to={`/tecnologia/${data.slug}`} onClick={props.handleMenuClick}>
         <div>
           <img src={data.acf.icon} alt={data.name} />
           <b>{data.name}</b>
@@ -143,13 +179,17 @@ const NavMain = (props) => {
       <div className="nav--main-content">
         <nav className="nav--links">
           <ul>
-            <li><a href="https://uat-gummybears.com/" className="nav--logo">{logo}</a></li>
+            <li><Link to="/" className="nav--logo" onClick={props.handleMenuClickLogo}>{logo}</Link></li>
             {MenuPrincipal}
           </ul>
         </nav>
         <div className="nav--trigger">
-          <a onClick={props.handleSearchToggle}><span className="nav--trigger-search fa-search" /></a>
           <a onClick={props.handleMenuToggle}><span className="nav--trigger-menu fa-bars" /></a>
+          <section className="nav--actions">
+            <div className="nav--search" onFocus={props.handleClicks}>
+              <SearchBox />
+            </div>
+          </section>
         </div>
         <section className="nav--social">
           <div>
@@ -157,7 +197,7 @@ const NavMain = (props) => {
           </div>
         </section>
       </div>
-      <div className="nav--menu" onMouseLeave={isDesktop ? props.handleMenuLinks : null}>
+      <div className="nav--menu" onMouseLeave={isDesktop ? props.handleMouseLeave : null}>
         <section className="nav--menu-content">
           <div className="nav--menu-list">
             <ul>
@@ -166,7 +206,7 @@ const NavMain = (props) => {
           </div>
           <div className="nav--menu-detail">
             <div className="nav--menu-detail-soluciones">
-              <div className="nav--grid-container-soluciones">
+              <div className="nav--grid-container-industria">
                 {MenuSoluciones}
               </div>
             </div>
@@ -188,11 +228,32 @@ const NavMain = (props) => {
 };
 
 const NavMenuLinks = (props) => {
+  if (!props.productsType || !props.productsType.length || !props.productsType.length === 0) return null;
+  if (!props.solutionsList || !props.solutionsList.length || !props.solutionsList.length === 0) return null;
+  if (!props.industriesList || !props.industriesList.length || !props.industriesList.length === 0) return null;
+  if (!props.tecnologiesType || !props.tecnologiesType.length || !props.tecnologiesType.length === 0) return null;
   const getData = props.layoutData && props.layoutData.SeccionesHeader && props.layoutData.SeccionesHeader[0] && props.layoutData.SeccionesHeader[0].Hijos && props.layoutData.SeccionesHeader[0].Hijos[0];
-  let servicesNav;
-  const output = [];
-  let tiendaNav;
-  const tiendaOutput = [];
+  // const output = [];
+  const MenuSoluciones = props.solutionsList.map((data, key) => (
+    <li>
+      <Link key={key} to={`/soluciones/${data.slug}`} onClick={props.handleMobileMenuClick}>
+        <b>{data.name}</b>
+      </Link>
+    </li>));
+
+  const MenuIndustrias = props.industriesList.map((data, key) => (
+    <li>
+      <Link key={key} to={`/industria/${data.slug}`} onClick={props.handleMobileMenuClick}>
+        <b>{data.name}</b>
+      </Link>
+    </li>));
+
+  const MenuTecnologias = props.tecnologiesType.map((data, key) => (
+    <li>
+      <Link key={key} to={`/tecnologia/${data.slug}`} onClick={props.handleMobileMenuClick}>
+        <b>{data.name}</b>
+      </Link>
+    </li>));
   if (getData) {
     const data = props.layoutData.SeccionesHeader[0].Hijos[0].Hijos;
     for (let i = 0; i < data.length; i += 1) {
@@ -208,121 +269,114 @@ const NavMenuLinks = (props) => {
           const key = child.Unico;
           children.push(<li key={`menu-${key}`}><a href={link}>{label}</a></li>);
         }
-        console.log('children', children);
       }
-      const iconList = [iconMovil, iconHogar, iconClub, iconIOT, iconEntretenimiento, iconPromociones];
-      const block = (
-        <ul className="nav--menu-links1" key={parent.Unico}>
-          <li className="desk icon">{iconList[i]}</li>
-          <li><a href={he.decode(parent.URL)}><b>{he.decode(parent.Descripcion)}</b></a></li>
-          {children}
-        </ul>
-      );
-      output.push(block);
-      // if (output) console('output', output);
-      servicesNav = (
-        <nav className="nav--menu-list2">
-          {output}
-        </nav>
-      );
-    }
-
-    const dataTienda = props.layoutData.SeccionesHeader[0].Hijos[1].Hijos;
-    for (let i = 0; i < dataTienda.length; i += 1) {
-      const parent = dataTienda[i];
-      const children = [];
-      const getChildren = parent && parent.Hijos && parent.Hijos.length;
-      const theChildren = parent.Hijos;
-      if (getChildren) {
-        for (let c = 0; c < theChildren.length; c += 1) {
-          const child = theChildren[c];
-          const link = he.decode(child.URL);
-          const label = he.decode(child.Descripcion);
-          const key = child.Unico;
-          children.push(<li key={`menu-${key}`}><a href={link}>{label}</a></li>);
-        }
-      }
-      const block = (
-        <ul className="nav--menu-links-tienda" key={parent.Unico}>
-          <li><a href={he.decode(parent.URL)}><b>{he.decode(parent.Descripcion)}</b></a></li>
-          {children}
-        </ul>
-      );
-      tiendaOutput.push(block);
-      tiendaNav = (
-        <nav className="nav--menu-list-tienda2">
-          {tiendaOutput}
-        </nav>
-      );
-      console.log(tiendaNav);
     }
   }
-  console.log(servicesNav);
-  const getSeccionesHeader = props && props.layoutData && props.layoutData.SeccionesHeader && props.layoutData.SeccionesHeader[0] && props.layoutData.SeccionesHeader[0].Hijos ? props.layoutData.SeccionesHeader[0].Hijos : [];
-  // console.log('getSeccionesHeader: ', getSeccionesHeader);
-  const seccionesHeaderMobile = getSeccionesHeader.map((i) => {
-    let outputMobile;
-    if (i.URL === 'uat-gummybears.com/personas/servicios') {
-      outputMobile = '';
-      // (
-      //   <React.Fragment key={`servicios-${i.Unico}`}>
-      //     <a className="nav--menu-title" onClick={props.handleSubmenuMobile}>
-      //       <span>Servicios</span>
-      //       <span className="mobile-icon icon-list fa-plus" />
-      //     </a>
-      //     { servicesNav }
-      //   </React.Fragment>
-      // );
-    } else if (i.Descripcion === 'Tienda' || i.URL === 'https://uat-gummybears.com/') {
-      outputMobile = ''; // (<Link to="/" key={`tienda-${i.Unico}`} className="nav--menu-title"><span>{he.decode(i.Descripcion)}</span><span className="mobile-icon fa-angle-right" /></Link>);
-    } else {
-      outputMobile = (<a key={`${i.Descripcion}-${i.Unico}`} href={he.decode(i.URL)} className="nav--menu-title"><span>{he.decode(i.Descripcion)}</span><span className="mobile-icon fa-angle-right" /></a>);
+
+  const MenuProductos = props.productsType.map((data, key) => {
+    switch (data.slug) {
+      case 'industria':
+        return (
+          <ul className="nav--mobilemenu-links" key={key}>
+            <li>
+              <a onClick={props.handleMobileMenuIndustria}>
+                <b>{data.name}</b>
+                <span className="mobile-industrias-icon fa-plus" />
+              </a>
+            </li>
+            <ul className="nav--mobilemenu-industrias">
+              {MenuIndustrias}
+            </ul>
+          </ul>
+        );
+        // return (<li ><Link to={`/${data.slug}`} onMouseEnter={props.handleMenuIndustria} onClick={props.handleMobileMenuClick}>{data.name}</Link></li>);
+      case 'tecnologia':
+        return (
+          <ul className="nav--mobilemenu-links" key={key}>
+            <li>
+              <a onClick={props.handleMobileMenuTecnologia}>
+                <b>{data.name}</b>
+                <span className="mobile-tecnologias-icon fa-plus" />
+              </a>
+            </li>
+            <ul className="nav--mobilemenu-tecnologias">
+              {MenuTecnologias}
+            </ul>
+          </ul>
+        );
+        // return (<li key={key}><Link to={`/${data.slug}/sap`} onMouseEnter={props.handleMenuTecnologia} onClick={props.handleMobileMenuClick}>{data.name}</Link></li>);
+      default:
+        return (
+          <ul className="nav--mobilemenu-links" key={key}>
+            <li>
+              <a onClick={props.handleMobileMenuSoluciones}>
+                <b>{data.name}</b>
+                <span className="mobile-soluciones-icon fa-plus" />
+              </a>
+            </li>
+            <ul className="nav--mobilemenu-soluciones">
+              {MenuSoluciones}
+            </ul>
+          </ul>
+        );
+        // return (<li key={key}><Link to="/soluciones" onMouseEnter={props.handleMenuSoluciones} onClick={props.handleMobileMenuClick}>{data.name}</Link></li>);
     }
-    return outputMobile;
   });
-  console.log(seccionesHeaderMobile);
-  return null; /* (
-    <div className="nav--menu1" onMouseLeave={isDesktop ? props.handleMenuLinks : null}>
-      <section className="nav--menu-content1">
-        <a className="nav--menu-title" onClick={props.handleSubmenuMobile}>
-          <span>Productos</span>
-          <span className="mobile-icon icon-list fa-plus" />
-        </a>
-        {servicesNav}
-        <a className="nav--menu-title" onClick={props.handleSubmenuMobileTienda}>
-          <span>Servicios</span>
-          <span className="mobile-icon icon-list-tienda fa-plus" />
-        </a>
-        {tiendaNav}
-        <a className="nav--menu-title" onClick={props.handleSubmenuMobileTienda}>
-          <span>Conozca más</span>
-          <span className="mobile-icon icon-list-tienda fa-plus" />
-        </a>
-        {tiendaNav}
-        <a className="nav--menu-title" onClick={props.handleSubmenuMobileTienda}>
-          <span>Blog</span>
-          <span className="mobile-icon icon-list-tienda fa-plus" />
-        </a>
-        {tiendaNav}
-        <a className="nav--menu-title" onClick={props.handleSubmenuMobileTienda}>
-          <span>Blog</span>
-          <span className="mobile-icon icon-list-tienda fa-plus" />
-        </a>
-        {tiendaNav}
-        <a className="nav--menu-title" onClick={props.handleSubmenuMobileTienda}>
-          <span>Contáctenos</span>
-          <span className="mobile-icon icon-list-tienda fa-plus" />
-        </a>
-        {tiendaNav}
+
+  const productsNav = (
+    <nav className="nav--mobilemenu-list">
+      {MenuProductos}
+    </nav>
+  );
+
+  const MenuPrincipal = props.menuData.map((data, key) => {
+    if (data.url === '/products') {
+      /* if (slugActive.includes('soluciones') || slugActive.includes('tecnologia') || slugActive.includes('industria') || slugActive.includes('producto')) {
+        return (<li key={key}><a className="nav--links-trigger nav--link active" onClick={props.handleMenuLinks} >{data.title.toUpperCase()}</a></li>);
+      } else {
+        return (<li key={key}><a className="nav--mobilemenu-title" onClick={props.handleMenuLinks} >{data.title.toUpperCase()}</a></li>);
+      } */
+      return (
+        <div>
+          <a key={key} className="nav--mobilemenu-title" onClick={props.handleSubmenuMobile}>
+            <span>{data.title.toUpperCase()}</span>
+            <span className="mobile-icon icon-list fa-plus" />
+          </a>
+          {productsNav}
+        </div>
+      );
+    } else if (data.url === '#services') {
+      return (
+        <Link to="/#servicios" className="nav--mobilemenu-title" onClick={props.handleMobileMenuClick} key={key}>
+          {data.title.toUpperCase()}
+          <span className="mobile-icon fa-angle-right" />
+        </Link>);
+    }
+    let url = '';
+    if (data.slug) {
+      if (data.slug.includes('blog')) {
+        url = `/${data.slug}`;
+      } else {
+        url = `/paginas/${data.slug}`;
+      }
+    } else if (data.url.includes('blog')) {
+      url = data.url.replace('https://uat-gummybears.com/wp/', '/');
+    } else {
+      url = data.url.replace('https://uat-gummybears.com/wp/', '/paginas/');
+    }
+    return (<Link key={key} to={url} onClick={props.handleMobileMenuClick} className="nav--mobilemenu-title" >{data.title.toUpperCase()}<span className="mobile-icon fa-angle-right" /></Link>);
+  });
+
+  return (
+    <div className="nav--mobilemenu" onMouseLeave={isDesktop ? props.handleMenuLinks : null}>
+      <section className="nav--mobilemenu-content">
+        {MenuPrincipal}
       </section>
-      <aside className="nav--menu-slogan">
-        {slogan}
-      </aside>
     </div>
-  ); */
+  );
 };
 
-const UI = ({ handleHover, handleLeave, handleScroll, handleSearchToggle, handleMenuToggle, handleMenuLinks, handleMenuLinksTienda, handleMenuSoluciones, handleMenuIndustria, handleMenuTecnologia, handleClicks, handleSubmenuMobile, handleSubmenuMobileTienda, layoutData, socialData, menuData, solutionsList, industriesList, tecnologiesType, productsType }) => (
+const UI = ({ handleHover, handleLeave, handleScroll, handleMenuToggle, handleMenuLinks, handleMenuLink, handleMenuLinksTienda, handleMenuSoluciones, handleMobileMenuSoluciones, handleMenuIndustria, handleMobileMenuIndustria, handleMenuTecnologia, handleMobileMenuTecnologia, handleClicks, handleSubmenuMobile, handleSubmenuMobileTienda, layoutData, socialData, menuData, solutionsList, industriesList, tecnologiesType, productsType, handleMenuClick, handleMobileMenuClick, handleMenuClickLogo, handleMouseLeave }) => (
   <div className="nav">
     <Helmet title="GYSSA" />
     <NavTop
@@ -333,9 +387,12 @@ const UI = ({ handleHover, handleLeave, handleScroll, handleSearchToggle, handle
       handleClicks={handleClicks}
     />
     <NavMain
-      handleSearchToggle={handleSearchToggle}
       handleMenuToggle={handleMenuToggle}
       handleMenuLinks={handleMenuLinks}
+      handleMenuLink={handleMenuLink}
+      handleMenuClick={handleMenuClick}
+      handleMenuClickLogo={handleMenuClickLogo}
+      handleMouseLeave={handleMouseLeave}
       handleMenuLinksTienda={handleMenuLinksTienda}
       handleMenuSoluciones={handleMenuSoluciones}
       handleMenuIndustria={handleMenuIndustria}
@@ -356,6 +413,15 @@ const UI = ({ handleHover, handleLeave, handleScroll, handleSearchToggle, handle
       handleMenuLinksTienda={handleMenuLinksTienda}
       handleMenuToggle={handleMenuToggle}
       layoutData={layoutData}
+      handleMobileMenuClick={handleMobileMenuClick}
+      menuData={menuData}
+      solutionsList={solutionsList}
+      industriesList={industriesList}
+      tecnologiesType={tecnologiesType}
+      productsType={productsType}
+      handleMobileMenuSoluciones={handleMobileMenuSoluciones}
+      handleMobileMenuIndustria={handleMobileMenuIndustria}
+      handleMobileMenuTecnologia={handleMobileMenuTecnologia}
     />
     <Loading />
   </div>
@@ -365,12 +431,19 @@ UI.propTypes = {
   handleHover: PropTypes.func.isRequired,
   handleLeave: PropTypes.func.isRequired,
   handleScroll: PropTypes.func.isRequired,
-  handleSearchToggle: PropTypes.func.isRequired,
   handleMenuToggle: PropTypes.func.isRequired,
   handleMenuLinks: PropTypes.func.isRequired,
+  handleMenuLink: PropTypes.func.isRequired,
+  handleMenuClick: PropTypes.func.isRequired,
+  handleMobileMenuClick: PropTypes.func.isRequired,
+  handleMenuClickLogo: PropTypes.func.isRequired,
+  handleMouseLeave: PropTypes.func.isRequired,
   handleMenuSoluciones: PropTypes.func.isRequired,
+  handleMobileMenuSoluciones: PropTypes.func.isRequired,
   handleMenuIndustria: PropTypes.func.isRequired,
+  handleMobileMenuIndustria: PropTypes.func.isRequired,
   handleMenuTecnologia: PropTypes.func.isRequired,
+  handleMobileMenuTecnologia: PropTypes.func.isRequired,
   handleClicks: PropTypes.func.isRequired,
   handleSubmenuMobile: PropTypes.func.isRequired,
   layoutData: PropTypes.shape({}).isRequired,
@@ -398,9 +471,12 @@ NavTop.defaultProps = {
 };
 
 NavMain.propTypes = {
-  handleSearchToggle: PropTypes.func.isRequired,
   handleMenuToggle: PropTypes.func.isRequired,
   handleMenuLinks: PropTypes.func.isRequired,
+  handleMenuLink: PropTypes.func.isRequired,
+  handleMenuClick: PropTypes.func.isRequired,
+  handleMenuClickLogo: PropTypes.func.isRequired,
+  handleMouseLeave: PropTypes.func.isRequired,
   handleMenuSoluciones: PropTypes.func.isRequired,
   handleMenuIndustria: PropTypes.func.isRequired,
   handleMenuTecnologia: PropTypes.func.isRequired,
@@ -426,6 +502,8 @@ NavMain.defaultProps = {
 NavMenuLinks.propTypes = {
   handleSubmenuMobile: PropTypes.func.isRequired,
   handleMenuLinks: PropTypes.func.isRequired,
+  handleMobileMenuClick: PropTypes.func.isRequired,
+  menuData: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   layoutData: PropTypes.shape({
     Eslogan: PropTypes.string,
     MiClaro: PropTypes.string,

@@ -18,15 +18,16 @@ background-color: white; position: fixed; top: 0; left: 0; right: 0; z-index: 9;
     @include tablet {display: none;}
   }
 
-  &--top {width: 100%; @include module; background-color: white; margin: 0 auto; height: 70px;
-    @include phone {display: none !important; height: 0;}
+  &--top {
+    @include phone {display: none; height: 0;}
+    @include tablet {display: none; height: 0;}
+    @include desk{width: 100%; @include module; background-color: white; margin: 0 auto; height: 70px;}
     @include flexbox; @include flow-rn; @include just-between; @include items-center;
 
-    &-desk {display: none; @include padbox(0.5em); width: 100%; text-align: center;
-      @include tablet {@include flexbox; @include flow-rn; @include just-between; @include items-center;}
-      // @include ie11 {
-      //   display: inline-block; text-align: left; position: relative;
-      // }
+    &-desk {display: none;
+      @include desk {@include flexbox; @include flow-rn; @include just-between; @include items-center;
+        @include padbox(0.5em); width: 100%; text-align: center;
+      }
     }
 
     section { @include flexbox; @include flow-rn; @include just-between; @include items-center;
@@ -63,7 +64,8 @@ background-color: white; position: fixed; top: 0; left: 0; right: 0; z-index: 9;
       }
       ul {top: calc(100% + 0.9em); right: 0; background-color: white; display: inline-block;
         li {display: inline-block; width: 100%;}
-        a {width: 100%; @include padbox(0.5em); background-color: white; font-size: 0.5em;
+        a {width: 100%; @include padbox(0.5em); background-color: white; font-size: 0.7em;
+          font-weight: 500;
           vertical-align: middle;
           // &:hover {background-color: $blue; color: white;}
         }
@@ -104,12 +106,33 @@ background-color: white; position: fixed; top: 0; left: 0; right: 0; z-index: 9;
 
   }
 
-  &--main {width: 100%; background-color: $red; color: white; position: relative; height: 67px;
+  &--main {width: 100%; background-color: $red; color: white; position: relative;
+    @include phone {
+      height: 130px;
+    }
+    @include tablet {height: 130px;}
+    @include desk {
+      height: 67px;
+    }
+    border-bottom: 4px solid white;
     // @include ie11 { text-align: center; }
     &-content {
+      
+      @include phone {
+        @include padbox(0.5rem);
+      }
+      @include tablet {
+          @include padbox(0.5rem);
+        }
+      @include desk {
+        @include padbox(0);
+        @include flexbox; @include flow-rw; @include just-between; @include items-center; 
       @include flexbox; @include flow-rw; @include just-between; @include items-center; 
-      position: relative; overflow: visible; height: auto; @include module; @include padbox(0.5rem);
-      @include tablet {padding: 0;}
+        @include flexbox; @include flow-rw; @include just-between; @include items-center; 
+      @include flexbox; @include flow-rw; @include just-between; @include items-center; 
+        @include flexbox; @include flow-rw; @include just-between; @include items-center; 
+        position: relative; overflow: visible; height: auto; @include module;
+      }
     }
   }
 
@@ -133,16 +156,17 @@ background-color: white; position: fixed; top: 0; left: 0; right: 0; z-index: 9;
     }
     li {
       display: inline-block;
+      text-align: center;
     }
   }
 
   &--link {
     font-size: 0.8em; color: white; height: 56%; display: none;
-      @include tablet {@include padbox(2em 1em);}
-      @include desk {@include padbox(1.6em 1.2em);}
+      @include desk {@include padbox(1.6em 2em); display: inline-block;}
+      width: 130%;
       vertical-align: middle;
       &::after {
-        font-weight: bold; font-size: 0.9em;
+        font-weight: 500; font-size: 0.9em;
         content: '';
         display: block;
         width: 0;
@@ -154,10 +178,9 @@ background-color: white; position: fixed; top: 0; left: 0; right: 0; z-index: 9;
       }
       &:hover, &.active { color: #FFC800; 
         &::after {
-          width: 120%;
+          width: 100%;
         }
       }
-      @include tablet {display: inline-block;}
   }
   &--logo {
     // display: inline-block !important; 
@@ -165,27 +188,35 @@ background-color: white; position: fixed; top: 0; left: 0; right: 0; z-index: 9;
     // @include tablet {padding: 1.7em 0em 0 0 !important;}
     // @include desk {padding: 0.9em 2em 0 0 !important;}
     svg { width: auto; display: block;
-      @include phone {height: 20px; margin-left: 0.5em;}
+      margin-right: 2em;
+      @include phone {height: 30px; margin-left: 0.5em;}
       @include tablet {height: 30px; margin-left: 0.5em;}
       @include desk {height: 40px;}
       @include ie11 { max-width: 186px; }
     }
   }
 
-  &--actions {width: 100%; position: absolute; top: 100%; left: 0; right: 0;
-    @include tablet {position: static; width: auto; @include flexbox; @include flow-rw; @include just-between; @include items-center;}
+  &--actions {
+    width: 100%;
+    top: 100%; left: 0; right: 0;
+    position: static; @include flexbox; @include flow-rw; @include just-between; @include items-center;
+    @include desk {
+      width: auto;
+    }
     .nav--trigger-search {display: none; font-family: $icon;
-      @include tablet {@include padblock(0.5em); color: $black; font-size: 1em; margin-right: 1em;}
-      @include tablet {display: inline-block;}
-      @include desk {display: none;}
+      // @include tablet {@include padblock(0.5em); color: $black; font-size: 1em; margin-right: 1em;}
+      // @include tablet {display: inline-block;}
+      // @include desk {display: none;}
     }
   }
 
   &--social {width: 100%; position: absolute; top: 100%; left: 0; right: 0;
     @include phone {display: none;}
-    @include desk {margin-top: -1.7em; margin-right: 3em;}
-    @include tablet {position: static; width: auto; @include flexbox; @include flow-rw; @include just-between; @include items-center;
-      margin-top: -1.7em; margin-right: 0.5em;}
+    @include tablet {display: none}
+    @include desk {margin-top: -1.7em; margin-right: 3em;
+      position: static; width: auto; @include flexbox; @include flow-rw; @include just-between; @include items-center;
+      margin-top: -1.7em; margin-right: 0.5em;
+    }
     div {width: 100%; margin-top: 1em;
       a {font-family: $icon; margin-right: 0.4em; color:  white; font-size: 1.4em;
         @include tablet {font-size: 0.8em; margin-right: 0.3em;}
@@ -210,10 +241,14 @@ background-color: white; position: fixed; top: 0; left: 0; right: 0; z-index: 9;
 
   &--qty {position: absolute; top: 3px; left: 7px; right: 0; text-align: center; color: white; font-size: 1em; padding: 0 !important; font-family: $font !important;}
 
-  &--search {width: 100%; position: absolute; top: 100%; left: 0; right: 0; @include padblock(0.45em); background-color: white; display: none;
-    @include radius(99px); box-shadow: 8px 5px 12px 0px #E3E7EA;
-    @include tablet {display: none; position: static; width: 12em;}
-    @include desk { display: inline-block; width: 18em; padding: 0; }
+  &--search {width: 100%; 
+    position: absolute; 
+    top: 100%; left: 0; right: 0;
+    @include padblock(0.45em); background-color: white; 
+    @include radius(99px);
+    @include phone {position: static; width: 90%;}
+    @include tablet {position: static; width: 90%;}
+    @include desk {width: 24em; padding: 0; box-shadow: 8px 5px 12px 0px #E3E7EA;}
   }
 
   &--miclaro {display: none; height: 100%; @include padbox(0.5em); background-color: $wine; color: white; margin-left: 0.5em; height: 51px; position: relative;
@@ -241,14 +276,16 @@ background-color: white; position: fixed; top: 0; left: 0; right: 0; z-index: 9;
   }
 
   &--trigger {
+    margin-top: 0.5em;
+    @include flexbox;
     a {color: white; font-size: 1.5em;
       span {@include padblock(0 0.7em 0 0); font-family: $icon;
         &::before {min-width: 24px; display: inline-block;}
       }
     }
-    @include tablet {display: none;}
+    @include desk {display: none;}
     &-menu {
-      @include tablet {display: none;}
+      @include desk {display: none;}
     }
   }
 
@@ -448,16 +485,46 @@ background-color: white; position: fixed; top: 0; left: 0; right: 0; z-index: 9;
   // -- Menu
 
   &--menu {position: absolute; top: 100%; left: 0; right: 0; background-color: white; height: 0;
-    @include tablet {display: none; background-color: white; height: auto;}
+    display: none;
+    @include desk {background-color: white; height: auto;}
     width: 100%;
 
-    &-content {@include transform(translateX(-100%)); @include trans;
+    &-content {
       &.active {@include transform(translateX(0)); @include trans;}
-      @include tablet {@include transform(translateX(0)); background-color: white;}
-      background-color: white;
-      width: 100%;
-      @include flexbox;
+      @include phone {
+        @include transform(translateX(-100%)); @include trans;
+        background-color: $black;
+        width: 90%;
+        height: 100%;
+        position: fixed;
+        z-index: -1;
+      }
+      @include tablet {
+        @include transform(translateX(-100%)); @include trans;
+        background-color: $black;
+        width: 90%;
+        height: 100%;
+        position: fixed;
+        z-index: -1;
+      }
+      @include desk {
+        @include trans;
+        @include transform(translateX(0));
+        background-color: white;
+        width: 100%;
+        height: auto;
+        @include flexbox;
+        position: unset;
+        z-index: 0;
+
+      }
     }
+    // &-content {
+    //   @include tablet {}
+    //   background-color: white;
+    //   width: 100%;
+    //   @include flexbox;
+    // }
 
     &-list {
       background-color: white;
@@ -470,13 +537,13 @@ background-color: white; position: fixed; top: 0; left: 0; right: 0; z-index: 9;
         border-color: $black;
       }
       a {
-        font-weight: bold;
+        font-weight: 500;
         width: -webkit-fill-available;
         height: 100%;
         padding: 1em 2em;
-        &:hover {
+        &:hover, &.active {
           color: white;
-          background-color: $black;
+          background-color: #FFC800;
         }
       }
     }
@@ -503,9 +570,19 @@ background-color: white; position: fixed; top: 0; left: 0; right: 0; z-index: 9;
       @include desk { max-height: 350px; }
     }
 
-    &-title {width: 100%; position: relative; @include padblock(0.5em); border-top: 1px solid white;
+    &-title {width: 100%; position: relative; @include padblock(0.5em);
+      @include phone {
+        border-top: none;
+        border-bottom: 1px solid white;
+      }
+      @include tablet {
+        border-top: none;
+        border-bottom: 1px solid white;
+      }
+      @include desk {
+        border-top: 1px solid white; display: none;
+      }
       background-color: $red; color: white; font-size: 1.3em;
-      @include tablet {display: none;}
       &.wine {background-color: $wine;
         &.miclaro {
           span:first-of-type { position: relative;
@@ -560,6 +637,248 @@ background-color: white; position: fixed; top: 0; left: 0; right: 0; z-index: 9;
         p {
           @include tablet {font-size: 111%;}
         }
+        &:hover .links-tienda {display: block;} 
+      }
+    }
+
+    &-links-tienda {position: relative;
+      .desk {display: none;}
+      @include tablet {
+        width: 16%; border-right: 1px solid $light; @include padblock(0 0.5em 2em 2em); margin-bottom: 8rem;
+        &:nth-of-type(3), &:nth-of-type(4), &:nth-of-type(5) { margin-bottom: 2rem; }
+        &:last-of-type {border-right: none;}
+        .desk {display: inline-block; font-size: 80%; @include transform(translateX(6px));}
+        .icon {position: absolute; left: 0; top: 0; text-align: center; width: 21px;
+          svg {display: inline-block; height: auto; width: 100%; max-width: 21px; max-height: 21px;}
+        }
+        .icon.after {top: 4em; padding: 0;}
+      }
+      @include desk {padding: 0 0.5em 0 3em; width: 50%;
+        .icon {width: 34px;
+          svg {max-width: 34px; max-height: 34px;}
+        }
+      }
+      li {display: inline-block; width: 100%; border-top: 1px solid $gray; position: relative;
+        &:last-of-type {height: 300px;}
+        @include tablet {border-top: none; font-size: 90%;
+          &.after {padding-top: 1.5em;}
+        }
+        @include desk {font-size: 100%;}
+        a {@include padblock(0.85em 3.2em); font-size: 0.9em;
+          &::after {content: "\f105"; font-family: $icon; position: absolute; top: 0.75em; right: 1.25em; font-size: 1.25em;}
+          @include tablet {
+            padding: 0.25em; font-size: 1em;
+            &::after {display: none;}
+          }
+        }
+        b {font-size: 1.2em; font-weight: 400; @include transform(translateX(-1em));
+          @include tablet {@include transform(translateX(0));}
+        }
+        p {
+          @include tablet {font-size: 111%;}
+        }
+      }
+    }
+
+    &-login {width: 100%; display: none; @include module; height: 0; text-align: right;
+      .container {
+        display: inline-block; width: auto;
+        // @include flexbox; @include flow-cn; @include just-start; @include items-end; // @include module;
+        a {
+          @include padblock(1rem); font-size: 0.75rem; color: white; background-color: $black;
+        }
+      }
+    }
+
+    &-slogan {width: 100%; @include padbox(0.5em); display: none; background-color: $blue; color: white; font-size: 0.8em; text-align: left;
+      @include tablet {display: inline-block;}
+      p {@include module;}
+    }
+
+  }
+
+  &--mobilemenu {position: absolute; top: 100%; left: 0; right: 0; background-color: white; height: 0;
+    @include desk {display: none; background-color: white; height: auto;}
+    width: 100%;
+
+    &-content {
+      &.active {@include transform(translateX(0)); @include trans;}
+      @include phone {
+        @include transform(translateX(-101%)); @include trans;
+        background-color: $black;
+        width: 90%;
+        height: 100%;
+        position: fixed;
+        z-index: -1;
+      }
+      @include tablet {
+        @include transform(translateX(-101%)); @include trans;
+        background-color: $black;
+        width: 90%;
+        height: 100%;
+        position: fixed;
+        z-index: -1;
+      }
+      @include desk {
+        @include trans;
+        @include transform(translateX(0));
+        background-color: white;
+        width: 100%;
+        height: auto;
+        @include flexbox;
+        position: unset;
+        z-index: 0;
+
+      }
+    }
+    // &-content {
+    //   @include tablet {}
+    //   background-color: white;
+    //   width: 100%;
+    //   @include flexbox;
+    // }
+
+    &-list {
+      width: 100%;
+      text-align: start;
+      display: none;
+      li {
+        border-top: 0.1em solid;
+        border-right: 0.1em solid;
+        border-color: $black;
+      }
+      a {
+        font-weight: 300;
+        width: -webkit-fill-available;
+        height: 100%;
+        color: white;
+        border-bottom: 1px solid #fff;
+        padding: 1em 2em;
+      }
+    }
+
+    &-detail {
+      width: 70%;
+      border-top: 0.1em solid;
+      border-color: $black;
+      background-color:white;
+      color: $black;
+      &-soluciones, &-industria, &-tecnologia
+      {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: none;
+      }
+    }
+
+    &-list-tienda {width: 40%; overflow-x: hidden; overflow-y: scroll; max-height: 60vh; display: none; background-color: white; margin-left: 100px!important;
+      @include tablet {@include padblock(2em 0 0.5em 0); @include module; overflow: hidden; height: 400px;
+        @include flexbox; @include flow-cw; @include just-start; @include items-start;
+      }
+      @include desk { max-height: 350px; }
+    }
+
+    &-title {width: 100%; position: relative; @include padblock(0.5em);
+      @include phone {
+        border-top: none;
+        border-bottom: 1px solid white;
+      }
+      @include tablet {
+        border-top: none;
+        border-bottom: 1px solid white;
+      }
+      @include desk {
+        border-top: 1px solid white; display: none;
+      }
+      background-color: $red; color: white; font-size: 1.3em;
+      &.wine {background-color: $wine;
+        &.miclaro {
+          span:first-of-type { position: relative;
+            &::after { content: "autogestion"; position: absolute; left: 110%; top: 0.45rem; text-align: left; font-size: 0.7rem; }
+          }
+        }
+      }
+      span {display: inline-block;
+        svg {height: 0.9em; width: auto; display: block;}
+      }
+      .mobile-icon {position: absolute; top: 0.6em; right: 1.5em; font-family: $icon;}
+      .nav--qty {
+        position: absolute; top: 0.6rem; right: 1.8rem; left: auto; font-size: 15px; font-weight: 500;
+        padding: 4px !important; background-color: white; color: $red;
+
+      }
+    }
+
+    &-links {position: relative;
+      .desk {display: none;}
+      li {display: inline-block; width: 100%; border-top: 1px solid $gray; position: relative;
+        a {@include padblock(0.85em 3.2em); font-size: 0.9em;          
+          .mobile-soluciones-icon {position: absolute; top: 0.6em; right: 1.5em; font-family: $icon;}
+          .mobile-industrias-icon {position: absolute; top: 0.6em; right: 1.5em; font-family: $icon;}
+          .mobile-tecnologias-icon {position: absolute; top: 0.6em; right: 1.5em; font-family: $icon;}
+        }
+        b {font-size: 1.2em; font-weight: 400; @include transform(translateX(-1em)); }
+        &:hover .links-tienda {display: block;} 
+      }
+    }
+
+    &-soluciones {position: relative;
+      .desk {display: none;}
+      display: none;
+      &.active{
+        @include phone {
+          display: block;
+        }
+        @include desk {
+          display: none;
+        }  
+      }
+      li {display: inline-block; width: 100%; border-top: 1px solid $gray; position: relative;
+        a {@include padblock(0.85em 5.2em); font-size: 0.9em;
+          &::after {content: "\f105"; font-family: $icon; position: absolute; top: 0.75em; right: 1.25em; font-size: 1.25em;}
+        }
+        b {font-size: 1.2em; font-weight: 400; @include transform(translateX(-1em));}
+        &:hover .links-tienda {display: block;} 
+      }
+    }
+
+    &-industrias {position: relative;
+      .desk {display: none;}
+      display: none;
+      &.active{
+        @include phone {
+          display: block;
+        }
+        @include desk {
+          display: none;
+        }  
+      }
+      li {display: inline-block; width: 100%; border-top: 1px solid $gray; position: relative;
+        a {@include padblock(0.85em 5.2em); font-size: 0.9em;
+          &::after {content: "\f105"; font-family: $icon; position: absolute; top: 0.75em; right: 1.25em; font-size: 1.25em;}
+        }
+        b {font-size: 1.2em; font-weight: 400; @include transform(translateX(-1em));}
+        &:hover .links-tienda {display: block;} 
+      }
+    }
+
+    &-tecnologias {position: relative;
+      .desk {display: none;}
+      display: none;
+      &.active{
+        @include phone {
+          display: block;
+        }
+        @include desk {
+          display: none;
+        }  
+      }
+      li {display: inline-block; width: 100%; border-top: 1px solid $gray; position: relative;
+        a {@include padblock(0.85em 5.2em); font-size: 0.9em;
+          &::after {content: "\f105"; font-family: $icon; position: absolute; top: 0.75em; right: 1.25em; font-size: 1.25em;}
+        }
+        b {font-size: 1.2em; font-weight: 400; @include transform(translateX(-1em));}
         &:hover .links-tienda {display: block;} 
       }
     }

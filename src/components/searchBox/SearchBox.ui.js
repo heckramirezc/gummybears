@@ -1,18 +1,30 @@
 import React from 'react';
 import { observer, inject } from 'mobx-react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import listSelector from '../../helpers/liselector';
-import { addonsList } from './../../store/Addons/Addons';
 
 // const hide = {
 //   display: 'none',
 // };
 
-const SearchResults = ({ data, listSelected }) => (
-  <li className="autosuggest" role="presentation" tabIndex="-1" onClick={e => listSelected(e, data.term)}>
-    <a onClick={() => { document.querySelector('#search-box').value = ''; }}>{data.term}</a>
-  </li>
-);
+const SearchResults = ({ data }) => {
+  let slug = '/';
+  if (data.url.includes('servicios')) {
+    slug = data.url.slice(0, -1).replace('https://uat-gummybears.com/wp', '');
+  } else if (data.url.includes('products')) {
+    slug = data.url.slice(0, -1).replace('https://uat-gummybears.com/wp/products/', '/producto/');
+  } else {
+    slug = data.url.slice(0, -1).replace('https://uat-gummybears.com/wp/', '/blog/articulos/');
+  }
+  return (
+    <li className="autosuggest" role="presentation" tabIndex="-1" >
+      <Link to={slug}>
+        {data.title}
+      </Link>
+    </li>
+  );
+};
 
 class SearchBox extends React.Component {
   static contextTypes = {
@@ -38,43 +50,32 @@ class SearchBox extends React.Component {
   /**
    @augments new information to search
    */
+  completeSentence = (data) => {
+    const loginForm = this;
+    loginForm.internalData.search = data;
+  }
 
-  handleChange = async (e, data) => {
+  handleChange = (e, data) => {
     const keys = data.split('.');
-    console.log(keys);
+    const loginForm = this;
 
     if (e.target.value && e.target.value.length && e.target.value.length >= 3) {
       this.props.catalogStore.autoSuggest({ keyword: e.target.value }).then((res) => {
         if (res.data && res.success) {
-          this.setState({ autoSuggest: res.data.data.Keyword });
+          console.log('GUARDANDO ESTADOS');
+          this.setState({ autoSuggest: res.data.data });
         }
       });
     }
+
+    loginForm[keys[0]][keys[1]] = e.target.value;
+    this.setState(loginForm);
   }
 
-  handleSubmit = async (e, data) => {
+  handleSubmit = (e, data) => {
     e.preventDefault();
     let searchData = data;
     if (searchData === undefined) searchData = this.state.internalData.search;
-    let addons;
-    await addonsList().then((res) => {
-      addons = res.data[0].filter(x => x.enabled === true && x.auto_cart === true);
-    });
-    console.log('addons', addons);
-    this.props.catalogStore.search({ keyword: searchData, addonsList: addons }).then((res) => {
-      console.log('search: ', res);
-      if (res.success && res.action === 'search') {
-        if (searchData) {
-          this.context.router.history.push(`/search/${searchData}`);
-        } else {
-          this.context.router.history.push(`/search/${this.internalData.search}`);
-        }
-        this.setState({ autoSuggest: [] });
-        document.querySelector('#search-box').value = '';
-      } else {
-        // console.log('Error.');
-      }
-    });
   }
 
   blurHandler = () => {
@@ -82,14 +83,20 @@ class SearchBox extends React.Component {
   }
 
   render() {
-    const searchTerm = document.getElementById('search-box');
+    const searchTerm = this.internalData.search;
     let searchResult;
-    if (this.state.autoSuggest.length && searchTerm.value !== '' && !searchTerm.value.startsWith('tar') && !searchTerm.value.startsWith('rec')) {
+    console.log('this.state.autoSuggest.length', this.state.autoSuggest.length);
+    if (searchTerm) console.log('searchTerm.value', searchTerm);
+    if (this.state.autoSuggest.length && searchTerm !== '' && !searchTerm.startsWith('tar') && !searchTerm.startsWith('rec')) {
       searchResult = this.state.autoSuggest.map((res, i) => {
         const index = i;
-        return (<SearchResults key={index} data={res} listSelected={this.handleSubmit} />);
+        console.log('paso por acá');
+        return (<SearchResults key={index} data={res} />);
       });
-    } else searchResult = [];
+    } else {
+      console.log('paso por acá :/ ');
+      searchResult = [];
+    }
 
     return (
       <form onSubmit={this.handleSubmit} className="search--box">
@@ -128,7 +135,6 @@ SearchBox.propTypes = {
 
 SearchResults.propTypes = {
   data: PropTypes.shape({}).isRequired,
-  listSelected: PropTypes.func.isRequired,
 };
 
 export default inject('catalogStore')(observer(SearchBox));
