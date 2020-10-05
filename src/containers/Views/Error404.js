@@ -12,7 +12,7 @@ const Error404 = () => (
       <div><b>404.</b> <p>Oh, oh!</p></div>
       <h2>¡Ups! Lo sentimos, no hemos podido encontrar la página que estás buscando.</h2>
       <p>Te invitamos a regresar a la página principal.</p>
-      <a href="https://uat-gummybears.com/">Ir a la página principal</a>
+      <a href="https://www.gyssa.com/">Ir a la página principal</a>
     </section>
     <aside>
       <img src="/media/layout/error404.png" alt="Error 404" />

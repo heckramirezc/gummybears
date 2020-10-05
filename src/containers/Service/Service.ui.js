@@ -33,7 +33,7 @@ const UI = (props) => {
     <section className="catalog--banner-services">
       <div className="catalog--banner-services-contenedor">
         <img src={servicio.acf.image} alt={servicio.title.rendered} />
-        <img className="catalog--banner-services-contenedor-mascara" src="https://uat-gummybears.com/wp/wp-content/uploads/2020/08/MASCARA-1.png" alt={servicio.title.rendered} />
+        <img className="catalog--banner-services-contenedor-mascara" src="https://www.gyssa.com/wp/wp-content/uploads/2020/08/MASCARA-1.png" alt={servicio.title.rendered} />
       </div>
     </section>
   );

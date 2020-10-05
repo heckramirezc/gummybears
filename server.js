@@ -3,7 +3,7 @@ const path = require('path');
 const proxy = require('express-request-proxy');
 
 const port = process.env.PORT || 8080;
-const apiHost = 'https://uat-gummybears.com';
+const apiHost = 'https://www.gyssa.com';
 
 const app = express();
 // serve static assets normally

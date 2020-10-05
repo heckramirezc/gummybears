@@ -38,7 +38,7 @@ const UI = (props) => {
   const imagenDestacada = (
     <section className="catalog--banner-category-blog">
       <img src={categoria.acf.image} alt={categoria.name} />
-      <img src="http://uat-gummybears.com/wp/wp-content/uploads/2020/09/mascaBlog@2x.png" alt="" />
+      <img src="https://www.gyssa.com/wp/wp-content/uploads/2020/09/mascaBlog@2x.png" alt="" />
       <button type="submit">
         <span>{categoria.name.toUpperCase()}</span>
       </button>
@@ -58,11 +58,9 @@ const UI = (props) => {
 
   const FormularioNewsletter = (
     <form onSubmit={props.handleSubmit} name="newsletterform">
-      {/* <div className="checkout--address-form"> */}
       <div>
         <h3>Suscríbase a nuestro</h3>
         <h3>Newsletter</h3>
-        {/* <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et doloreundefined</p> */}
         <label htmlFor="email">
           <input
             type="email"
@@ -89,13 +87,10 @@ const UI = (props) => {
         <section className="checkout--address">
           <section className="product--main">
             <div className="product--info">
-              {/* <h1>{servicio.title.rendered.toUpperCase()}</h1> */}
               <div className="product--detail" >
                 <div className="catalog--grid-container-blog-posts">
                   {Articulos}
                 </div>
-                {/* <br /><p dangerouslySetInnerHTML={{ __html: servicio.acf.description }} /> */}
-                {/* <div className="key-content" dangerouslySetInnerHTML={{ __html: servicio.acf.key_content }} /> */}
               </div>
             </div>
           </section>

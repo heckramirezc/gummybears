@@ -4,13 +4,13 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const credentials = process.env.NODE_ENV || 'UAT';
-let uri = 'https://uat-gummybears.com'; // UAT
+const credentials = process.env.NODE_ENV || 'PROD';
+let uri = 'https://www.gyssa.com'; // UAT
 
 if (credentials === 'PROD') {
-  uri = 'https://uat-gummybears.com';
+  uri = 'https://www.gyssa.com';
 } else if (credentials === 'QA') {
-  uri = 'https://uat-gummybears.com';
+  uri = 'https://www.gyssa.com';
 }
 console.warn(`${uri} ---> ${credentials}`);
 

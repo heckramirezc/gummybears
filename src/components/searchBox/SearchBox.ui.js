@@ -11,11 +11,11 @@ import listSelector from '../../helpers/liselector';
 const SearchResults = ({ data }) => {
   let slug = '/';
   if (data.url.includes('servicios')) {
-    slug = data.url.slice(0, -1).replace('https://uat-gummybears.com/wp', '');
+    slug = data.url.slice(0, -1).replace('https://www.gyssa.com/wp', '');
   } else if (data.url.includes('products')) {
-    slug = data.url.slice(0, -1).replace('https://uat-gummybears.com/wp/products/', '/producto/');
+    slug = data.url.slice(0, -1).replace('https://www.gyssa.com/wp/products/', '/producto/');
   } else {
-    slug = data.url.slice(0, -1).replace('https://uat-gummybears.com/wp/', '/blog/articulos/');
+    slug = data.url.slice(0, -1).replace('https://www.gyssa.com/wp/', '/blog/articulos/');
   }
   return (
     <li className="autosuggest" role="presentation" tabIndex="-1" >
@@ -62,7 +62,6 @@ class SearchBox extends React.Component {
     if (e.target.value && e.target.value.length && e.target.value.length >= 3) {
       this.props.catalogStore.autoSuggest({ keyword: e.target.value }).then((res) => {
         if (res.data && res.success) {
-          console.log('GUARDANDO ESTADOS');
           this.setState({ autoSuggest: res.data.data });
         }
       });
@@ -85,16 +84,12 @@ class SearchBox extends React.Component {
   render() {
     const searchTerm = this.internalData.search;
     let searchResult;
-    console.log('this.state.autoSuggest.length', this.state.autoSuggest.length);
-    if (searchTerm) console.log('searchTerm.value', searchTerm);
     if (this.state.autoSuggest.length && searchTerm !== '' && !searchTerm.startsWith('tar') && !searchTerm.startsWith('rec')) {
       searchResult = this.state.autoSuggest.map((res, i) => {
         const index = i;
-        console.log('paso por acá');
         return (<SearchResults key={index} data={res} />);
       });
     } else {
-      console.log('paso por acá :/ ');
       searchResult = [];
     }
 

@@ -5,22 +5,12 @@ import PropTypes from 'prop-types';
 import _ from 'lodash';
 import Slider from 'react-slick'; // https://github.com/akiran/react-slick
 import { isMobile } from 'react-device-detect';
-// import $ from 'jquery';
 
 // utilities
 import { ArrowPrev, ArrowNext } from '../../helpers/svg';
-// import $ from 'jquery';
-// import Slider from 'react-slick'; // https://github.com/akiran/react-slick
-
-// Components
-// import { ArrowPrev, ArrowNext } from '../../helpers/svg';
-
-// const isIE = (navigator.userAgent.indexOf('MSIE') !== -1 || navigator.appVersion.indexOf('Trident/') > -1);
-
 
 const Industries = ({ industriesList, slug, solutionsList }) => {
   if (!industriesList || !industriesList.length || !industriesList.length === 0) return null;
-  console.log(solutionsList);
   const Industrias = industriesList.map((producto, key) => {
     const solucion = solutionsList.find(x => x.id === producto.acf.tag);
     return (
@@ -38,8 +28,10 @@ const Industries = ({ industriesList, slug, solutionsList }) => {
 };
 
 const ClientBanner = ({ clientes, categoriasClientes, slug }) => {
+  if (!clientes && !clientes.length && clientes.length === 0) return null;
   const cocategoriaClientes = categoriasClientes.find(cat => cat.slug === slug);
   const clients = clientes.filter(client => client.clientes.some(clientCat => clientCat === cocategoriaClientes.id));
+  if (!clients && !clients.length && clients.length === 0) return null;
   let bannerSettings = '';
   if (isMobile) {
     bannerSettings = {
@@ -68,7 +60,7 @@ const ClientBanner = ({ clientes, categoriasClientes, slug }) => {
       arrows: true,
       prevArrow: <ArrowPrev />,
       nextArrow: <ArrowNext />,
-      slidesToShow: 3,
+      slidesToShow: clients.length > 2 ? 3 : 2,
       slidesToScroll: 1,
     };
   }

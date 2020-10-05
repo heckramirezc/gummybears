@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import { render } from 'react-dom';
 import { Router, Route, Switch } from 'react-router-dom';
 import { CookiesProvider } from 'react-cookie';
-import TagManager from 'react-gtm-module';
+// import TagManager from 'react-gtm-module';
+import ReactGA from 'react-ga';
 import { createBrowserHistory } from 'history';
 
 // Mobx
@@ -25,36 +26,16 @@ import Category from './containers/Category/Category';
 import SubCategory from './containers/SubCategory/SubCategory';
 import Industry from './containers/Industry/Industry';
 import Service from './containers/Service/Service';
-import Search from './containers/Catalog/Search';
 import Product from './containers/Product/Product';
-import MiniCart from './containers/Cart/MiniCart/MiniCart';
-import Cart from './containers/Cart/Cart';
-import CheckoutAddress from './containers/Checkout/Address/Address';
-import CheckoutPayment from './containers/Checkout/Payments/MPCard';
-import CheckoutConfirm from './containers/Checkout/Confirm/Confirm';
-
-import DashboardAccount from './containers/Account/DashboardAccount/DashboardAccount';
-import Orders from './containers/Account/Orders/Orders';
-import OrdersDetails from './containers/Account/Orders/OrdersDetails';
-import Profile from './containers/Account/Profile/Profile';
-
-import Addresses from './containers/Account/Addresses/Addresses';
-import AddressEdit from './containers/Account/Addresses/AddressEdit';
-
 
 import Terms from './containers/Views/Common/Terms';
 import Support from './containers/Views/Common/Support';
-import Activation from './containers/Views/Common/Activation';
-import PurchaseLimit from './containers/Views/Notification/PurchaseLimit';
 import Error404 from './containers/Views/Error404';
 import Maintenance from './containers/Views/Maintenance';
 
 // Stores
 import orderStore from './store/Orders/Cart';
-import paymentsStore from './store/Payments/MpCard';
-import accountStore from './store/Account/Account';
 import catalogStore from './store/Catalog/Catalog';
-import facets from './store/Facets/Facets';
 import modals from './store/Modals/Modals';
 import navigationStore from './store/Navigation/Navigation';
 
@@ -79,10 +60,7 @@ const BlankLayout = ({ component: Component }) => (
 
 const stores = {
   orderStore,
-  paymentsStore,
-  accountStore,
   catalogStore,
-  facets,
   modals,
   navigationStore,
 };
@@ -110,24 +88,10 @@ const Root = () => (
           <DefaultLayout exact path="/tecnologia/*" component={Category} />
           <DefaultLayout exact path="/soluciones/*" component={SubCategory} />
           <DefaultLayout exact path="/industria/*" component={Industry} />
-          <DefaultLayout exact path="/search/*" component={Search} />
           <DefaultLayout exact path="/servicios/*" component={Service} />
           <DefaultLayout exact path="/producto/*" component={Product} />
-          <DefaultLayout path="/cart/more/" component={MiniCart} />
-          <DefaultLayout path="/cart" component={Cart} />
-          <DefaultLayout path="/checkout/address" component={CheckoutAddress} />
-          <DefaultLayout path="/checkout/payment" component={CheckoutPayment} />
-          <DefaultLayout path="/checkout/confirm" component={CheckoutConfirm} />
-          <DefaultLayout path="/checkout/purchase-limit" component={PurchaseLimit} />
-          <DefaultLayout exact path="/account" component={DashboardAccount} />
-          <DefaultLayout exact path="/account/orders" component={Orders} />
-          <DefaultLayout exact path="/account/orders/details/:id" component={OrdersDetails} />
-          <DefaultLayout exact path="/account/profile" component={Profile} />
-          <DefaultLayout exact path="/account/addresses" component={Addresses} />
-          <DefaultLayout exact path="/account/addresses-edit" component={AddressEdit} />
           <DefaultLayout path="/politicas-de-privacidad" component={Terms} />
           <DefaultLayout path="/soporte" component={Support} />
-          <DefaultLayout path="/activar" component={Activation} />
           <BlankLayout path="/maintenance" component={Maintenance} />
           <BlankLayout path="*" component={Error404} />
         </Switch>
@@ -148,12 +112,17 @@ DefaultLayout.defaultProps = {
   component: () => {},
 };
 
-const tagManagerArgs = {
+/* const tagManagerArgs = {
   gtmId: process.env.TAG,
-};
+}; */
 
+history.listen((location) => {
+  ReactGA.set({ page: location.pathname });
+  ReactGA.pageview(location.pathname);
+});
 
-TagManager.initialize(tagManagerArgs);
+ReactGA.initialize(process.env.GA);
+// TagManager.initialize(tagManagerArgs);
 
 render(App, document.getElementById('app'));
 

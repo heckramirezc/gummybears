@@ -12,8 +12,6 @@ import SearchBox from '../searchBox/SearchBox.ui';
 import Loading from '../ui/Loading';
 import IEnotification from '../../components/ui/IENotification';
 
-// utilities
-// iconPlus, iconMinus
 import { logo } from '../../helpers/svg'; // iconLocation
 import { isDesktop } from '../../helpers/ui';
 
@@ -21,23 +19,6 @@ const ScrollLink = Scroll.Link;
 const isIE = (navigator.userAgent.indexOf('MSIE') !== -1 || navigator.appVersion.indexOf('Trident/') > -1);
 
 const NavTop = (props) => {
-  console.log(props);
-  /* const getTopSites = props && props.layoutData && props.layoutData.Secciones;
-  const topSites = [];
-  if (getTopSites) {
-    const data = props.layoutData.Secciones;
-    for (let i = 0; i < data.length; i += 1) {
-      const item = data[i];
-      const element = (<a href={he.decode(item.URL)} key={item.Unico}>{he.decode(item.Descripcion)}</a>);
-      topSites.push(element);
-    }
-  }
-  const navTopSites = (
-    <nav className="nav--top-first">
-      {topSites}
-    </nav>
-  );
-  const getTopMenu = props && props.layoutData && props.layoutData.Menus && props.layoutData.Menus[0] && props.layoutData.Menus[0].Hijos; */
   const navTopMenu = (
     <nav className="nav--top-second">
       <ul className="nav--top-ul"><ul><span className="fa-map-marker" /></ul><ul><a href="https://goo.gl/maps/JkDd6XmdDs82b8pt9">11 Calle 7-66 Zona 9,<br />Centro Corporativo Heidelberg, Nivel 9,<br />Guatemala, Guatemala</a></ul></ul>
@@ -46,22 +27,6 @@ const NavTop = (props) => {
       {/* <ul className="nav--top-ul"><ul><span className="fa-clock-o" /></ul><ul><a>Lunes a Viernes<br />05:15 a 17:15 horas</a></ul></ul> */}
     </nav>
   );
-  /* if (getTopMenu) {
-    const data = props.layoutData.Menus[0].Hijos;
-    const dataLength = data.length;
-    const getDropdown = data && dataLength && data[dataLength - 1].Hijos;
-    const dropdown = [];
-    if (getDropdown) {
-      const list = data[dataLength - 1].Hijos;
-      for (let i = 0; i < list.length; i += 1) {
-        const item = list[i];
-        const element = <li key={item.Unico}><a href={he.decode(item.URL)}>{he.decode(item.Descripcion)}</a></li>;
-        dropdown.push(element);
-      }
-    }
-  } */
-  // console.log(navTopSites);
-  // console.log(navTopMenu);
   return (
     <div className="nav--top" >
       <div className="nav--top-desk">
@@ -122,9 +87,9 @@ const NavMain = (props) => {
         url = `/paginas/${data.slug}`;
       }
     } else if (data.url.includes('blog')) {
-      url = data.url.replace('https://uat-gummybears.com/wp/', '/');
+      url = data.url.replace('https://www.gyssa.com/wp/', '/');
     } else {
-      url = data.url.replace('https://uat-gummybears.com/wp/', '/paginas/');
+      url = data.url.replace('https://www.gyssa.com/wp/', '/paginas/');
     }
     if (slugActive.includes(url)) {
       return (<li key={key}><Link to={url} onClick={props.handleMenuLink} className="nav--links-trigger nav--link active" >{data.title.toUpperCase()}</Link></li>);
@@ -149,7 +114,7 @@ const NavMain = (props) => {
           <img src={data.acf.icon} alt={data.name} />
           <b>{data.name}</b>
         </div>
-        <img src="https://uat-gummybears.com/wp/wp-content/uploads/2020/06/btn_env@2x.png" alt={data.name} />
+        <img src="https://www.gyssa.com/wp/wp-content/uploads/2020/06/btn_env@2x.png" alt={data.name} />
       </Link>
     </div>));
 
@@ -160,7 +125,7 @@ const NavMain = (props) => {
           <img src={data.acf.small_image} alt={data.name} />
           <b>{data.name}</b>
         </div>
-        <img src="https://uat-gummybears.com/wp/wp-content/uploads/2020/06/btn_env@2x.png" alt={data.name} />
+        <img src="https://www.gyssa.com/wp/wp-content/uploads/2020/06/btn_env@2x.png" alt={data.name} />
       </Link>
     </div>));
 
@@ -171,7 +136,7 @@ const NavMain = (props) => {
           <img src={data.acf.icon} alt={data.name} />
           <b>{data.name}</b>
         </div>
-        <img src="https://uat-gummybears.com/wp/wp-content/uploads/2020/06/btn_env@2x.png" alt={data.name} />
+        <img src="https://www.gyssa.com/wp/wp-content/uploads/2020/06/btn_env@2x.png" alt={data.name} />
       </Link>
     </div>));
   return (
@@ -233,7 +198,6 @@ const NavMenuLinks = (props) => {
   if (!props.industriesList || !props.industriesList.length || !props.industriesList.length === 0) return null;
   if (!props.tecnologiesType || !props.tecnologiesType.length || !props.tecnologiesType.length === 0) return null;
   const getData = props.layoutData && props.layoutData.SeccionesHeader && props.layoutData.SeccionesHeader[0] && props.layoutData.SeccionesHeader[0].Hijos && props.layoutData.SeccionesHeader[0].Hijos[0];
-  // const output = [];
   const MenuSoluciones = props.solutionsList.map((data, key) => (
     <li>
       <Link key={key} to={`/soluciones/${data.slug}`} onClick={props.handleMobileMenuClick}>
@@ -289,7 +253,6 @@ const NavMenuLinks = (props) => {
             </ul>
           </ul>
         );
-        // return (<li ><Link to={`/${data.slug}`} onMouseEnter={props.handleMenuIndustria} onClick={props.handleMobileMenuClick}>{data.name}</Link></li>);
       case 'tecnologia':
         return (
           <ul className="nav--mobilemenu-links" key={key}>
@@ -304,7 +267,6 @@ const NavMenuLinks = (props) => {
             </ul>
           </ul>
         );
-        // return (<li key={key}><Link to={`/${data.slug}/sap`} onMouseEnter={props.handleMenuTecnologia} onClick={props.handleMobileMenuClick}>{data.name}</Link></li>);
       default:
         return (
           <ul className="nav--mobilemenu-links" key={key}>
@@ -319,7 +281,6 @@ const NavMenuLinks = (props) => {
             </ul>
           </ul>
         );
-        // return (<li key={key}><Link to="/soluciones" onMouseEnter={props.handleMenuSoluciones} onClick={props.handleMobileMenuClick}>{data.name}</Link></li>);
     }
   });
 
@@ -331,11 +292,6 @@ const NavMenuLinks = (props) => {
 
   const MenuPrincipal = props.menuData.map((data, key) => {
     if (data.url === '/products') {
-      /* if (slugActive.includes('soluciones') || slugActive.includes('tecnologia') || slugActive.includes('industria') || slugActive.includes('producto')) {
-        return (<li key={key}><a className="nav--links-trigger nav--link active" onClick={props.handleMenuLinks} >{data.title.toUpperCase()}</a></li>);
-      } else {
-        return (<li key={key}><a className="nav--mobilemenu-title" onClick={props.handleMenuLinks} >{data.title.toUpperCase()}</a></li>);
-      } */
       return (
         <div>
           <a key={key} className="nav--mobilemenu-title" onClick={props.handleSubmenuMobile}>
@@ -360,9 +316,9 @@ const NavMenuLinks = (props) => {
         url = `/paginas/${data.slug}`;
       }
     } else if (data.url.includes('blog')) {
-      url = data.url.replace('https://uat-gummybears.com/wp/', '/');
+      url = data.url.replace('https://www.gyssa.com/wp/', '/');
     } else {
-      url = data.url.replace('https://uat-gummybears.com/wp/', '/paginas/');
+      url = data.url.replace('https://www.gyssa.com/wp/', '/paginas/');
     }
     return (<Link key={key} to={url} onClick={props.handleMobileMenuClick} className="nav--mobilemenu-title" >{data.title.toUpperCase()}<span className="mobile-icon fa-angle-right" /></Link>);
   });
@@ -504,19 +460,6 @@ NavMenuLinks.propTypes = {
   handleMenuLinks: PropTypes.func.isRequired,
   handleMobileMenuClick: PropTypes.func.isRequired,
   menuData: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
-  layoutData: PropTypes.shape({
-    Eslogan: PropTypes.string,
-    MiClaro: PropTypes.string,
-    SeccionesHeader: PropTypes.array,
-  }),
-};
-
-NavMenuLinks.defaultProps = {
-  layoutData: {
-    Eslogan: '',
-    MiClaro: '',
-    SeccionesHeader: {},
-  },
 };
 
 export default UI;

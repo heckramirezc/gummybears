@@ -10,8 +10,6 @@ import request from '../../bin/httpRequest';
 // Components
 import DefaultHeader from './../../components/Headers/DefaultHeader';
 import DefaultFooter from './../../components/Footer/DefaultFooter';
-import CheckoutHeader from './../../components/Headers/CheckoutHeader';
-import CheckoutFooter from './../../components/Footer/CheckoutFooter';
 import { solutionsList, industriesList, tecnologiesType } from './../../store/Catalog/Catalog';
 
 class DefaultLayout extends Component {
@@ -126,11 +124,11 @@ class DefaultLayout extends Component {
   render() {
     return (
       <div id="layout-default">
-        {(this.context.router.route.location.pathname.match(/\/checkout/) ? <CheckoutHeader /> : <DefaultHeader layoutdata={this.state.layout} socialdata={this.state.social_media} menudata={this.state.menu_principal} solutionsList={this.state.solutionsList} industriesList={this.state.industriesList} tecnologiesType={this.state.tecnologiesType} productsType={this.state.taxonomias_productos} />)}
+        <DefaultHeader layoutdata={this.state.layout} socialdata={this.state.social_media} menudata={this.state.menu_principal} solutionsList={this.state.solutionsList} industriesList={this.state.industriesList} tecnologiesType={this.state.tecnologiesType} productsType={this.state.taxonomias_productos} />
         <div id="initial">
           {this.props.children}
         </div>
-        {(this.context.router.route.location.pathname.match(/\/checkout/) ? <CheckoutFooter layoutdata={this.state.layout} /> : <DefaultFooter layoutdata={this.state.layout} socialdata={this.state.social_media} />)}
+        <DefaultFooter layoutdata={this.state.layout} socialdata={this.state.social_media} />
       </div>
     );
   }

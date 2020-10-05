@@ -2,16 +2,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-// import $ from 'jquery';
-
-// utilities
-// import $ from 'jquery';
-// import Slider from 'react-slick'; // https://github.com/akiran/react-slick
-
-// Components
-// import { ArrowPrev, ArrowNext } from '../../helpers/svg';
-
-// const isIE = (navigator.userAgent.indexOf('MSIE') !== -1 || navigator.appVersion.indexOf('Trident/') > -1);
 
 const Solutions = ({ solutionsList }) => {
   if (!solutionsList || !solutionsList.length || !solutionsList.length === 0) return null;
@@ -51,7 +41,6 @@ const Tecnologies = ({ tecnologiesList, tecnologiesType }) => {
   slugs = slugs.filter(x => x !== '/');
   const tecnologieType = tecnologiesType.find(x => x.slug === slugs[slugs.length - 1]);
   const tecnologies = tecnologiesList.filter(x => x.tecnologia[0] === tecnologieType.id);
-  console.log('tecnologies', tecnologies);
   const Tecnologias = tecnologies.map((tecnologia, key) => {
     if (slugs[slugs.length - 1] === 'sap') {
       return (
@@ -83,10 +72,6 @@ const UI = ({ solutionsList, industriesList, productsList, tecnologiesType }) =>
   slugs = slugs.filter(x => x !== '/');
   const categoryName = slugs[slugs.length - 1].toUpperCase();
   const categories = [['soluciones', 'SOLUCIONES'], ['industria', 'INDUSTRIA'], ['tecnologia/sap', 'TECNOLOGÍA']];
-  /* categories = categories.filter(x => x[0] !== slugs[slugs.length - 1]);
-  if (typeof slugs[slugs.length - 2] !== 'undefined' && slugs[slugs.length - 2] === 'tecnologia') {
-    categories = categories.filter(x => x[0] !== 'tecnologia/sap');
-  } */
   const Categorias = categories.map((categoria, key) => {
     if (categoria[0] === slugs[slugs.length - 1]) {
       return (
@@ -159,14 +144,6 @@ const UI = ({ solutionsList, industriesList, productsList, tecnologiesType }) =>
 
 UI.propTypes = {
   solutionsList: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
-  indexPage: PropTypes.shape({
-    initPage: PropTypes.number,
-    endPage: PropTypes.number,
-  }),
-};
-
-UI.defaultProps = {
-  indexPage: {},
 };
 
 export default UI;

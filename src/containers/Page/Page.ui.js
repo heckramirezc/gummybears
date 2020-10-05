@@ -5,18 +5,6 @@ import PropTypes from 'prop-types';
 import ReCAPTCHA from 'react-google-recaptcha';
 
 import Notification from '../Views/Notification/Notification.ui';
-// import { Element } from 'react-scroll';
-
-// import $ from 'jquery';
-
-// utilities
-// import $ from 'jquery';
-// import Slider from 'react-slick'; // https://github.com/akiran/react-slick
-
-// Components
-// import { ArrowPrev, ArrowNext } from '../../helpers/svg';
-
-// const isIE = (navigator.userAgent.indexOf('MSIE') !== -1 || navigator.appVersion.indexOf('Trident/') > -1);
 
 const Layout1 = (props) => {
   let Seccion1 = '';
@@ -62,7 +50,6 @@ const Layout1 = (props) => {
     );
   }
   if (props.pagina.acf.section_3 !== false) {
-    console.log('props.pageElements===> ', props.pageElements);
     const pageElements = props.pageElements.filter(x => x.page_elements[0] === props.pagina.acf.section_3.items_section);
     if (pageElements && pageElements.length && pageElements.length > 0) {
       const Items = pageElements.map((elemento, key) => (
@@ -90,7 +77,7 @@ const Layout1 = (props) => {
         <header className="catalog--layout-1-section-4-header">
           <div>
             <p>{props.pagina.acf.section_4.title_section}</p>
-            <Link to={`/paginas/${props.pagina.acf.section_4.url.url.replace('http://uat-gummybears.com/wp/', '').replace('/', '')}`}>
+            <Link to={`/paginas/${props.pagina.acf.section_4.url.url.replace('https://www.gyssa.com/wp/', '').replace('/', '')}`}>
               <span>{props.pagina.acf.section_4.url.title}</span>
             </Link>
           </div>
@@ -103,7 +90,7 @@ const Layout1 = (props) => {
       <section className="catalog--layout-1-section-5">
         <h2>{props.pagina.acf.section_5.title_section}</h2>
         <div dangerouslySetInnerHTML={{ __html: props.pagina.acf.section_5.description }} />
-        <Link to={`/paginas/${props.pagina.acf.section_5.url.url.replace('http://uat-gummybears.com/wp/', '').replace('/', '')}`}>
+        <Link to={`/paginas/${props.pagina.acf.section_5.url.url.replace('https://www.gyssa.com/wp/', '').replace('/', '')}`}>
           <span>{props.pagina.acf.section_5.url.title}</span>
         </Link>
       </section>
@@ -257,7 +244,7 @@ const Layout2 = (props) => {
             <span>ENVIAR</span>
           </button>
           <ReCAPTCHA
-            sitekey="6Lf0BsYZAAAAAOL-VNCetxkKogK_8jkSphNPsFtA"
+            sitekey="6LfnPNMZAAAAAIausbz-YtRYlx9NLmlp0S32ofHW"
             size="invisible"
             ref={props.reCaptchaRef}
             onChange={props.handleChangeReCaptcha}
@@ -371,7 +358,7 @@ const Layout2 = (props) => {
             <span>ENVIAR</span>
           </button>
           <ReCAPTCHA
-            sitekey="6Lf0BsYZAAAAAOL-VNCetxkKogK_8jkSphNPsFtA"
+            sitekey="6LfnPNMZAAAAAIausbz-YtRYlx9NLmlp0S32ofHW"
             size="invisible"
             ref={props.reCaptchaRef}
             onChange={props.handleChangeReCaptcha}
@@ -392,7 +379,6 @@ const Layout2 = (props) => {
                   placeholder="Ingrese su nombre"
                   name="nombre"
                   id="nombre"
-                  // maxLength={30}
                   onChange={(e) => { props.handleChange(e); }}
                 />
               </label>
@@ -405,7 +391,6 @@ const Layout2 = (props) => {
                   placeholder="Ingrese sus apellidos"
                   name="apellidos"
                   id="apellidos"
-                  // maxLength={30}
                   onChange={(e) => { props.handleChange(e); }}
                 />
               </label>
@@ -418,7 +403,6 @@ const Layout2 = (props) => {
                   placeholder="Ingrese su número de teléfono"
                   name="telefono"
                   id="telefono"
-                  // maxLength={30}
                   onChange={(e) => { props.handleChange(e); }}
                 />
               </label>
@@ -444,7 +428,6 @@ const Layout2 = (props) => {
                   placeholder="Ingrese el nombre de la empresa"
                   name="empresa"
                   id="empresa"
-                  // maxLength={30}
                   onChange={(e) => { props.handleChange(e); }}
                 />
               </label>
@@ -457,7 +440,6 @@ const Layout2 = (props) => {
                   placeholder="Ingrese el cargo que desempeña"
                   name="cargo"
                   id="cargo"
-                  // maxLength={30}
                   onChange={(e) => { props.handleChange(e); }}
                 />
               </label>
@@ -471,29 +453,10 @@ const Layout2 = (props) => {
                   placeholder="Ingrese su país"
                   name="pais"
                   id="pais"
-                  // maxLength={8}
-                  // onKeyPress={numberChars}
-                  // value={shippingAddress.phone_1 || ''}
                   onChange={(e) => { props.handleChange(e); }}
                 />
               </label>
             </div>
-            {/* <div className="full">
-              <p>Mensaje</p>
-              <label htmlFor="s_phone_1">
-                <textarea
-                  type="text"
-                  tabIndex={0}
-                  placeholder="Ingrese su mensaje"
-                  // name="s_phone_1"
-                  // id="s_phone_1"
-                  // maxLength={8}
-                  // onKeyPress={numberChars}
-                  // value={shippingAddress.phone_1 || ''}
-                  // onChange={(e) => { handleChange(e, 'form_shipping_info.phone_1'); }}
-                />
-              </label>
-            </div> */}
           </section>
         </div>
         <aside className="catalog--continue">
@@ -501,7 +464,7 @@ const Layout2 = (props) => {
             <span>ENVIAR</span>
           </button>
           <ReCAPTCHA
-            sitekey="6Lf0BsYZAAAAAOL-VNCetxkKogK_8jkSphNPsFtA"
+            sitekey="6LfnPNMZAAAAAIausbz-YtRYlx9NLmlp0S32ofHW"
             size="invisible"
             ref={props.reCaptchaRef}
             onChange={props.handleChangeReCaptcha}
@@ -532,36 +495,12 @@ const Layout2 = (props) => {
   );
 };
 
-// const closeThis = () => {
-//   $(".catalog--quiz").hide();
-// }
-// const callQuiz = () => {
-//   console.log('Link to quiz');
-// }
-
-// const CatalogQuiz = () => (
-//   <div className="catalog--quiz fixed">
-//     <section>
-//       <h6>¡Encuenta tu equipo y plan ideal!</h6>
-//       <p>Lo único que necesitas es contestar algunas preguntas</p>
-//       <div>
-//         <a href="#" onClick={callQuiz} role="button" tabIndex="-1">
-//           <span>Iniciar</span>
-//         </a>
-//       </div>
-//       <i className="fa fa-times" onClick={closeThis} role="button" tabIndex="-1" />
-//     </section>
-//   </div>
-// );
-
 const UI = (props) => {
   let imagenDestacada = '';
   if (!props.pagesList || !props.pagesList.length || !props.pagesList.length === 0) return null;
   let slugs = window.location.pathname.split(/(\/)/g);
   slugs = slugs.filter(x => x !== '/');
-  console.log('slugs ', slugs);
   const pagina = props.pagesList.find(x => x.slug === (slugs[slugs.length - 1] === '' ? slugs[slugs.length - 2] : slugs[slugs.length - 1]));
-  console.log('pagina ', pagina);
   if (!pagina) return null;
 
   if (pagina.acf.page_layout === 'Diseño 1' && pagina.acf.section_1 !== false && pagina.acf.section_1.show_background === true) {
@@ -591,12 +530,6 @@ const UI = (props) => {
 
 
 UI.propTypes = {
-  eSpot: PropTypes.shape({}),
-  indexPage: PropTypes.shape({
-    initPage: PropTypes.number,
-    endPage: PropTypes.number,
-  }),
-  itemsPerPageValue: PropTypes.number.isRequired, // eslint-disable-line
   handleContactoSubmit: PropTypes.func.isRequired,
   handleTrabajeSubmit: PropTypes.func.isRequired,
   handleSociosSubmit: PropTypes.func.isRequired,
@@ -604,8 +537,6 @@ UI.propTypes = {
 };
 
 UI.defaultProps = {
-  eSpot: {},
-  indexPage: {},
   error: '',
 };
 

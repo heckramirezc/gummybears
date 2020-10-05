@@ -2,12 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-// components
-import Cross from '../../components/Cross/Cross';
-import ProductMain from './ProductMain';
-import ProductSpecs from './ProductSpecs.ui';
-import ProductInfo from './ProductInfo.ui';
-
 const UI = (props) => {
   if (!props.productsList || !props.productsList.length || !props.productsList.length === 0) return null;
   let slugs = window.location.pathname.split(/(\/)/g);
@@ -36,25 +30,6 @@ const UI = (props) => {
     );
   });
 
-  const holamundo = (
-    <main>
-      <section className="product">
-        <br />Hola Mundo!
-        <div dangerouslySetInnerHTML={{ __html: producto.content.rendered }} />
-        <ProductMain allProps={props} product={props.product} color={props.color} size={props.size} images={props.images} />
-        <ProductSpecs product={props.product.data} />
-        <ProductInfo
-          product={props.product.data}
-          handleTabs={props.handleTabs}
-          handleBlocks={props.handleBlocks}
-          handleSwitch={props.handleSwitch}
-          pathName={props.pathname}
-        />
-      </section>
-      <Cross slug={props.slug} />
-    </main>
-  );
-  console.log(holamundo);
   return (
     <main className="product">
       <section className="checkout--content">
@@ -86,14 +61,6 @@ UI.propTypes = {
   product: PropTypes.shape({
     data: PropTypes.arrayOf(PropTypes.shape({})),
   }),
-  color: PropTypes.string,
-  size: PropTypes.string,
-  images: PropTypes.arrayOf(PropTypes.string),
-  handleTabs: PropTypes.func.isRequired,
-  handleBlocks: PropTypes.func.isRequired,
-  handleSwitch: PropTypes.func.isRequired,
-  pathname: PropTypes.string.isRequired,
-  slug: PropTypes.string,
   productsList: PropTypes.arrayOf(PropTypes.shape({})),
 };
 
@@ -101,10 +68,6 @@ UI.defaultProps = {
   product: {
     data: {},
   },
-  color: '',
-  size: '',
-  images: [],
-  slug: '',
   productsList: [],
 };
 

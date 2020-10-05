@@ -3,25 +3,11 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import {
   FacebookShareButton,
-  // FacebookMessengerShareButton,
-  // FacebookMessengerIcon,
-  // LinkedinShareButton,
   TwitterShareButton,
   PinterestShareButton,
-  // WhatsappShareButton,
-  // EmailShareButton,
-  // TumblrShareButton,
-  // ViberShareButton,
-  // LineShareButton,
   FacebookIcon,
   TwitterIcon,
-  // LinkedinIcon,
   PinterestIcon,
-  // WhatsappIcon,
-  // TumblrIcon,
-  // EmailIcon,
-  // ViberIcon,
-  // LineIcon,
 } from 'react-share';
 
 import Notification from '../Views/Notification/Notification.ui';
@@ -106,11 +92,9 @@ const UI = (props) => {
 
   const FormularioNewsletter = (
     <form onSubmit={props.handleSubmit} name="newsletterform">
-      {/* <div className="checkout--address-form"> */}
       <div>
         <h3>Suscríbase a nuestro</h3>
         <h3>Newsletter</h3>
-        {/* <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et doloreundefined</p> */}
         <label htmlFor="email">
           <input
             type="email"

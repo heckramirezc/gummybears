@@ -7,19 +7,12 @@ import CookieConsent from 'react-cookie-consent';
 import { isMobile } from 'react-device-detect';
 import Carousel from 'react-grid-carousel';
 
-// import $ from 'jquery';
-
-// utilities
-// import $ from 'jquery';
 import Slider from 'react-slick'; // https://github.com/akiran/react-slick
 
 // Components
 import { ArrowPrev, ArrowNext } from '../../helpers/svg';
 
-// const isIE = (navigator.userAgent.indexOf('MSIE') !== -1 || navigator.appVersion.indexOf('Trident/') > -1);
-
-const CatalogBanner = ({ eSpot }) => {
-  console.log(eSpot);
+const CatalogBanner = () => {
   const bannerSettings = {
     dots: false,
     autoplay: true,
@@ -34,45 +27,44 @@ const CatalogBanner = ({ eSpot }) => {
   };
   return (
     <section className="catalog--banner">
-      {/* <img src="https://uat-gummybears.com/wp/wp-content/uploads/2020/06/Enmascarar-grupo-1920.png" alt="" /> */}
       <Slider {...bannerSettings}>
         <div>
           <picture>
             <Link to="/producto/microsoft-dynamics-365-unified-op">
-              <img src="https://uat-gummybears.com/wp/wp-content/uploads/2020/08/Dynamics-365-Unified-Operation.jpg" alt="" />
+              <img src="https://www.gyssa.com/wp/wp-content/uploads/2020/08/Dynamics-365-Unified-Operation.jpg" alt="" />
             </Link>
           </picture>
         </div>
         <div>
           <picture>
             <Link to="/producto/sap-analytics-cloud">
-              <img src="https://uat-gummybears.com/wp/wp-content/uploads/2020/08/SAP-Analytics-Cloud.jpg" alt="" />
+              <img src="https://www.gyssa.com/wp/wp-content/uploads/2020/08/SAP-Analytics-Cloud.jpg" alt="" />
             </Link>
           </picture>
         </div>
         <div>
           <picture>
             <Link to="/producto/sap-cloud-platform">
-              <img src="https://uat-gummybears.com/wp/wp-content/uploads/2020/08/SAP-Data-Warehouse-Cloud.jpg" alt="" />
+              <img src="https://www.gyssa.com/wp/wp-content/uploads/2020/08/SAP-Data-Warehouse-Cloud.jpg" alt="" />
             </Link>
           </picture>
         </div>
         <div>
           <picture>
             <Link to="/producto/sap-master-data-governance">
-              <img src="https://uat-gummybears.com/wp/wp-content/uploads/2020/08/SAP-Master-Data-Governance.jpg" alt="" />
+              <img src="https://www.gyssa.com/wp/wp-content/uploads/2020/08/SAP-Master-Data-Governance.jpg" alt="" />
             </Link>
           </picture>
         </div>
         <div>
           <picture>
             <Link to="/producto/singular-sap-business-one">
-              <img src="https://uat-gummybears.com/wp/wp-content/uploads/2020/08/Singular-SAP-Business-One.jpg" alt="" />
+              <img src="https://www.gyssa.com/wp/wp-content/uploads/2020/08/Singular-SAP-Business-One.jpg" alt="" />
             </Link>
           </picture>
         </div>
       </Slider>
-      <img className="catalog--banner-recorte" src="https://uat-gummybears.com/wp/wp-content/uploads/2020/08/RECORTE-DE-BANNER.png" alt="" />
+      <img className="catalog--banner-recorte" src="https://www.gyssa.com/wp/wp-content/uploads/2020/08/RECORTE-DE-BANNER.png" alt="" />
       {/* <header className="cart--summary-form-quick">
         <h1>CONTACTO RÁPIDO</h1> */}
       {/* <form onSubmit={handleSubmit} name="addresses"> */}
@@ -212,28 +204,6 @@ const ClientBanner = ({ clientes, categoriasClientes }) => {
   );
 };
 
-// const closeThis = () => {
-//   $(".catalog--quiz").hide();
-// }
-// const callQuiz = () => {
-//   console.log('Link to quiz');
-// }
-
-// const CatalogQuiz = () => (
-//   <div className="catalog--quiz fixed">
-//     <section>
-//       <h6>¡Encuenta tu equipo y plan ideal!</h6>
-//       <p>Lo único que necesitas es contestar algunas preguntas</p>
-//       <div>
-//         <a href="#" onClick={callQuiz} role="button" tabIndex="-1">
-//           <span>Iniciar</span>
-//         </a>
-//       </div>
-//       <i className="fa fa-times" onClick={closeThis} role="button" tabIndex="-1" />
-//     </section>
-//   </div>
-// );
-
 const UI = (props) => {
   if (!props.servicesList || !props.servicesList.length || !props.servicesList.length === 0) return null;
   if (!props.postsList || !props.postsList.length || !props.postsList.length === 0) return null;
@@ -285,41 +255,6 @@ const UI = (props) => {
   });
 
   let ServiciosView = '';
-  // const servicesSettings = {
-  //   cols: 1,
-  //   rows: 2,
-  //   gap: 0,
-  //   loop: false,
-  //   showDots: true,
-  //   prevArrow: <ArrowPrev />,
-  //   nextArrow: <ArrowNext />,
-  //   responsiveLayout: {[
-  //     {
-  //       breakpoint: 760,
-  //       cols: 1,
-  //       rows: 2,
-  //       gap: 0,
-  //       loop: false,
-  //       showDots: true,
-  //       prevArrow: <ArrowPrev />,
-  //       nextArrow: <ArrowNext />,
-  //     },
-  //     {
-  //       breakpoint: 990,
-  //       cols: 2
-  //     }
-  //   ]},
-  //   responsiveLayout: [{
-  //     breakpoint: 760,
-  //     cols: 1,
-  //     rows: 2,
-  //     gap: 0,
-  //     loop: false,
-  //     showDots: true,
-  //     prevArrow: <ArrowPrev />,
-  //     nextArrow: <ArrowNext />,
-  //   }],
-  // };
   if (isMobile) {
     ServiciosView = (
       <Carousel
@@ -343,10 +278,10 @@ const UI = (props) => {
   return (
     <main>
       <section className="catalog">
-        <CatalogBanner eSpot={props.eSpot} />
+        <CatalogBanner />
         <Element id="servicios" name="servicios" className="catalog--header-servicios-container">
           <div className="catalog--header-servicios">
-            <img src="https://uat-gummybears.com/wp/wp-content/uploads/2020/07/bk_servicios@2x.png" alt="" />
+            <img src="https://www.gyssa.com/wp/wp-content/uploads/2020/07/bk_servicios@2x.png" alt="" />
             <h1>SERVICIOS</h1>
           </div>
         </Element>
@@ -362,7 +297,7 @@ const UI = (props) => {
                   <h3>SOLUCIONES</h3>
                   <p>Conozca nuestras soluciones enfocadas a cubrir las necesidades de cada área de su empresa y potencialice la productividad de sus colaboradores.</p>
                 </div>
-                <img src="https://uat-gummybears.com/wp/wp-content/uploads/2020/06/btn_env@2x.png" alt="" />
+                <img src="https://www.gyssa.com/wp/wp-content/uploads/2020/06/btn_env@2x.png" alt="" />
               </a>
             </Link>
           </div>
@@ -373,7 +308,7 @@ const UI = (props) => {
                   <h3>INDUSTRIA</h3>
                   <p>Conviértase en la empresa líder en su giro de negocios y comience el viaje de la transformación digital con soluciones que se adaptan a su empresa e industria.</p>
                 </div>
-                <img src="https://uat-gummybears.com/wp/wp-content/uploads/2020/06/btn_env@2x.png" alt="" />
+                <img src="https://www.gyssa.com/wp/wp-content/uploads/2020/06/btn_env@2x.png" alt="" />
               </a>
             </Link>
           </div>
@@ -384,7 +319,7 @@ const UI = (props) => {
                   <h3>TECNOLOGÍA</h3>
                   <p>Explore las soluciones integrales de nuestros partners líderes en la Industria tecnológica y encuentre la opción que se adapte mejor a su empresa.</p>
                 </div>
-                <img src="https://uat-gummybears.com/wp/wp-content/uploads/2020/06/btn_env@2x.png" alt="" />
+                <img src="https://www.gyssa.com/wp/wp-content/uploads/2020/06/btn_env@2x.png" alt="" />
               </a>
             </Link>
           </div>
@@ -400,8 +335,8 @@ const UI = (props) => {
             </div>
           </div>
           <div className="grid-item-image">
-            <img src="https://uat-gummybears.com/wp/wp-content/uploads/2020/08/iSAPpartner@2x.png" alt="" />
-            <img src="https://uat-gummybears.com/wp/wp-content/uploads/2020/08/iMSpartner@2x.png" alt="" />
+            <img src="https://www.gyssa.com/wp/wp-content/uploads/2020/08/iSAPpartner@2x.png" alt="" />
+            <img src="https://www.gyssa.com/wp/wp-content/uploads/2020/08/iMSpartner@2x.png" alt="" />
           </div>
         </div>
         <br />
@@ -442,7 +377,7 @@ const UI = (props) => {
         </div> */}
         <div className="catalog--module-blog">
           <Link to="/blog" className="catalog--module-blog--banner">
-            <img src="http://uat-gummybears.com/wp/wp-content/uploads/2020/09/bannerBlog@2x.png" alt="" />
+            <img src="https://www.gyssa.com/wp/wp-content/uploads/2020/09/bannerBlog@2x.png" alt="" />
             <div className="catalog--module-blog--contenido">
               <span>NUESTRO BLOG</span>
               <div className="catalog--grid-container-blog-categories--banner">
@@ -477,7 +412,6 @@ const UI = (props) => {
 
 
 UI.propTypes = {
-  eSpot: PropTypes.shape({}),
   indexPage: PropTypes.shape({
     initPage: PropTypes.number,
     endPage: PropTypes.number,
@@ -486,16 +420,7 @@ UI.propTypes = {
 };
 
 UI.defaultProps = {
-  eSpot: {},
   indexPage: {},
-};
-
-CatalogBanner.propTypes = {
-  eSpot: PropTypes.shape({}),
-};
-
-CatalogBanner.defaultProps = {
-  eSpot: {},
 };
 
 export default UI;
