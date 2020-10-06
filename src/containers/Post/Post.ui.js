@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import {
   FacebookShareButton,
+  LinkedinShareButton,
   TwitterShareButton,
   PinterestShareButton,
   FacebookIcon,
   TwitterIcon,
+  LinkedinIcon,
   PinterestIcon,
 } from 'react-share';
 
@@ -133,10 +135,17 @@ const UI = (props) => {
                 <div className="product--post-info-content-share">
                   <p>{`Escrito por: ${articulo.acf.autor.nickname}`}</p>
                   <div className="product--post-info-content-share-networks">
-                    <FacebookShareButton
+                    <LinkedinShareButton
                       url={String(window.location)}
                       quote={articulo.title.rendered}
                       className="share-button"
+                    >
+                      <LinkedinIcon size={32} round />
+                    </LinkedinShareButton>
+                    <FacebookShareButton
+                      url={String(window.location)}
+                      quote={articulo.title.rendered}
+                      className="product--post-info-content-share-button"
                     >
                       <FacebookIcon size={32} round />
                     </FacebookShareButton>
