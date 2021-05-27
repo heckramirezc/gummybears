@@ -414,8 +414,8 @@ UI.propTypes = {
 NavTop.propTypes = {
   handleClicks: PropTypes.func.isRequired,
   layoutData: PropTypes.shape({
-    Menus: PropTypes.array,
-    Secciones: PropTypes.array,
+    // Menus: PropTypes.array,
+    // Secciones: PropTypes.array,
   }),
 };
 
@@ -438,7 +438,7 @@ NavMain.propTypes = {
   handleMenuTecnologia: PropTypes.func.isRequired,
   layoutData: PropTypes.shape({
     MiClaro: PropTypes.string,
-    SeccionesHeader: PropTypes.array,
+    // SeccionesHeader: PropTypes.array,
   }),
   socialData: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   menuData: PropTypes.arrayOf(PropTypes.shape({})).isRequired,

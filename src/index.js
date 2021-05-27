@@ -116,12 +116,14 @@ DefaultLayout.defaultProps = {
   gtmId: process.env.TAG,
 }; */
 
+ReactGA.initialize(process.env.GA);
+
 history.listen((location) => {
   ReactGA.set({ page: location.pathname });
   ReactGA.pageview(location.pathname);
 });
 
-ReactGA.initialize(process.env.GA);
+
 // TagManager.initialize(tagManagerArgs);
 
 render(App, document.getElementById('app'));

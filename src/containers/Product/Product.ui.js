@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet';
 
 const UI = (props) => {
   if (!props.productsList || !props.productsList.length || !props.productsList.length === 0) return null;
@@ -29,9 +30,11 @@ const UI = (props) => {
       </div>
     );
   });
-
+  console.log(producto.yoast_title);
+  console.log(producto.yoast_meta);
   return (
     <main className="product">
+      <Helmet title={producto.title.rendered} />
       <section className="checkout--content">
         <section className="checkout--address">
           <section className="product--main">
