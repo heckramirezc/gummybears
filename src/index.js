@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { render } from 'react-dom';
 import { Router, Route, Switch } from 'react-router-dom';
 import { CookiesProvider } from 'react-cookie';
-// import TagManager from 'react-gtm-module';
+import TagManager from 'react-gtm-module';
 import ReactGA from 'react-ga';
 import { createBrowserHistory } from 'history';
 
@@ -112,9 +112,9 @@ DefaultLayout.defaultProps = {
   component: () => {},
 };
 
-/* const tagManagerArgs = {
+const tagManagerArgs = {
   gtmId: process.env.TAG,
-}; */
+};
 
 ReactGA.initialize(process.env.GA);
 
@@ -124,7 +124,7 @@ history.listen((location) => {
 });
 
 
-// TagManager.initialize(tagManagerArgs);
+TagManager.initialize(tagManagerArgs);
 
 render(App, document.getElementById('app'));
 
