@@ -251,30 +251,6 @@ background-color: white; position: fixed; top: 0; left: 0; right: 0; z-index: 9;
     @include desk {width: 24em; padding: 0; box-shadow: 8px 5px 12px 0px #E3E7EA;}
   }
 
-  &--miclaro {display: none; height: 100%; @include padbox(0.5em); background-color: $wine; color: white; margin-left: 0.5em; height: 51px; position: relative;
-    @include tablet {display: inline-block; font-size: 1em; padding: 0.95rem 1rem; line-height: 1.4; height: 100%;}
-    // @include desk {}
-    span { width: 100%; position: relative; transform: translateY(-6px);
-      &::after { content: "autogestion"; position: absolute; left: 0; right: 0; top: 90%; text-align: center; font-size: 0.7rem; }
-    }
-    &:hover, &.active {background-color: white; color: $wine;}
-    // &::after {content: "autogestión"; font-size: 60%; display: inline-block; width: 100%; text-align: center;
-    //   position: absolute; left: 0; right: 0; top: 64%;
-    // }
-    // &-logout { @include padbox(0.7rem); font-size: 1.6rem; position: relative; color: white; background-color: $wine; display: none;
-    //   @include tablet { display: inline-block; margin-left: 0.5rem; }
-    //   @include desk { margin-left: 0; }
-    //   &::before { content: "\f08b"; font-family: $icon; }
-    //   &::after { content: "cerrar sesión"; font-size: 0.8rem; @include padblock(0.5rem); background-color: white; color: $wine; text-align: center;
-    //     position: absolute; top: 100%; right: 3rem; width: 6rem; visibility: hidden; opacity: 0; @include trans;
-    //   }
-    //   &:hover { background-color: white; color: $wine;
-    //     &::after {visibility: visible; opacity: 1; right: 0; @include trans;}
-    //   }
-    // }
-    // &-logout { display: inline; visibility: hidden;}
-  }
-
   &--trigger {
     margin-top: 0.5em;
     @include flexbox;
@@ -584,11 +560,6 @@ background-color: white; position: fixed; top: 0; left: 0; right: 0; z-index: 9;
       }
       background-color: $red; color: white; font-size: 1.3em;
       &.wine {background-color: $wine;
-        &.miclaro {
-          span:first-of-type { position: relative;
-            &::after { content: "autogestion"; position: absolute; left: 110%; top: 0.45rem; text-align: left; font-size: 0.7rem; }
-          }
-        }
       }
       span {display: inline-block;
         svg {height: 0.9em; width: auto; display: block;}
@@ -793,11 +764,6 @@ background-color: white; position: fixed; top: 0; left: 0; right: 0; z-index: 9;
       }
       background-color: $red; color: white; font-size: 1.3em;
       &.wine {background-color: $wine;
-        &.miclaro {
-          span:first-of-type { position: relative;
-            &::after { content: "autogestion"; position: absolute; left: 110%; top: 0.45rem; text-align: left; font-size: 0.7rem; }
-          }
-        }
       }
       span {display: inline-block;
         svg {height: 0.9em; width: auto; display: block;}

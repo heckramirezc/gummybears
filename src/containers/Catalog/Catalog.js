@@ -15,12 +15,14 @@ class ProductList extends Component {
       categoriesList: [],
       postsList: [],
       clientes: [],
+      banners: [],
       categoriasClientes: [],
     });
   }
 
   componentDidMount() {
     document.getElementById('initial').scrollIntoView(true);
+    this.fetchBanners();
     this.servicesList();
     this.categoriesList();
     this.postsList();
@@ -56,6 +58,25 @@ class ProductList extends Component {
   postsList() {
     postsList().then((res) => {
       this.setState({ postsList: res.data });
+    });
+  }
+
+  fetchBanners() {
+    const options = {
+      method: 'GET',
+      url: `${process.env.SERVICE}/settings?per_page=100`,
+    };
+    request.genericHandler(options).then((res) => {
+      let callback = { action: 'banners', success: false };
+      if (!res.error) {
+        const data = _.sortBy(res.data.data.filter(x => x.banners.length !== 0), val => parseInt(val.acf.posicion, 10));
+        callback = Object.assign({}, callback, { data, success: true });
+        this.setState({ banners: callback.data });
+      } else {
+        console.log('error', res.error);
+        callback = Object.assign({}, callback, { error: res.error, success: false });
+      }
+      return callback;
     });
   }
 
@@ -97,6 +118,7 @@ class ProductList extends Component {
   render() {
     return (
       <UI
+        banners={this.state.banners}
         servicesList={this.state.servicesList}
         postsList={this.state.postsList}
         categoriesList={this.state.categoriesList}

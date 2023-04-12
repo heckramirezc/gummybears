@@ -366,7 +366,7 @@ const Layout2 = (props) => {
         </aside>
       </form>
     );
-  } else if (props.pagina.acf.form.post_title === 'Formulario de Unete como Socio') {
+  } else if (props.pagina.acf.form.post_title === 'Formulario de Unase como Socio') {
     Formulario = (
       <form onSubmit={props.handleSociosSubmit} name="servicesform">
         <div className="checkout--address-form">

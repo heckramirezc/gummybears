@@ -21,7 +21,7 @@
 | es6 | Yes | Mejorar calidad de codigo |
 
 
-To run the project you must install [Node.js](https://nodejs.org/)
+To run the project you must install [Node.js v12.10.0](https://nodejs.org/)
 
 ### You can run this project using npm:
 ```sh
@@ -51,3 +51,9 @@ To test build process, run:
 ```sh
 $ docker run -it --rm --volume=`pwd`:/localDebugRepo --workdir="/localDebugRepo" --memory=1g --memory-swap=1g --entrypoint=/bin/bash docker.edgebound.net/builders/node-builder:latest
 ```
+## You build this project using npm:
+```sh
+$ npm run build
+```
+
+Use public folder to upload files to web server

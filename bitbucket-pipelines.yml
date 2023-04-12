@@ -23,5 +23,5 @@ pipelines:
           - cp /opt/wcaas/bin/* target/codedeploy/scripts/
           - cp appspec.yml target/codedeploy/appspec.yml
           - cd target/codedeploy
-          - tar -cvzf ../render-clarogt.tar.gz *
-          - aws s3 cp ../render-clarogt.tar.gz s3://wcaas-deployments/
+          - tar -cvzf ../render.tar.gz *
+          - aws s3 cp ../render.tar.gz s3://wcaas-deployments/

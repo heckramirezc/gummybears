@@ -12,7 +12,7 @@ import Slider from 'react-slick'; // https://github.com/akiran/react-slick
 // Components
 import { ArrowPrev, ArrowNext } from '../../helpers/svg';
 
-const CatalogBanner = () => {
+const CatalogBanner = ({ banners }) => {
   const bannerSettings = {
     dots: false,
     autoplay: true,
@@ -20,49 +20,26 @@ const CatalogBanner = () => {
     speed: 1000,
     infinite: true,
     pauseOnHover: false,
-    initialSlide: 1,
+    initialSlide: 0,
     arrows: false,
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+
+  const Banners = banners.map((currentBanner, key) => (
+    <div key={key}>
+      <picture>
+        <Link to={currentBanner.acf.enlace ? currentBanner.acf.enlace : '#'}>
+          <img src={currentBanner.acf.icon} alt={currentBanner.acf.description} />
+        </Link>
+      </picture>
+    </div>
+  ));
+
   return (
     <section className="catalog--banner">
       <Slider {...bannerSettings}>
-        <div>
-          <picture>
-            <Link to="/producto/microsoft-dynamics-365-unified-op">
-              <img src="https://www.gyssa.com/wp/wp-content/uploads/2020/08/Dynamics-365-Unified-Operation.jpg" alt="" />
-            </Link>
-          </picture>
-        </div>
-        <div>
-          <picture>
-            <Link to="/producto/sap-analytics-cloud">
-              <img src="https://www.gyssa.com/wp/wp-content/uploads/2020/08/SAP-Analytics-Cloud.jpg" alt="" />
-            </Link>
-          </picture>
-        </div>
-        <div>
-          <picture>
-            <Link to="/producto/sap-cloud-platform">
-              <img src="https://www.gyssa.com/wp/wp-content/uploads/2020/08/SAP-Data-Warehouse-Cloud.jpg" alt="" />
-            </Link>
-          </picture>
-        </div>
-        <div>
-          <picture>
-            <Link to="/producto/sap-master-data-governance">
-              <img src="https://www.gyssa.com/wp/wp-content/uploads/2020/08/SAP-Master-Data-Governance.jpg" alt="" />
-            </Link>
-          </picture>
-        </div>
-        <div>
-          <picture>
-            <Link to="/producto/singular-sap-business-one">
-              <img src="https://www.gyssa.com/wp/wp-content/uploads/2020/08/Singular-SAP-Business-One.jpg" alt="" />
-            </Link>
-          </picture>
-        </div>
+        {Banners}
       </Slider>
       <img className="catalog--banner-recorte" src="https://www.gyssa.com/wp/wp-content/uploads/2020/08/RECORTE-DE-BANNER.png" alt="" />
       {/* <header className="cart--summary-form-quick">
@@ -205,6 +182,7 @@ const ClientBanner = ({ clientes, categoriasClientes }) => {
 };
 
 const UI = (props) => {
+  if (!props.banners || !props.banners.length || !props.banners.length === 0) return null;
   if (!props.servicesList || !props.servicesList.length || !props.servicesList.length === 0) return null;
   if (!props.postsList || !props.postsList.length || !props.postsList.length === 0) return null;
   if (!props.categoriesList || !props.categoriesList.length || !props.categoriesList.length === 0) return null;
@@ -278,7 +256,7 @@ const UI = (props) => {
   return (
     <main>
       <section className="catalog">
-        <CatalogBanner />
+        <CatalogBanner banners={props.banners} />
         <Element id="servicios" name="servicios" className="catalog--header-servicios-container">
           <div className="catalog--header-servicios">
             <img src="https://www.gyssa.com/wp/wp-content/uploads/2020/07/bk_servicios@2x.png" alt="" />

@@ -437,7 +437,6 @@ NavMain.propTypes = {
   handleMenuIndustria: PropTypes.func.isRequired,
   handleMenuTecnologia: PropTypes.func.isRequired,
   layoutData: PropTypes.shape({
-    MiClaro: PropTypes.string,
     // SeccionesHeader: PropTypes.array,
   }),
   socialData: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
@@ -450,7 +449,6 @@ NavMain.propTypes = {
 
 NavMain.defaultProps = {
   layoutData: {
-    MiClaro: '',
     SeccionesHeader: [],
   },
 };

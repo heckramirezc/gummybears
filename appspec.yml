@@ -5,23 +5,23 @@ os: linux
 
 files:
   - source: ./render
-    destination: /opt/wcaas/www/clarogt-DEPLOY
+    destination: /opt/wcaas/www/
 
 permissions:
-  - object: /opt/wcaas/www/clarogt-DEPLOY
+  - object: /opt/wcaas/www/
     owner: wcaas
     group: wcaas
     mode: 644
     type:
       - file
-  - object: /opt/wcaas/www/clarogt-DEPLOY
+  - object: /opt/wcaas/www/
     owner: wcaas
     group: wcaas
     mode: 755
     type:
       - directory
   - object: /opt/wcaas/www
-    pattern: clarogt-DEPLOY
+    pattern: /
     owner: wcaas
     group: wcaas
     mode: 755

@@ -1,7 +1,7 @@
 {
-  "name": "claro-gt",
+  "name": "gyssa",
   "version": "0.0.1",
-  "description": "claroGT - WCaaS",
+  "description": "gyssa - WCaaS",
   "main": "index.js",
   "scripts": {
     "start": "npm run serve | webpack-cli --config webpack.config.js -w",
